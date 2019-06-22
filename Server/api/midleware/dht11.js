@@ -8,11 +8,11 @@ setInterval(function () {
 
 sensor.read(11, 26, function(err, temperature, humidity) {
     if (!err) {
-        const dht11Schema = dht11Schema({
+        const schema = dht11Schema({
             _id: mongoose.Types.ObjectId(),
             temperature: temperature
         });
-        dht11Schema.save();
+        schema.save();
 
         module.exports.temp = temperature;
         module.exports.humid = humidity;
