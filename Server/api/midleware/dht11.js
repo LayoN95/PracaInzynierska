@@ -14,4 +14,4 @@ sensor.read(11, 26, function(err, temperature, humidity) {
         );
     }
 });
-}, 1000);
+}, 10000);

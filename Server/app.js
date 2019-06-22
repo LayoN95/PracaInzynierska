@@ -4,11 +4,21 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+const mongoose = require('mongoose');
+
 const cors = require('cors');
 
 var indexRouter = require('./api/routes/index');
 var usersRouter = require('./api/routes/users');
 
+mongoose.connect('mongodb+srv://marcin:' +
+process.env.MONGO_ATLAS_PW +
+'@nodejs-jamoh.mongodb.net/test?retryWrites=true&w=majority',
+{
+  useNewUrlParser: true
+});
+
+mongoose.Promise = global.Promise;
 
 
 var app = express();
