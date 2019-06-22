@@ -5,10 +5,7 @@ var temp = 0;
 
 setInterval(function () {
 
-
-    temp++;
-    module.exports.temp = temp;
-    /*ds18b20.readSimpleC((err, temperature) =>{
+    ds18b20.readSimpleC((err, temperature) =>{
         if (err) {
             console.log(err);
             console.log("Brak urządzenia");
@@ -19,6 +16,6 @@ setInterval(function () {
             module.exports.temp = temp;
 
         }
-    });*/
+    });
 }, 1000); 
  
