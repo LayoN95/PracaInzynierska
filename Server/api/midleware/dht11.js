@@ -1,5 +1,6 @@
 const sensor = require('node-dht-sensor');
 const dht11Schema = require('../models/dht11');
+const mongoose = require('mongoose');
 
 var temp = 0;
 var humid = 0;
