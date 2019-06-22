@@ -17,8 +17,7 @@ router.get('/', function(req, res, next) {
 router.get('/dht11', function(req, res, next) {
 
  res.status(200).json({
-   message: ("Temperatura: " + dht11.temp),
-   message: ("Wilgotność: " + dht11.humid)
+   message: ("Wilgotność: " + dht11.humid + "Temperatura: " + dht11.temp)
  });
 });
 
