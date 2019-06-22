@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 const ds18b20 = require('../midleware/ds18b20');
+const dht11 = require('../midleware/dht11');
 
 var test = require('./test.json');
 
