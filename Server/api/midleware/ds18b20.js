@@ -12,11 +12,11 @@ setInterval(function () {
             console.log(err);
             console.log("Brak urządzenia");
         } else {
-            const schema = ds18b20Schema({
+            const DS18B20schema = ds18b20Schema({
                 _id: mongoose.Types.ObjectId(),
                 temperature: temperature
             });
-            schema.save();
+            DS18B20schema.save();
 
             console.log("temperature" + temperature);
             temp = temperature;
