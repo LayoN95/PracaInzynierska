@@ -11,16 +11,35 @@ var test = require('./test.json');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  //res.send(test);
-  res.status(200).json({
-    "message": ds18b20.temp
+  DS18B20
+  .findOne()
+  .select('_id temperature date')
+  .exec()
+  .then(docs => {
+    res.status(200).json({
+      count: docs.length,
+      ds18b20: docs.map(doc => {
+        return {
+          _id: doc.id,
+          temperature: doc.temperature,
+          date: doc.date
+        }
+      })
+    });
+  })
+  .catch(err => {
+    error: err
   });
+  //res.send(test);
+  /*res.status(200).json({
+    "message": ds18b20.temp
+  });*/
 });
 
 router.get('/dht11', function(req, res, next) {
   DHT11
   .find()
-  .select('_id temperature date')
+  .select('_id temperature humidity date')
   .exec()
   .then(docs => {
     res.status(200).json({
