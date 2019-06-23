@@ -11,8 +11,8 @@ var test = require('./test.json');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  DS18B20
-  .findOne()
+  DS18B20.find().sort({_id: -1 }).limit(10)
+  /*.findOne()
   .select('_id temperature date')
   .exec()
   .then(docs => {
@@ -29,7 +29,7 @@ router.get('/', function(req, res, next) {
   })
   .catch(err => {
     error: err
-  });
+  });*/
   //res.send(test);
   /*res.status(200).json({
     "message": ds18b20.temp
@@ -44,7 +44,7 @@ router.get('/dht11', function(req, res, next) {
   .then(docs => {
     res.status(200).json({
       count: docs.length,
-      recors: docs.map(doc => {
+      records: docs.map(doc => {
         return {
           _id: doc.id,
           temperature: doc.temperature,
