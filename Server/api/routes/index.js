@@ -10,13 +10,13 @@ var test = require('./test.json');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.send(test);
-  /*res.status(200).json({
-    message: ds18b20.temp
-  });*/
+  //res.send(test);
+  res.status(200).json({
+    "message": ds18b20.temp
+  });
 });
 
-/*router.get('/dht11', function(req, res, next) {
+router.get('/dht11', function(req, res, next) {
   DHT11
   .find()
   .select('_id temperature date')
@@ -24,7 +24,7 @@ router.get('/', function(req, res, next) {
   .then(docs => {
     res.status(200).json({
       count: docs.length,
-      orders: docs.map(doc => {
+      recors: docs.map(doc => {
         return {
           _id: doc.id,
           temperature: doc.temperature,
@@ -40,7 +40,7 @@ router.get('/', function(req, res, next) {
   });
  /*res.status(200).json({
    message: ("Wilgotność: " + dht11.humid + " Temperatura: " + dht11.temp)
- });
-});*/
+ });*/
+});
 
 module.exports = router;
