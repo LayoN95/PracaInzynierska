@@ -11,7 +11,8 @@ sensor.read(11, 26, function(err, temperature, humidity) {
     if (!err) {
         const schema = dht11Schema({
             _id: mongoose.Types.ObjectId(),
-            temperature: temperature
+            temperature: temperature,
+            humidity: humidity
         });
         schema.save();
 
