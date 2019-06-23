@@ -271,7 +271,7 @@
         }
       })
       .then((response) => {
-        console.log("Odpowiedz: " + response.data);
+        console.log("Odpowiedz: " + response.data.ds18b20);
         this.User = response.data;
       })
       .catch((error) => {
