@@ -1,5 +1,5 @@
 const ds18b20 = require('ds18b20-raspi');
-const ds18b20Schema = require('../models/dht11');
+const ds18b20Schema = require('../models/ds18b20');
 const mongoose = require('mongoose');
 var temp = 0;
 
