@@ -271,8 +271,8 @@
         }
       })
       .then((response) => {
-        console.log("Odpowiedz: " + response.data.ds18b20);
-        this.User = response.data;
+        console.log("Odpowiedz: " + response.data.ds18b20.temperature);
+        this.User = response.data.ds18b20;
       })
       .catch((error) => {
         console.log(error);
