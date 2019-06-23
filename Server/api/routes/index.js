@@ -28,10 +28,7 @@ router.get('/dht11', function(req, res, next) {
         return {
           _id: doc.id,
           temperature: doc.temperature,
-          date: doc.date,
-          request: {
-            type: 'GET'
-          }
+          date: doc.date
         }
       })
     });

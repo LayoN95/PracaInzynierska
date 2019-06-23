@@ -31,7 +31,7 @@
           </template>
           <!-- Szeroki Wykres -->
           <div class="chart-area">
-            <p>{{ User.firstName }}</p>
+            <p>{{ User.message }}</p>
             <line-chart style="height: 100%"
                         ref="bigChart"
                         chart-id="big-line-chart"
