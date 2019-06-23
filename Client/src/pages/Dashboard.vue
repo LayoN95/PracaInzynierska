@@ -265,7 +265,7 @@
       }
     },
     mounted() {
-      axios.get('http://localhost:3000/', {
+      axios.get('http://192.168.1.48:3000/dht11', {
         headers: {
           'Access-Control-Allow-Origin': '*',
         }
