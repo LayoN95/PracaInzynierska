@@ -31,7 +31,8 @@
           </template>
           <!-- Szeroki Wykres -->
           <div class="chart-area">
-            <p>{{ User.message }}</p>
+            <p>{{ User.temperature }}</p>
+             <p>{{ User.orders.temperature }}</p>
             <line-chart style="height: 100%"
                         ref="bigChart"
                         chart-id="big-line-chart"
@@ -265,7 +266,7 @@
       }
     },
     mounted() {
-      axios.get('http://localhost:3000/', {
+      axios.get('http://localhost:3000/dht11', {
         headers: {
           'Access-Control-Allow-Origin': '*',
         }
