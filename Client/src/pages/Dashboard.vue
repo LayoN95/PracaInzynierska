@@ -31,7 +31,7 @@
           </template>
           <!-- Szeroki Wykres -->
           <div class="chart-area">
-            <p>{{ User.temperature }}</p>
+            <p>{{ User }}</p>
             <line-chart style="height: 100%"
                         ref="bigChart"
                         chart-id="big-line-chart"
@@ -271,7 +271,7 @@
         }
       })
       .then((response) => {
-        console.log("Odpowiedz: " + response.data.ds18b20.temperature);
+        console.log("Odpowiedz: " + response.data.ds18b20);
         this.User = response.data.ds18b20;
       })
       .catch((error) => {
