@@ -283,6 +283,7 @@
         console.log(x);
 
         this.User = x;
+        table = x;
         
       })
       .catch((error) => {
