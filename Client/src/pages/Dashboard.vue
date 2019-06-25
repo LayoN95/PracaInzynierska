@@ -162,7 +162,9 @@
         var x = [];
 
         for (var i in obj.ds18b20) {
-          x[i] = obj.ds18b20[i].temperature;
+          var integer = parseInt(obj.ds18b20[i].temperature, 10);
+          //x[i] = obj.ds18b20[i].temperature;
+          x[i] = integer;
         }
         console.log(x);
 
