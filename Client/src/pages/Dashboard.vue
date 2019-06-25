@@ -274,7 +274,7 @@
         //console.log("Odpowiedz: " + response.data.ds18b20);
      
         this.User = response.data;
-        var obj = response.data
+        var obj = response.data;
         console.log(obj.ds18b20.temperature);
 
     
