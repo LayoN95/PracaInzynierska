@@ -31,7 +31,7 @@
           </template>
           <!-- Szeroki Wykres -->
           <div class="chart-area">
-            <p>{{ /*User.ds18b20[0].temperature*/ User }}</p>
+            <p>{{ /*User.ds18b20[0].temperature*/ Temperature }}</p>
             <line-chart style="height: 100%"
                         ref="bigChart"
                         chart-id="big-line-chart"
@@ -137,8 +137,7 @@
   import config from '@/config';
 
   import axios from 'axios';
- var table2 = [ ];
-  var table = [[12, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100, 200],
+   var table = [[12, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100, 200],
             [80, 120, 105, 110, 95, 105, 90, 100, 80, 95, 70, 120, 200],
             [60, 80, 65, 130, 80, 105, 90, 130, 70, 115, 60, 130, 200]];
   export default {
@@ -148,47 +147,10 @@
       TaskList,
       UserTable
     },
-        mounted() {
-      axios.get('http://192.168.1.48:3000/', {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-        }
-      })
-      .then((response) => {
-        //console.log("Odpowiedz: " + response.data.ds18b20);
-     
-        //this.User = response.data;
-        var obj = response.data;
-        var x = [];
-
-        for (var i in obj.ds18b20) {
-          var integer = parseInt(obj.ds18b20[i].temperature, 10);
-          //x[i] = obj.ds18b20[i].temperature;
-          x[i] = integer;
-        }
-        console.log(x);
-
-        this.User = x;
-        this.table = x;
-        this.table2 = [80, 100, 70, 80, 120, 80];
-        console.log(table2);
-        console.log(table);
-        
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-
-      this.i18n = this.$i18n;
-      if (this.enableRTL) {
-        this.i18n.locale = 'ar';
-        this.$rtl.enableRTL();
-      }
-      this.initBigChart(0);
-    },
+ 
     data() {
       return {
-        User: {},
+        Temperature: {},
 
         bigLineChart: {
           allData: table,
@@ -217,7 +179,7 @@
               pointHoverRadius: 4,
               pointHoverBorderWidth: 15,
               pointRadius: 4,
-              data: table2, //[80, 100, 70, 80, 120, 80],
+              data: [80, 100, 70, 80, 120, 80],
             }]
           },
           gradientColors: config.colors.primaryGradient,
@@ -302,6 +264,40 @@
         this.bigLineChart.chartData = chartData;
         this.bigLineChart.activeIndex = index;
       }
+    },
+       mounted() {
+      axios.get('http://192.168.1.48:3000/', {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        }
+      })
+      .then((response) => {
+     
+        var obj = response.data;
+        var x = [];
+
+        for (var i in obj.ds18b20) {
+          x[i] = obj.ds18b20[i].temperature;
+
+          //Konwersja z łańcucha znaków do liczb
+          //var integer = parseInt(obj.ds18b20[i].temperature, 10);
+          //x[i] = integer;
+        }
+        console.log(x);
+
+        this.Temperature = x;
+        
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+      this.i18n = this.$i18n;
+      if (this.enableRTL) {
+        this.i18n.locale = 'ar';
+        this.$rtl.enableRTL();
+      }
+      this.initBigChart(0);
     },
     beforeDestroy() {
       if (this.$rtl.isRTL) {
