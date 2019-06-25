@@ -148,6 +148,40 @@
       TaskList,
       UserTable
     },
+        mounted() {
+      axios.get('http://192.168.1.48:3000/', {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        }
+      })
+      .then((response) => {
+        //console.log("Odpowiedz: " + response.data.ds18b20);
+     
+        //this.User = response.data;
+        var obj = response.data;
+        var x = [];
+
+        for (var i in obj.ds18b20) {
+          x[i] = obj.ds18b20[i].temperature;
+        }
+        console.log(x);
+
+        this.User = x;
+        this.table = x;
+        this.greenChartTable = x;
+        
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+      this.i18n = this.$i18n;
+      if (this.enableRTL) {
+        this.i18n.locale = 'ar';
+        this.$rtl.enableRTL();
+      }
+      this.initBigChart(0);
+    },
     data() {
       return {
         User: {},
@@ -263,40 +297,6 @@
         this.bigLineChart.chartData = chartData;
         this.bigLineChart.activeIndex = index;
       }
-    },
-    mounted() {
-      axios.get('http://192.168.1.48:3000/', {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-        }
-      })
-      .then((response) => {
-        //console.log("Odpowiedz: " + response.data.ds18b20);
-     
-        //this.User = response.data;
-        var obj = response.data;
-        var x = [];
-
-        for (var i in obj.ds18b20) {
-          x[i] = obj.ds18b20[i].temperature;
-        }
-        console.log(x);
-
-        this.User = x;
-        this.table = x;
-        this.greenChartTable = x;
-        
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-
-      this.i18n = this.$i18n;
-      if (this.enableRTL) {
-        this.i18n.locale = 'ar';
-        this.$rtl.enableRTL();
-      }
-      this.initBigChart(0);
     },
     beforeDestroy() {
       if (this.$rtl.isRTL) {
