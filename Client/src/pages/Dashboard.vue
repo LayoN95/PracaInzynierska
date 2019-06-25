@@ -137,7 +137,7 @@
   import config from '@/config';
 
   import axios from 'axios';
-  var greenChartTable;
+ var table2 = [];
   var table = [[12, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100, 200],
             [80, 120, 105, 110, 95, 105, 90, 100, 80, 95, 70, 120, 200],
             [60, 80, 65, 130, 80, 105, 90, 130, 70, 115, 60, 130, 200]];
@@ -170,7 +170,7 @@
 
         this.User = x;
         this.table = x;
-        this.greenChartTable = x;
+        table2 = x;
         
       })
       .catch((error) => {
@@ -215,7 +215,7 @@
               pointHoverRadius: 4,
               pointHoverBorderWidth: 15,
               pointRadius: 4,
-              data: [80, 100, 70, 80, 120, 80],
+              data: table2, //[80, 100, 70, 80, 120, 80],
             }]
           },
           gradientColors: config.colors.primaryGradient,
