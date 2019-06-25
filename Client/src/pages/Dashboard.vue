@@ -275,7 +275,7 @@
         var tempTable;
         this.User = response.data;
 
-        for (i = 0; i = 12; i++)
+        for (var i = 0; i = 12; i++)
         {
           tempTable[i] = User.ds18b20[i].temperature;
         }
