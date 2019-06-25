@@ -31,7 +31,7 @@
           </template>
           <!-- Szeroki Wykres -->
           <div class="chart-area">
-            <p>{{ User.ds18b20[0].temperature + User.ds18b20[1].temperature + User.ds18b20[2].temperature }}</p>
+            <p>{{ /*User.ds18b20[0].temperature*/ User }}</p>
             <line-chart style="height: 100%"
                         ref="bigChart"
                         chart-id="big-line-chart"
@@ -273,7 +273,7 @@
       .then((response) => {
         //console.log("Odpowiedz: " + response.data.ds18b20);
      
-        this.User = response.data;
+        //this.User = response.data;
         var obj = response.data;
         var x = [];
 
@@ -282,9 +282,7 @@
         }
         console.log(x);
 
-    
-        //this.User = JSON.parse(obj);
-        //console.log("Odpowiedź: " + User);
+        this.User = x;
         
       })
       .catch((error) => {
