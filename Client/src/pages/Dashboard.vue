@@ -275,7 +275,7 @@
      
         this.User = response.data;
         var obj = response.data;
-        var x;
+        var x = [];
 
         for (var i in obj.ds18b20) {
           x[i] += obj.ds18b20[i].temperature;
