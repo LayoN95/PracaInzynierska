@@ -271,10 +271,10 @@
         }
       })
       .then((response) => {
-        //console.log("Odpowiedz: " + response.data.ds18b20);
-        //this.User = response.data.ds18b20;
-        this.User = JSON.parse(response.data);
-        //Update
+        console.log("Odpowiedz: " + response);
+        this.User = response;
+        //this.User = JSON.parse(response.data);
+        //console.log("Odpowiedź: " + User);
       })
       .catch((error) => {
         console.log(error);
