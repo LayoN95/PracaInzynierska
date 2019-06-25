@@ -275,10 +275,10 @@
      
         this.User = response.data;
         var obj = response.data;
-        var x = 0;
+        var x;
 
         for (var i in obj.ds18b20) {
-          x += obj.ds18b20[i].temperature;
+          x[i] += obj.ds18b20[i].temperature;
         }
         console.log(x);
 
