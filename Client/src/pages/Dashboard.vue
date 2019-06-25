@@ -170,7 +170,7 @@
 
         this.User = x;
         this.table = x;
-        table2 = [80, 100, 70, 80, 120, 80];
+        this.table2 = [80, 100, 70, 80, 120, 80];
         console.log(table2);
         console.log(table);
         
