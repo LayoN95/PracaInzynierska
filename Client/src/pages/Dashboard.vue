@@ -273,8 +273,10 @@
       .then((response) => {
         //console.log("Odpowiedz: " + response.data.ds18b20);
         //this.User = response.data.ds18b20;
-        this.User = JSON.parse(response.data.ds18b20);
-        console.log("Odpowiedź: " + User);
+        var obj = response.data.ds18b20;
+        //this.User = JSON.parse(response.data.ds18b20);
+        //console.log("Odpowiedź: " + User);
+        this.User = obj;
       })
       .catch((error) => {
         console.log(error);
