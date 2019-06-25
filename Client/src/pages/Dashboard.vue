@@ -217,7 +217,7 @@
               pointHoverRadius: 4,
               pointHoverBorderWidth: 15,
               pointRadius: 4,
-              data: this.table2, //[80, 100, 70, 80, 120, 80],
+              data: table2, //[80, 100, 70, 80, 120, 80],
             }]
           },
           gradientColors: config.colors.primaryGradient,
