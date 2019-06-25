@@ -273,11 +273,12 @@
       .then((response) => {
         //console.log("Odpowiedz: " + response.data.ds18b20);
         var tempTable;
+        var obj = response.data;
         this.User = response.data;
 
         for (var i = 0; i = 12; i++)
         {
-          tempTable[i] = User.ds18b20[i].temperature;
+          tempTable[i] = obj.ds18b20[i].temperature;
         }
         
         console.log(tempTable);
