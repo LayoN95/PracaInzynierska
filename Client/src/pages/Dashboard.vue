@@ -275,7 +275,12 @@
      
         this.User = response.data;
         var obj = response.data;
-        console.log(obj.ds18b20.temperature);
+        var x;
+
+        for (var i in obj.ds18b20) {
+          x += obj.ds18b20[i].temperature;
+        }
+        console.log(x);
 
     
         //this.User = JSON.parse(obj);
