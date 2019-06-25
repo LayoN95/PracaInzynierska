@@ -278,7 +278,7 @@
         var x = [];
 
         for (var i in obj.ds18b20) {
-          x[i] += obj.ds18b20[i].temperature;
+          x[i] = obj.ds18b20[i].temperature;
         }
         console.log(x);
 
