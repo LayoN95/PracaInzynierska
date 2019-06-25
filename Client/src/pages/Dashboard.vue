@@ -275,6 +275,8 @@
      
         this.User = response.data;
 
+        console.log(User.ds18b20.temperature);
+
     
         //this.User = JSON.parse(obj);
         //console.log("Odpowiedź: " + User);
