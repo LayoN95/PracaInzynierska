@@ -171,6 +171,8 @@
         this.User = x;
         this.table = x;
         table2 = x;
+        console.log(table2);
+        console.log(table);
         
       })
       .catch((error) => {
@@ -241,6 +243,7 @@
               pointRadius: 4,
               data: [90, 27, 60, 12, 80],
             }]
+            
           },
           gradientColors: ['rgba(66,134,121,0.15)', 'rgba(66,134,121,0.0)', 'rgba(66,134,121,0)'],
           gradientStops: [1, 0.4, 0],
