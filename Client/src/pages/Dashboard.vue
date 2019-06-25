@@ -274,6 +274,7 @@
         //console.log("Odpowiedz: " + response.data.ds18b20);
         //this.User = response.data.ds18b20;
         this.User = JSON.parse(response.data);
+        //Update
       })
       .catch((error) => {
         console.log(error);
