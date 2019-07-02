@@ -8,7 +8,8 @@ var sensor = new Sensor({
 });
  
 sensor.on('movement', function () {
-    // who's there?
+    console.log("Ktos tu jest?!");
+    
 });
  
 sensor.start();
