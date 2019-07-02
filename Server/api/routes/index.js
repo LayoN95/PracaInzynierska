@@ -6,6 +6,7 @@ const DS18B20 = require('../models/ds18b20');
 
 const ds18b20 = require('../midleware/ds18b20');
 const dht11 = require('../midleware/dht11');
+const pir = require('../midleware/pirHCSR501');
 
 var test = require('./test.json');
 
@@ -74,6 +75,10 @@ router.get('/dht11', function(req, res, next) {
  /*res.status(200).json({
    message: ("Wilgotność: " + dht11.humid + " Temperatura: " + dht11.temp)
  });*/
+});
+
+router.get('/pir', function(req, res, next) {
+  res.render(pir.count);
 });
 
 module.exports = router;
