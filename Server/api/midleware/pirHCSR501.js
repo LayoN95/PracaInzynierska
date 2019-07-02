@@ -1,15 +1,17 @@
-var Sensor = require('pi-pir-sensor');
-var sensor = new Sensor({
-    // pin number must be specified
-    pin: 19,
- 
-    // loop time to check PIR sensor, defaults to 1.5 seconds
-    loop: 1500
-});
- 
-sensor.on('movement', function () {
-    console.log("Ktos tu jest?!");
-    
-});
- 
-sensor.start();
+var Gpio = require('onoff').Gpio,
+    pir = new Gpio(27, 'in', 'both');
+var count = 0;
+
+exports.start = function () {
+
+
+    pir.watch(function (err, value) {
+        //count++;
+        //console.log('Intruder detected' + count);
+
+        socket.emit("intruderValue", {
+            "value": value
+        });
+    });
+
+};
