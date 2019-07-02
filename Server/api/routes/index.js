@@ -78,7 +78,7 @@ router.get('/dht11', function(req, res, next) {
 });
 
 router.get('/pir', function(req, res, next) {
-  res.render(pir.count);
+  console.log(pir.count);
 });
 
 module.exports = router;
