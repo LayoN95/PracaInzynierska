@@ -3,7 +3,6 @@ LED = new Gpio(20, 'out');
 
 var x = true;
 
-setInterval(function (){
     if(x == true) {
         LED.write(false);
     } else {
@@ -11,4 +10,4 @@ setInterval(function (){
     }
 
 
-},1000);
+
