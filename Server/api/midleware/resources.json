@@ -1,0 +1,21 @@
+{
+    "pi": {
+        "name": "Smart Home",
+        "description": "Projekt inteligentnego budynku",
+        "actuators": {
+            "leds": {
+                "1": {
+                    "name": "LED 1",
+                    "value": false,
+                    "gpio": 21
+                },
+
+                "2": {
+                    "name": "LED 2",
+                    "value": false,
+                    "gpio": 20 
+                }
+            }
+        }
+    }
+}
