@@ -5,10 +5,10 @@ var x = false;
 
     if(x == true) {
         LED.write(false);
-        console.log('Wlaczono diode');
+        console.log('Wylaczono diode');
     } else {
         LED.write(true);
-        console.log('Wylaczono diode');
+        console.log('Wlaczono diode');
     }
 
 
