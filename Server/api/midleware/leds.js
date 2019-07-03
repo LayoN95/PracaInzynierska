@@ -1,5 +1,5 @@
-var GPIO = require('onoff').GPIO;
-LED = new GPIO(20, 'out');
+var Gpio = require('onoff').Gpio;
+LED = new Gpio(20, 'out');
 
 var x = true;
 
