@@ -4,7 +4,7 @@ const Gpio = require('onoff').Gpio;
     var value = false;
 
     function led(ledId, value) {
-        const LED = new Gpio(ledId, 'out'); // gpio 4 as out
+        var LED = new Gpio(ledId, 'out'); // gpio 4 as out
         console.log("FUNKCJA DZIALA");
         LED.writeSync(value);
     }
