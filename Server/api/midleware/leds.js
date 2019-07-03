@@ -4,7 +4,6 @@ const Gpio = require('onoff').Gpio;
     var value = false;
     var ledId = 0;
     function led(ledId, value) {
-      parseInt(ledId);
         console.log("FUNKCJA DZIALA" + ledId);
         var LED = new Gpio(ledId, 'out'); // gpio 4 as out
         
