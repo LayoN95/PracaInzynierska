@@ -89,9 +89,15 @@ router.post('/leds/:ledId/:value', (req, res, next) => {
   {
     leds.led(parseInt(req.params.ledId), 1)
     console.log("led ID: " + req.params.ledId + " value: " + req.params.value);
+    res.status(200).json({
+      message: ("Uruchomiono diodę")
+    });
   } else {
     leds.led(req.params.ledId, 0)
     console.log("led ID: " + req.params.ledId + " value: " + req.params.value);
+    res.status(200).json({
+      message: ("Wyłączono diodę")
+    });
   }
 });
 
