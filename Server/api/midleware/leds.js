@@ -1,12 +1,14 @@
 var Gpio = require('onoff').Gpio;
-LED = new Gpio(20, 'out');
+LED = new Gpio(21, 'out');
 
-var x = true;
+var x = false;
 
     if(x == true) {
         LED.write(false);
+        console.log('Wlaczono diode');
     } else {
         LED.write(true);
+        console.log('Wylaczono diode');
     }
 
 
