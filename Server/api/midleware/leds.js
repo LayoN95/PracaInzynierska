@@ -1,10 +1,11 @@
 const Gpio = require('onoff').Gpio;
-const LED = new Gpio(21, 'out'); // gpio 4 as out
 
 
     var value = false;
 
-    function led(value) {
+    function led(ledId, value) {
+        const LED = new Gpio(ledId, 'out'); // gpio 4 as out
+
         LED.writeSync(value);
     }
 module.exports.led = led;
