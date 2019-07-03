@@ -1,4 +1,4 @@
-var GPIO = require('onoff');
+var GPIO = require('onoff').GPIO;
 LED = new GPIO(20, 'out');
 
 var x = true;
