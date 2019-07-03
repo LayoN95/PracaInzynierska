@@ -84,7 +84,7 @@ router.get('/pir', function(req, res, next) {
 });
 
 router.post('/leds/:ledId', (req, res, next) => {
-  console.log(req.params.id);
+  console.log(req.params.ledId);
 })
 
 module.exports = router;
