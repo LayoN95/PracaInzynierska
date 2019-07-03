@@ -7,6 +7,7 @@ const DS18B20 = require('../models/ds18b20');
 const ds18b20 = require('../midleware/ds18b20');
 const dht11 = require('../midleware/dht11');
 const pir = require('../midleware/pirHCSR501');
+const leds = require('../midleware/leds');
 
 var test = require('./test.json');
 
@@ -84,7 +85,14 @@ router.get('/pir', function(req, res, next) {
 });
 
 router.post('/leds/:ledId', (req, res, next) => {
-  console.log(req.params.ledId);
-})
+  if(req.params.ledId == '1')
+  {
+    leds.led(true)
+    console.log(req.params.ledId);
+  } else {
+    leds.led(false)
+    console.log(req.params.ledId);
+  }
+});
 
 module.exports = router;
