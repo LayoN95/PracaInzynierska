@@ -87,10 +87,10 @@ router.get('/pir', function(req, res, next) {
 router.post('/leds/:ledId/:value', (req, res, next) => {
   if(req.params.ledId == '1')
   {
-    leds.led(parseInt(req.params.ledId), 1)
+    leds.led(req.params.ledId, 1)
     console.log("led ID: " + req.params.ledId + " value: " + req.params.value);
   } else {
-    leds.led(parseInt(req.params.ledId), 0)
+    leds.led(req.params.ledId, 0)
     console.log("led ID: " + req.params.ledId + " value: " + req.params.value);
   }
 });
