@@ -163,7 +163,7 @@
  
     data() {
       var id = 21;
-      var tabelaTemp = [12.5, 15.2, 17.1, 10.7, 12.2, 17.0];
+      var tabelaTemp = [];
       return {
         Temperature: {},
         Dht11: {},
@@ -195,7 +195,7 @@
               pointHoverRadius: 4,
               pointHoverBorderWidth: 15,
               pointRadius: 4,
-              data: getData(),
+              data: tabelaTemp,
             }]
           },
           gradientColors: config.colors.primaryGradient,
@@ -304,7 +304,7 @@
         this.tabelaTemp = x;
         this.Temperature = this.tabelaTemp;
 
-        return this.tabelaTemp
+        return this.tabelaTemp;
 
         })
         .catch((error) => {
