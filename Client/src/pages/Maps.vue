@@ -18,7 +18,8 @@
     data () {
         return {
         datacollection: null,
-        table: [21, 24, 26, 20, 18]
+        table: [],
+        dateTable: []
       }
     },
     mounted () {
@@ -49,11 +50,14 @@
         .then((response) => {
         var obj = response.data;
         var x = [];
+        var y = []
         for (var i in obj.ds18b20) {
-          x[i] = obj.ds18b20[i].temperature
+          x[i] = obj.ds18b20[i].temperature;
+          y[i] = obj.ds18b20[i].date;
         }
         console.log(x);
         this.table = x;
+        this.dateTable = y;
         console.log(this.table);
         })
         .catch((error) => {
