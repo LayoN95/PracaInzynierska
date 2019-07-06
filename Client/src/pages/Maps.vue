@@ -14,11 +14,9 @@
       LineChart
     },
     data () {
-      var temps = [21, 24, 26, 20, 18];
-      console.log(table);
-      return {
+        return {
         datacollection: null,
-        table: this.temps
+        table: [21, 24, 26, 20, 18]
       }
     },
     mounted () {
