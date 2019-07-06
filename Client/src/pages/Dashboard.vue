@@ -195,7 +195,7 @@
               pointHoverRadius: 4,
               pointHoverBorderWidth: 15,
               pointRadius: 4,
-              data: this.tabelaTemp,
+              data: tabelaTemp,
             }]
           },
           gradientColors: config.colors.primaryGradient,
