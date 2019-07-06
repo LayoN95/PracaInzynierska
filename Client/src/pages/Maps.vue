@@ -53,6 +53,7 @@
         }
         console.log(x);
         this.table = x;
+        console.log(this.table);
         })
         .catch((error) => {
           console.log(error);
