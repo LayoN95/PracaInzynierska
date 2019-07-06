@@ -35,7 +35,7 @@
             }
           ]
         }
-        console.log("filldata" + table);
+        console.log("filldata" + this.table);
       },
      
     }
