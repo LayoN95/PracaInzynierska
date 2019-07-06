@@ -18,7 +18,7 @@
       console.log(table);
       return {
         datacollection: null,
-        table: temps
+        table: this.temps
       }
     },
     mounted () {
