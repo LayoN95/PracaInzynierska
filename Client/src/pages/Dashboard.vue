@@ -33,9 +33,9 @@
           <div class="chart-area">
             <!--<p>{{ /*User.ds18b20[0].temperature*/ Temperature + " " + Dht11 }}</p> -->
 
-            <input v-model="id" placeholder="podaj id">
-            <p>Wybrano id: {{ id }}</p>
-            
+            <input v-model="message" placeholder="podaj id">
+            <p>Wybrano id: {{ message }}</p>
+
             <button v-on:click="turnOn">Turn the lights on!</button>
 
             <button v-on:click="turnOff">Turn the lights off!</button>
