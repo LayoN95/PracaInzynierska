@@ -14,7 +14,7 @@
       LineChart
     },
     data () {
-      var tamps = [21, 24, 26, 20, 18];
+      var temps = [21, 24, 26, 20, 18];
       console.log(table);
       return {
         datacollection: null,
