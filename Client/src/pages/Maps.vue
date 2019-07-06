@@ -20,7 +20,8 @@
       }
     },
     mounted () {
-      this.fillData()
+      this.fillData(),
+      this.getData()
     },
     methods: {
       fillData () {
