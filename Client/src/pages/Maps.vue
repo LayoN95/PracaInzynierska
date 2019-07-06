@@ -2,7 +2,7 @@
     <card type="plain" title="Google Maps">
   <div class="small">
     <line-chart :chart-data="datacollection"></line-chart>
-    <button @click="fillData()">Randomize</button>
+    <button @click="getData()">Randomize</button>
   </div>
     </card>
 </template>
@@ -36,6 +36,25 @@
         }
         console.log("filldata: " + this.table);
       },
+      getData() {
+        axios.get('http://192.168.1.48:3000/', {
+              headers: {
+                'Access-Control-Allow-Origin': '*',
+              }
+        })
+        .then((response) => {
+        var obj = response.data;
+        var x = [];
+        for (var i in obj.ds18b20) {
+          x[i] = obj.ds18b20[i].temperature
+        }
+        console.log(x);
+        this.table = x;
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      }
      
     }
   };
