@@ -14,10 +14,11 @@
       LineChart
     },
     data () {
-      var table = [12, 14, 17, 21, 34];
+      var table = [];
       console.log(table);
       return {
-        datacollection: null
+        datacollection: null,
+        table = [12, 14, 17, 21, 34]
       }
     },
     mounted () {
