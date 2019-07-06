@@ -32,7 +32,7 @@
           <!-- Szeroki Wykres -->
           <div class="chart-area">
             <p>{{ /*User.ds18b20[0].temperature*/ Temperature + " " + Dht11 }}</p>
-            <button></button>
+            <button v-on:click="turnOn">Turn the lights on!</button>
             <line-chart style="height: 100%"
                         ref="bigChart"
                         chart-id="big-line-chart"
@@ -141,6 +141,9 @@
    var table = [[12, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100, 200],
             [80, 120, 105, 110, 95, 105, 90, 100, 80, 95, 70, 120, 200],
             [60, 80, 65, 130, 80, 105, 90, 130, 70, 115, 60, 130, 200]];
+
+
+
   export default {
     components: {
       LineChart,
@@ -243,6 +246,20 @@
       }
     },
     methods: {
+      turnOn: function (event) {
+            axios.post('http://192.168.1.48:3000/leds/21/1', {
+              headers: {
+                'Access-Control-Allow-Origin': '*',
+              }
+            })
+            .then(() => {
+              console.log("włączono światło")   
+            })
+            .catch((error) => {
+              console.log(error);
+              
+            });
+      },
       initBigChart(index) {
         let chartData = {
           datasets: [{
@@ -315,18 +332,6 @@
 
         this.Dht11 = x;
         
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-
-      axios.post('http://192.168.1.48:3000/leds/21/1', {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-        }
-      })
-      .then(() => {
-        console.log("włączono światło")   
       })
       .catch((error) => {
         console.log(error);
