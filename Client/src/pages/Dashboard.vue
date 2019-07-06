@@ -302,7 +302,7 @@
         }
         console.log(x);
         this.tabelaTemp = x;
-        //this.Temperature = tabelaTemp;
+        this.Temperature = this.tabelaTemp;
 
         })
         .catch((error) => {
