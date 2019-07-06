@@ -32,10 +32,7 @@
           <!-- Szeroki Wykres -->
           <div class="chart-area">
             <p>{{ /*User.ds18b20[0].temperature*/ Temperature }}</p>
-            <p>{{ tabelaTemp }}</p>
             <input v-model="id" placeholder="edit me">
-            <p>Message is: {{ id }}</p>
-
             <button v-on:click="turnOn">Turn the lights on!</button>
 
             <button v-on:click="turnOff">Turn the lights off!</button>
@@ -62,13 +59,15 @@
             <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary "></i> 763,215</h3>
           </template>
           <div class="chart-area">
-            <line-chart style="height: 100%"
+           <!-- <line-chart style="height: 100%"
                         chart-id="purple-line-chart"
                         :chart-data="purpleLineChart.chartData"
                         :gradient-colors="purpleLineChart.gradientColors"
                         :gradient-stops="purpleLineChart.gradientStops"
                         :extra-options="purpleLineChart.extraOptions">
-            </line-chart>
+            </line-chart> -->
+            <line-chart :chart-data="datacollection"></line-chart>
+            <button @click="fillData()">Randomize</button>
           </div>
         </card>
       </div>
@@ -139,6 +138,9 @@
   </div>
 </template>
 <script>
+ 
+  import LineChart2 from './LineChart.js'
+
   import LineChart from '@/components/Charts/LineChart';
   import BarChart from '@/components/Charts/BarChart';
   import * as chartConfigs from '@/components/Charts/config';
@@ -158,13 +160,15 @@
       LineChart,
       BarChart,
       TaskList,
-      UserTable
+      UserTable,
+      LineChart2
     },
  
     data() {
       var id = 21;
       var tabelaTemp = [];
       return {
+        datacollection: null,
         Temperature: {},
         Dht11: {},
 
@@ -257,6 +261,26 @@
       }
     },
     methods: {
+
+            fillData () {
+        this.datacollection = {
+          labels: [this.getRandomInt(), this.getRandomInt()],
+          datasets: [
+            {
+              label: 'Data One',
+              backgroundColor: '#f87979',
+              data: [this.getRandomInt(), this.getRandomInt()]
+            }, {
+              label: 'Data One',
+              backgroundColor: '#f87979',
+              data: [this.getRandomInt(), this.getRandomInt()]
+            }
+          ]
+        }
+      },
+      getRandomInt () {
+        return Math.floor(Math.random() * (50 - 5 + 1)) + 5
+      }
       //Włączenie wybranej diody led
       turnOn: function (event) {
             axios.post('http://192.168.1.48:3000/leds/' + this.id + '/1', {
@@ -303,9 +327,6 @@
         console.log(x);
         this.tabelaTemp = x;
         this.Temperature = this.tabelaTemp;
-
-        return this.tabelaTemp;
-
         })
         .catch((error) => {
           console.log(error);
@@ -336,6 +357,8 @@
       }
     },
        mounted() {
+         this.fillData()
+      
       axios.get('http://192.168.1.48:3000/', {
         headers: {
           'Access-Control-Allow-Origin': '*',
