@@ -18,7 +18,7 @@
       console.log(table);
       return {
         datacollection: null,
-        table = [12, 14, 17, 21, 34]
+        table: [12, 14, 17, 21, 34]
       }
     },
     mounted () {
