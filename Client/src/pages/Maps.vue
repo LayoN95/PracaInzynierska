@@ -15,6 +15,7 @@
     },
     data () {
       var table = [12, 14, 17, 21, 34];
+      consloe.log(table);
       return {
         datacollection: null
       }
@@ -34,6 +35,7 @@
             }
           ]
         }
+        console.log("filldata" + table);
       },
      
     }
