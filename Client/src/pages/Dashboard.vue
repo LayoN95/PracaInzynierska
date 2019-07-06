@@ -31,7 +31,7 @@
           </template>
           <!-- Szeroki Wykres -->
           <div class="chart-area">
-            <!--<p>{{ /*User.ds18b20[0].temperature*/ Temperature + " " + Dht11 }}</p> -->
+            <p>{{ /*User.ds18b20[0].temperature*/ Temperature + " " + Dht11 }}</p>
 
             <input v-model="id" placeholder="edit me">
             <p>Message is: {{ id }}</p>
@@ -296,11 +296,12 @@
         })
         .then((response) => {
         var obj = response.data;
-
+        var x = [];
         for (var i in obj.ds18b20) {
-          tabelaTemp[i] = obj.ds18b20[i].temperature
+          x[i] = obj.ds18b20[i].temperature
         }
-        console.log(tabelaTemp);
+        console.log(x);
+        this.tabelaTemp = x;
         this.Temperature = tabelaTemp;
 
         })
