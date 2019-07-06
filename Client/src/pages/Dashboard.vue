@@ -280,7 +280,7 @@
       },
       getRandomInt () {
         return Math.floor(Math.random() * (50 - 5 + 1)) + 5
-      }
+      },
       //Włączenie wybranej diody led
       turnOn: function (event) {
             axios.post('http://192.168.1.48:3000/leds/' + this.id + '/1', {
