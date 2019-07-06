@@ -27,7 +27,7 @@
     },
     methods: {
       fillData () {
-        getData(),
+        this.getData(),
         this.datacollection = {
           labels: ["1","2","3","4","5"],
           datasets: [
