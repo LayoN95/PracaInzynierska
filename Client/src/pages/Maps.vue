@@ -30,7 +30,7 @@
       fillData () {
         this.getData(),
         this.datacollection = {
-          labels: ["1","2","3","4","5","6"],
+          labels: this.dateTable,
           datasets: [
             {
               label: 'Data One',
@@ -50,7 +50,7 @@
         .then((response) => {
         var obj = response.data;
         var x = [];
-        var y = []
+        var y = [];
         for (var i in obj.ds18b20) {
           x[i] = obj.ds18b20[i].temperature;
           y[i] = obj.ds18b20[i].date;
