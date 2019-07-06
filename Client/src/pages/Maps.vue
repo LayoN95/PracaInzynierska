@@ -8,13 +8,13 @@
 </template>
 <script>
   import LineChart from './LineChart.js'
-
+  var table = [12,14,17,21,34];
   export default {
     components: {
       LineChart
     },
     data () {
-      var table = [12,14,17,21,34];
+      
       return {
         datacollection: null
       }
