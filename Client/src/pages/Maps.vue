@@ -2,7 +2,7 @@
     <card type="plain" title="Google Maps">
   <div class="small">
     <line-chart :chart-data="datacollection"></line-chart>
-    <button @click="getData()">Randomize</button>
+    <button @click="fillData()">Randomize</button>
   </div>
     </card>
 </template>
