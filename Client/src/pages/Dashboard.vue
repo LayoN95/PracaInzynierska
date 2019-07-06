@@ -301,7 +301,7 @@
           x[i] = obj.ds18b20[i].temperature
         }
         console.log(x);
-        tabelaTemp = x;
+        this.tabelaTemp = x;
         //this.Temperature = tabelaTemp;
 
         })
