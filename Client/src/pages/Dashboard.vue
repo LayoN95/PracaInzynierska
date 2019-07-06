@@ -254,28 +254,30 @@
       }
     },
     methods: {
+      //Włączenie wybranej diody led
       turnOn: function (event) {
             axios.post('http://192.168.1.48:3000/leds/' + this.id + '/1', {
               headers: {
                 'Access-Control-Allow-Origin': '*',
               }
             })
-            .then(() => {
-              console.log("włączono światło")   
+            .then((response) => {
+              console.log(response)   
             })
             .catch((error) => {
               console.log(error);
               
             });
       },
+      //Wyłączenie wybranej diody led
       turnOff: function (event) {
             axios.post('http://192.168.1.48:3000/leds/' + this.id + '/0', {
               headers: {
                 'Access-Control-Allow-Origin': '*',
               }
             })
-            .then(() => {
-              console.log("wyłączono światło")   
+            .then((response) => {
+              console.log(response)   
             })
             .catch((error) => {
               console.log(error);
