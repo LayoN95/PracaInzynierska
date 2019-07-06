@@ -14,7 +14,7 @@
       LineChart
     },
     data () {
-      var data = [12,14,17,21,34];
+      var table = [12,14,17,21,34];
       return {
         datacollection: null
       }
