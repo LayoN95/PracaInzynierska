@@ -30,7 +30,7 @@
             {
               label: 'Data One',
               backgroundColor: '#f87979',
-              data: [12,14,17,21,34]
+              data: this.table
             }
           ]
         }
