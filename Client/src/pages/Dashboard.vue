@@ -32,7 +32,7 @@
           <!-- Szeroki Wykres -->
           <div class="chart-area">
             <p>{{ /*User.ds18b20[0].temperature*/ Temperature }}</p>
-
+            <p>{{ tabelaTemp }}</p>
             <input v-model="id" placeholder="edit me">
             <p>Message is: {{ id }}</p>
 
@@ -301,8 +301,8 @@
           x[i] = obj.ds18b20[i].temperature
         }
         console.log(x);
-        this.tabelaTemp = x;
-        this.Temperature = tabelaTemp;
+        tabelaTemp = x;
+        //this.Temperature = tabelaTemp;
 
         })
         .catch((error) => {
