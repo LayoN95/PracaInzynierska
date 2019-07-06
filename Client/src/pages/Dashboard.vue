@@ -160,7 +160,7 @@
  
     data() {
       var id = 21;
-      var tabelaTemp = [];
+      var tabelaTemp = [12, 21, 43, 12, 12, 32];
       return {
         Temperature: {},
         Dht11: {},
