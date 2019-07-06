@@ -33,8 +33,8 @@
           <div class="chart-area">
             <!--<p>{{ /*User.ds18b20[0].temperature*/ Temperature + " " + Dht11 }}</p> -->
 
-            <input v-model="message" placeholder="podaj id">
-            <p>Wybrano id: {{ message }}</p>
+            <input v-model="id" placeholder="edit me">
+            <p>Message is: {{ id }}</p>
 
             <button v-on:click="turnOn">Turn the lights on!</button>
 
@@ -160,6 +160,7 @@
     },
  
     data() {
+      var id = 21;
       return {
         Temperature: {},
         Dht11: {},
@@ -254,7 +255,7 @@
     },
     methods: {
       turnOn: function (event) {
-            axios.post('http://192.168.1.48:3000/leds/'+ id +'/1', {
+            axios.post('http://192.168.1.48:3000/leds/'+ this.id +'/1', {
               headers: {
                 'Access-Control-Allow-Origin': '*',
               }
@@ -268,7 +269,7 @@
             });
       },
       turnOff: function (event) {
-            axios.post('http://192.168.1.48:3000/leds/21/0' + id + '/0', {
+            axios.post('http://192.168.1.48:3000/leds/21/0' + this.id + '/0', {
               headers: {
                 'Access-Control-Allow-Origin': '*',
               }
