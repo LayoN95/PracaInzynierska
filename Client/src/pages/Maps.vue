@@ -14,11 +14,11 @@
       LineChart
     },
     data () {
-      var table = [];
+      var tamps = [21, 24, 26, 20, 18];
       console.log(table);
       return {
         datacollection: null,
-        table: [12, 14, 17, 21, 34]
+        table: temps
       }
     },
     mounted () {
