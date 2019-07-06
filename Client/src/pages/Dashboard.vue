@@ -182,7 +182,7 @@
           chartData: {
             labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
             datasets: [{
-              label: "Data",
+              label: "Temp: ",
               fill: true,
               borderColor: config.colors.primary,
               borderWidth: 2,
@@ -195,7 +195,7 @@
               pointHoverRadius: 4,
               pointHoverBorderWidth: 15,
               pointRadius: 4,
-              data: tabelaTemp,
+              data: this.tabelaTemp,
             }]
           },
           gradientColors: config.colors.primaryGradient,
