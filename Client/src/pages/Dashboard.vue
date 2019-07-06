@@ -40,6 +40,8 @@
 
             <button v-on:click="turnOff">Turn the lights off!</button>
 
+            <button v-on:click="getData">Get data from mongoDB</button>
+
             <line-chart style="height: 100%"
                         ref="bigChart"
                         chart-id="big-line-chart"
@@ -284,6 +286,27 @@
               console.log(error);
               
             });
+      },
+
+      getData: function (event) {
+        axios.get('http://192.168.1.48:3000/', {
+              headers: {
+                'Access-Control-Allow-Origin': '*',
+              }
+        })
+        .then((response) => {
+        var obj = response.data;
+
+        for (var i in obj.ds18b20) {
+          tabelaTemp[i] = obj.ds18b20[i].temperature
+        }
+        console.log(tabelaTemp);
+        this.Temperature = tabelaTemp;
+
+        })
+        .catch((error) => {
+          console.log(error);
+        });
       },
       initBigChart(index) {
         let chartData = {
