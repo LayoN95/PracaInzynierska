@@ -14,6 +14,7 @@
       LineChart
     },
     data () {
+      var data = [12,14,17,21,34];
       return {
         datacollection: null
       }
@@ -24,19 +25,17 @@
     methods: {
       fillData () {
         this.datacollection = {
-          labels: [this.getRandomInt(), this.getRandomInt()],
+          labels: ["1","2","3","4","5"],
           datasets: [
             {
               label: 'Data One',
               backgroundColor: '#f87979',
-              data: [12,13,12,15,12]
+              data: table
             }
           ]
         }
       },
-      getRandomInt () {
-        return Math.floor(Math.random() * (50 - 5 + 1)) + 5
-      }
+     
     }
   };
 </script>
