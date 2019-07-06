@@ -195,7 +195,7 @@
               pointHoverRadius: 4,
               pointHoverBorderWidth: 15,
               pointRadius: 4,
-              data: tabelaTemp,
+              data: getData(),
             }]
           },
           gradientColors: config.colors.primaryGradient,
@@ -303,6 +303,8 @@
         console.log(x);
         this.tabelaTemp = x;
         this.Temperature = this.tabelaTemp;
+
+        return this.tabelaTemp
 
         })
         .catch((error) => {
