@@ -161,6 +161,7 @@
  
     data() {
       var id = 21;
+      var tabelaTemp = [12, 15, 17, 10, 12, 17];
       return {
         Temperature: {},
         Dht11: {},
@@ -192,7 +193,7 @@
               pointHoverRadius: 4,
               pointHoverBorderWidth: 15,
               pointRadius: 4,
-              data: [80, 100, 70, 80, 120, 80],
+              data: tabelaTemp,
             }]
           },
           gradientColors: config.colors.primaryGradient,
