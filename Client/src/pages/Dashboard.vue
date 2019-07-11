@@ -22,11 +22,12 @@
             <button v-on:click="turnOff">Turn the lights off!</button>
 
             <button v-on:click="getData">Get data from mongoDB</button>
+            <button @click="fillData()">Randomize</button>
 
             <line-chart style="height: 100%" :chart-data="datacollection">
               <!--Big chart -->
             </line-chart>
-             <button @click="fillData()">Randomize</button>
+             
           </div>
         </card>
       </div>
@@ -211,7 +212,7 @@
         this.dateTable = y;
         console.log(table);
         console.log(dateTable);
-        //this.Temperature = this.tabelaTemp;
+        this.Temperature = this.table;
         })
         .catch((error) => {
           console.log(error);
