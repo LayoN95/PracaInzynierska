@@ -23,7 +23,10 @@
             <button v-on:click="getData">Get data from mongoDB</button>
             <button @click="fillData()">Randomize</button>
 
-            <line-chart style="height: 50%" :chart-data="datacollection">
+            <line-chart style="height: 50%" 
+              ref="bigChart"
+              chart-id="big-line-chart"
+              :chart-data="datacollection">
               <!--Big chart -->
             </line-chart>
              
@@ -140,9 +143,6 @@
       isRTL() {
         return this.$rtl.isRTL;
       },
-      bigLineChartCategories() {
-        return this.$t('dashboard.chartCategories');
-      }
     },
     methods: {
       //wypełnienie wykresu
