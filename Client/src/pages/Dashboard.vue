@@ -145,6 +145,7 @@
       },
     },
     methods: {
+      
       //wypełnienie wykresu
       fillData() {
         this.getData(),
@@ -209,8 +210,8 @@
 
         this.table = x;
         this.dateTable = y;
-        console.log(table);
-        console.log(dateTable);
+        console.log(this.table);
+        console.log(this.dateTable);
         })
         .catch((error) => {
           console.log(error);
