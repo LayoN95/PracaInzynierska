@@ -157,11 +157,15 @@
               data: this.table
             },
           ],
-          options: {
-            legend: {
-              display: false,
-            }
-          }
+              options: {
+        scales: {
+            xAxes: [{
+                ticks: {
+                    display: false //this will remove only the label
+                }
+            }]
+        }
+    }
         }
       },
 
