@@ -155,8 +155,13 @@
               label: 'Data One',
               backgroundColor: '#f87979',
               data: this.table
+            },
+          ],
+          options: {
+            legend: {
+              display: false,
             }
-          ]
+          }
         }
       },
 
