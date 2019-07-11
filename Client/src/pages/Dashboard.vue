@@ -149,7 +149,6 @@
       fillData() {
         this.getData(),
         this.datacollection = {
-          labels: this.dateTable,
           datasets: [
             {
               label: 'Data One',
