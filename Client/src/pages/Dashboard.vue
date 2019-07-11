@@ -24,7 +24,7 @@
             <button v-on:click="getData">Get data from mongoDB</button>
             <button @click="fillData()">Randomize</button>
 
-            <line-chart style="height: 100%" :chart-data="datacollection">
+            <line-chart style="height: 50% width: 50%" :chart-data="datacollection">
               <!--Big chart -->
             </line-chart>
              
