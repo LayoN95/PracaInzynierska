@@ -150,22 +150,14 @@
         this.getData(),
         this.datacollection = {
           labels: this.dateTable,
+          extraOptions: chartConfigs.purpleChartOptions,
           datasets: [
             {
               label: 'Data One',
               backgroundColor: '#f87979',
               data: this.table
             },
-          ],
-              options: {
-        scales: {
-            xAxes: [{
-                ticks: {
-                    display: false //this will remove only the label
-                }
-            }]
-        }
-    }
+          ]
         }
       },
 
