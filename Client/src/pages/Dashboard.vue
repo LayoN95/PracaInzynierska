@@ -15,7 +15,6 @@
           </template>
           <!-- Szeroki Wykres -->
           <div class="chart-area">
-            <p>{{ /*User.ds18b20[0].temperature*/ Temperature }}</p>
             <input v-model="id" placeholder="edit me">
             <button v-on:click="turnOn">Turn the lights on!</button>
 
@@ -127,7 +126,6 @@
     data() {
       var id = 21;
            return {
-        Temperature: {},
         Dht11: {},
         datacollection: null,
         table: [],
@@ -212,7 +210,6 @@
         this.dateTable = y;
         console.log(table);
         console.log(dateTable);
-        this.Temperature = this.table;
         })
         .catch((error) => {
           console.log(error);
