@@ -39,9 +39,10 @@
 
             <button v-on:click="getData">Get data from mongoDB</button>
 
-            <line-chart style="height: 100%">
+            <line-chart style="height: 100%" :chart-data="datacollection">
               <!--Big chart -->
             </line-chart>
+             <button @click="fillData()">Randomize</button>
           </div>
         </card>
       </div>
@@ -129,11 +130,6 @@
   import config from '@/config';
 
   import axios from 'axios';
-   var table = [[12, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100, 200],
-            [80, 120, 105, 110, 95, 105, 90, 100, 80, 95, 70, 120, 200],
-            [60, 80, 65, 130, 80, 105, 90, 130, 70, 115, 60, 130, 200]];
-
-
 
   export default {
     components: {
@@ -145,10 +141,12 @@
  
     data() {
       var id = 21;
-      var tabelaTemp = [12, 21, 43, 12, 12, 32];
-      return {
+           return {
         Temperature: {},
         Dht11: {},
+        datacollection: null,
+        table: [],
+        dateTable: []
  
       }
     },
@@ -164,6 +162,21 @@
       }
     },
     methods: {
+      //wypełnienie wykresu
+      fillData() {
+        this.getData(),
+        this.datacollection = {
+          labels: this.dateTable,
+          datasets: [
+            {
+              label: 'Data One',
+              backgroundColor: '#f87979',
+              data: this.table
+            }
+          ]
+        }
+      },
+
       //Włączenie wybranej diody led
       turnOn: function (event) {
             axios.post('http://192.168.1.48:3000/leds/' + this.id + '/1', {
@@ -204,12 +217,17 @@
         .then((response) => {
         var obj = response.data;
         var x = [];
+        var y = [];
         for (var i in obj.ds18b20) {
-          x[i] = obj.ds18b20[i].temperature
+          x[i] = obj.ds18b20[i].temperature;
+          y[i] = obj.ds18b20[i].date;
         }
-        console.log(x);
-        this.tabelaTemp = x;
-        this.Temperature = this.tabelaTemp;
+
+        this.table = x;
+        this.dateTable = y;
+        console.log(table);
+        console.log(dateTable);
+        //this.Temperature = this.tabelaTemp;
         })
         .catch((error) => {
           console.log(error);
@@ -218,6 +236,9 @@
 
     },
        mounted() {
+         this.fillData(),
+         this.getData(),
+
       axios.get('http://192.168.1.48:3000/', {
         headers: {
           'Access-Control-Allow-Origin': '*',
