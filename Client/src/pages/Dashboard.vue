@@ -260,8 +260,8 @@
     methods: {
 
       fillData: function (event) {
-        //this.getData(),
-        this.bigLineChart.allData = table2;
+        this.getData(),
+        //this.bigLineChart.allData = table2;
         this.initBigChart(0);
         console.log(this.bigLineChart.allData);
         //this.bigLineChart.chartData = chartData;
@@ -312,6 +312,8 @@
         }
         console.log(x);
         this.tabelaTemp = x;
+        //bigchart
+        this.bigLineChart.allData = x;
         this.Temperature = this.tabelaTemp;
         })
         .catch((error) => {
