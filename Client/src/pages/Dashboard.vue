@@ -262,6 +262,7 @@
       fillData: function (event) {
         //this.getData(),
         this.bigLineChart.allData = table2;
+        this.initBigChart();
         console.log(this.bigLineChart.allData);
         
       },
