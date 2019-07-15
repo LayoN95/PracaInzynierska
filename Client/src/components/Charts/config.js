@@ -4,6 +4,20 @@ export const basicOptions = {
   legend: {
     display: false
   },
+  scales: {
+    yAxes: [{
+      barPercentage: 1.6,
+      gridLines: {
+        drawBorder: false,
+        color: 'rgba(29,140,248,0.0)',
+        zeroLineColor: "transparent",
+      },
+      ticks: {
+        suggestedMin: 0,
+        suggestedMax: 30,
+       }
+    }]
+  },
   responsive: true,
 };
 export let blueChartOptions = {
