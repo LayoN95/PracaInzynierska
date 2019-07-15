@@ -307,10 +307,13 @@
         .then((response) => {
         var obj = response.data;
         var x = [];
+        var y = [];
         for (var i in obj.ds18b20) {
-          x[i] = obj.ds18b20[i].temperature
+          x[i] = obj.ds18b20[i].temperature;
+          y[i] = (obj.ds18b20[i].date).split("T.");
         }
         console.log(x);
+        console.log("Split: " + y);
         this.tabelaTemp = x;
         this.bigLineChart.allData = x;
         console.log(this.table2);
