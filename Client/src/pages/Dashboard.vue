@@ -312,7 +312,7 @@
         }
         console.log(x);
         this.tabelaTemp = x;
-        this.table2 = x;
+        this.bigLineChart.allData = x;
         console.log(this.table2);
         this.Temperature = this.tabelaTemp;
         })
