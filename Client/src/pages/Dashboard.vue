@@ -261,7 +261,7 @@
 
       fillData: function (event) {
         this.getData(),
-        this.bigLineChart.allData = 
+        this.bigLineChart.allData = table2;
         
       },
       //Włączenie wybranej diody led
