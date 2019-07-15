@@ -39,6 +39,8 @@
 
             <button v-on:click="getData">Get data from mongoDB</button>
 
+            <button v-on:click="fillData">fill Data</button>
+
             <line-chart style="height: 100%"
                         ref="bigChart"
                         chart-id="big-line-chart"
@@ -165,15 +167,7 @@
         Temperature: {},
         Dht11: {},
 
-        bigLineChart: {
-          allData: table,
-          activeIndex: 0,
-          chartData: null,
-          extraOptions: chartConfigs.purpleChartOptions,
-          gradientColors: config.colors.primaryGradient,
-          gradientStops: [1, 0.4, 0],
-          categories: []
-        },
+        bigLineChart: null,
         purpleLineChart: {
           extraOptions: chartConfigs.purpleChartOptions,
           chartData: {
@@ -254,6 +248,20 @@
       }
     },
     methods: {
+
+      fillData: function (event) {
+        this.getData(),
+        this.bigLineChart = {
+          allData: table,
+          activeIndex: 0,
+          chartData: null,
+          extraOptions: chartConfigs.purpleChartOptions,
+          gradientColors: config.colors.primaryGradient,
+          gradientStops: [1, 0.4, 0],
+          categories: []
+        }
+        
+      },
       //Włączenie wybranej diody led
       turnOn: function (event) {
             axios.post('http://192.168.1.48:3000/leds/' + this.id + '/1', {
