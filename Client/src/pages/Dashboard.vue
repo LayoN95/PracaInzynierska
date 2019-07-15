@@ -42,7 +42,12 @@
             <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary "></i> 763,215</h3>
           </template>
           <div class="chart-area">
-            <line-chart style="height: 100%" :chart-data="datacollection">
+            <line-chart style="height: 100%"
+                        chart-id="purple-line-chart"
+                        :chart-data="purpleLineChart.chartData"
+                        :gradient-colors="purpleLineChart.gradientColors"
+                        :gradient-stops="purpleLineChart.gradientStops"
+                        :extra-options="purpleLineChart.extraOptions">
               <!-- Purple line chart -->
             </line-chart> 
           </div>
@@ -211,7 +216,7 @@
         this.table = x;
         this.dateTable = y;
         console.log(this.table);
-        console.log(this.dateTable);
+        console.log(this.LdateTable);
         })
         .catch((error) => {
           console.log(error);
