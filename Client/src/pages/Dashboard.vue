@@ -262,7 +262,7 @@
       fillData: function (event) {
         //this.getData(),
         //this.bigLineChart.allData = table2;
-        this.initBigChart(0);
+        this.initBigChart();
         console.log(this.bigLineChart.allData);
         //this.bigLineChart.chartData = chartData;
         
@@ -320,7 +320,7 @@
           console.log(error);
         });
       },
-      initBigChart(index) {
+      initBigChart() {
         let chartData = {
           datasets: [{
             fill: true,
@@ -335,7 +335,7 @@
             pointHoverRadius: 4,
             pointHoverBorderWidth: 15,
             pointRadius: 4,
-            data: this.bigLineChart.allData[index]
+            data: this.bigLineChart.allData
           }],
           labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC', '+1'],
         }
