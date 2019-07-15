@@ -150,7 +150,9 @@
             [80, 120, 105, 110, 95, 105, 90, 100, 80, 95, 70, 120, 200],
             [60, 80, 65, 130, 80, 105, 90, 130, 70, 115, 60, 130, 200]];
 
-
+   var table2 = [[12, 70, 90, 70, 85, 60, 200, 60, 90, 80, 11, 10, 100],
+            [80, 120, 105, 110, 95, 105, 90, 100, 80, 95, 70, 120, 100],
+            [60, 80, 65, 130, 80, 105, 90, 130, 70, 115, 60, 130, 100]];
 
   export default {
     components: {
@@ -167,7 +169,15 @@
         Temperature: {},
         Dht11: {},
 
-        bigLineChart: null,
+        bigLineChart: {
+          allData: table,
+          activeIndex: 0,
+          chartData: null,
+          extraOptions: chartConfigs.purpleChartOptions,
+          gradientColors: config.colors.primaryGradient,
+          gradientStops: [1, 0.4, 0],
+          categories: []
+        },
         purpleLineChart: {
           extraOptions: chartConfigs.purpleChartOptions,
           chartData: {
@@ -251,15 +261,7 @@
 
       fillData: function (event) {
         this.getData(),
-        this.bigLineChart = {
-          allData: table,
-          activeIndex: 0,
-          chartData: null,
-          extraOptions: chartConfigs.purpleChartOptions,
-          gradientColors: config.colors.primaryGradient,
-          gradientStops: [1, 0.4, 0],
-          categories: []
-        }
+        this.bigLineChart.allData = 
         
       },
       //Włączenie wybranej diody led
