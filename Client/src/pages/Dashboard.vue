@@ -358,7 +358,7 @@
           //x[i] = integer;
         }
 
-        this.dhtChartTemp = y;
+        //this.dhtChartTemp = y;
         console.log(this.purpleLineChart.chartData.datasets.data);
         //this.purpleLineChart.chartData.datasets.data = y;
         console.log(x);
