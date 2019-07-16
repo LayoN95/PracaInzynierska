@@ -324,8 +324,7 @@
         console.log(y);
         this.tabelaTemp = x;
         this.bigLineChart.allData = x;
-        this.bigLineChart.labels = y;
-        console.log(this.table2);
+        this.chartLabels = y;
         this.Temperature = this.tabelaTemp;
         })
         .catch((error) => {
@@ -349,7 +348,7 @@
             pointRadius: 4,
             data: this.bigLineChart.allData
           }],
-          labels: chartLabels,
+          labels: this.chartLabels,
         }
         this.$refs.bigChart.updateGradients(chartData);
         this.bigLineChart.chartData = chartData;
