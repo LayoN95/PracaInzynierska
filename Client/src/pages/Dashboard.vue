@@ -157,7 +157,7 @@
             [60, 80, 65, 130, 80, 105, 90, 130, 70, 115, 60, 130, 100]];
 
     var chartLabels = [];
-    var dhtChartTemp = [];
+    var dhtChartTemp = [1, 2, 3, 4, 5, 6];
     var dhtChartHumid = [];
 
   export default {
@@ -202,7 +202,7 @@
               pointHoverRadius: 4,
               pointHoverBorderWidth: 15,
               pointRadius: 4,
-              data: dhtChartTemp,
+              data: this.dhtChartTemp,
             }]
           },
           gradientColors: config.colors.primaryGradient,
