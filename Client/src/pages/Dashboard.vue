@@ -29,7 +29,10 @@
               </div>
             </div>
           </template>
-          <input v-model="id" placeholder="edit me">
+          <!-- Szeroki Wykres -->
+          <div class="chart-area">
+            <!--<p>{{ /*User.ds18b20[0].temperature*/ Temperature }}</p> -->
+            <input v-model="id" placeholder="edit me">
             <button v-on:click="turnOn">Turn the lights on!</button>
 
             <button v-on:click="turnOff">Turn the lights off!</button>
@@ -38,10 +41,6 @@
 
             <button v-on:click="fillData">fill Data</button>
 
-          <!-- Szeroki Wykres -->
-          <div class="chart-area">
-            <!--<p>{{ /*User.ds18b20[0].temperature*/ Temperature }}</p> -->
-            
             <line-chart style="height: 100%"
                         ref="bigChart"
                         chart-id="big-line-chart"
