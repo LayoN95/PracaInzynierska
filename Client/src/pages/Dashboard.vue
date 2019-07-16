@@ -37,7 +37,8 @@
 
             <button v-on:click="turnOff">Turn the lights off!</button>
 
-            <button v-on:click="getData">Get data from mongoDB</button>
+            <button v-on:click="getDS18B20">Get DS18B20 data from mongoDB</button>
+            <button v-on:click="getDHT11">Get DHT11 data from mongoDB</button>
 
             <button v-on:click="fillData">fill Data</button>
 
@@ -263,7 +264,7 @@
     methods: {
 
       fillData: function (event) {
-        //this.getData(),
+        //this.getDS18B20(),
         //this.bigLineChart.allData = table2;
         this.initBigChart();
         console.log(this.bigLineChart.allData);
@@ -301,7 +302,7 @@
             });
       },
 
-      getData: function (event) {
+      getDS18B20: function (event) {
         axios.get('http://192.168.1.48:3000/', {
               headers: {
                 'Access-Control-Allow-Origin': '*',
@@ -332,6 +333,36 @@
           console.log(error);
         });
       },
+
+      getDHT11: function(event) {
+
+      axios.get('http://192.168.1.48:3000/dht11', {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        }
+      })
+      .then((response) => {
+     
+        var obj = response.data;
+        var x = [];
+        var y = [];
+
+        for (var i in obj.records) {
+          x[i] = obj.records[i].humidity;
+          y[i] = obj.records[i].temperature;
+
+          //Konwersja z łańcucha znaków do liczb
+          //var integer = parseInt(obj.ds18b20[i].temperature, 10);
+          //x[i] = integer;
+        }
+        console.log(x);
+        console.log(y);       
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+      },
+
       initBigChart() {
         let chartData = {
           datasets: [{
@@ -357,57 +388,8 @@
       }
     },
        mounted() {
-      axios.get('http://192.168.1.48:3000/', {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-        }
-      })
-      .then((response) => {
-     
-        var obj = response.data;
-        var x = [];
 
-        for (var i in obj.ds18b20) {
-          x[i] = obj.ds18b20[i].temperature;
 
-          //Konwersja z łańcucha znaków do liczb
-          //var integer = parseInt(obj.ds18b20[i].temperature, 10);
-          //x[i] = integer;
-        }
-        console.log(x);
-
-        this.Temperature = x;
-        
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-
-      axios.get('http://192.168.1.48:3000/dht11', {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-        }
-      })
-      .then((response) => {
-     
-        var obj = response.data;
-        var x = [];
-
-        for (var i in obj.records) {
-          x[i] = obj.records[i].humidity;
-
-          //Konwersja z łańcucha znaków do liczb
-          //var integer = parseInt(obj.ds18b20[i].temperature, 10);
-          //x[i] = integer;
-        }
-        console.log(x);
-
-        this.Dht11 = x;
-        
-      })
-      .catch((error) => {
-        console.log(error);
-      });
 
       this.i18n = this.$i18n;
       if (this.enableRTL) {
