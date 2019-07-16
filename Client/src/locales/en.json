@@ -2,9 +2,10 @@
   "dashboard": {
     "completedTasks": "Completed Tasks",
     "dailySales": "Daily Sales",
-    "performance": "Performance",
+    "performance": "Podgląd",
+    "dht11": "DHT11",
     "simpleTable": "Simple Table",
-    "totalShipments": "Total Shipments",
+    "totalShipments": "Smart Home",
     "chartCategories": [
       "Accounts",
       "Purchases",

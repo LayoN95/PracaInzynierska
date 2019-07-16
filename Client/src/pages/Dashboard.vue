@@ -58,17 +58,17 @@
       <div class="col-lg-4" :class="{'text-right': isRTL}">
         <card type="chart">
           <template slot="header">
-            <h5 class="card-category">{{$t('dashboard.totalShipments')}}</h5>
+            <h5 class="card-category">{{$t('dashboard.dht11')}}</h5>
             <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary "></i> 763,215</h3>
           </template>
           <div class="chart-area">
-           <!-- <line-chart style="height: 100%"
+           <line-chart style="height: 100%"
                         chart-id="purple-line-chart"
                         :chart-data="purpleLineChart.chartData"
                         :gradient-colors="purpleLineChart.gradientColors"
                         :gradient-stops="purpleLineChart.gradientStops"
                         :extra-options="purpleLineChart.extraOptions">
-            </line-chart> -->
+            </line-chart> 
           </div>
         </card>
       </div>
