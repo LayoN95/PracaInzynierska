@@ -154,6 +154,8 @@
             [80, 120, 105, 110, 95, 105, 90, 100, 80, 95, 70, 120, 100],
             [60, 80, 65, 130, 80, 105, 90, 130, 70, 115, 60, 130, 100]];
 
+    var chartLabels = [];
+
   export default {
     components: {
       LineChart,
@@ -322,6 +324,7 @@
         console.log("Split: " + y[0]);
         this.tabelaTemp = x;
         this.bigLineChart.allData = x;
+        this.bigLineChart.chartLabels = y;
         console.log(this.table2);
         this.Temperature = this.tabelaTemp;
         })
@@ -346,7 +349,7 @@
             pointRadius: 4,
             data: this.bigLineChart.allData
           }],
-          labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC', '+1'],
+          labels: chartLabels,
         }
         this.$refs.bigChart.updateGradients(chartData);
         this.bigLineChart.chartData = chartData;
