@@ -324,7 +324,7 @@
         console.log("Split: " + y[0]);
         this.tabelaTemp = x;
         this.bigLineChart.allData = x;
-        this.bigLineChart.chartLabels = y;
+        this.bigLineChart.labels = y;
         console.log(this.table2);
         this.Temperature = this.tabelaTemp;
         })
@@ -422,6 +422,7 @@
         this.$rtl.disableRTL();
       }
     }
+
   };
 </script>
 <style>
