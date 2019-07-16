@@ -305,12 +305,14 @@
               }
         })
         .then((response) => {
+        var dateHour;
         var obj = response.data;
         var x = [];
         var y = [];
         for (var i in obj.ds18b20) {
           x[i] = obj.ds18b20[i].temperature;
-          y[i] = (obj.ds18b20[i].date).split(/[.,\/ -]/);
+          dateHour = new Date(obj.ds18b20[i].date);
+          y[i] = dateHour.getHours();
         }
         console.log(x);
         console.log("Split: " + y[0]);
