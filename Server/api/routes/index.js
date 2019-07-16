@@ -52,7 +52,7 @@ router.get('/', function(req, res, next) {
 
 router.get('/dht11', function(req, res, next) {
   DHT11
-  .find()
+  .find().sort({_id: -1 }).limit(48)
   .select('_id temperature humidity date')
   .exec()
   .then(docs => {
