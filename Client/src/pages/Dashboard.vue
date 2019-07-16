@@ -270,6 +270,7 @@
         //this.bigLineChart.allData = table2;
         this.initBigChart();
         console.log(this.bigLineChart.allData);
+        console.log(this.purpleLineChart.chartData.datasets.data)
         //this.bigLineChart.chartData = chartData;
         
       },
@@ -359,7 +360,7 @@
         }
 
         //this.dhtChartTemp = y;
-        console.log(this.purpleLineChart.chartData.datasets.data[1]);
+        console.log(this.purpleLineChart.chartData.datasets.data);
         //this.purpleLineChart.chartData.datasets.data = y;
         console.log(x);
         console.log(y);       
