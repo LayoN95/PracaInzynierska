@@ -359,7 +359,7 @@
         }
 
         this.dhtChartTemp = y;
-        console.log(this.purpleChartOptions.chartData.labels);
+        console.log(this.purpleLineChart.chartData.labels);
         //this.purpleLineChart.chartData.datasets.data = y;
         console.log(x);
         console.log(y);       
