@@ -29,10 +29,7 @@
               </div>
             </div>
           </template>
-          <!-- Szeroki Wykres -->
-          <div class="chart-area">
-            <!--<p>{{ /*User.ds18b20[0].temperature*/ Temperature }}</p> -->
-            <input v-model="id" placeholder="edit me">
+          <input v-model="id" placeholder="edit me">
             <button v-on:click="turnOn">Turn the lights on!</button>
 
             <button v-on:click="turnOff">Turn the lights off!</button>
@@ -41,6 +38,10 @@
 
             <button v-on:click="fillData">fill Data</button>
 
+          <!-- Szeroki Wykres -->
+          <div class="chart-area">
+            <!--<p>{{ /*User.ds18b20[0].temperature*/ Temperature }}</p> -->
+            
             <line-chart style="height: 100%"
                         ref="bigChart"
                         chart-id="big-line-chart"
@@ -146,15 +147,16 @@
   import config from '@/config';
 
   import axios from 'axios';
-   var table = [[12, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100, 200],
+
+   /*var table = [[12, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100, 200],
             [80, 120, 105, 110, 95, 105, 90, 100, 80, 95, 70, 120, 200],
             [60, 80, 65, 130, 80, 105, 90, 130, 70, 115, 60, 130, 200]];
 
    var table2 = [[12, 70, 90, 70, 85, 60, 200, 60, 90, 80, 11, 10, 100],
             [80, 120, 105, 110, 95, 105, 90, 100, 80, 95, 70, 120, 100],
-            [60, 80, 65, 130, 80, 105, 90, 130, 70, 115, 60, 130, 100]];
+            [60, 80, 65, 130, 80, 105, 90, 130, 70, 115, 60, 130, 100]];*/
 
-    var chartLabels = [];
+    
 
   export default {
     components: {
@@ -167,6 +169,7 @@
     data() {
       var id = 21;
       var tabelaTemp = [12, 21, 43, 12, 12, 32];
+      var chartLabels = [];
       return {
         Temperature: {},
         Dht11: {},
@@ -308,16 +311,16 @@
         })
         .then((response) => {
         var hours, minutes, seconds;
-        var dateHour;
+        var dateHMS;
         var obj = response.data;
         var x = [];
         var y = [];
         for (var i in obj.ds18b20) {
           x[i] = obj.ds18b20[i].temperature;
           dateHour = new Date(obj.ds18b20[i].date);
-          hours = dateHour.getHours();
-          minutes = dateHour.getMinutes();
-          seconds = dateHour.getSeconds();
+          hours = dateHMS.getHours();
+          minutes = dateHMS.getMinutes();
+          seconds = dateHMS.getSeconds();
           y[i] = hours + ":" + minutes + ":" + seconds;
         }
         console.log(x);
