@@ -157,6 +157,8 @@
             [60, 80, 65, 130, 80, 105, 90, 130, 70, 115, 60, 130, 100]];
 
     var chartLabels = [];
+    var dhtChartTemp = [];
+    var dhtChartHumid = [];
 
   export default {
     components: {
@@ -200,7 +202,7 @@
               pointHoverRadius: 4,
               pointHoverBorderWidth: 15,
               pointRadius: 4,
-              data: tabelaTemp,
+              data: dhtChartTemp,
             }]
           },
           gradientColors: config.colors.primaryGradient,
@@ -355,6 +357,8 @@
           //var integer = parseInt(obj.ds18b20[i].temperature, 10);
           //x[i] = integer;
         }
+
+        this.dhtChartTemp = y;
         console.log(x);
         console.log(y);       
       })
