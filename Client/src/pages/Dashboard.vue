@@ -315,7 +315,7 @@
         var y = [];
         for (var i in obj.ds18b20) {
           x[i] = obj.ds18b20[i].temperature;
-          dateHour = new Date(obj.ds18b20[i].date);
+          dateHMS = new Date(obj.ds18b20[i].date);
           hours = dateHMS.getHours();
           minutes = dateHMS.getMinutes();
           seconds = dateHMS.getSeconds();
