@@ -321,7 +321,7 @@
           y[i] = hours + ":" + minutes + ":" + seconds;
         }
         console.log(x);
-        console.log("Split: " + y[0]);
+        console.log(y);
         this.tabelaTemp = x;
         this.bigLineChart.allData = x;
         this.bigLineChart.labels = y;
