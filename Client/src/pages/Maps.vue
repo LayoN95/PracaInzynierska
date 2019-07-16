@@ -7,7 +7,7 @@
     </card>
 </template>
 <script>
-  import LineChart from './LineChart.js';
+  //import LineChart from './LineChart.js';
     import axios from 'axios';
 
   
