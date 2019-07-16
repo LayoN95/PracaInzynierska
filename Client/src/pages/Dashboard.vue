@@ -359,6 +359,7 @@
         }
 
         this.dhtChartTemp = y;
+        this.purpleLineChart.chartData.datasets.data = y;
         console.log(x);
         console.log(y);       
       })
