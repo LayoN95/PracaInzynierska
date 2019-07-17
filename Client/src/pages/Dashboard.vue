@@ -361,6 +361,7 @@
         //this.purpleLineChart.chartData.datasets[0].data = y;
         console.log(this.purpleLineChart.chartData.datasets[0].data);
         this.purpleLineChart.chartData.datasets[0].data[2] = 8;
+        this.purpleLineChart.update();
         
         //console.log(x);
         //console.log(y);       
@@ -394,34 +395,7 @@
         this.bigLineChart.activeIndex = index;
       }
     },
-    initPurpleChart() {
-      let chartData = {
-            labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
-            datasets: [{
-              label: "Temp: ",
-              fill: true,
-              borderColor: config.colors.primary,
-              borderWidth: 2,
-              borderDash: [],
-              borderDashOffset: 0.0,
-              pointBackgroundColor: config.colors.primary,
-              pointBorderColor: 'rgba(255,255,255,0)',
-              pointHoverBackgroundColor: config.colors.primary,
-              pointBorderWidth: 20,
-              pointHoverRadius: 4,
-              pointHoverBorderWidth: 15,
-              pointRadius: 4,
-              data: this.dhtChartTemp,
-            
-          }],
-          labels: this.chartLabels,
-        }
-        this.$refs.purpleChart.updateGradients(chartData);
-        this.purpleLineChart.chartData = chartData;
-
-      },
-
-
+    
        mounted() {
 
 
