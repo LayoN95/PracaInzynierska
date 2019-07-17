@@ -352,24 +352,16 @@
         for (var i in obj.records) {
           x[i] = obj.records[i].humidity;
           y[i] = obj.records[i].temperature;
-
-          //Konwersja z łańcucha znaków do liczb
-          //var integer = parseInt(obj.ds18b20[i].temperature, 10);
-          //x[i] = integer;
         }
 
-        //this.dhtChartTemp = y;
-        
-        //chartData
-        
-        //this.purpleLineChart.chartData.datasets.data = y;
-        this.purpleLineChart.chartData.datasets[0].data = y;
-        console.log("DHTchart: " + this.dhtChartTemp)
+     
+
+        //this.purpleLineChart.chartData.datasets[0].data = y;
         console.log(this.purpleLineChart.chartData.datasets[0].data);
         this.purpleLineChart.chartData.datasets[0].data[2] = 3;
         
-        console.log(x);
-        console.log(y);       
+        //console.log(x);
+        //console.log(y);       
       })
       .catch((error) => {
         console.log(error);
