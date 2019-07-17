@@ -357,7 +357,7 @@
         for (var i in obj.records) {
           x[i] = obj.records[i].humidity;
           y[i] = obj.records[i].temperature;
-          dateHMS = new Date(obj.ds18b20[i].date);
+          dateHMS = new Date(obj.records[i].date);
           hours = dateHMS.getHours();
           minutes = dateHMS.getMinutes();
           seconds = dateHMS.getSeconds();
