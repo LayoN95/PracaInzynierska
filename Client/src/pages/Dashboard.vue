@@ -269,6 +269,7 @@
         //this.getDS18B20(),
         //this.bigLineChart.allData = table2;
         this.initBigChart();
+        this.initPurpleChart();
         console.log(this.bigLineChart.allData);
         //this.bigLineChart.chartData = chartData;
         
@@ -398,6 +399,15 @@
         this.bigLineChart.chartData = chartData;
         this.bigLineChart.activeIndex = index;
       }
+    },
+
+    initPurpleChart() {
+      let chartData = {
+        datasets: [{
+          data: this.purpleLineChart.chartData[0].data,
+        }],
+      }
+      this.purpleLineChart.chartData = chartData;
     },
        mounted() {
 
