@@ -365,7 +365,7 @@
         //this.purpleLineChart.chartData.datasets.data = y;
         this.dhtChartTemp = y;
         console.log("DHTchart: " + this.dhtChartTemp)
-        console.log(this.purpleLineChart.chartData);
+        console.log(this.purpleLineChart.chartData.datasets[0].data);
         
         console.log(x);
         console.log(y);       
