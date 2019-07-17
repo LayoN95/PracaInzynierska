@@ -360,9 +360,14 @@
      
 
         //this.purpleLineChart.chartData.datasets[0].data = y;
-        console.log(this.purpleLineChart.chartData.datasets[0].data);
-        this.purpleLineChart.chartData.datasets[0].data = y;
-        this.purpleLineChart.chartData = this.purpleLineChart.chartData;
+        //console.log(this.purpleLineChart.chartData.datasets[0].data);
+        //this.purpleLineChart.chartData.datasets[0].data = y;
+        let chartData = {
+          datasets: [{
+            data: y,
+          }],
+        }
+        this.purpleLineChart.chartData = chartData;
         
         //console.log(x);
         //console.log(y);       
