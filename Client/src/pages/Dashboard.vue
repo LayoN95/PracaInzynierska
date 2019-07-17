@@ -347,14 +347,21 @@
         }
       })
       .then((response) => {
-     
+        var hours, minutes, seconds;
+        var dateHMS;
         var obj = response.data;
         var x = [];
         var y = [];
+        var z = [];
 
         for (var i in obj.records) {
           x[i] = obj.records[i].humidity;
           y[i] = obj.records[i].temperature;
+          dateHMS = new Date(obj.ds18b20[i].date);
+          hours = dateHMS.getHours();
+          minutes = dateHMS.getMinutes();
+          seconds = dateHMS.getSeconds();
+          z[i] = hours + ":" + minutes + ":" + seconds; 
         }
 
      
@@ -363,7 +370,7 @@
         //console.log(this.purpleLineChart.chartData.datasets[0].data);
         //this.purpleLineChart.chartData.datasets[0].data = y;
         let chartData = {
-            labels: x,
+            labels: z,
             datasets: [{
               label: "Temp: ",
               fill: true,
@@ -418,7 +425,9 @@
     },
     
        mounted() {
-
+         getDS18B20();
+         getDHT11();
+         fillData();
 
 
       this.i18n = this.$i18n;
