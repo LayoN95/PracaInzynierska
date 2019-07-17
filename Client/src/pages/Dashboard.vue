@@ -202,7 +202,7 @@
               pointHoverRadius: 4,
               pointHoverBorderWidth: 15,
               pointRadius: 4,
-              data: dhtChartTemp,
+              data: this.dhtChartTemp,
             }]
           },
           gradientColors: config.colors.primaryGradient,
