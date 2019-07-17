@@ -271,7 +271,6 @@
         //this.bigLineChart.allData = table2;
         this.initBigChart();
      
-        this.$refs.purpleChart.updateGradients(this.purpleChart.chartData);
         
         console.log(this.bigLineChart.allData);
         //this.bigLineChart.chartData = chartData;
@@ -362,7 +361,8 @@
 
         //this.purpleLineChart.chartData.datasets[0].data = y;
         console.log(this.purpleLineChart.chartData.datasets[0].data);
-        this.purpleLineChart.chartData.datasets[0].data[2] = 8;
+        this.purpleLineChart.chartData.datasets[0].data = y;
+        this.purpleLineChart.chartData = this.purpleLineChart.chartData;
         
         //console.log(x);
         //console.log(y);       
