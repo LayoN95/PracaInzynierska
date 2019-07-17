@@ -378,7 +378,7 @@
               pointHoverRadius: 4,
               pointHoverBorderWidth: 15,
               pointRadius: 4,
-              data: dhtChartTemp,
+              data: y,
             }]
           }
         this.purpleLineChart.chartData = chartData;
