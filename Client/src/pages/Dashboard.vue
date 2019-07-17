@@ -202,7 +202,7 @@
               pointHoverRadius: 4,
               pointHoverBorderWidth: 15,
               pointRadius: 4,
-              data: this.dhtChartTemp,
+              data: dhtChartTemp,
             }]
           },
           gradientColors: config.colors.primaryGradient,
@@ -361,10 +361,11 @@
         //this.dhtChartTemp = y;
         
         //chartData
-        console.log(this.purpleLineChart.chartData.datasets);
+        
         //this.purpleLineChart.chartData.datasets.data = y;
         this.dhtChartTemp = y;
         console.log("DHTchart: " + this.dhtChartTemp)
+        console.log(purpleLineChart.chartData.datasets[13]);
         console.log(x);
         console.log(y);       
       })
