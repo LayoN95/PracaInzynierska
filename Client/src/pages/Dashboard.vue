@@ -188,23 +188,7 @@
         purpleLineChart: {
           extraOptions: chartConfigs.purpleChartOptions,
           chartData: {
-            labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
-            datasets: [{
-              label: "Temp: ",
-              fill: true,
-              borderColor: config.colors.primary,
-              borderWidth: 2,
-              borderDash: [],
-              borderDashOffset: 0.0,
-              pointBackgroundColor: config.colors.primary,
-              pointBorderColor: 'rgba(255,255,255,0)',
-              pointHoverBackgroundColor: config.colors.primary,
-              pointBorderWidth: 20,
-              pointHoverRadius: 4,
-              pointHoverBorderWidth: 15,
-              pointRadius: 4,
-              data: dhtChartTemp,
-            }]
+
           },
           gradientColors: config.colors.primaryGradient,
           gradientStops: [1, 0.2, 0],
@@ -363,10 +347,24 @@
         //console.log(this.purpleLineChart.chartData.datasets[0].data);
         //this.purpleLineChart.chartData.datasets[0].data = y;
         let chartData = {
-          datasets: [{
-            data: y,
-          }],
-        }
+            labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+            datasets: [{
+              label: "Temp: ",
+              fill: true,
+              borderColor: config.colors.primary,
+              borderWidth: 2,
+              borderDash: [],
+              borderDashOffset: 0.0,
+              pointBackgroundColor: config.colors.primary,
+              pointBorderColor: 'rgba(255,255,255,0)',
+              pointHoverBackgroundColor: config.colors.primary,
+              pointBorderWidth: 20,
+              pointHoverRadius: 4,
+              pointHoverBorderWidth: 15,
+              pointRadius: 4,
+              data: dhtChartTemp,
+            }]
+          },
         this.purpleLineChart.chartData = chartData;
         
         //console.log(x);
