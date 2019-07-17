@@ -358,7 +358,7 @@
 
         //this.purpleLineChart.chartData.datasets[0].data = y;
         console.log(this.purpleLineChart.chartData.datasets[0].data);
-        this.purpleLineChart.chartData.datasets[0].data[2] = 3;
+        this.purpleLineChart.chartData.datasets[0].data[2] = 8;
         
         //console.log(x);
         //console.log(y);       
