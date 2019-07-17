@@ -63,6 +63,7 @@
           </template>
           <div class="chart-area">
            <line-chart style="height: 100%"
+                        ref="purpleChart"
                         chart-id="purple-line-chart"
                         :chart-data="purpleLineChart.chartData"
                         :gradient-colors="purpleLineChart.gradientColors"
@@ -390,6 +391,7 @@
         this.$refs.bigChart.updateGradients(chartData);
         this.bigLineChart.chartData = chartData;
         this.bigLineChart.activeIndex = index;
+        this.$refs.purpleChart.updateGradients(this.purpleLineChart.chartData);
       }
     },
 
