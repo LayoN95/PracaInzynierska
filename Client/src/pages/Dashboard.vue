@@ -391,7 +391,7 @@
           }],
           labels: this.chartLabels,
         }
-        this.$refs.bigChart.updateGradients(chartData);
+        //this.$refs.bigChart.updateGradients(chartData);
         this.bigLineChart.chartData = chartData;
         this.bigLineChart.activeIndex = index;
       }
