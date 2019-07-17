@@ -362,7 +362,7 @@
         //this.purpleLineChart.chartData.datasets[0].data = y;
         //console.log(this.purpleLineChart.chartData.datasets[0].data);
         //this.purpleLineChart.chartData.datasets[0].data = y;
-        let chartData = {
+        /*let chartData = {
             labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
             datasets: [{
               label: "Temp: ",
@@ -381,7 +381,10 @@
               data: y,
             }]
           }
-        this.purpleLineChart.chartData = chartData;
+        this.purpleLineChart.chartData = chartData;*/
+
+        let data = y;
+        this.purpleLineChart.chartData.datasets[0].data = data;
         
         //console.log(x);
         //console.log(y);       
