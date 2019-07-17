@@ -271,6 +271,7 @@
         //this.bigLineChart.allData = table2;
         this.initBigChart();
         this.initPurpleChart();
+        this.data();
         console.log(this.bigLineChart.allData);
         //this.bigLineChart.chartData = chartData;
         
