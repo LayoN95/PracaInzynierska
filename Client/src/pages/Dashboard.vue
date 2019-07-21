@@ -386,7 +386,7 @@
               pointHoverBorderWidth: 15,
               pointRadius: 4,
               data: y,
-            }/*,
+            }/,
             {
               label: "Humid: ",
               fill: true,
@@ -402,14 +402,14 @@
               pointHoverBorderWidth: 15,
               pointRadius: 4,
               data: x,
-            }*/]
+            }]
           }
         this.purpleLineChart.chartData = chartData;
 
         let chartData2 =  {
             labels: z,
             datasets: [{
-              label: "My Second dataset",
+              label: "Humidity: ",
               fill: true,
               borderColor: config.colors.danger,
               borderWidth: 2,
