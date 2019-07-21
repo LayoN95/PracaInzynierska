@@ -227,7 +227,7 @@
               pointHoverRadius: 4,
               pointHoverBorderWidth: 15,
               pointRadius: 4,
-              data: [90, 27, 60, 12, 80],
+              data: [77, 78, 78, 76, 76],
             }]
             
           },
@@ -405,7 +405,7 @@
             }]
           }
         this.purpleLineChart.chartData = chartData;
-
+/*
         let chartData2 = {
             labels: z,
             datasets: [{
@@ -426,7 +426,7 @@
             }]
           } 
           this.greenLineChart.chartData = chartData2;
-        
+        */
         //console.log(x);
         //console.log(y);       
       })
