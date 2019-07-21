@@ -186,7 +186,8 @@
           categories: []
         },
         purpleLineChart: {
-          extraOptions: chartConfigs.purpleChartOptions,
+          //extraOptions: chartConfigs.purpleChartOptions,
+          
           options: {
             legend: {
               display: false
