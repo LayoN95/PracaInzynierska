@@ -187,6 +187,11 @@
         },
         purpleLineChart: {
           extraOptions: chartConfigs.purpleChartOptions,
+          options: {
+            legend: {
+              display: false
+            }
+          },
           chartData: {
             labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
             datasets: [{
