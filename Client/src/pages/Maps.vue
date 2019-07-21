@@ -3,15 +3,15 @@
       <div class="col-md-6">
         <card>
           <h4 slot="header">Light 1</h4>
-          <button v-on:click="turnOn">Turn the lights on!</button>
-          <button v-on:click="turnOff">Turn the lights off!</button>
+          <button v-on:click="turnOn" ref="turnOn" id="21">Turn the lights on!</button>
+          <button v-on:click="turnOff" ref="turnOff" id="21">Turn the lights off!</button>
         </card>
       </div>
       <div class="col-md-6">
         <card>
           <h4 slot="header">Light 2</h4>
-          <button v-on:click="turnOn" ref="turnOn21" id="21">Turn the lights on!</button>
-          <button v-on:click="turnOff">Turn the lights off!</button>
+          <button v-on:click="turnOn" ref="turnOn" id="20">Turn the lights on!</button>
+          <button v-on:click="turnOff" ref="turnOff" id="20">Turn the lights off!</button>
         </card>
       </div>
 </div>
@@ -28,14 +28,14 @@
     },
     methods: {
       turnOn: function (event) {
-            axios.post('http://192.168.1.48:3000/leds/' + this.id /*this.id*/ + '/1', {
+            axios.post('http://192.168.1.48:3000/leds/' + this.$refs.turnOn.id /*this.id*/ + '/1', {
               headers: {
                 'Access-Control-Allow-Origin': '*',
               }
             })
             .then((response) => {
               console.log(response);
-              console.log("REFS" + this.$refs.turnOn21.id);
+              console.log("REFS" + this.$refs.turnOn.id);
             })
             .catch((error) => {
               console.log(error);
@@ -43,7 +43,7 @@
             });
       },
       turnOff: function (event) {
-            axios.post('http://192.168.1.48:3000/leds/' + this.id /*this.id*/+ '/0', {
+            axios.post('http://192.168.1.48:3000/leds/' + this.$refs.turnOff.id /*this.id*/+ '/0', {
               headers: {
                 'Access-Control-Allow-Origin': '*',
               }
