@@ -386,6 +386,22 @@
               pointHoverBorderWidth: 15,
               pointRadius: 4,
               data: y,
+            },
+            {
+              label: "Humid: ",
+              fill: true,
+              borderColor: config.colors.primary,
+              borderWidth: 2,
+              borderDash: [],
+              borderDashOffset: 0.0,
+              pointBackgroundColor: config.colors.primary,
+              pointBorderColor: 'rgba(255,255,255,0)',
+              pointHoverBackgroundColor: config.colors.primary,
+              pointBorderWidth: 20,
+              pointHoverRadius: 4,
+              pointHoverBorderWidth: 15,
+              pointRadius: 4,
+              data: x,
             }]
           }
         this.purpleLineChart.chartData = chartData;
