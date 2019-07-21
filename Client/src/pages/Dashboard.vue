@@ -187,7 +187,7 @@
         },
         purpleLineChart: {
           extraOptions: chartConfigs.purpleChartOptions,
-            chartData: {
+            chartData: null/*{
             labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
             datasets: [{
               label: "Temp: ",
@@ -205,7 +205,7 @@
               pointRadius: 4,
               data: dhtChartTemp,
             }]
-          },
+            }*/,
           gradientColors: config.colors.primaryGradient,
           gradientStops: [1, 0.2, 0],
         },
