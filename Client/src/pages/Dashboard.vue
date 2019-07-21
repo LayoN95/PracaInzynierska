@@ -426,7 +426,7 @@
     
        mounted() {
          getDS18B20();
-         getDHT11();
+         this.getDHT11();
          fillData();
 
 
