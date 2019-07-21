@@ -39,8 +39,8 @@ const routes = [
       },
       {
         path: "maps",
-        name: "lights",
-        component: Maps
+        name: "maps",
+        component: Lights
       },
       {
         path: "typography",
