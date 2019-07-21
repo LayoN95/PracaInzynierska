@@ -409,7 +409,7 @@
         let chartData2 =  {
             labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV'],
             datasets: [{
-              label: "Humidity",
+              label: "My First dataset",
               fill: true,
               borderColor: config.colors.danger,
               borderWidth: 2,
