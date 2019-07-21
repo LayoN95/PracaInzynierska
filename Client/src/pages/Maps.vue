@@ -28,7 +28,7 @@
     },
     methods: {
       turnOn: function (event) {
-        targetId = event.currentTarget.id;
+        var targetId = event.currentTarget.id;
             axios.post('http://192.168.1.48:3000/leds/' + this.id /*this.id*/ + '/1', {
               headers: {
                 'Access-Control-Allow-Origin': '*',
