@@ -186,14 +186,8 @@
           categories: []
         },
         purpleLineChart: {
-          //extraOptions: chartConfigs.purpleChartOptions,
-          
-          options: {
-            legend: {
-              display: false
-            }
-          },
-          chartData: {
+          extraOptions: chartConfigs.purpleChartOptions,
+            chartData: {
             labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
             datasets: [{
               label: "Temp: ",
@@ -412,6 +406,26 @@
           }
         this.purpleLineChart.chartData = chartData;
 
+        let chartData = {
+            labels: z,
+            datasets: [{
+              label: "Temp: ",
+              fill: true,
+              borderColor: config.colors.primary,
+              borderWidth: 2,
+              borderDash: [],
+              borderDashOffset: 0.0,
+              pointBackgroundColor: config.colors.primary,
+              pointBorderColor: 'rgba(255,255,255,0)',
+              pointHoverBackgroundColor: config.colors.primary,
+              pointBorderWidth: 20,
+              pointHoverRadius: 4,
+              pointHoverBorderWidth: 15,
+              pointRadius: 4,
+              data: x,
+            }]
+          } 
+          this.greenLineChart.chartData = chartData;
         
         //console.log(x);
         //console.log(y);       
