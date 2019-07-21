@@ -59,7 +59,7 @@
         <card type="chart">
           <template slot="header">
             <h5 class="card-category">{{$t('dashboard.dht11')}}</h5>
-            <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary "></i> 763,215</h3>
+            <!-- <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary "></i> 763,215</h3> -->
           </template>
           <div class="chart-area">
            <line-chart style="height: 100%"
