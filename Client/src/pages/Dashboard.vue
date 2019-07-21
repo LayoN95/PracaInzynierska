@@ -409,7 +409,7 @@
         let chartData2 =  {
             labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV'],
             datasets: [{
-              label: "123",
+              label: "My First dataset",
               fill: true,
               borderColor: config.colors.danger,
               borderWidth: 2,
