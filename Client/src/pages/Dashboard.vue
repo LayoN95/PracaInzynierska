@@ -386,7 +386,7 @@
               pointHoverBorderWidth: 15,
               pointRadius: 4,
               data: y,
-            }/,
+            },
             {
               label: "Humid: ",
               fill: true,
