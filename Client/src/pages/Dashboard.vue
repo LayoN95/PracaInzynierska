@@ -465,6 +465,7 @@
     },
     beforeMount() {
       this.getDHT11();
+      this.getDS18B20();
     },
     
        mounted() {
