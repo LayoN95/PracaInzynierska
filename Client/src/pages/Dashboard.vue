@@ -406,7 +406,7 @@
           }
         this.purpleLineChart.chartData = chartData;
 
-        let chartData = {
+        let chartData2 = {
             labels: z,
             datasets: [{
               label: "Temp: ",
@@ -425,7 +425,7 @@
               data: x,
             }]
           } 
-          this.greenLineChart.chartData = chartData;
+          this.greenLineChart.chartData = chartData2;
         
         //console.log(x);
         //console.log(y);       
