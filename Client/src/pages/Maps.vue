@@ -3,7 +3,7 @@
       <div class="col-md-6">
         <card>
           <h4 slot="header">Light 1</h4>
-          <button v-on:click="turnOn" id="21">Turn the lights on!</button>
+          <button v-on:click="turnOn" name="light1" id="21">Turn the lights on!</button>
           <button v-on:click="turnOff" id="21">Turn the lights off!</button>
         </card>
       </div>
@@ -23,7 +23,7 @@
     },
     data() {
       return {
-        //id: 21,
+        id: 21,
       };
     },
     methods: {
@@ -35,7 +35,7 @@
             })
             .then((response) => {
               console.log(response);
-              console.log("REFS" + this.$refs.turnOn.id);
+              console.log("REFS" + this.light1.id);
             })
             .catch((error) => {
               console.log(error);
