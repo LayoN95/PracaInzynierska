@@ -22,6 +22,9 @@ export const basicOptions = {
 };
 export let blueChartOptions = {
   ...basicOptions,
+  legend: {
+    display: false
+  },
   tooltips: {
     backgroundColor: '#f5f5f5',
     titleFontColor: '#333',

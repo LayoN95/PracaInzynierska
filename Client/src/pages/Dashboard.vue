@@ -199,7 +199,7 @@
               pointBackgroundColor: config.colors.primary,
               pointBorderColor: 'rgba(255,255,255,0)',
               pointHoverBackgroundColor: config.colors.primary,
-              pointBorderWidth: 5,
+              pointBorderWidth: 20,
               pointHoverRadius: 4,
               pointHoverBorderWidth: 15,
               pointRadius: 4,
