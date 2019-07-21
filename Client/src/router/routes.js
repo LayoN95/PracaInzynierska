@@ -39,7 +39,7 @@ const routes = [
       },
       {
         path: "maps",
-        name: "maps",
+        name: "lights",
         component: Maps
       },
       {
