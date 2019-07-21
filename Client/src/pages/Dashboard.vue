@@ -211,7 +211,7 @@
         },
         greenLineChart: {
           extraOptions: chartConfigs.greenChartOptions,
-          chartData: {
+          chartData: null /*{
             labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV'],
             datasets: [{
               label: "My First dataset",
@@ -230,7 +230,7 @@
               data: [77, 78, 78, 76, 76],
             }]
             
-          },
+          }*/,
           gradientColors: ['rgba(66,134,121,0.15)', 'rgba(66,134,121,0.0)', 'rgba(66,134,121,0)'],
           gradientStops: [1, 0.4, 0],
         },
