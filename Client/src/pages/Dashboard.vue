@@ -407,7 +407,7 @@
         this.purpleLineChart.chartData = chartData;
 
         let chartData2 =  {
-            labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV'],
+            labels: z,
             datasets: [{
               label: "My First dataset",
               fill: true,
