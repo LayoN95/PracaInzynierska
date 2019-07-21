@@ -3,7 +3,7 @@
       <div class="col-md-6">
         <card>
           <h4 slot="header">Light 1</h4>
-          <button v-on:click="turnOn" name="light1" id="21">Turn the lights on!</button>
+          <button v-on:click="turnOn" id="21">Turn the lights on!</button>
           <button v-on:click="turnOff" id="21">Turn the lights off!</button>
         </card>
       </div>
@@ -28,6 +28,7 @@
     },
     methods: {
       turnOn: function (event) {
+        targetId = event.currentTarget.id;
             axios.post('http://192.168.1.48:3000/leds/' + this.id /*this.id*/ + '/1', {
               headers: {
                 'Access-Control-Allow-Origin': '*',
@@ -35,7 +36,7 @@
             })
             .then((response) => {
               console.log(response);
-              console.log("REFS" + this.light1.id);
+              console.log("REFS" + targetId);
             })
             .catch((error) => {
               console.log(error);
