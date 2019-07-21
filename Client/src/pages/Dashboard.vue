@@ -409,7 +409,7 @@
         let chartData2 =  {
             labels: z,
             datasets: [{
-              label: "My First dataset",
+              label: "My Second dataset",
               fill: true,
               borderColor: config.colors.danger,
               borderWidth: 2,
