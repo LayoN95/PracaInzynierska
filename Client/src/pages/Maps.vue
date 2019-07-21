@@ -10,7 +10,7 @@
       <div class="col-md-6">
         <card>
           <h4 slot="header">Light 2</h4>
-          <button v-on:click="turnOn">Turn the lights on!</button>
+          <button v-on:click="turnOn" ref="turnOn21" id="21">Turn the lights on!</button>
           <button v-on:click="turnOff">Turn the lights off!</button>
         </card>
       </div>
@@ -34,7 +34,8 @@
               }
             })
             .then((response) => {
-              console.log(response)   
+              console.log(response);
+              console.log($refs.turnOn21.id);
             })
             .catch((error) => {
               console.log(error);
