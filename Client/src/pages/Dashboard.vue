@@ -327,6 +327,29 @@
           seconds = dateHMS.getSeconds();
           y[i] = hours + ":" + minutes + ":" + seconds;
         }
+
+            let chartData =  {
+            labels: y,
+            datasets: [{
+              label: "Temperature: ",
+              fill: true,
+              borderColor: config.colors.danger,
+              borderWidth: 2,
+              borderDash: [],
+              borderDashOffset: 0.0,
+              pointBackgroundColor: config.colors.danger,
+              pointBorderColor: 'rgba(255,255,255,0)',
+              pointHoverBackgroundColor: config.colors.danger,
+              pointBorderWidth: 20,
+              pointHoverRadius: 4,
+              pointHoverBorderWidth: 15,
+              pointRadius: 4,
+              data: x,
+            }]
+            
+          }
+          this.greenLineChart.chartData = chartData;
+
         console.log(x);
         console.log(y);
         this.tabelaTemp = x;
@@ -406,27 +429,7 @@
           }
         this.purpleLineChart.chartData = chartData;
 
-        let chartData2 =  {
-            labels: z,
-            datasets: [{
-              label: "Humidity: ",
-              fill: true,
-              borderColor: config.colors.danger,
-              borderWidth: 2,
-              borderDash: [],
-              borderDashOffset: 0.0,
-              pointBackgroundColor: config.colors.danger,
-              pointBorderColor: 'rgba(255,255,255,0)',
-              pointHoverBackgroundColor: config.colors.danger,
-              pointBorderWidth: 20,
-              pointHoverRadius: 4,
-              pointHoverBorderWidth: 15,
-              pointRadius: 4,
-              data: x,
-            }]
-            
-          }
-          this.greenLineChart.chartData = chartData2;
+
        
         //console.log(x);
         //console.log(y);       
