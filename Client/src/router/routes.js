@@ -38,7 +38,7 @@ const routes = [
         component: Icons
       },
       {
-        path: "maps",
+        path: "lights",
         name: "lights",
         component: Maps
       },
