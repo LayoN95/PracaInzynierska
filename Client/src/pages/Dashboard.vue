@@ -406,25 +406,26 @@
           }
         this.purpleLineChart.chartData = chartData;
 /*
-        let chartData2 = {
-            labels: z,
+        let chartData2 =  {
+            labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV'],
             datasets: [{
-              label: "Temp: ",
+              label: "My First dataset",
               fill: true,
-              borderColor: config.colors.primary,
+              borderColor: config.colors.danger,
               borderWidth: 2,
               borderDash: [],
               borderDashOffset: 0.0,
-              pointBackgroundColor: config.colors.primary,
+              pointBackgroundColor: config.colors.danger,
               pointBorderColor: 'rgba(255,255,255,0)',
-              pointHoverBackgroundColor: config.colors.primary,
+              pointHoverBackgroundColor: config.colors.danger,
               pointBorderWidth: 20,
               pointHoverRadius: 4,
               pointHoverBorderWidth: 15,
               pointRadius: 4,
-              data: x,
+              data: [77, 78, 78, 76, 76],
             }]
-          } 
+            
+          },
           this.greenLineChart.chartData = chartData2;
         */
         //console.log(x);
