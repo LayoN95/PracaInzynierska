@@ -86,7 +86,7 @@ export let purpleChartOptions = {
       ticks: {
         suggestedMin: 0,
         suggestedMax: 25,
-        padding: 10,
+        padding: 20,
         fontColor: "#9a9a9a"
       }
     }],
