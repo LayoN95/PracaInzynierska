@@ -35,7 +35,7 @@
             })
             .then((response) => {
               console.log(response);
-              console.log($refs.turnOn21.id);
+              console.log("REFS" + $refs.turnOn21.id);
             })
             .catch((error) => {
               console.log(error);
