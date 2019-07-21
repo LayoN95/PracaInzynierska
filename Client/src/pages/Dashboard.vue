@@ -423,10 +423,12 @@
         //this.bigLineChart.activeIndex = index;
       }
     },
+    beforeMount() {
+      this.getDHT11();
+    },
     
        mounted() {
          getDS18B20();
-         this.getDHT11();
          fillData();
 
 
