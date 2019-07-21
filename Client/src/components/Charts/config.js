@@ -66,9 +66,7 @@ export let blueChartOptions = {
 
 export let purpleChartOptions = {
   ...basicOptions,
-  legend: {
-    display: false
-  },
+  
   tooltips: {
     backgroundColor: '#f5f5f5',
     titleFontColor: '#333',
@@ -77,7 +75,10 @@ export let purpleChartOptions = {
     xPadding: 12,
     mode: "nearest",
     intersect: 0,
-    position: "nearest"
+    position: "nearest",
+    legend: {
+      display: false
+    },
   },
   scales: {
     yAxes: [{
