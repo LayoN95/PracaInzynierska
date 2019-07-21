@@ -27,7 +27,7 @@
     },
     methods: {
       turnOn: function (event) {
-            axios.post('http://192.168.1.48:3000/leds/' + id + /*this.id*/ + '/1', {
+            axios.post('http://192.168.1.48:3000/leds/' + id /*this.id*/ + '/1', {
               headers: {
                 'Access-Control-Allow-Origin': '*',
               }
@@ -41,7 +41,7 @@
             });
       },
       turnOff: function (event) {
-            axios.post('http://192.168.1.48:3000/leds/' + this.id + '/0', {
+            axios.post('http://192.168.1.48:3000/leds/' + id /*this.id*/+ '/0', {
               headers: {
                 'Access-Control-Allow-Origin': '*',
               }
