@@ -422,7 +422,7 @@
               pointHoverRadius: 4,
               pointHoverBorderWidth: 15,
               pointRadius: 4,
-              data: [77, 78, 78, 76, 76],
+              data: x,
             }]
             
           }
