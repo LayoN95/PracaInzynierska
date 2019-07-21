@@ -386,14 +386,26 @@
               pointHoverBorderWidth: 15,
               pointRadius: 4,
               data: y,
-            },
+            }/*,
             {
               label: "Humid: ",
+              fill: true,
+              borderColor: config.colors.primary,
+              borderWidth: 2,
+              borderDash: [],
+              borderDashOffset: 0.0,
+              pointBackgroundColor: config.colors.primary,
+              pointBorderColor: 'rgba(255,255,255,0)',
+              pointHoverBackgroundColor: config.colors.primary,
+              pointBorderWidth: 20,
+              pointHoverRadius: 4,
+              pointHoverBorderWidth: 15,
+              pointRadius: 4,
               data: x,
-            }]
+            }*/]
           }
         this.purpleLineChart.chartData = chartData;
-/*
+
         let chartData2 =  {
             labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV'],
             datasets: [{
@@ -413,9 +425,9 @@
               data: [77, 78, 78, 76, 76],
             }]
             
-          },
+          }
           this.greenLineChart.chartData = chartData2;
-        */
+       
         //console.log(x);
         //console.log(y);       
       })
