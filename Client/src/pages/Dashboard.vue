@@ -407,7 +407,7 @@
         this.purpleLineChart.chartData = chartData;
 
         let chartData2 =  {
-            labels: z,
+            labels: ["1", "2", "3", "4", "5", "6", "7"],
             datasets: [{
               label: "Humidity",
               fill: true,
