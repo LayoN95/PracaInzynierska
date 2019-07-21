@@ -40,7 +40,7 @@ const routes = [
       {
         path: "maps",
         name: "maps",
-        component: Lights
+        component: Maps
       },
       {
         path: "typography",
