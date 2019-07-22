@@ -12,6 +12,9 @@
           <h4 slot="header">Light 2</h4>
           <button v-on:click="turnOn" id="20">Turn the lights on!</button>
           <button v-on:click="turnOff" id="20">Turn the lights off!</button>
+          <input v-model="id" placeholder="edit me">
+          <datetime type="datetime" v-model="datetime"></datetime>
+
         </card>
       </div>
 </div>
