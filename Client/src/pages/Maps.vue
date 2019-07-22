@@ -32,8 +32,11 @@
     components: {
     },
     data() {
+      
+      var mydate;
       return {
         id: 21,
+        checked: null,
       };
     },
     methods: {
