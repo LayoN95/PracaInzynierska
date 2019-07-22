@@ -13,13 +13,13 @@
           <button v-on:click="turnOn" id="20">Turn the lights on!</button>
           <button v-on:click="turnOff" id="20">Turn the lights off!</button>
           
-          <input type="date" id="dateStart" v-model="mydate" />
+          <input type="date" id="dateStart" v-model="dateStart" />
           <label for="dateStart">Start</label>
-          <input type="time" id="timeStart" v-model="mytime" />
+          <input type="time" id="timeStart" v-model="timeStart" />
           
-          <input type="date" id="dateEnd" v-model="mydate" />
+          <input type="date" id="dateEnd" v-model="dateEnd" />
           <label for="dateEnd">Koniec</label>
-          <input type="time" id="timeEnd" v-model="mytime" />
+          <input type="time" id="timeEnd" v-model="timeEnd" />
 
           <p>Start dzień: {{ dateStart }}</p>
           <p>Start godzina: {{ timeStart }}</p>
