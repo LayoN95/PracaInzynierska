@@ -15,6 +15,8 @@
           <input v-model="id" placeholder="edit me">
           <input type="date" v-model="mydate" />
           <input type="time" v-model="mytime" />
+          <p>{{ mydate }}</p>
+          <p>{{ mytime }}</p>
 
         </card>
       </div>
