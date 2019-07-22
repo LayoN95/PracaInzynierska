@@ -14,6 +14,7 @@
           <button v-on:click="turnOff" id="20">Turn the lights off!</button>
           <input v-model="id" placeholder="edit me">
           <input type="date" v-model="mydate" />
+          <input type="time" v-model="mytime" />
 
         </card>
       </div>
