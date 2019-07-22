@@ -13,7 +13,7 @@
           <button v-on:click="turnOn" id="20">Turn the lights on!</button>
           <button v-on:click="turnOff" id="20">Turn the lights off!</button>
           <input v-model="id" placeholder="edit me">
-          <datetime type="datetime" v-model="datetime"></datetime>
+          <input type="datetime" v-model="datetime">
 
         </card>
       </div>
@@ -21,10 +21,6 @@
 </template>
 <script>
    import axios from 'axios';
-
-   import Datetime from 'vue-datetime'
-// You need a specific loader for CSS files
-import 'vue-datetime/dist/vue-datetime.css'
 
    export default {
     components: {
