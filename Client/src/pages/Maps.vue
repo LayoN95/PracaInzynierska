@@ -12,11 +12,20 @@
           <h4 slot="header">Light 2</h4>
           <button v-on:click="turnOn" id="20">Turn the lights on!</button>
           <button v-on:click="turnOff" id="20">Turn the lights off!</button>
-          <input v-model="id" placeholder="edit me">
-          <input type="date" v-model="mydate" />
-          <input type="time" v-model="mytime" />
-          <p>{{ mydate }}</p>
-          <p>{{ mytime }}</p>
+          
+          <input type="date" id="dateStart" v-model="mydate" />
+          <label for="dateStart">Start</label>
+          <input type="time" id="timeStart" v-model="mytime" />
+          
+          <input type="date" id="dateEnd" v-model="mydate" />
+          <label for="dateEnd">Koniec</label>
+          <input type="time" id="timeEnd" v-model="mytime" />
+
+          <p>Start dzień: {{ dateStart }}</p>
+          <p>Start godzina: {{ timeStart }}</p>
+          <p>Stop dzień: {{ dateEnd }}</p>
+          <p>Stop godzina: {{ timeEnd }}</p>
+   
 
           <input type="checkbox" id="checkbox" v-model="checked">
           <label for="checkbox">{{ checked }}</label>
@@ -32,12 +41,12 @@
     components: {
     },
     data() {
-      
-      var mydate;
-      return {
-        id: 21,
-        checked: null,
-        mytime: null,
+        return {
+        id: null,
+        dateStart: null,
+        timeStart: null,
+        dateEnd: null,
+        timeEnd: null
       };
     },
     methods: {
