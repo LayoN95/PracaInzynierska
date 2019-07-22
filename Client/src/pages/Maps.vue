@@ -13,7 +13,7 @@
           <button v-on:click="turnOn" id="20">Turn the lights on!</button>
           <button v-on:click="turnOff" id="20">Turn the lights off!</button>
           <input v-model="id" placeholder="edit me">
-          <input type="datetime" v-model="datetime">
+          <input type="date" v-model="mydate" />
 
         </card>
       </div>
