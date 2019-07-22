@@ -16,7 +16,7 @@
           <input type="date" v-model="mydate" />
           <input type="time" v-model="mytime" />
           <p>{{ mydate }}</p>
-          <p>{{ id }}</p>
+          <p>{{ mytime }}</p>
 
           <input type="checkbox" id="checkbox" v-model="checked">
           <label for="checkbox">{{ checked }}</label>
@@ -37,6 +37,7 @@
       return {
         id: 21,
         checked: null,
+        mytime: null,
       };
     },
     methods: {
