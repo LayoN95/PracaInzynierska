@@ -16,7 +16,10 @@
           <input type="date" v-model="mydate" />
           <input type="time" v-model="mytime" />
           <p>{{ mydate }}</p>
-          <p>{{ mytime }}</p>
+          <p>{{ id }}</p>
+
+          <input type="checkbox" id="checkbox" v-model="checked">
+          <label for="checkbox">{{ checked }}</label>
 
         </card>
       </div>
