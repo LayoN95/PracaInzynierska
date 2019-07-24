@@ -105,7 +105,11 @@ router.post('/leds/:ledId/:value', (req, res, next) => {
 router.post('/schedulde/:hour/:min'), (req, res, next) => {
   //req.params.hour = schedulde.hour;
   //req.params.min = schedulde.min;
+  console.log("hour:" + req.params.hour + " min: " + req.params.min);
   schedulde.schedule(req.params.min, req.params.hour);
+  res.status(200).json({
+    message: ("Submit")
+  });
 }
 
 module.exports = router;
