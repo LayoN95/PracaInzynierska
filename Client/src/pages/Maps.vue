@@ -66,15 +66,21 @@
     methods: {
       submit: function (event) {
         var time = [];
-
-        //time = new Date(timeStart);
-        //hour = time.getHours();
         time = this.timeStart.split(':');
+
         console.log(this.timeStart);
         console.log(time);
-        /*axios.post('http://192.168.1.48:3000/schedule/' + timeStart +  + , {
-
-        })*/
+        axios.post('http://192.168.1.48:3000/schedule/' + time[0] + '/' + time[1] + '/1', {
+           headers: {
+                'Access-Control-Allow-Origin': '*',
+              }
+          })
+          .then((response) => {
+              console.log(response);
+          })
+          .catch((error) => {
+              console.log(error);
+          });
       },
       turnOn: function (event) {
             var targetId = event.currentTarget.id;
