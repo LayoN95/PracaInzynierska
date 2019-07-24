@@ -66,7 +66,7 @@
     methods: {
       submit: function (event) {
         var hour = 0;
-        var time = "18:22";
+        var time = toString(timeStart);
 
         //time = new Date(timeStart);
         //hour = time.getHours();
