@@ -6,7 +6,8 @@ var min, hour = 0;
 console.log("schedule1");
 
 function schedule1(min, hour) {
-        schedule.scheduleJob(min + hour + ' * * *', function(){
+        console.log(min + " " +hour);
+        var j = schedule.scheduleJob('' + min + hour + ' * * *', function(){
         console.log("schedule");
         leds.led(21,1);
       });
