@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const DHT11 = require('../models/dht11');
 const DS18B20 = require('../models/ds18b20');
 
+const schedulde = require('../midleware/schedulde');
 const ds18b20 = require('../midleware/ds18b20');
 const dht11 = require('../midleware/dht11');
 const pir = require('../midleware/pirHCSR501');
