@@ -25,8 +25,6 @@
           
         
 
-          <input type="checkbox" id="checkbox" v-model="checked">
-          <label for="checkbox">{{ checked }}</label>
 
         </card>
       </div>
@@ -42,6 +40,17 @@
           <input type="time" id="timeEnd" v-model="timeEnd" />
           <p>Stop godzina: {{ timeEnd }}</p>
           <button v-on:click="submit">Submit!</button>
+
+
+        </card>
+      </div>
+      <div class="col-12">
+        <card>
+          <h4 slot="header">Alarm</h4>
+
+          <h1>Reset: </h1>
+          <input type="checkbox" id="checkbox" v-model="checked">
+          <label for="checkbox">{{ checked }}</label>
 
 
         </card>
@@ -70,8 +79,6 @@
         start = this.timeStart.split(':');
         end = this.timeEnd.split(':');
 
-        console.log(this.timeStart);
-        console.log(start);
         axios.post('http://192.168.1.48:3000/schedule/' + start[0] + '/' + start[1] + '/1', {
            headers: {
                 'Access-Control-Allow-Origin': '*',
