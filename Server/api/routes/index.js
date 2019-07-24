@@ -112,7 +112,14 @@ router.post('/schedule/:hour/:min/:state', (req, res, next) => {
   });
 });
 
-router.get('/alarm', function(req, res, next) {
+router.get('/alarm', (req, res, next) => {
+  res.status(200).json({
+    message: (pir.alarm)
+  });
+});
+
+router.post('/reset', (req, res, next) => {
+  pir.alarm = 0;
   res.status(200).json({
     message: (pir.alarm)
   });
