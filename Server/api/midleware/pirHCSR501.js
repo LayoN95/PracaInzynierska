@@ -11,7 +11,7 @@ var alarm = 0;
         alarm = 1;
         count++;
         module.exports.count = count;
-        console.log('Intruder detected' + count);
+        console.log('Intruder detected' + count + " " +  alarm);
 
     });
 
