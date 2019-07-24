@@ -37,7 +37,7 @@
           <label for="timeStart">TurnOn: </label>
           <input type="time" id="timeStart" v-model="timeStart" />
           <p>Start godzina: {{ timeStart }}</p>
-          
+
           <label for="timeEnd">TurnOff: </label>
           <input type="time" id="timeEnd" v-model="timeEnd" />
           <p>Stop godzina: {{ timeEnd }}</p>
@@ -65,7 +65,12 @@
     },
     methods: {
       submit: function (event) {
+        var hour = 0;
+        hour = getHour(timeStart);
+        console.log(hour);
+        /*axios.post('http://192.168.1.48:3000/schedule/' + timeStart +  + , {
 
+        })*/
       },
       turnOn: function (event) {
             var targetId = event.currentTarget.id;

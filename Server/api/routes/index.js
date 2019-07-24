@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const DHT11 = require('../models/dht11');
 const DS18B20 = require('../models/ds18b20');
 
-const schedulde = require('../midleware/schedulde');
+const schedule = require('../midleware/schedule');
 const ds18b20 = require('../midleware/ds18b20');
 const dht11 = require('../midleware/dht11');
 const pir = require('../midleware/pirHCSR501');
@@ -102,11 +102,11 @@ router.post('/leds/:ledId/:value', (req, res, next) => {
   }
 });
 
-router.post('/schedulde/:hour/:min/:state', (req, res, next) => {
+router.post('/schedule/:hour/:min/:state', (req, res, next) => {
   //req.params.hour = schedulde.hour;
   //req.params.min = schedulde.min;
   console.log("hour:" + req.params.hour + " min: " + req.params.min);
-  schedulde.schedule1(req.params.min, req.params.hour, req.params.state);
+  schedule.schedule1(req.params.min, req.params.hour, req.params.state);
   res.status(200).json({
     message: ("Submit: " + req.params.min + " " + req.params.hour + " " + req.params.state)
   });
