@@ -70,7 +70,7 @@
 
         //time = new Date(timeStart);
         //hour = time.getHours();
-        hour = timeStart.split(':');
+        hour = time.split(':');
         console.log(time);
         console.log(hour);
         /*axios.post('http://192.168.1.48:3000/schedule/' + timeStart +  + , {
