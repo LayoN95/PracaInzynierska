@@ -25,7 +25,8 @@
           <p>Start godzina: {{ timeStart }}</p>
           <p>Stop dzień: {{ dateEnd }}</p>
           <p>Stop godzina: {{ timeEnd }}</p>
-   
+          <button v-on:click="submit">Submit!</button>
+
 
           <input type="checkbox" id="checkbox" v-model="checked">
           <label for="checkbox">{{ checked }}</label>
@@ -50,6 +51,9 @@
       };
     },
     methods: {
+      submit: function (event) {
+        
+      },
       turnOn: function (event) {
             var targetId = event.currentTarget.id;
             axios.post('http://192.168.1.48:3000/leds/' + targetId /*this.id*/ + '/1', {
