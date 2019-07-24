@@ -8,7 +8,7 @@ var alarm = 0;
     pir.watch(function (err, value) {
         if (err) exit(err);
         console.log(value ? 'Ktos tu jest!' : ' Juz Nie!');
-        alarm = 1;
+        alarm++;
         count++;
         module.exports.count = count;
         console.log('Intruder detected' + count + " " +  alarm);
