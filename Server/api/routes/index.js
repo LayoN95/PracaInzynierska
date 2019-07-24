@@ -108,7 +108,7 @@ router.post('/schedulde/:hour/:min/:state', (req, res, next) => {
   console.log("hour:" + req.params.hour + " min: " + req.params.min);
   schedulde.schedule1(req.params.min, req.params.hour, req.params.state);
   res.status(200).json({
-    message: ("Submit")
+    message: ("Submit: " + req.params.min + " " + req.params.hour + " " + req.params.state)
   });
 });
 
