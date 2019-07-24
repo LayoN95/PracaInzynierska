@@ -7,7 +7,7 @@ var state;
 console.log("schedule1");
 
 function schedule1(min, hour, state) {
-        console.log(min + " " + hour);
+        console.log(min + " " + hour + " " + state);
         var j = schedule.scheduleJob('' + min + ' ' + hour + ' * * *', function(){
         console.log("schedule");
         leds.led(21, state);
