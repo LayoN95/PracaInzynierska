@@ -66,9 +66,10 @@
     methods: {
       submit: function (event) {
         var hour = 0;
-        var time = 0;
-        time = new Date(timeStart);
-        hour = time.getHours();
+        var time = [];
+        //time = new Date(timeStart);
+        //hour = time.getHours();
+        time = timeStart.split(':');
         console.log(time);
         console.log(hour);
         /*axios.post('http://192.168.1.48:3000/schedule/' + timeStart +  + , {
