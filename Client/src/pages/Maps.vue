@@ -71,7 +71,7 @@
         //hour = time.getHours();
         time = this.timeStart.split(':');
         console.log(this.timeStart);
-        console.log(hour);
+        console.log(time);
         /*axios.post('http://192.168.1.48:3000/schedule/' + timeStart +  + , {
 
         })*/
