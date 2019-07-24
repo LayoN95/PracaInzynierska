@@ -49,6 +49,7 @@
           <h4 slot="header">Alarm</h4>
 
           <h1>Reset: </h1>
+          <button v-on:click="reset">Reset!</button>
           <input type="checkbox" id="checkbox" v-model="checked">
           <label for="checkbox">{{ checked }}</label>
 
@@ -69,7 +70,8 @@
         dateStart: null,
         timeStart: null,
         dateEnd: null,
-        timeEnd: null
+        timeEnd: null,
+        checked: null
       };
     },
     methods: {
@@ -102,6 +104,11 @@
               console.log(error);
           });
       },
+
+      reset: function (event) {
+        
+      },
+
       turnOn: function (event) {
             var targetId = event.currentTarget.id;
             axios.post('http://192.168.1.48:3000/leds/' + targetId /*this.id*/ + '/1', {
