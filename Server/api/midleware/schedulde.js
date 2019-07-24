@@ -1,15 +1,15 @@
 const leds = require('./leds');
 var schedule = require('node-schedule');
 var date = new Date(2019, 6, 24, 15, 52, 0);
-var min, hour = 0;
+var min, hour, state = 0;
 
 console.log("schedule1");
 
-function schedule1(min, hour) {
-        console.log(min + " " +hour);
+function schedule1(min, hour, state) {
+        console.log(min + " " + hour);
         var j = schedule.scheduleJob('' + min + ' ' + hour + ' * * *', function(){
         console.log("schedule");
-        leds.led(21,1);
+        leds.led(21, state);
       });
 }
 
