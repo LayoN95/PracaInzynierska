@@ -102,7 +102,7 @@ router.post('/leds/:ledId/:value', (req, res, next) => {
   }
 });
 
-router.post('/schedulde/:hour/:min:/:state', (req, res, next) => {
+router.post('/schedulde/:hour/:min/:state', (req, res, next) => {
   //req.params.hour = schedulde.hour;
   //req.params.min = schedulde.min;
   console.log("hour:" + req.params.hour + " min: " + req.params.min);
