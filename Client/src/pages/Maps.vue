@@ -15,21 +15,34 @@
           
           <input type="date" id="dateStart" v-model="dateStart" />
           <label for="dateStart">Start</label>
-          <input type="time" id="timeStart" v-model="timeStart" />
           
           <input type="date" id="dateEnd" v-model="dateEnd" />
           <label for="dateEnd">Koniec</label>
-          <input type="time" id="timeEnd" v-model="timeEnd" />
 
           <p>Start dzień: {{ dateStart }}</p>
-          <p>Start godzina: {{ timeStart }}</p>
+          
           <p>Stop dzień: {{ dateEnd }}</p>
-          <p>Stop godzina: {{ timeEnd }}</p>
-          <button v-on:click="submit">Submit!</button>
-
+          
+        
 
           <input type="checkbox" id="checkbox" v-model="checked">
           <label for="checkbox">{{ checked }}</label>
+
+        </card>
+      </div>
+      <div class="col-12">
+        <card>
+          <h4 slot="header">Schedule</h4>
+
+          <label for="timeStart">TurnOn: </label>
+          <input type="time" id="timeStart" v-model="timeStart" />
+          <p>Start godzina: {{ timeStart }}</p>
+          
+          <label for="timeEnd">TurnOff: </label>
+          <input type="time" id="timeEnd" v-model="timeEnd" />
+          <p>Stop godzina: {{ timeEnd }}</p>
+          <button v-on:click="submit">Submit!</button>
+
 
         </card>
       </div>
@@ -52,7 +65,7 @@
     },
     methods: {
       submit: function (event) {
-        
+
       },
       turnOn: function (event) {
             var targetId = event.currentTarget.id;
