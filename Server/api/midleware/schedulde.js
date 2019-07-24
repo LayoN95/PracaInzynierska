@@ -5,7 +5,7 @@ var min, hour = 0;
 
 console.log("schedule1");
 
-function schedule(min, hour) {
+function schedule1(min, hour) {
     var j = schedule.scheduleJob(min + hour + ' * * *', function(){
         console.log("schedule");
         leds.led(21,1);
@@ -13,6 +13,6 @@ function schedule(min, hour) {
 }
 
 
-  module.exports.schedule = schedule;
+  module.exports.schedule = schedule1;
   module.exports.min = min;
   module.exports.hour = hour;
