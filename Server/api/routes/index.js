@@ -88,7 +88,7 @@ router.get('/pir', function(req, res, next) {
 router.post('/leds/:ledId/:value', (req, res, next) => {
   if(req.params.value == '1')
   {
-    leds.led(parseInt(req.params.ledId), 1)
+    leds.led(req.params.ledId, 1)
     console.log("led ID: " + req.params.ledId + " value: " + req.params.value);
     res.status(200).json({
       message: ("Uruchomiono diodę")
