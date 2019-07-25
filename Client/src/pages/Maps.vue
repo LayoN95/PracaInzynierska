@@ -93,7 +93,7 @@
           .catch((error) => {
               console.log(error);
           });
-        axios.post('http://192.168.1.48:3000/schedule/' + end[0] + '/' + end[1] + '/0', {
+        axios.post(`${this.path}/schedule/${end[0]}/${end[1]}/0`, {
            headers: {
                 'Access-Control-Allow-Origin': '*',
               }

@@ -3,6 +3,8 @@ const ds18b20Schema = require('../models/ds18b20');
 const mongoose = require('mongoose');
 var temp = 0;
 
+var schedule = require('node-schedule');
+
 
 
 setInterval(function () {
@@ -25,5 +27,12 @@ setInterval(function () {
 
         }
     });
-}, 900000); 
+}, 1000/*900000*/); 
  
+var rule = new schedule.RecurrenceRule();
+
+rule.minute = 15;
+ 
+var j = schedule.scheduleJob(rule, function(){
+  console.log('Today is recognized by Rebecca Black!');
+});
