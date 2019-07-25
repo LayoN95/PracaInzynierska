@@ -81,7 +81,7 @@
         start = this.timeStart.split(':');
         end = this.timeEnd.split(':');
 
-        axios.post('http://192.168.1.48:3000/schedule/' + start[0] + '/' + start[1] + '/1', {
+        axios.post(`http://192.168.1.48:3000/schedule/${start[0]}/${start[1]}/1`, {
            headers: {
                 'Access-Control-Allow-Origin': '*',
               }
