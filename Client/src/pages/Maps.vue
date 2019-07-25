@@ -71,7 +71,8 @@
         timeStart: null,
         dateEnd: null,
         timeEnd: null,
-        checked: null
+        checked: null,
+        path: 'http://192.168.1.48:3000'
       };
     },
     methods: {
@@ -81,7 +82,7 @@
         start = this.timeStart.split(':');
         end = this.timeEnd.split(':');
 
-        axios.post(`http://192.168.1.48:3000/schedule/${start[0]}/${start[1]}/1`, {
+        axios.post(`${this.path}/schedule/${start[0]}/${start[1]}/1`, {
            headers: {
                 'Access-Control-Allow-Origin': '*',
               }
