@@ -21,7 +21,7 @@ setInterval(function () {
             DS18B20schema.save();*/
 
             console.log("temperature" + temperature);
-            temp = temperature;
+            this.temp = temperature;
             console.log("temp:" + temp);
             module.exports.temp = temp;
 
@@ -37,7 +37,7 @@ var j = schedule.scheduleJob(rule, function(){
     console.log("Schedule!");
     const DS18B20schema = ds18b20Schema({
         _id: mongoose.Types.ObjectId(),
-        temperature: temp
+        temperature: this.temp
     });
     DS18B20schema.save();
 });
