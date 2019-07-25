@@ -14,30 +14,25 @@ setInterval(function () {
             console.log(err);
             console.log("Brak urządzenia");
         } else {
-            /*const DS18B20schema = ds18b20Schema({
+            const DS18B20schema = ds18b20Schema({
                 _id: mongoose.Types.ObjectId(),
                 temperature: temperature
             });
-            DS18B20schema.save();*/
+            DS18B20schema.save();
 
             console.log("temperature" + temperature);
-            this.temp = temperature;
+            temp = temperature;
             console.log("temp:" + temp);
             module.exports.temp = temp;
 
         }
     });
-}, 10000/*900000*/); 
+}, 900000); 
  
 var rule = new schedule.RecurrenceRule();
 
-rule.minute = [0,15,30,45];
+rule.minute = 0;
  
 var j = schedule.scheduleJob(rule, function(){
-    console.log("Schedule!");
-    const DS18B20schema = ds18b20Schema({
-        _id: mongoose.Types.ObjectId(),
-        temperature: this.temp
-    });
-    DS18B20schema.save();
+  console.log('Today is recognized by Rebecca Black!');
 });
