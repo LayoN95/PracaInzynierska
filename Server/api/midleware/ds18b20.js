@@ -27,13 +27,14 @@ setInterval(function () {
 
         }
     });
-}, 1000/*900000*/); 
+}, 10000/*900000*/); 
  
 var rule = new schedule.RecurrenceRule();
 
 rule.minute = [0,15,30,45];
  
 var j = schedule.scheduleJob(rule, function(){
+    console.log("Schedule!");
     const DS18B20schema = ds18b20Schema({
         _id: mongoose.Types.ObjectId(),
         temperature: temp
