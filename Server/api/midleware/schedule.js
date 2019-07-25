@@ -3,14 +3,16 @@ var schedule = require('node-schedule');
 var date = new Date(2019, 6, 24, 15, 52, 0);
 var min, hour = 0;
 var value = false;
-var j;
+var rule = new schedule.RecurrenceRule();
+
 
 console.log("schedule1");
 
 function schedule1(min, hour, value) {
-        j.cancel();
+        rule.hour = hour;
+        rule.minute = min;
         console.log(min + " " + hour + " " + value);
-        j = schedule.scheduleJob('' + min + ' ' + hour + ' * * *', function(){
+        var j = schedule.scheduleJob(rule, function(){
         console.log("schedule");
         leds.led(21, parseInt(value));
       });
