@@ -4,8 +4,8 @@ const mongoose = require('mongoose');
 
 var schedule = require('node-schedule');
 
-var temp = 0;
-var humid = 0;
+var temp;
+var humid;
  
 setInterval(function () {
 
