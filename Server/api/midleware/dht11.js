@@ -17,7 +17,6 @@ sensor.read(11, 26, function(err, temperature, humidity) {
             humidity: humidity
         });
         DHT11schema.save();*/
-        `${this.temp}` = temperature;
         this.temp = temperature;
         this.humid = humidity;
         //module.exports.temp = temperature;
