@@ -4,8 +4,8 @@ const mongoose = require('mongoose');
 
 var schedule = require('node-schedule');
 
-var temp;
-var humid;
+var temp = 0;
+var humid = 0;
  
 setInterval(function () {
 
@@ -19,8 +19,8 @@ sensor.read(11, 26, function(err, temperature, humidity) {
         DHT11schema.save();*/
         this.temp = temperature;
         this.humid = humidity;
-        module.exports.temp = temperature;
-        module.exports.humid = humidity;
+        //module.exports.temp = temperature;
+        //module.exports.humid = humidity;
         console.log('temp: ' + temperature.toFixed(1) + '°C, ' +
             'humidity: ' + humidity.toFixed(1) + '%'
         );
@@ -36,8 +36,8 @@ var j = schedule.scheduleJob(rule, function(){
     
     const DHT11schema = dht11Schema({
         _id: mongoose.Types.ObjectId(),
-        temperature: this.temp,
-        humidity: this.humid
+        temperature: temp,
+        humidity: humid
     });
     DHT11schema.save();
     console.log("DHT11 Zapisano!" + temp + " " + humid);
