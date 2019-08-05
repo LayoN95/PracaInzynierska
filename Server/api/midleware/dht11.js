@@ -6,7 +6,7 @@ var schedule = require('node-schedule');
 
 var temp = 0;
 var humid = 0;
-var tem;
+
  
 setInterval(function () {
 
@@ -18,11 +18,10 @@ sensor.read(11, 26, function(err, temperature, humidity) {
             humidity: humidity
         });
         DHT11schema.save();*/
-        tem = temperature;
-        console.log("tem = " + tem);
-        this.temp = temperature.toFixed(1);
-        this.humid = humidity.toFixed(1);
-        console.log(this.temp + " " + this.humid); 
+
+        temp = temperature.toFixed(1);
+        humid = humidity.toFixed(1);
+        console.log(temp + " " + humid); 
         //module.exports.temp = temperature;
         //module.exports.humid = humidity;
         console.log('temp: ' + temperature.toFixed(1) + '°C, ' +
@@ -44,7 +43,7 @@ var j = schedule.scheduleJob(rule, function(){
         humidity: humid
     });
     DHT11schema.save();
-    console.log("DHT11 Zapisano!" + this.temp + " " + humid);
+    console.log("DHT11 Zapisano!" + temp + " " + humid);
 
 
 });
