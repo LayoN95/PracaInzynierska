@@ -36,5 +36,7 @@ var j = schedule.scheduleJob(rule, function(){
     _id: mongoose.Types.ObjectId(),
     temperature: temp
 });
-DS18B20schema.save();  
+if (temp!=0){DS18B20schema.save();}
+
+ 
 });
