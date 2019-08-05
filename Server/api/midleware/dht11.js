@@ -4,8 +4,8 @@ const mongoose = require('mongoose');
 
 var schedule = require('node-schedule');
 
-var temp;
-var humid;
+var temp = 0;
+var humid = 0;
  
 setInterval(function () {
 
@@ -19,6 +19,7 @@ sensor.read(11, 26, function(err, temperature, humidity) {
         DHT11schema.save();*/
         this.temp = temperature.toFixed(1);
         this.humid = humidity.toFixed(1);
+        console.log(temp + " " + humid); 
         //module.exports.temp = temperature;
         //module.exports.humid = humidity;
         console.log('temp: ' + temperature.toFixed(1) + '°C, ' +
@@ -26,7 +27,7 @@ sensor.read(11, 26, function(err, temperature, humidity) {
         );
     }
 });
-}, /*900000*/1000);
+}, /*900000*/30000);
 
 var rule = new schedule.RecurrenceRule();
 
