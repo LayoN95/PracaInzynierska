@@ -36,8 +36,8 @@ var j = schedule.scheduleJob(rule, function(){
     
     const DHT11schema = dht11Schema({
         _id: mongoose.Types.ObjectId(),
-        temperature: temp,
-        humidity: humid
+        temperature: this.temp,
+        humidity: this.humid
     });
     DHT11schema.save();
     console.log("DHT11 Zapisano!" + temp + " " + humid);
