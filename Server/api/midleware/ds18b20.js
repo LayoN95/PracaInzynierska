@@ -31,7 +31,7 @@ setInterval(function () {
  
 var rule = new schedule.RecurrenceRule();
 
-rule.minute = 0;
+rule.minute = [0,15,30,45];
  
 var j = schedule.scheduleJob(rule, function(){
   console.log('Today is recognized by Rebecca Black!');

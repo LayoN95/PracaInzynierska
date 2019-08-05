@@ -2,6 +2,8 @@ const sensor = require('node-dht-sensor');
 const dht11Schema = require('../models/dht11');
 const mongoose = require('mongoose');
 
+var schedule = require('node-schedule');
+
 var temp = 0;
 var humid = 0;
  
@@ -9,12 +11,12 @@ setInterval(function () {
 
 sensor.read(11, 26, function(err, temperature, humidity) {
     if (!err) {
-        const DHT11schema = dht11Schema({
+        /*const DHT11schema = dht11Schema({
             _id: mongoose.Types.ObjectId(),
             temperature: temperature,
             humidity: humidity
         });
-        DHT11schema.save();
+        DHT11schema.save();*/
 
         module.exports.temp = temperature;
         module.exports.humid = humidity;
@@ -24,3 +26,18 @@ sensor.read(11, 26, function(err, temperature, humidity) {
     }
 });
 }, 900000);
+
+var rule = new schedule.RecurrenceRule();
+
+rule.minute = [0,15,20,21,22,23,24,25,30,45];
+ 
+var j = schedule.scheduleJob(rule, function(){
+    
+    const DHT11schema = dht11Schema({
+        _id: mongoose.Types.ObjectId(),
+        temperature: temp,
+        humidity: humid
+    });
+    DHT11schema.save();
+    console.log("DHT11 Zapisano!");
+});
