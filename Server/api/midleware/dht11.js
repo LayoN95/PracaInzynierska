@@ -42,7 +42,7 @@ var j = schedule.scheduleJob(rule, function(){
         temperature: temp,
         humidity: humid
     });
-    DHT11schema.save();
+    if(temp!=0){DHT11schema.save();}
     console.log("DHT11 Zapisano!" + temp + " " + humid);
 
 
