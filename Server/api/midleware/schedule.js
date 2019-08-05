@@ -4,6 +4,7 @@ var date = new Date(2019, 6, 24, 15, 52, 0);
 var min, hour = 0;
 var value = false;
 var rule = new schedule.RecurrenceRule();
+const ds18b20 = require('./ds18b20');
 
 
 console.log("schedule1");

@@ -22,8 +22,8 @@ sensor.read(11, 26, function(err, temperature, humidity) {
         temp = temperature.toFixed(1);
         humid = humidity.toFixed(1);
         console.log(temp + " " + humid); 
-        //module.exports.temp = temperature;
-        //module.exports.humid = humidity;
+        module.exports.temp = temperature;
+        module.exports.humid = humidity;
         console.log('temp: ' + temperature.toFixed(1) + '°C, ' +
             'humidity: ' + humidity.toFixed(1) + '%'
         );

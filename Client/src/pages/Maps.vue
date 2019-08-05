@@ -52,7 +52,8 @@
           <button v-on:click="reset">Reset!</button>
           <input type="checkbox" id="checkbox" v-model="checked">
           <label for="checkbox">{{ checked }}</label>
-
+            <div id="chart">
+            </div>
 
         </card>
       </div>
@@ -60,6 +61,8 @@
 </template>
 <script>
    import axios from 'axios';
+   import ApexCharts from 'apexcharts';
+
 
    export default {
     components: {
@@ -76,6 +79,21 @@
       };
     },
     methods: {
+      beforeMount() {
+     var options = {
+       chart: {
+      height: 350,
+      type: 'radialBar',
+  }   ,
+  series: [70],
+  labels: ['Progress'],
+}
+
+var chart = new ApexCharts(document.querySelector("#chart"), options);
+
+chart.render();
+
+    },
       submit: function (event) {
         var start = [];
         var end = [];
