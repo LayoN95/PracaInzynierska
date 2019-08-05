@@ -41,4 +41,5 @@ var j = schedule.scheduleJob(rule, function(){
     });
     DHT11schema.save();
     console.log("DHT11 Zapisano!" + temp + " " + humid);
+    console.log(`${this.temp}`);
 });
