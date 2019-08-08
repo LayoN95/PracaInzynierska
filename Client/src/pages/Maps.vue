@@ -5,26 +5,14 @@
           <h4 slot="header">Light 1</h4>
           <button v-on:click="turnOn" id="21">Turn the lights on!</button>
           <button v-on:click="turnOff" id="21">Turn the lights off!</button>
+          
+          <button v-on:click="turnOn" id="20">Turn the lights on!</button>
+          <button v-on:click="turnOff" id="20">Turn the lights off!</button>
         </card>
       </div>
       <div class="col-md-6">
         <card>
           <h4 slot="header">Light 2</h4>
-          <button v-on:click="turnOn" id="20">Turn the lights on!</button>
-          <button v-on:click="turnOff" id="20">Turn the lights off!</button>
-          
-          <input type="date" id="dateStart" v-model="dateStart" />
-          <label for="dateStart">Start</label>
-          
-          <input type="date" id="dateEnd" v-model="dateEnd" />
-          <label for="dateEnd">Koniec</label>
-
-          <p>Start dzień: {{ dateStart }}</p>
-          
-          <p>Stop dzień: {{ dateEnd }}</p>
-          
-        
-
 
         </card>
       </div>

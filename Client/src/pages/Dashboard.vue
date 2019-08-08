@@ -244,13 +244,9 @@
     methods: {
 
       fillData: function (event) {
-        //this.getDS18B20(),
-        //this.bigLineChart.allData = table2;
         this.initBigChart();
      
-        
         console.log(this.bigLineChart.allData);
-        //this.bigLineChart.chartData = chartData;
         
       },
       //Włączenie wybranej diody led
