@@ -88,9 +88,6 @@ chart.render();
         start = this.timeStart.split(':');
         end = this.timeEnd.split(':');
         time = new Date();
-        if(time >= this.timeStart && time <= this.timeEnd ) {
-            console.log("Czas w zakresie " + time);
-        }
 
         axios.post(`${this.path}/schedule/${start[0]}/${start[1]}/1`, {
            headers: {
@@ -114,6 +111,10 @@ chart.render();
           .catch((error) => {
               console.log(error);
           });
+
+              if(time >= this.timeStart && time <= this.timeEnd ) {
+            console.log("Czas w zakresie " + time);
+        }
       },
 
       reset: function (event) {
