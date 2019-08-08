@@ -128,6 +128,7 @@ router.post('/reset', (req, res, next) => {
     doc.state = 0;
     doc.save();
 })
+  leds.led(20, 0);
   res.status(200).json({
     message: (pir.alarm)
   });
