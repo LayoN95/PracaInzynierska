@@ -112,11 +112,11 @@ chart.render();
               console.log(error);
           });
 
-              if(time >= this.timeStart && time <= this.timeEnd ) {
+              /*if(time >= this.timeStart && time <= this.timeEnd ) {
             console.log("Czas w zakresie " + time);
         } else {
           console.log("czas poza zakresem " + time);
-        }
+        }*/
       },
 
       reset: function (event) {
