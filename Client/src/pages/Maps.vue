@@ -5,7 +5,7 @@
           <h4 slot="header">Light 1</h4>
           <button v-on:click="turnOn" id="21">Turn the lights on!</button>
           <button v-on:click="turnOff" id="21">Turn the lights off!</button>
-          
+
           <button v-on:click="turnOn" id="20">Turn the lights on!</button>
           <button v-on:click="turnOff" id="20">Turn the lights off!</button>
         </card>
@@ -87,6 +87,10 @@ chart.render();
         var end = [];
         start = this.timeStart.split(':');
         end = this.timeEnd.split(':');
+        time = new Date();
+        if(time >= this.timeStart && time <= this.timeEnd ) {
+            console.log("Czas w zakresie " + time);
+        }
 
         axios.post(`${this.path}/schedule/${start[0]}/${start[1]}/1`, {
            headers: {
