@@ -19,12 +19,7 @@ sensor.read(11, 26, function(err, temperature, humidity) {
             humidity: humidity
         });
         DHT11schema.save();*/
-        const thermostat = THERMO({
-            _id: mongoose.Types.ObjectId(),
-            temperature: temperature,
-           
-        });
-        thermostat.save();
+
         
         temp = temperature.toFixed(1);
         humid = humidity.toFixed(1);

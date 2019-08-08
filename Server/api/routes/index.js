@@ -137,7 +137,7 @@ router.post('/reset', (req, res, next) => {
 });
 
 router.post('/thermostat/:temp', (req, res, next) => {
-  THERMOSTAT.findById('5d4c5a3d5af4f10b07a9bbde', function(err, doc) {
+  THERMOSTAT.findById('5d4c6723b9388f0ed86b1da3', function(err, doc) {
     if (err) {
         console.log("erorr not found");
     }
