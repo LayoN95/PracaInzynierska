@@ -2,6 +2,7 @@ var Gpio = require('onoff').Gpio,
     pir = new Gpio(19, 'in', 'both');
 const pirSchema = require('../models/pirHCSR501');
 const mongoose = require('mongoose');
+const LED = require('../midleware/leds')
 
 var count = 0;
 var alarm = 0;
@@ -21,11 +22,10 @@ var alarm = 0;
             doc.state = alarm;
             doc.save();
         })
-        /*const PIRschema = pirSchema({
-            _id: mongoose.Types.ObjectId(),
-            state: alarm
-        });
-        PIRschema.save();*/
+    
+        if (value = true) {
+            LED.led(20,1);
+        }
 
         module.exports.alarm = alarm;
         module.exports.count = count;
