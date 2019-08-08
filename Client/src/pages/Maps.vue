@@ -87,7 +87,8 @@ chart.render();
         var end = [];
         start = this.timeStart.split(':');
         end = this.timeEnd.split(':');
-        //time = new Date();
+        var timeNow = Date.now();
+        console.log(timeNow);
 
         axios.post(`${this.path}/schedule/${start[0]}/${start[1]}/1`, {
            headers: {
