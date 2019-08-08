@@ -31,7 +31,7 @@
           </template>
           <!-- Szeroki Wykres -->
           <div class="chart-area">
-            <!--<p>{{ /*User.ds18b20[0].temperature*/ Temperature }}</p> -->
+            <!--<p>{{ /*User.ds18b20[0].temperature*/ Temperature }}</p>
             <input v-model="id" placeholder="edit me">
             <button v-on:click="turnOn">Turn the lights on!</button>
 
@@ -40,7 +40,7 @@
             <button v-on:click="getDS18B20">Get DS18B20 data from mongoDB</button>
             <button v-on:click="getDHT11">Get DHT11 data from mongoDB</button>
 
-            <button v-on:click="fillData">fill Data</button>
+            <button v-on:click="fillData">fill Data</button> -->
 
             <line-chart style="height: 100%"
                         ref="bigChart"
@@ -443,6 +443,7 @@
     beforeMount() {
       this.getDHT11();
       this.getDS18B20();
+      this.fillData();
     },
     
        mounted() {
