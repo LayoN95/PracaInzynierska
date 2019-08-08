@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const DHT11 = require('../models/dht11');
 const DS18B20 = require('../models/ds18b20');
 const PIR = require('../models/pirHCSR501');
+const THERMOSTAT = require('../models/thermostat');
+
 
 const schedule = require('../midleware/schedule');
 const ds18b20 = require('../midleware/ds18b20');
@@ -132,6 +134,16 @@ router.post('/reset', (req, res, next) => {
   res.status(200).json({
     message: (pir.alarm)
   });
+});
+
+router.post('/thermostat/:temp', (req, res, next) => {
+  THERMOSTAT.findById('5d4c5a3d5af4f10b07a9bbde', function(err, doc) {
+    if (err) {
+        console.log("erorr not found");
+    }
+    doc.temperature = req.params.temp;
+    doc.save();
+}) 
 });
 
 

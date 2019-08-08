@@ -29,6 +29,8 @@
           <p>Stop godzina: {{ timeEnd }}</p>
           <button v-on:click="submit">Submit!</button>
 
+          <input v-model="thermostat" placeholder="Set temperature">
+          <button v-on:click="setTemperature">SetTemperature</button>
 
         </card>
       </div>
@@ -63,6 +65,7 @@
         dateEnd: null,
         timeEnd: null,
         checked: null,
+        thermostat: null,
         path: 'http://192.168.1.48:3000'
       };
     },
@@ -157,6 +160,21 @@
               
             });
       },
+      setTemperature: function (event) {
+              
+             axios.post(`${this.path}/thermostat/${this.thermostat}`, {
+              headers: {
+                'Access-Control-Allow-Origin': '*',
+              }
+            })
+            .then((response) => {
+              console.log(response);
+                          })
+            .catch((error) => {
+              console.log(error);
+              
+            });       
+      }
 
     }
   };
