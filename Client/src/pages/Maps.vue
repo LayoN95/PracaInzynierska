@@ -111,7 +111,18 @@
       },
 
       reset: function (event) {
-        
+            axios.post('http://192.168.1.48:3000/reset', {
+              headers: {
+                'Access-Control-Allow-Origin': '*',
+              }
+            })
+            .then((response) => {
+              console.log(response);
+                          })
+            .catch((error) => {
+              console.log(error);
+              
+            });        
       },
 
       turnOn: function (event) {
