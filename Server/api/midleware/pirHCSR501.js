@@ -1,6 +1,8 @@
 var Gpio = require('onoff').Gpio,
     pir = new Gpio(19, 'in', 'both');
 const pirSchema = require('../models/pirHCSR501');
+const mongoose = require('mongoose');
+
 var count = 0;
 var alarm = 0;
 
