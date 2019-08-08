@@ -10,7 +10,7 @@
                 <h5 class="card-category">{{$t('dashboard.totalShipments')}}</h5>
                 <h2 class="card-title">{{$t('dashboard.performance')}}</h2>
               </div>
-              <div class="col-sm-6">
+             <!-- <div class="col-sm-6">
                 <div class="btn-group btn-group-toggle"
                      :class="isRTL ? 'float-left' : 'float-right'"
                      data-toggle="buttons">
@@ -26,7 +26,7 @@
                     {{option}}
                   </label>
                 </div>
-              </div>
+              </div>-->
             </div>
           </template>
           <!-- Szeroki Wykres -->
