@@ -3,12 +3,14 @@ var router = express.Router();
 const mongoose = require('mongoose');
 const DHT11 = require('../models/dht11');
 const DS18B20 = require('../models/ds18b20');
+const PIR = require('../models/pirHCSR501');
 
 const schedule = require('../midleware/schedule');
 const ds18b20 = require('../midleware/ds18b20');
 const dht11 = require('../midleware/dht11');
 const pir = require('../midleware/pirHCSR501');
 const leds = require('../midleware/leds');
+
 
 var test = require('./test.json');
 
@@ -119,7 +121,13 @@ router.get('/alarm', (req, res, next) => {
 });
 
 router.post('/reset', (req, res, next) => {
-  pir.alarm = 0;
+  PIR.findById('5d4c5a3d5af4f10b07a9bbde', function(err, doc) {
+    if (err) {
+        console.log("erorr not found");
+    }
+    doc.state = 0;
+    doc.save();
+})
   res.status(200).json({
     message: (pir.alarm)
   });

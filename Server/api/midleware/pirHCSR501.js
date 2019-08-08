@@ -14,12 +14,18 @@ var alarm = 0;
         console.log(value ? 'Ktos tu jest!' : ' Juz Nie!');
         alarm = 1;
         count++;
-
-        const PIRschema = pirSchema({
+        pirSchema.findById('5d4c5a3d5af4f10b07a9bbde', function(err, doc) {
+            if (err) {
+                console.log("erorr not found");
+            }
+            doc.state = alarm;
+            doc.save();
+        })
+        /*const PIRschema = pirSchema({
             _id: mongoose.Types.ObjectId(),
             state: alarm
         });
-        PIRschema.save();
+        PIRschema.save();*/
 
         module.exports.alarm = alarm;
         module.exports.count = count;
