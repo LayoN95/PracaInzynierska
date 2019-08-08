@@ -68,18 +68,7 @@
     },
     methods: {
       beforeMount() {
-     var options = {
-       chart: {
-      height: 350,
-      type: 'radialBar',
-  }   ,
-  series: [70],
-  labels: ['Progress'],
-}
 
-var chart = new ApexCharts(document.querySelector("#chart"), options);
-
-chart.render();
 
     },
       submit: function (event) {
@@ -88,6 +77,7 @@ chart.render();
         start = this.timeStart.split(':');
         end = this.timeEnd.split(':');
         var timeNow = new Date();
+
         console.log("TIME NOW: " + timeNow);
 
         axios.post(`${this.path}/schedule/${start[0]}/${start[1]}/1`, {
