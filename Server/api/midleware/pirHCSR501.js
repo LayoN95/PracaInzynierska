@@ -24,7 +24,7 @@ var alarm = 0;
         })
     
         if (value = true) {
-            LED.alarm();
+            LED.alarm;
         }
 
         module.exports.alarm = alarm;
