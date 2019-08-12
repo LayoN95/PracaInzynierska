@@ -24,8 +24,7 @@ var alarm = 0;
         })
     
         if (value = true) {
-            //LED.led(20,1);
-            LED.startBlinking();
+            zLED.led(20,1);
         }
 
         module.exports.alarm = alarm;
