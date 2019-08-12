@@ -82,7 +82,11 @@
         var timeNow = new Date();
 
         console.log("TIME NOW: " + timeNow);
-
+          var hours = timeNow.getHours();
+          var minutes = timeNow.getMinutes();
+          var seconds = timeNow.getSeconds();
+         var timeRightNow = hours + ":" + minutes + ":" + seconds;
+         console.log("TIME NOW: " + timeRightNow);
         axios.post(`${this.path}/schedule/${start[0]}/${start[1]}/1`, {
            headers: {
                 'Access-Control-Allow-Origin': '*',
