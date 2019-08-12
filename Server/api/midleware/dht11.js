@@ -1,7 +1,6 @@
 const sensor = require('node-dht-sensor');
 const dht11Schema = require('../models/dht11');
 const mongoose = require('mongoose');
-const THERMO = require('../models/thermostat');
 
 var schedule = require('node-schedule');
 
