@@ -1,6 +1,6 @@
 const Gpio = require('onoff').Gpio;
 var ALARM = new Gpio(20, 'out');
-var alarm = setInterval(blinking, 250);
+var alarm;
 
     var value = false;
     var ledId = 0;
@@ -10,7 +10,9 @@ var alarm = setInterval(blinking, 250);
         
         LED.writeSync(value);
     }
-
+function startBlinking() {
+    alarm = setInterval(blinking, 250);
+}
     function blinking() {
         if (ALARM.readSync() === 0) {
             ALARM.writeSync(1);
@@ -23,7 +25,7 @@ var alarm = setInterval(blinking, 250);
         ALARM.writeSync(0);
         ALARM.unexport();
     }
-
+module.exports.startBlinking = startBlinking;
 module.exports.alarm = alarm;
 module.exports.endBlink = endBlink;
 module.exports.led = led;

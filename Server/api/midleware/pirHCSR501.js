@@ -25,7 +25,7 @@ var alarm = 0;
     
         if (value = true) {
             //LED.led(20,1);
-            LED.alarm;
+            LED.startBlinking();
         }
 
         module.exports.alarm = alarm;
