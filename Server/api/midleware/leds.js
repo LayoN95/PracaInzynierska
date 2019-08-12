@@ -1,5 +1,4 @@
 const Gpio = require('onoff').Gpio;
-z
 
     var value = false;
     var ledId = 0;
