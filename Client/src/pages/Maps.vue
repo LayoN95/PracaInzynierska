@@ -79,14 +79,15 @@
         var end = [];
         start = this.timeStart.split(':');
         end = this.timeEnd.split(':');
+        
+        //Ustalenie aktualnej godziny
         var timeNow = new Date();
-
         console.log("TIME NOW: " + timeNow);
-          var hours = timeNow.getHours();
-          var minutes = timeNow.getMinutes();
-          var seconds = timeNow.getSeconds();
-         var timeRightNow = hours + ":" + minutes + ":" + seconds;
-         console.log("TIME RIGHT NOW: " + timeRightNow);
+        var hours = timeNow.getHours();
+        var minutes = timeNow.getMinutes();
+        var timeRightNow = hours + ":" + minutes;
+        console.log("TIME RIGHT NOW: " + timeRightNow);
+
         axios.post(`${this.path}/schedule/${start[0]}/${start[1]}/1`, {
            headers: {
                 'Access-Control-Allow-Origin': '*',
@@ -110,11 +111,11 @@
               console.log(error);
           });
 
-              /*if(time >= this.timeStart && time <= this.timeEnd ) {
+              if(timeRightNow >= this.timeStart && time <= this.timeEnd ) {
             console.log("Czas w zakresie " + time);
         } else {
           console.log("czas poza zakresem " + time);
-        }*/
+        }
       },
 
       reset: function (event) {
