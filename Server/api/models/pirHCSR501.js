@@ -6,4 +6,4 @@ const pirSchema = mongoose.Schema({
     date: {type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model('pirHCSR501', pirzSchema);
+module.exports = mongoose.model('pirHCSR501', pirSchema);
