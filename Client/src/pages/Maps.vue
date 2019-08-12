@@ -111,10 +111,10 @@
               console.log(error);
           });
 
-              if(timeRightNow >= this.timeStart && time <= this.timeEnd ) {
-            console.log("Czas w zakresie " + time);
+              if(timeRightNow >= this.timeStart && timeRightNow <= this.timeEnd ) {
+            console.log("Czas w zakresie " + timeRightNow);
         } else {
-          console.log("czas poza zakresem " + time);
+          console.log("czas poza zakresem " + timeRightNow);
         }
       },
 
