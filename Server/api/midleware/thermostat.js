@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const ds18b20 = require('./ds18b20');
 
-var temp = 27;
+var temp;
 
 setInterval(function () {
 console.log(`DS18B20 Temperature ${ds18b20.temp}`);
