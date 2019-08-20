@@ -174,6 +174,7 @@
             })
             .then((response) => {
               console.log(response);
+              console.log("thermostat " + thermostat);
                           })
             .catch((error) => {
               console.log(error);
