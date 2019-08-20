@@ -37,6 +37,4 @@ var j = schedule.scheduleJob(rule, function(){
     temperature: temp
 });
 if (temp!=0){DS18B20schema.save();}
-
- 
 });

@@ -6,8 +6,6 @@ var rule = new schedule.RecurrenceRule();
 const ds18b20 = require('./ds18b20');
 
 
-console.log("schedule1");
-
 function schedule1(min, hour, value) {
         rule.hour = hour;
         rule.minute = min;
