@@ -144,6 +144,9 @@ router.post('/thermostat/:temp', (req, res, next) => {
     doc.temperature = req.params.temp;
     doc.save();
     thermostat.temp = req.params.temp;
+    res.status(200).json({
+      message: (req.params.temp)
+    });
 }) 
 });
 
