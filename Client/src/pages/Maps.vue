@@ -13,7 +13,8 @@
       <div class="col-md-6">
         <card>
           <h4 slot="header">Light 2</h4>
-            <input type="text" value="75" class="dial">
+          <knob-control v-model="someValue"></knob-control>
+
         </card>
       </div>
       <div class="col-12">
@@ -51,7 +52,10 @@
 </template>
 <script>
    import axios from 'axios';
-   import knob from 'jquery-knob';
+   import Vue from 'vue'
+    import KnobControl from 'vue-knob-control'
+
+    Vue.use(KnobControl)
    
 
 
@@ -72,9 +76,7 @@
     },
     methods: {
       beforeMount() {
-        $(function() {
-          $(".dial").knob();
-        });
+   
 
     },
       submit: function (event) {
