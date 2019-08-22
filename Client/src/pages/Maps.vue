@@ -79,6 +79,7 @@
         timeEnd: null,
         checked: null,
         thermostat: null,
+        detune: 20,
         path: 'http://192.168.1.48:3000'
       };
     },
