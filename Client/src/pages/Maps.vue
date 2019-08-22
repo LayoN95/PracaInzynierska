@@ -14,15 +14,15 @@
         <card>
           <h4 slot="header">Light 2</h4>
           <knob-control
-  :min="-64"
-  :max="63"
-  :size="75"
-  primary-color="#E844C3"
-  secondary-color="#E7B6DC"
-  text-color="#E844C3"
-  v-model="detune"
-></knob-control>
-
+          :min="10"
+          :max="35"
+          :size="100"
+          secondary-color="#66CC66"
+          text-color="#66CC66"
+          v-model="detune"
+          id="thermostatKnob"
+          ></knob-control>
+          <label for="thermostatKnob">Ustaw temperaturę</label>
         </card>
       </div>
       <div class="col-12">
