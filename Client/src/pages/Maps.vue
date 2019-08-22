@@ -54,6 +54,7 @@
    import axios from 'axios';
    import Vue from 'vue'
     import KnobControl from 'vue-knob-control'
+          Vue.use(KnobControl);
 
    
 
@@ -75,10 +76,10 @@
     },
     methods: {
       beforeMount() {
-          Vue.use(KnobControl);
   
 
     },
+    
       submit: function (event) {
         var start = [];
         var end = [];
