@@ -13,7 +13,7 @@
       <div class="col-md-6">
         <card>
           <h4 slot="header">Light 2</h4>
-
+            <div id="knob"></div>
         </card>
       </div>
       <div class="col-12">
@@ -51,7 +51,7 @@
 </template>
 <script>
    import axios from 'axios';
-   import ApexCharts from 'apexcharts';
+   import Knob from 'knob';
 
 
    export default {
@@ -71,8 +71,17 @@
     },
     methods: {
       beforeMount() {
+        let knob = Knob({
+          label: 'test 123',
+          value: 100,
+          angleOffset: -125,
+          angleArc: 250,
+          min: 0,
+          max: 200,
+          width: 100
+        })
 
-
+        document.getElementById('knob').appendChild(knob);
     },
       submit: function (event) {
         var start = [];
