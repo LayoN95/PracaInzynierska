@@ -153,6 +153,16 @@ router.post('/thermostat/:temp', (req, res, next) => {
 }) 
 });
 
-
+router.get('/thermostat', (req, res, next) => {
+  THERMOSTAT.findById('5d4c6723b9388f0ed86b1da3', function(err, doc) {
+    if (err) {
+        console.log("erorr not found");
+    }
+    
+    res.status(200).json({
+      message: (doc.temperature)
+    });
+}) 
+});
 
 module.exports = router;

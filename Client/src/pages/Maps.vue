@@ -12,7 +12,7 @@
       </div>
       <div class="col-md-6">
         <card>
-          <h4 slot="header">Light 2</h4>
+          <h4 slot="header">Termostat</h4>
           <knob-control
           :min="10"
           :max="35"
@@ -23,7 +23,7 @@
           id="thermostatKnob"
           ></knob-control>
           <label for="thermostatKnob">Ustaw temperaturę</label>
-          <button v-on:click="setTemperature">SetTemperature</button>
+          <button v-on:click="setTemperature">Zapisz</button>
         </card>
       </div>
       <div class="col-12">
@@ -80,7 +80,7 @@
         dateEnd: null,
         timeEnd: null,
         checked: null,
-        thermostat: null,
+        thermostat: 21,
         //detune: 20,
         path: 'http://192.168.1.48:3000'
       };
@@ -196,7 +196,20 @@
               console.log(error);
               
             });       
-      }
+      },
+            getDHT11: function(event) {
+
+      axios.get('http://192.168.1.48:3000/thermostat', {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        }
+      })
+      .then((response) => {
+      
+      })
+      .catch((error) => {
+        console.log(error);
+      });
 
     }
   };
