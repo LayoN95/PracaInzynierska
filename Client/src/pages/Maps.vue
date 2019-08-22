@@ -51,6 +51,7 @@
 </template>
 <script>
    import axios from 'axios';
+   import knob from 'jquery-knob';
    
 
 
