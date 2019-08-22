@@ -13,7 +13,15 @@
       <div class="col-md-6">
         <card>
           <h4 slot="header">Light 2</h4>
-          <knob-control v-model="someValue"></knob-control>
+          <knob-control
+  :min="-64"
+  :max="63"
+  :size="75"
+  primary-color="#E844C3"
+  secondary-color="#E7B6DC"
+  text-color="#E844C3"
+  v-model="detune"
+></knob-control>
 
         </card>
       </div>
