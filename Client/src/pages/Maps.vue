@@ -19,10 +19,11 @@
           :size="100"
           secondary-color="#66CC66"
           text-color="#66CC66"
-          v-model="detune"
+          v-model="thermostat"
           id="thermostatKnob"
           ></knob-control>
           <label for="thermostatKnob">Ustaw temperaturę</label>
+          <button v-on:click="setTemperature">SetTemperature</button>
         </card>
       </div>
       <div class="col-12">
@@ -38,8 +39,9 @@
           <p>Stop godzina: {{ timeEnd }}</p>
           <button v-on:click="submit">Submit!</button>
 
-          <input v-model="thermostat" placeholder="Set temperature">
-          <button v-on:click="setTemperature">SetTemperature</button>
+          <!--
+            <input v-model="thermostat" placeholder="Set temperature">
+          -->
 
         </card>
       </div>
@@ -79,7 +81,7 @@
         timeEnd: null,
         checked: null,
         thermostat: null,
-        detune: 20,
+        //detune: 20,
         path: 'http://192.168.1.48:3000'
       };
     },
