@@ -13,6 +13,7 @@ const dht11 = require('../midleware/dht11');
 const pir = require('../midleware/pirHCSR501');
 const leds = require('../midleware/leds');
 const thermostat = require('../midleware/thermostat');
+const servoControl = require('../midleware/servo');
 
 var test = require('./test.json');
 
@@ -163,6 +164,13 @@ router.get('/thermostat', (req, res, next) => {
       message: (doc.temperature)
     });
 }) 
+});
+
+router.post('/servo/:value', (req, res, next) => {
+  servoControl.servoControl(req.params.value);
+  res.status(200).json({
+    message: (req.params/value)
+  });
 });
 
 module.exports = router;

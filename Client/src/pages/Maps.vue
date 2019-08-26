@@ -197,19 +197,7 @@
               
             });       
       },
-            getDHT11: function(event) {
-
-      axios.get('http://192.168.1.48:3000/thermostat', {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-        }
-      })
-      .then((response) => {
       
-      })
-      .catch((error) => {
-        console.log(error);
-      });
 
     }
   };
