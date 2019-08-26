@@ -1,14 +1,14 @@
-const Gpio = require('pigpio').Gpio;
+/* const Gpio = require('pigpio').Gpio;
  
 const motor = new Gpio(13, {mode: Gpio.OUTPUT});
  
-let pulseWidth = 1550; /*600-2500*/
+let pulseWidth = 1550; 
 
 function servoControl(value) {
     motor.servoWrite(value);
 }
 
-/* setInterval(() => {
+setInterval(() => {
     motor.servoWrite(pulseWidth);
  
   pulseWidth += increment;
@@ -17,6 +17,6 @@ function servoControl(value) {
   } else if (pulseWidth <= 600) {
     increment = 200;
   }
-}, 100); */
+}, 100); 
 
-module.expots.servoControl = servoControl;
+module.expots.servoControl = servoControl;*/
