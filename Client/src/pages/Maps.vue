@@ -10,7 +10,7 @@
           <button v-on:click="turnOff" id="20">Turn the lights off!</button>
         </card>
       </div>
-      <div class="col-12">
+      <div class="col-md-6">
         <card>
           <h4 slot="header">Termostat</h4>
           <knob-control
@@ -26,7 +26,7 @@
           <button v-on:click="setTemperature">Zapisz</button>
         </card>
       </div>
-      <div class="col-md-6">
+      <div class="col-12">
         <card>
           <h4 slot="header">Schedule</h4>
 
@@ -38,6 +38,17 @@
           <input type="time" id="timeEnd" v-model="timeEnd" />
           <p>Stop godzina: {{ timeEnd }}</p>
           <button v-on:click="submit">Submit!</button>
+
+          <knob-control
+          :min="600"
+          :max="2500"
+          :size="100"
+          secondary-color="#66CC66"
+          text-color="#66CC66"
+          v-model="servoControl"
+          id="servoControlKnob"
+          ></knob-control>
+          <button v-on:click="servoSubmit">Submit!</button>
 
           <!--
             <input v-model="thermostat" placeholder="Set temperature">
