@@ -26,7 +26,7 @@
           <button v-on:click="setTemperature">Zapisz</button>
         </card>
       </div>
-      <div class="col-md-6">
+      <div class="col-12">
         <card>
           <h4 slot="header">Schedule</h4>
 
@@ -47,7 +47,7 @@
 
         </card>
       </div>
-        <div class="col-md-6">
+        <div class="col-12">
         <card>
           <h4 slot="header">ServoControl</h4>
           <input v-model="servoControl" placeholder="edit me">
