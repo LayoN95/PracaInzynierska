@@ -13,7 +13,7 @@ const dht11 = require('../midleware/dht11');
 const pir = require('../midleware/pirHCSR501');
 const leds = require('../midleware/leds');
 const thermostat = require('../midleware/thermostat');
-//const servoControl = require('../midleware/servo');
+const servoControl = require('../midleware/servo');
 
 var test = require('./test.json');
 
