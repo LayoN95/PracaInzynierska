@@ -54,8 +54,8 @@
           :size="100"
           secondary-color="#66CC66"
           text-color="#66CC66"
-          v-model="thermostat"
-          id="servoControl"
+          v-model="servoControl"
+          id="servoControlKnob"
           ></knob-control>
           <button v-on:click="servoSubmit">Submit!</button>
         </card>
