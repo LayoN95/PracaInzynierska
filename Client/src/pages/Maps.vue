@@ -26,7 +26,7 @@
           <button v-on:click="setTemperature">Zapisz</button>
         </card>
       </div>
-      <div class="col-12">
+      <div class="col-md-6">
         <card>
           <h4 slot="header">Schedule</h4>
 
@@ -43,6 +43,21 @@
             <input v-model="thermostat" placeholder="Set temperature">
           -->
 
+        </card>
+      </div>
+            <div class="col-md-6">
+        <card>
+          <h4 slot="header">ServoControl</h4>
+          <knob-control
+          :min="600"
+          :max="2500"
+          :size="100"
+          secondary-color="#66CC66"
+          text-color="#66CC66"
+          v-model="thermostat"
+          id="servoControl"
+          ></knob-control>
+          <button v-on:click="servoSubmit">Submit!</button>
         </card>
       </div>
       <div class="col-12">
@@ -81,6 +96,7 @@
         timeEnd: null,
         checked: null,
         thermostat: 21,
+        servoControl: 1550,
         //detune: 20,
         path: 'http://192.168.1.48:3000'
       };
@@ -198,6 +214,19 @@
             });       
       },
       
+      servoControl: function (event) {
+        axios.post(`${this.path}/servo/${this.servoControl}`, {
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+           }
+        })  .then((response) => {
+              console.log(response);
+                                    })
+            .catch((error) => {
+              console.log(error);
+              
+            });
+      }
 
     }
   };

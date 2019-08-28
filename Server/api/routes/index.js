@@ -166,11 +166,11 @@ router.get('/thermostat', (req, res, next) => {
 }) 
 });
 
-/*router.post('/servo/:value', (req, res, next) => {
+router.post('/servo/:value', (req, res, next) => {
   servoControl.servoControl(req.params.value);
   res.status(200).json({
     message: (req.params/value)
   });
-});*/
+});
 
 module.exports = router;

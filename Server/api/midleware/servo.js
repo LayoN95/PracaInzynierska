@@ -8,15 +8,15 @@ function servoControl(value) {
     motor.servoWrite(value);
 }
 
-setInterval(() => {
+/*setInterval(() => {
     motor.servoWrite(pulseWidth);
  
-  /*pulseWidth += increment;
+  pulseWidth += increment;
   if (pulseWidth >= 2400) {
     increment = -200;
   } else if (pulseWidth <= 600) {
     increment = 200;
-  }*/
-}, 100); 
+  }
+}, 100); */
 
 module.exports.servoControl = servoControl;
