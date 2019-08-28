@@ -47,14 +47,14 @@
 
         </card>
       </div>
-        <!--<div class="col-12">
+        <div class="col-12">
         <card>
           <h4 slot="header">ServoControl</h4>
           <input v-model="servoControl" placeholder="edit me">
 
           <button v-on:click="servoSubmit">Submit!</button>
         </card>
-      </div>-->
+      </div>
       <div class="col-12">
         <card>
           <h4 slot="header">Alarm</h4>
