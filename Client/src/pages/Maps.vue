@@ -10,7 +10,7 @@
           <button v-on:click="turnOff" id="20">Turn the lights off!</button>
         </card>
       </div>
-      <div class="col-md-6">
+      <div class="col-12">
         <card>
           <h4 slot="header">Termostat</h4>
           <knob-control
@@ -45,7 +45,7 @@
 
         </card>
       </div>
-            <div class="col-md-6">
+            <!--<div class="col-md-6">
         <card>
           <h4 slot="header">ServoControl</h4>
           <knob-control
@@ -59,7 +59,7 @@
           ></knob-control>
           <button v-on:click="servoSubmit">Submit!</button>
         </card>
-      </div>
+      </div>-->
       <div class="col-12">
         <card>
           <h4 slot="header">Alarm</h4>
