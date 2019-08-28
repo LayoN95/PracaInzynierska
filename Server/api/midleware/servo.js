@@ -19,4 +19,4 @@ setInterval(() => {
   }*/
 }, 100); 
 
-module.expots.servoControl = servoControl;
+module.exports.servoControl = servoControl;
