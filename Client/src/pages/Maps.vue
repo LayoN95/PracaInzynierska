@@ -91,7 +91,7 @@
         timeEnd: null,
         checked: null,
         thermostat: 21,
-        servoControl: 1550,
+        servoControl: null,
         //detune: 20,
         path: 'http://192.168.1.48:3000'
       };
@@ -209,7 +209,7 @@
             });       
       },
       
-      servoControl: function (event) {
+      servoSubmit: function (event) {
         axios.post(`${this.path}/servo/${this.servoControl}`, {
           headers: {
             'Access-Control-Allow-Origin': '*',
