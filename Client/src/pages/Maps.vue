@@ -60,7 +60,7 @@
           v-model="servoControl"
           id="servoControlKnob"
           ></knob-control>
-
+          <base-button slot="footer" v-on:click="servoSubmit" type="primary" fill>Save</base-button>
           <!--<input v-model="servoControl" placeholder="edit me">-->
 
           <button v-on:click="servoSubmit">Submit!</button>
@@ -102,7 +102,7 @@
         timeEnd: null,
         checked: null,
         thermostat: 21,
-        servoControl: null,
+        servoControl: 1550,
         //detune: 20,
         path: 'http://192.168.1.48:3000'
       };
