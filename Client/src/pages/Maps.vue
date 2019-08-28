@@ -50,7 +50,18 @@
         <div class="col-12">
         <card>
           <h4 slot="header">ServoControl</h4>
-          <input v-model="servoControl" placeholder="edit me">
+          
+          <knob-control
+          :min="600"
+          :max="2500"
+          :size="100"
+          secondary-color="#66CC66"
+          text-color="#66CC66"
+          v-model="servoControl"
+          id="servoControlKnob"
+          ></knob-control>
+
+          <!--<input v-model="servoControl" placeholder="edit me">-->
 
           <button v-on:click="servoSubmit">Submit!</button>
         </card>
