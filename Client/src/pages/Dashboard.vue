@@ -116,6 +116,9 @@
     </div>
   </div>
 </template>
+<script src="/socket.io/socket.io.js"></script>
+
+
 <script>
   import LineChart from '@/components/Charts/LineChart';
   import BarChart from '@/components/Charts/BarChart';
@@ -126,7 +129,8 @@
 
   import axios from 'axios';
   
-  
+    var socket = null;
+
    var table = [[12, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100, 200],
             [80, 120, 105, 110, 95, 105, 90, 100, 80, 95, 70, 120, 200],
             [60, 80, 65, 130, 80, 105, 90, 130, 70, 115, 60, 130, 200]];
@@ -441,6 +445,9 @@
       this.getDHT11();
       this.getDS18B20();
       this.fillData();
+    },
+    created: function() {
+      socket = io();
     },
     
        mounted() {
