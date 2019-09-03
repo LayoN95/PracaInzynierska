@@ -446,7 +446,6 @@
       this.getDS18B20();
       this.fillData();
     },
-   
     
        mounted() {
          getDS18B20();
