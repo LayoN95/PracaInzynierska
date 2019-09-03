@@ -129,7 +129,7 @@
 
   import axios from 'axios';
   
-    var socket = null;
+    var socket = io();
 
    var table = [[12, 70, 90, 70, 85, 60, 75, 60, 90, 80, 110, 100, 200],
             [80, 120, 105, 110, 95, 105, 90, 100, 80, 95, 70, 120, 200],
@@ -446,9 +446,7 @@
       this.getDS18B20();
       this.fillData();
     },
-    created: function() {
-      socket = io();
-    },
+   
     
        mounted() {
          getDS18B20();
