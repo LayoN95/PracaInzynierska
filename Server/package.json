@@ -23,6 +23,7 @@
     "nodemon": "^1.19.1",
     "onoff": "^4.1.2",
     "pi-pir-sensor": "0.0.3",
-    "pigpio.js": "0.0.3"
+    "pigpio.js": "0.0.3",
+    "i2c": "https://github.com/alphacharlie/node-i2c"
   }
 }
