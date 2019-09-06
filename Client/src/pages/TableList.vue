@@ -2,12 +2,14 @@
     <div class="row">
       <div class="col-12">
         <card :title="123">
-          <!--<div class="table-responsive">
+          <div class="table-responsive">
             <base-table :data="table1.data"
                         :columns="table1.columns"
                         thead-classes="text-primary">
             </base-table>
-          </div>-->
+          </div>
+
+
         </card>
       </div>
 
@@ -28,8 +30,8 @@
 import { BaseTable } from "@/components";
   import axios from 'axios';
 
-/*const tableColumns = ["Name", "Country", "City", "Salary"];
-const tableData = [
+const tableColumns = ["Name", "Country", "City", "Salary"];
+/*const tableData = [
   {
     id: 1,
     name: "Dakota Rice",
@@ -86,7 +88,9 @@ export default {
     BaseTable
   },
   data() {
+    var table;
     return {
+      
       /*table1: {
         title: "Simple Table",
         columns: [...tableColumns],
@@ -97,6 +101,12 @@ export default {
         columns: [...tableColumns],
         data: [...tableData]
       }*/
+
+      table1: {
+        title: "Simple Table:",
+        columns: [...tableColumns],
+        data: this.table
+      }
     };
   },
   methods: {
@@ -114,7 +124,8 @@ export default {
         var x = [];
         var y = [];
         var z = [];
-
+        this.table = response.data;
+        console.log("this.table: " + this.table);
         for (var i in obj.records) {
           x[i] = obj.records[i].humidity;
           y[i] = obj.records[i].temperature;
