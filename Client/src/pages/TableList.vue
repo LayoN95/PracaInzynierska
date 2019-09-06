@@ -30,7 +30,7 @@
 import { BaseTable } from "@/components";
   import axios from 'axios';
 
-const tableColumns = ["temperature", "humidity", "date", "id"];
+const tableColumns = ["Temperature", "Humidity", "Date", "Id"];
 /*const tableData = [
   {
     id: 1,
