@@ -1,7 +1,7 @@
 <template>
     <div class="row">
       <div class="col-12">
-        <card :title="table1.title">
+        <card :title="123">
           <!--<div class="table-responsive">
             <base-table :data="table1.data"
                         :columns="table1.columns"
