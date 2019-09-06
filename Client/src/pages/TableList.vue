@@ -88,7 +88,7 @@ export default {
     BaseTable
   },
   data() {
-    var table;
+    var table = [];
     return {
       
       /*table1: {
@@ -105,7 +105,7 @@ export default {
       table1: {
         title: "Simple Table:",
         columns: [...tableColumns],
-        data: this.table
+        data: table
       }
     };
   },
@@ -125,7 +125,7 @@ export default {
         var y = [];
         var z = [];
         this.table = response.data;
-        console.log("this.table: " + table);
+        console.log("this.table: " + this.table);
         for (var i in obj.records) {
           x[i] = obj.records[i].humidity;
           y[i] = obj.records[i].temperature;
