@@ -121,11 +121,13 @@ export default {
         var hours, minutes, seconds;
         var dateHMS;
         var obj = response.data;
+        var table8 = response.data;
         var x = [];
         var y = [];
         var z = [];
         this.table = response.data;
         console.log("this.table: " + this.table);
+        console.log("table8: " + table8);
         for (var i in obj.records) {
           x[i] = obj.records[i].humidity;
           y[i] = obj.records[i].temperature;
