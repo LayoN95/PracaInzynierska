@@ -26,6 +26,8 @@
 </template>
 <script>
 import { BaseTable } from "@/components";
+  import axios from 'axios';
+
 /*const tableColumns = ["Name", "Country", "City", "Salary"];
 const tableData = [
   {
