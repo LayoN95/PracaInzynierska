@@ -136,7 +136,7 @@ export default {
           z[i] = hours + ":" + minutes + ":" + seconds; 
         }
 
-        console.log(obj);
+        console.log(obj.records);
         console.log(x);
         console.log(y);
       })
