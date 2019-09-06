@@ -2,23 +2,23 @@
     <div class="row">
       <div class="col-12">
         <card :title="table1.title">
-          <div class="table-responsive">
+          <!--<div class="table-responsive">
             <base-table :data="table1.data"
                         :columns="table1.columns"
                         thead-classes="text-primary">
             </base-table>
-          </div>
+          </div>-->
         </card>
       </div>
 
       <div class="col-12">
         <card class="card-plain">
-          <div class="table-full-width table-responsive">
+          <!--<div class="table-full-width table-responsive">
             <base-table :title="table2.title" :sub-title="table2.subTitle" :data="table2.data"
                          :columns="table2.columns">
 
             </base-table>
-          </div>
+          </div>-->
         </card>
       </div>
 
@@ -26,7 +26,7 @@
 </template>
 <script>
 import { BaseTable } from "@/components";
-const tableColumns = ["Name", "Country", "City", "Salary"];
+/*const tableColumns = ["Name", "Country", "City", "Salary"];
 const tableData = [
   {
     id: 1,
@@ -77,7 +77,7 @@ const tableData = [
     country: 'Portugal',
     city: 'Gloucester'
   }
-];
+]; */
 
 export default {
   components: {
@@ -85,7 +85,7 @@ export default {
   },
   data() {
     return {
-      table1: {
+      /*table1: {
         title: "Simple Table",
         columns: [...tableColumns],
         data: [...tableData]
@@ -94,10 +94,44 @@ export default {
         title: "Table on Plain Background",
         columns: [...tableColumns],
         data: [...tableData]
-      }
+      }*/
     };
+  },
+  methods: {
+      getDHT11: function(event) {
+
+      axios.get('http://192.168.1.48:3000/dht11', {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        }
+      })
+        .then((response) => {
+        var hours, minutes, seconds;
+        var dateHMS;
+        var obj = response.data;
+        var x = [];
+        var y = [];
+        var z = [];
+
+        for (var i in obj.records) {
+          x[i] = obj.records[i].humidity;
+          y[i] = obj.records[i].temperature;
+          dateHMS = new Date(obj.records[i].date);
+          hours = dateHMS.getHours();
+          minutes = dateHMS.getMinutes();
+          seconds = dateHMS.getSeconds();
+          z[i] = hours + ":" + minutes + ":" + seconds; 
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      }); 
   }
-};
+},
+beforeMount(){
+  this.getDHT11();
+}
+}
 </script>
 <style>
 </style>
