@@ -125,7 +125,7 @@ export default {
         var y = [];
         var z = [];
         this.table = response.data;
-        console.log("this.table: " + this.table.records[1].humidity);
+        console.log("this.table: " + this.table);
         for (var i in obj.records) {
           x[i] = obj.records[i].humidity;
           y[i] = obj.records[i].temperature;
