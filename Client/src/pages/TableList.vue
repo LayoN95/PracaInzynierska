@@ -139,7 +139,7 @@ export default {
           z[i] = hours + ":" + minutes + ":" + seconds; 
         }
 console.log("this.table: " + this.table);
-        console.log("table8: " + table8);
+        console.log(table8);
         console.log("obj: " + obj);
 
         console.log(obj);
