@@ -137,7 +137,7 @@ export default {
           z[i] = hours + ":" + minutes + ":" + seconds; 
         }
 
-        console.log(obj.records);
+        console.log(table);
         console.log(x);
         console.log(y);
       })
@@ -149,7 +149,7 @@ export default {
 beforeMount(){
   this.getDHT11();
   console.log(tableData);
-  console.log(table);
+
 }
 }
 </script>
