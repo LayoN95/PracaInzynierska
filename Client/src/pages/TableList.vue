@@ -30,7 +30,7 @@
 import { BaseTable } from "@/components";
   import axios from 'axios';
 
-const tableColumns = ["Temperature", "Humidity", "Date", "Id"];
+const tableColumns = ["Temperature", "Humidity", "Date", "_Id"];
 const tableData = [
   {
     id: 1,
@@ -91,7 +91,7 @@ export default {
     var table = [];
     return {
       
-      table1: {
+      /*table1: {
         title: "Simple Table",
         columns: [...tableColumns],
         data: [...tableData]
@@ -100,13 +100,13 @@ export default {
         title: "Table on Plain Background",
         columns: [...tableColumns],
         data: [...tableData]
-      }
+      }*/
 
-      /*table1: {
+      table1: {
         title: "Simple Table:",
         columns: [...tableColumns],
-        data: [table.records]
-      }*/
+        data: [table]
+      }
     };
   },
   methods: {
@@ -124,7 +124,7 @@ export default {
         var x = [];
         var y = [];
         var z = [];
-        this.table = response.data;
+        this.table = response.data.records;
 
         for (var i in obj.records) {
           x[i] = obj.records[i].humidity;
