@@ -124,6 +124,7 @@ export default {
           seconds = dateHMS.getSeconds();
           z[i] = hours + ":" + minutes + ":" + seconds; 
         }
+        console.log(obj);
         console.log(x);
         console.log(y);
       })
