@@ -30,6 +30,7 @@
 import { BaseTable } from "@/components";
   import axios from 'axios';
 
+var table = [];
 const tableColumns = ["temperature", "humidity", "date", "id"];
 const tableData = [
   {
@@ -88,7 +89,7 @@ export default {
     BaseTable
   },
   data() {
-    var table = [];
+
     return {
       
       /*table1: {
