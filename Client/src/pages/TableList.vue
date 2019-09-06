@@ -138,6 +138,10 @@ export default {
           seconds = dateHMS.getSeconds();
           z[i] = hours + ":" + minutes + ":" + seconds; 
         }
+console.log("this.table: " + this.table);
+        console.log("table8: " + table8);
+        console.log("obj: " + obj);
+
         console.log(obj);
         console.log(x);
         console.log(y);
