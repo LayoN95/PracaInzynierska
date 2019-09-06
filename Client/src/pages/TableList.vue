@@ -101,11 +101,11 @@ export default {
         columns: [...tableColumns],
         data: [...tableData]
       }*/
-
+      
       table1: {
         title: "Simple Table:",
         columns: [...tableColumns],
-        data: [table]
+        data: [...table]
       }
     };
   },
@@ -147,6 +147,7 @@ export default {
 },
 beforeMount(){
   this.getDHT11();
+  console.log(tableData);
 }
 }
 </script>
