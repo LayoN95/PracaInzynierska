@@ -31,7 +31,7 @@ import { BaseTable } from "@/components";
   import axios from 'axios';
 
 const tableColumns = ["Temperature", "Humidity", "Date", "Id"];
-/*const tableData = [
+const tableData = [
   {
     id: 1,
     name: "Dakota Rice",
@@ -81,7 +81,7 @@ const tableColumns = ["Temperature", "Humidity", "Date", "Id"];
     country: 'Portugal',
     city: 'Gloucester'
   }
-]; */
+]; 
 
 export default {
   components: {
@@ -91,7 +91,7 @@ export default {
     var table = [];
     return {
       
-      /*table1: {
+      table1: {
         title: "Simple Table",
         columns: [...tableColumns],
         data: [...tableData]
@@ -100,13 +100,13 @@ export default {
         title: "Table on Plain Background",
         columns: [...tableColumns],
         data: [...tableData]
-      }*/
+      }
 
-      table1: {
+      /*table1: {
         title: "Simple Table:",
         columns: [...tableColumns],
         data: [table.records]
-      }
+      }*/
     };
   },
   methods: {
