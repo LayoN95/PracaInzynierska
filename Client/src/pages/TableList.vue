@@ -30,7 +30,7 @@
 import { BaseTable } from "@/components";
   import axios from 'axios';
 
-const tableColumns = ["Temperature", "Humidity", "Date", "_Id"];
+const tableColumns = ["temperature", "humidity", "date", "id"];
 const tableData = [
   {
     id: 1,
@@ -148,6 +148,7 @@ export default {
 beforeMount(){
   this.getDHT11();
   console.log(tableData);
+  console.log(table);
 }
 }
 </script>
