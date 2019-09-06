@@ -1,7 +1,7 @@
 <template>
     <div class="row">
       <div class="col-12">
-        <card :title="123">
+        <card :title="table1.title">
           <div class="table-responsive">
             <base-table :data="table1.data"
                         :columns="table1.columns"
@@ -30,7 +30,7 @@
 import { BaseTable } from "@/components";
   import axios from 'axios';
 
-const tableColumns = ["Name", "Country", "City", "Salary"];
+const tableColumns = ["temperature", "humidity", "date", "id"];
 /*const tableData = [
   {
     id: 1,
