@@ -105,7 +105,7 @@ export default {
       table1: {
         title: "Simple Table:",
         columns: [...tableColumns],
-        data: [...table.records]
+        data: table.records
       }
     };
   },
