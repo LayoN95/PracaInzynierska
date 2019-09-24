@@ -7,4 +7,4 @@ const devicesStatusSchema = mongoose.Schema({
     date: {type: Date, default: Date.now }
 });
 
-module.exports = mongoose.model('Devices_Status', devicesStatusSchema);
+module.exports = mongoose.model('devices_status', devicesStatusSchema);

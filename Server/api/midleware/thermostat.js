@@ -14,6 +14,6 @@ if (ds18b20.temp < temp) {
     console.log("Turn on the heater.");
 } else if (ds18b20.temp >= temp) {
     console.log("Turn off the heater");
-}}, 15000);
+}}, 60000);
 
 module.exports.setTemp = setTemp;
