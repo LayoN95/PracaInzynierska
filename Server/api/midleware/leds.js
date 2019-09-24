@@ -11,7 +11,7 @@ const devicesStatus = ('../models/devicesStatus');
             if (err) {
                 console.log("erorr not found");
             }
-            doc.status = value;
+            doc.status = true;
             doc.save();
 
         })
