@@ -7,13 +7,12 @@ const devicesSchema = require('../models/devicesStatus');
     function led(ledId, value) {
         console.log("FUNKCJA DZIALA " + ledId + " " + value);
         var LED = new Gpio(ledId, 'out'); 
-        devicesSchema.findById('5d8a53ac2e19d307f72dae0d', function(err, doc) {
+        devicesSchema.findById('5d8a55262e19d307f72dae11', function(err, doc) {
             if (err) {
                 console.log("erorr not found");
             }
             doc.state = value;
             doc.save();
-
         })
         /*const DEVICEstatus = devicesSchema({
             _id: mongoose.Types.ObjectId(),
