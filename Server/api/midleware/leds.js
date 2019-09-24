@@ -1,4 +1,5 @@
 const Gpio = require('onoff').Gpio;
+const mongoose = require('mongoose');
 const devicesStatusSchema = ('../models/devicesStatus');
 
     var value = false;
