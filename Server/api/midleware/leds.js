@@ -7,7 +7,7 @@ const devicesSchema = require('../models/devicesStatus');
     function led(ledId, value) {
         console.log("FUNKCJA DZIALA " + ledId + " " + value);
         var LED = new Gpio(ledId, 'out'); 
-        devicesSchema.findById('5d8a55262e19d307f72dae11', function(err, doc) {
+        devicesSchema.findById('5d8a5b771c9d4400002e3fa9', function(err, doc) {
             if (err) {
                 console.log("erorr not found");
             }
