@@ -15,8 +15,6 @@ const devicesStatus = require('../models/devicesStatus');
             doc.save();
 
         })*/
-        LED.writeSync(value);
-
         const DEVICEstatus = devicesStatus({
             _id: mongoose.Types.ObjectId(),
             name: "light2",
@@ -24,6 +22,10 @@ const devicesStatus = require('../models/devicesStatus');
 
         });
         DEVICEstatus.save();
+        
+        LED.writeSync(value);
+
+
 
     }
 module.exports.led = led;
