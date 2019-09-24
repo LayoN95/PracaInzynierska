@@ -1,6 +1,6 @@
 const Gpio = require('onoff').Gpio;
 const mongoose = require('mongoose');
-const devicesStatus = require('../models/devicesStatus');
+const devicesSchema = require('../models/devicesStatus');
 
     var value = false;
     var ledId = 0;
@@ -15,14 +15,14 @@ const devicesStatus = require('../models/devicesStatus');
             doc.save();
 
         })*/
-        const DEVICEstatus = devicesStatus({
+        const DEVICEstatus = devicesSchema({
             _id: mongoose.Types.ObjectId(),
             name: "light2",
-            state: value,
+            state: value
 
         });
         DEVICEstatus.save();
-        
+
         LED.writeSync(value);
 
 
