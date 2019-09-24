@@ -7,16 +7,23 @@ const devicesStatus = ('../models/devicesStatus');
     function led(ledId, value) {
         console.log("FUNKCJA DZIALA " + ledId + " " + value);
         var LED = new Gpio(ledId, 'out'); 
-        devicesStatus.findById('5d8a46ad1c9d440000c541e3', function(err, doc) {
+        /*devicesStatus.findById('5d8a46ad1c9d440000c541e3', function(err, doc) {
             if (err) {
                 console.log("erorr not found");
             }
             doc.status = true;
             doc.save();
 
-        })
+        })*/
         LED.writeSync(value);
 
+        const DEVICEstatus = devicesStatus({
+            _id: mongoose.Types.ObjectId(),
+            name: "light2",
+            stauts: value,
+
+        });
+        DEVICEstatus.save();
 
     }
 module.exports.led = led;
