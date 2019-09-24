@@ -10,13 +10,13 @@ const devicesStatusSchema = ('../models/devicesStatus');
         
         LED.writeSync(value);
 
-       devicesStatusSchema.findById('5d8a45091c9d440000c541df', function(err, doc) {
+       devicesStatusSchema.findById('5d8a46ad1c9d440000c541e3', function(err, doc) {
             if (err) {
                 console.log("erorr not found");
             }
             doc.status = value;
             doc.save();
 
-        });
+        })
     }
 module.exports.led = led;
