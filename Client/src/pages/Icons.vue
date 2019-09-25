@@ -48,18 +48,21 @@
 export default {
 data() {
         return {
-
+        lightStatus: null, 
         path: 'http://192.168.1.48:3000'
       };
     },
     methods: {
       beforeMount() {
-        axios.get(`${this.path}/schedule/`, {
+        axios.get(`${this.path}/devicestatus/`, {
            headers: {
                 'Access-Control-Allow-Origin': '*',
               }
           })
           .then((response) => {
+          var obj = response.data;
+          console.log(obj.state);
+
               console.log(response);
           })
           .catch((error) => {
