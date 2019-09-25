@@ -76,14 +76,15 @@ data() {
               console.log(error);
           });  
 
-        },
-    beforeMount() {
-        this.getData();
+        }
+  
+    
+    },
+      beforeMount() {
+      this.getData();  
     },
     mounted() {
-        getData();
-    }
-    
+       
     }  
   };
 
