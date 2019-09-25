@@ -77,48 +77,15 @@ data() {
           });  
 
         }*/
-        getDHT11: function(event) {
-
-      axios.get('http://192.168.1.48:3000/dht11', {
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-        }
-      })
-        .then((response) => {
-        var hours, minutes, seconds;
-        var dateHMS;
-        var obj = response.data;
-        var x = [];
-        var y = [];
-        var z = [];
-        table = response.data.records;
-
-        for (var i in obj.records) {
-          x[i] = obj.records[i].humidity;
-          y[i] = obj.records[i].temperature;
-          dateHMS = new Date(obj.records[i].date);
-          hours = dateHMS.getHours();
-          minutes = dateHMS.getMinutes();
-          seconds = dateHMS.getSeconds();
-          z[i] = hours + ":" + minutes + ":" + seconds; 
-        }
-
-        console.log(table);
-        console.log(x);
-        console.log(y);
-      })
-      .catch((error) => {
-        console.log(error);
-      }); 
-  }
+  
     
     },
       beforeMount() {
-      //this.getData();  
-      this.getDHT11();
+      //this.getData(); 
+      console.log("123"); 
     },
     mounted() {
-       
+       console.log("456");
     }  
   };
 
