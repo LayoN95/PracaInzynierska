@@ -19,7 +19,17 @@
 
         </card>
       </div>
-        <div class="col-md-6">
+        <div class="col-lg-4">
+        <card>
+           <h4 slot="header">Schedule</h4>
+        </card>
+      </div>
+        <div class="col-lg-4">
+        <card>
+           <h4 slot="header">Schedule</h4>
+        </card>
+      </div>
+        <div class="col-lg-4">
         <card>
            <h4 slot="header">Schedule</h4>
         </card>
