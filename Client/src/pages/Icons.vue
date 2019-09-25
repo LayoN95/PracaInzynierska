@@ -21,12 +21,12 @@
       </div>
         <div class="col-md-6">
         <card>
-
+           <h4 slot="header">Schedule</h4>
         </card>
       </div>
       <div class="col-12">
         <card>
-
+           <h4 slot="header">Schedule</h4>
         </card>
       </div>
 </div>
