@@ -10,23 +10,7 @@
                 <h5 class="card-category">{{$t('dashboard.totalShipments')}}</h5>
                 <h2 class="card-title">{{$t('dashboard.performance')}}</h2>
               </div>
-             <!-- <div class="col-sm-6">
-                <div class="btn-group btn-group-toggle"
-                     :class="isRTL ? 'float-left' : 'float-right'"
-                     data-toggle="buttons">
-                  <label v-for="(option, index) in bigLineChartCategories"
-                         :key="option"
-                         class="btn btn-sm btn-primary btn-simple"
-                         :class="{active: bigLineChart.activeIndex === index}"
-                         :id="index">
-                    <input type="radio"
-                           @click="initBigChart(index)"
-                           name="options" autocomplete="off"
-                           :checked="bigLineChart.activeIndex === index">
-                    {{option}}
-                  </label>
-                </div>
-              </div>-->
+
             </div>
           </template>
           <!-- Szeroki Wykres -->
