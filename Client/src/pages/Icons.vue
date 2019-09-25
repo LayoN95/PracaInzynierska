@@ -1,17 +1,25 @@
 <template>
-<div class="row">
-      <div class="col-lg-4">
-        123
+    <div class="row">
+      <div class="col-12">
+          123
+          </div>
+
+
+        </card>
       </div>
 
-      <div class="col-lg-4">
-        123
-      </div>
-      <div class="col-lg-4">
-        123
+      <div class="col-12">
+        <card class="card-plain">
+          <!--<div class="table-full-width table-responsive">
+            <base-table :title="table2.title" :sub-title="table2.subTitle" :data="table2.data"
+                         :columns="table2.columns">
+
+            </base-table>
+          </div>-->
+        </card>
       </div>
 
-</div>
+    </div>
 </template>
 <script>
 export default {};
