@@ -48,7 +48,7 @@
 export default {
 data() {
         return {
-        lightStatus: null, 
+        lightStatus: 5, 
         path: 'http://192.168.1.48:3000'
       };
     },
