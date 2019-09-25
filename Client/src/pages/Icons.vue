@@ -54,7 +54,10 @@ data() {
     },
     methods: {
       beforeMount() {
-        axios.get(`${this.path}/devicestatus/`, {
+        getData();
+    },
+            getData: function(event) {
+          axios.get(`${this.path}/devicestatus/`, {
            headers: {
                 'Access-Control-Allow-Origin': '*',
               }
@@ -70,7 +73,7 @@ data() {
               console.log(error);
           });  
 
-    },
+        }
     
     }  
   };
