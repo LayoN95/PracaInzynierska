@@ -70,7 +70,7 @@ data() {
           var obj = response.data;
           lightStatus = obj.state;
           console.log("GET DATA");
-          console.log(obj.state);
+          console.log(obj.deviceStatus[0].state);
           console.log(lightStatus);
               console.log(response);
           })
