@@ -54,7 +54,7 @@ data() {
     },
     methods: {
       beforeMount() {
-        getData();
+        this.getData();
     },
             getData: function(event) {
           axios.get(`${this.path}/devicestatus/`, {
