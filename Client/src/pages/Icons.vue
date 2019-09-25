@@ -56,7 +56,11 @@ data() {
       beforeMount() {
         this.getData();
     },
-            getData: function(event) {
+    mounted() {
+      getData();
+    },
+
+          getData: function(event) {
           axios.get(`${this.path}/devicestatus/`, {
            headers: {
                 'Access-Control-Allow-Origin': '*',
