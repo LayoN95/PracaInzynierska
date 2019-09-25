@@ -65,7 +65,7 @@ data() {
           for (var i in obj.deviceStatus) {
             data[i] = obj.deviceStatus[i].state;
           }
-          this.lightStatus = deviceStatus[0].state;
+          this.lightStatus = obj.deviceStatus[0].state;
           console.log(obj.deviceStatus[0].state);
           console.log(this.lightStatus);
               console.log(response);
