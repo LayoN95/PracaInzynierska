@@ -22,6 +22,8 @@
         <div class="col-lg-4">
         <card>
            <h4 slot="header">Temperatura</h4>
+           <p>Temperatura: {{ temperature }} </p>
+           <p>Wilgotność: {{ humidity }}</p>
         </card>
       </div>
         <div class="col-lg-4">
@@ -49,6 +51,8 @@ export default {
 data() {
         return {
         lightStatus: 5, 
+        temperature: null,
+        humidity: null,
         path: 'http://192.168.1.48:3000'
       };
     },
@@ -99,7 +103,8 @@ data() {
           seconds = dateHMS.getSeconds();
           z[i] = hours + ":" + minutes + ":" + seconds; 
         }
-
+        this.temperature = y[0];
+        this.humidity = x[0];
         console.log(x[0]);
         console.log(y[0]);
         console.log(z[0]);
