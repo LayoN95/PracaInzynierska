@@ -60,8 +60,13 @@ data() {
               }
           })
           .then((response) => {
+          var data = [];
           var obj = response.data;
+          for (var i in obj.deviceStatus) {
+            data[i] = obj.deviceStatus[i].state;
+          }
           lightStatus = obj.state;
+          console.log(data);
           console.log("GET DATA");
           console.log(obj.deviceStatus[0].state);
           console.log(lightStatus);
