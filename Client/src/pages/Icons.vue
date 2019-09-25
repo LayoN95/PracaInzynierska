@@ -65,6 +65,7 @@ data() {
           .then((response) => {
           var obj = response.data;
           lightStatus = obj.state;
+          console.log("GET DATA");
           console.log(obj.state);
           console.log(lightStatus);
               console.log(response);
