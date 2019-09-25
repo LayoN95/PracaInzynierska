@@ -46,8 +46,31 @@
    import Vue from 'vue';
 
 export default {
+data() {
+        return {
 
-};
+        path: 'http://192.168.1.48:3000'
+      };
+    },
+    methods: {
+      beforeMount() {
+        axios.get(`${this.path}/schedule/`, {
+           headers: {
+                'Access-Control-Allow-Origin': '*',
+              }
+          })
+          .then((response) => {
+              console.log(response);
+          })
+          .catch((error) => {
+              console.log(error);
+          });  
+
+    },
+    
+    }  
+  };
+
 </script>
 <style>
 </style>

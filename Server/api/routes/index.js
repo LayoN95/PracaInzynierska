@@ -5,7 +5,7 @@ const DHT11 = require('../models/dht11');
 const DS18B20 = require('../models/ds18b20');
 const PIR = require('../models/pirHCSR501');
 const THERMOSTAT = require('../models/thermostat');
-
+const DEVICE_STATUS = require('../models/devicesStatus');
 
 const schedule = require('../midleware/schedule');
 const ds18b20 = require('../midleware/ds18b20');
@@ -174,5 +174,20 @@ router.post('/servo/:value', (req, res, next) => {
     message: (req.params.value)
   });
 });
+
+router.get('/device-status', (req, res, next) => {
+  DEVICE_STATUS.find().exec()
+  .then(docs => {
+    res.status(200).json({
+      deviceStatus: docs.map(doc => {
+        return {
+          _id: doc.id,
+          state: doc.state,
+          date: doc.date
+        }
+      })
+    });
+  })
+})
 
 module.exports = router;
