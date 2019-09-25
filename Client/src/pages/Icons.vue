@@ -3,7 +3,7 @@
       <div class="col-lg-4">
         <card>
           <h4 slot="header">Światło</h4>
-
+            <p>{{ /*User.ds18b20[0].temperature*/ lightStatus }} 123</p>
         </card>
       </div>
       <div class="col-lg-4">
