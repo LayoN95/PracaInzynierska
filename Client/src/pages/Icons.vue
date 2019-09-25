@@ -89,7 +89,6 @@ data() {
         var x = [];
         var y = [];
         var z = [];
-        table = response.data.records;
 
         for (var i in obj.records) {
           x[i] = obj.records[i].humidity;
