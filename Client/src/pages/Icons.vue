@@ -53,13 +53,6 @@ data() {
       };
     },
     methods: {
-      beforeMount() {
-        this.getData();
-    },
-    mounted() {
-      getData();
-    },
-
           getData: function(event) {
           axios.get(`${this.path}/devicestatus/`, {
            headers: {
@@ -78,7 +71,13 @@ data() {
               console.log(error);
           });  
 
-        }
+        },
+    beforeMount() {
+        this.getData();
+    },
+    mounted() {
+        getData();
+    }
     
     }  
   };
