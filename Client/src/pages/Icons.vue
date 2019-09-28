@@ -15,7 +15,7 @@
       <div class="col-lg-4">
         <card>
           <h4 slot="header">Alarm</h4>
-
+          <p><i class="tim-icons icon-send text-success "></i>Alarm: {{ alarm }}</p>
 
         </card>
       </div>
@@ -54,6 +54,7 @@ data() {
         thermostat: 22, 
         temperature: null,
         humidity: null,
+        alarm: null,
         path: 'http://192.168.1.48:3000'
       };
     },
@@ -121,9 +122,22 @@ data() {
         }
       })
       .then((response) => {
-          var data = [];
           var obj = response.data;
           this.thermostat = obj.message;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    },
+    getAlarm: function(event) {
+      axios.get(`${this.path}/alarm`, {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        }
+      })
+      .then((response) => {
+        var obj = response.data;
+        this.alarm = obj.message;
       })
       .catch((error) => {
         console.log(error);
@@ -136,6 +150,7 @@ data() {
       this.getData(); 
       this.getDHT11();
       this.getThermostat();
+      this.getAlarm();
    
     },
     mounted() {
