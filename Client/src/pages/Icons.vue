@@ -29,16 +29,19 @@
         <div class="col-lg-4">
         <card>
            <h4 slot="header"><i class="tim-icons icon-alert-circle-exc text-success "></i> Pir</h4>
+           <p>Czujnik PIR: {{ alarm }}</p>
         </card>
       </div>
         <div class="col-lg-4">
         <card>
            <h4 slot="header"><i class="tim-icons icon-alert-circle-exc text-success "></i> HCSR</h4>
+           <p>Czujnik HCSR</p>
         </card>
       </div>
       <div class="col-12">
         <card>
            <h4 slot="header"><i class="tim-icons icon-image-02 text-success "></i> Okna</h4>
+           <p>Stopień otwarcia okien: </p>
         </card>
       </div>
 </div>
