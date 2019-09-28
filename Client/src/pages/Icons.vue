@@ -123,11 +123,12 @@ data() {
       .then((response) => {
           var data = [];
           var obj = response.data;
-          for (var i in obj.deviceStatus) {
+          console.log(obj);
+          /*for (var i in obj.deviceStatus) {
             data[i] = obj.deviceStatus[i].temperature;
           }
           this.thermostat = obj.deviceStatus[0].temperature;
-          console.log("Thermostat REsponse" + response);
+          console.log("Thermostat REsponse" + response);*/
       })
       .catch((error) => {
         console.log(error);
