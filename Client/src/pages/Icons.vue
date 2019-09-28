@@ -9,7 +9,7 @@
       <div class="col-lg-4">
         <card>
           <h4 slot="header">Termostat</h4>
-
+          <p>Termostat: {{ thermostat }}</p>
         </card>
       </div>
       <div class="col-lg-4">
@@ -50,7 +50,8 @@
 export default {
 data() {
         return {
-        lightStatus: 5, 
+        lightStatus: 5,
+        thermostat: null, 
         temperature: null,
         humidity: null,
         path: 'http://192.168.1.48:3000'
@@ -81,7 +82,7 @@ data() {
         },
         getDHT11: function(event) {
 
-      axios.get('http://192.168.1.48:3000/dht11', {
+      axios.get(`${this.path}/dht11/`, {
         headers: {
           'Access-Control-Allow-Origin': '*',
         }
@@ -112,7 +113,26 @@ data() {
       .catch((error) => {
         console.log(error);
       }); 
-  }
+  },
+    getThermostat: function(event) {
+      axios.get(`${this.path}/thermostat`, {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        }
+      })
+      .then((response) => {
+          var data = [];
+          var obj = response.data;
+          for (var i in obj.deviceStatus) {
+            data[i] = obj.deviceStatus[i].temperature;
+          }
+          this.thermostat = obj.deviceStatus[0].temperature;
+          console.log("Thermostat REsponse" + response);
+      })
+      .catch((error) => {
+
+      });
+    }
   
     
     },
