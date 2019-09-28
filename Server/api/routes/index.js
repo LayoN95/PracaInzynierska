@@ -96,8 +96,13 @@ router.post('/schedule/:hour/:min/:state', (req, res, next) => {
 });
 
 router.get('/alarm', (req, res, next) => {
-  res.status(200).json({
-    message: (pir.alarm)
+  PIR.findById('5d4c5a3d5af4f10b07a9bbde', function(err, doc) {
+    if (err) {
+        console.log("erorr not found");
+    }
+    res.status(200).json({
+      message: (doc.state)
+    });
   });
 });
 
