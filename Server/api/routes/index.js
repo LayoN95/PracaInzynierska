@@ -100,7 +100,7 @@ router.get('/alarm', (req, res, next) => {
   PIR.findById('5d4c5a3d5af4f10b07a9bbde', function(err, doc) {
     if (err) {
         console.log("erorr not found");
-        state = doc.state
+        this.state = doc.state
     }
 })
   res.status(200).json({
