@@ -123,7 +123,7 @@ data() {
       .then((response) => {
           var data = [];
           var obj = response.data;
-          console.log(obj);
+          console.log(obj.message);
           /*for (var i in obj.deviceStatus) {
             data[i] = obj.deviceStatus[i].temperature;
           }
