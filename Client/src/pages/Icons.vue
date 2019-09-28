@@ -130,7 +130,7 @@ data() {
           console.log("Thermostat REsponse" + response);
       })
       .catch((error) => {
-
+        console.log(error);
       });
     }
   
