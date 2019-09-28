@@ -41,7 +41,7 @@
       <div class="col-12">
         <card>
            <h4 slot="header"><i class="tim-icons icon-image-02 text-success "></i> Okna</h4>
-           <p>Stopień otwarcia okien: </p>
+           <p>Stopień otwarcia okien: {{ window }}</p>
         </card>
       </div>
 </div>
@@ -57,6 +57,7 @@ data() {
         thermostat: 22, 
         temperature: null,
         humidity: null,
+        window: null,
         alarm: null,
         path: 'http://192.168.1.48:3000'
       };
@@ -72,9 +73,10 @@ data() {
           var data = [];
           var obj = response.data;
           for (var i in obj.deviceStatus) {
-            data[i] = obj.deviceStatus[i].state;
+            data[i] = obj.deviceStatus[i];
           }
           this.lightStatus = obj.deviceStatus[0].state;
+          this.window = obj.deviceStatus[0].window_open;
           console.log(obj.deviceStatus[0].state);
           console.log(this.lightStatus);
               console.log(response);
