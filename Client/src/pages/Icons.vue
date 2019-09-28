@@ -51,7 +51,7 @@ export default {
 data() {
         return {
         lightStatus: 5,
-        thermostat: null, 
+        thermostat: 22, 
         temperature: null,
         humidity: null,
         path: 'http://192.168.1.48:3000'
@@ -139,6 +139,7 @@ data() {
       beforeMount() {
       this.getData(); 
       this.getDHT11();
+      this.getThermostat();
    
     },
     mounted() {
