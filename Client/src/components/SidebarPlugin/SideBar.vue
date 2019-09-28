@@ -18,9 +18,9 @@
               alt="">
           </div>
         </a>
-        <h2 class="simple-text logo-normal">
+        <a class="simple-text logo-normal">
           {{title}}
-        </h2>
+        </a>
       </div>
       <slot>
 
