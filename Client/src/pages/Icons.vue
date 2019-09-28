@@ -2,43 +2,43 @@
 <div class="row">
       <div class="col-lg-4">
         <card>
-          <h4 slot="header"><i class="tim-icons icon-bulb-63 text-success "></i>Światło</h4>
+          <h4 slot="header"><i class="tim-icons icon-bulb-63 text-success "></i> Światło</h4>
             <p>{{ /*User.ds18b20[0].temperature*/ lightStatus }} 123</p>
         </card>
       </div>
       <div class="col-lg-4">
         <card>
-          <h4 slot="header">Termostat</h4>
+          <h4 slot="header"><i class="tim-icons icon-bell-55 text-success "></i> Termostat</h4>
           <p>Termostat: {{ thermostat }}</p>
         </card>
       </div>
       <div class="col-lg-4">
         <card>
-          <h4 slot="header">Alarm</h4>
-          <p><i class="tim-icons icon-send text-success "></i>Alarm: {{ alarm }}</p>
+          <h4 slot="header"><i class="tim-icons icon-bell-55 text-success "></i> Alarm</h4>
+          <p>Alarm: {{ alarm }}</p>
 
         </card>
       </div>
         <div class="col-lg-4">
         <card>
-           <h4 slot="header">Temperatura</h4>
+           <h4 slot="header"><i class="tim-icons icon-bell-55 text-success "></i> Temperatura</h4>
            <p>Temperatura: {{ temperature }} </p>
            <p>Wilgotność: {{ humidity }}</p>
         </card>
       </div>
         <div class="col-lg-4">
         <card>
-           <h4 slot="header">Pir</h4>
+           <h4 slot="header"><i class="tim-icons icon-alert-circle-exc text-success "></i> Pir</h4>
         </card>
       </div>
         <div class="col-lg-4">
         <card>
-           <h4 slot="header">HCSR</h4>
+           <h4 slot="header"><i class="tim-icons icon-alert-circle-exc text-success "></i> HCSR</h4>
         </card>
       </div>
       <div class="col-12">
         <card>
-           <h4 slot="header">Okna</h4>
+           <h4 slot="header"><i class="tim-icons icon-image-02 text-success "></i> Okna</h4>
         </card>
       </div>
 </div>
