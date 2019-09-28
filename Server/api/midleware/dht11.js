@@ -41,7 +41,7 @@ var j = schedule.scheduleJob(rule, function(){
                 'humidity: ' + humidity.toFixed(1) + '%'
             );
         }
-
+    });
     const DHT11schema = dht11Schema({
         _id: mongoose.Types.ObjectId(),
         temperature: temp,
