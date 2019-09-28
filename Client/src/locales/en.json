@@ -114,9 +114,9 @@
   "sidebar": {
     "title": "Smart Home",
     "shortTitle": "CT",
-    "dashboard": "dashboard",
-    "icons": "Info",
-    "maps": "Maps",
+    "dashboard": "Wykresy",
+    "icons": "Zestawienie",
+    "maps": "Sterowanie",
     "notifications": "Notifications",
     "userProfile": "User Profile",
     "tableList": "Table List",
