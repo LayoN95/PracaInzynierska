@@ -254,7 +254,7 @@
 
     },
           beforeMount() {
-        getData();
+        this.getData();
 
     }
   };
