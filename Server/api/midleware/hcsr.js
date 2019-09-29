@@ -17,7 +17,7 @@ const watchHCSR04 = () => {
     } else {
       const endTick = tick;
       const diff = (endTick >> 0) - (startTick >> 0); // Unsigned 32 bit arithmetic
-      if((diff / 2 / MICROSECDONDS_PER_CM) < 25)
+      if((diff / 2 / MICROSECDONDS_PER_CM) < 15)
       {
         console.log(diff / 2 / MICROSECDONDS_PER_CM);
       }
@@ -31,4 +31,4 @@ watchHCSR04();
 // Trigger a distance measurement once per second
 setInterval(() => {
   trigger.trigger(10, 1); // Set trigger high for 10 microseconds
-}, 1000);
+}, 1000 );
