@@ -102,7 +102,7 @@
         timeEnd: null,
         checked: null,
         thermostat: 21,
-        servoControl: 1550,
+        servoControl: null,
         //detune: 20,
         path: 'http://192.168.1.48:3000'
       };
