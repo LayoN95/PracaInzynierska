@@ -109,7 +109,7 @@
     },
     methods: {
       beforeMount() {
-  
+        getData();
 
     },
     
@@ -232,7 +232,27 @@
               console.log(error);
               
             });
-      }
+      },
+
+          getData: function(event) {
+          axios.get(`${this.path}/devicestatus/`, {
+           headers: {
+                'Access-Control-Allow-Origin': '*',
+              }
+          })
+          .then((response) => {
+          var data = [];
+          var obj = response.data;
+          for (var i in obj.deviceStatus) {
+            data[i] = obj.deviceStatus[i];
+          }
+          this.servoControl = obj.deviceStatus[0].window_open;
+          })
+          .catch((error) => {
+              console.log(error);
+          });  
+
+        }
 
     }
   };
