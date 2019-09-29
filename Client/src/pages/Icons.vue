@@ -35,7 +35,7 @@
         <div class="col-lg-4">
         <card>
            <h4 slot="header"><i class="tim-icons icon-alert-circle-exc text-success "></i> HCSR</h4>
-           <p>Czujnik HCSR</p>
+           <p>Czujnik HCSR: {{ hcsr04 }}</p>
         </card>
       </div>
       <div class="col-12">
@@ -59,6 +59,7 @@ data() {
         humidity: null,
         window: null,
         alarm: null,
+        hcsr04: null,
         path: 'http://192.168.1.48:3000'
       };
     },
@@ -77,6 +78,7 @@ data() {
           }
           this.lightStatus = obj.deviceStatus[0].state;
           this.window = obj.deviceStatus[0].window_open;
+          this.hcsr04 = obj.deviceStatus[0].hcsr04;
           console.log(obj.deviceStatus[0].state);
           console.log(this.lightStatus);
               console.log(response);
