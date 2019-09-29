@@ -108,10 +108,7 @@
       };
     },
     methods: {
-      beforeMount() {
-        getData();
 
-    },
     
       submit: function (event) {
         var start = [];
@@ -247,12 +244,17 @@
             data[i] = obj.deviceStatus[i];
           }
           this.servoControl = obj.deviceStatus[0].window_open;
+          console.log(this.servoControl);
           })
           .catch((error) => {
               console.log(error);
           });  
 
         }
+
+    },
+          beforeMount() {
+        getData();
 
     }
   };
