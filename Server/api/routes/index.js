@@ -14,6 +14,7 @@ const pir = require('../midleware/pirHCSR501');
 const leds = require('../midleware/leds');
 const thermostat = require('../midleware/thermostat');
 const servoControl = require('../midleware/servo');
+const hcsr = require('../midleware/hcsr');
 
 var test = require('./test.json');
 
