@@ -1,4 +1,6 @@
 const Gpio = require('pigpio').Gpio;
+const devicesSchema = require('../models/devicesStatus');
+
 
 // The number of microseconds it takes sound to travel 1cm at 20 degrees celcius
 const MICROSECDONDS_PER_CM = 1e6/34321;
@@ -10,7 +12,6 @@ trigger.digitalWrite(0); // Make sure trigger is low
 
 const watchHCSR04 = () => {
   let startTick;
-
   echo.on('alert', (level, tick) => {
     if (level == 1) {
       startTick = tick;
@@ -19,6 +20,13 @@ const watchHCSR04 = () => {
       const diff = (endTick >> 0) - (startTick >> 0); // Unsigned 32 bit arithmetic
       if((diff / 2 / MICROSECDONDS_PER_CM) < 15)
       {
+        devicesSchema.findById('5d8a5d38456fa304cebf8f4a', function(err, doc) {
+            if (err) {
+                console.log("erorr not found");
+            }
+            doc.hcsr04 = (diff / 2 / MICROSECDONDS_PER_CM);
+            doc.save();
+        })
         console.log(diff / 2 / MICROSECDONDS_PER_CM);
       }
       
