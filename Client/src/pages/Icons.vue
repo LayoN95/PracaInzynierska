@@ -59,7 +59,7 @@ data() {
         humidity: null,
         window: null,
         alarm: null,
-        hcsr04: null,
+        hcsr04: 5,
         path: 'http://192.168.1.48:3000'
       };
     },

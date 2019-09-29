@@ -168,6 +168,7 @@ router.get('/devicestatus', (req, res, next) => {
           _id: doc.id,
           state: doc.state,
           window_open: doc.window_open,
+          hcsr04: doc.hcsr04,
           date: doc.date
         }
       })
