@@ -5,8 +5,8 @@
       <card>
         <div class="visualization" style="position: relative">
         <img src="img/makieta.png">   
-        <div class="tempVis" style="position: absolute; top: 100px; left: 50px;">
-          <p style="color: black">123</p>
+        <div class="tempVis" style="position: absolute; top: 300px; left: 150px;">
+          <p style="color: black">Dzięki</p>
         </div>     
         </div>
       </card>
