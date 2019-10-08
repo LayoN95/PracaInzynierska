@@ -6,7 +6,8 @@
         <div class="visualization" style="position: relative; width: 980px;">
         <img src="img/makieta.png">   
         <div class="tempVis" style="position: absolute; top: 300px; left: 350px;">
-          <p style="color: black">Dzięki</p>
+          <img src="img/temperature.png">
+          <p style="color: black">{{ temperature }}</p>
         </div>     
         </div>
       </card>
@@ -14,33 +15,41 @@
   </div>
 </template>
 <script>
-  import NotificationTemplate from './Notifications/NotificationTemplate';
-  import { BaseAlert } from '@/components';
+
 
   export default {
     components: {
-      BaseAlert
+      
     },
     data() {
       return {
-        type: ["", "info", "success", "warning", "danger"],
-        notifications: {
-          topCenter: false
-        }
+        temperature: null
       };
     },
     methods: {
-      notifyVue(verticalAlign, horizontalAlign) {
-        const color = Math.floor(Math.random() * 4 + 1);
-        this.$notify({
-          component: NotificationTemplate,
-          icon: "tim-icons icon-bell-55",
-          horizontalAlign: horizontalAlign,
-          verticalAlign: verticalAlign,
-          type: this.type[color],
-          timeout: 0
+      getDS18B20: function (event) {
+        axios.get('http://192.168.1.48:3000/', {
+              headers: {
+                'Access-Control-Allow-Origin': '*',
+              }
+        })
+        .then((response) => {
+        var obj = response.data;
+        var x = [];
+        for (var i in obj.ds18b20) {
+          x[i] = obj.ds18b20[i].temperature;
+        }
+        this.temperature = x[0];
+        console.log(x[0]);
+
+        })
+        .catch((error) => {
+          console.log(error);
         });
-      }
+      },
+    },
+    beforeMount() {
+      this.getDS18B20();
     }
   };
 </script>
