@@ -18,12 +18,12 @@
           <p style="color: blacl"> {{ humidity }} </p>
         </div> 
 
-        <div class="window" style="position: absolute; top: 240px; left: 700px;">
+        <div class="window" style="position: absolute; top: 240px; left: 800px;">
           <img src="img/windowopen.png" style="width: 25px;">
           <p style="color: black">{{ temperature }}</p>
         </div> 
 
-        <div class="airconditioner" style="position: absolute; top: 580px; left: 500px;">
+        <div class="airconditioner" style="position: absolute; top: 580px; left: 550px;">
           <img src="img/air-conditioner-off.png" style="width: 25px;">
           <p style="color: black">{{ temperature }}</p>
         </div> 
