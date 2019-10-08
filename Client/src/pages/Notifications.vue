@@ -3,7 +3,7 @@
 
     <div class="col-md-12">
       <card>
-        <div class="visualization" style="position: relative; width: 1000px; heigth: 600px;">
+        <div class="visualization" style="position: relative; width: 950px;">
         <img src="img/makieta.png">   
         <div class="tempVis" style="position: absolute; top: 300px; left: 350px;">
           <p style="color: black">Dzięki</p>
