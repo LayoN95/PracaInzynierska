@@ -5,7 +5,7 @@
       <card>
         <div class="visualization" style="position: relative; width: 980px;">
         <img src="img/makieta.png">   
-        <div class="tempVis" style="position: absolute; top: 230px; left: 290px;">
+        <div class="tempVis" style="position: absolute; top: 240px; left: 280px;">
           <img src="img/temperature.png" style="width: 25px;">
           <p style="color: black">{{ temperature }}</p>
         </div>     
