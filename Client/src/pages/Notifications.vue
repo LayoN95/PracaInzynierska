@@ -4,8 +4,7 @@
     <div class="col-md-12">
       <card>
         <div class="visualization">
-          <img src="makieta.png">
-        </div>
+        <img class="avatar" src="img/makieta.png" alt="...">        </div>
       </card>
     </div>
   </div>
