@@ -23,7 +23,7 @@
           <p style="color: black">{{ temperature }}</p>
         </div> 
 
-        <div class="airconditioner" style="position: absolute; top: 580px; left: 540px;">
+        <div class="airconditioner" style="position: absolute; top: 600px; left: 540px;">
           <img src="img/air-conditioner-off.png" style="width: 25px;">
           <p style="color: black">{{ temperature }}</p>
         </div> 
