@@ -11,7 +11,7 @@
           <p style="color: black">{{ temperature }}</p>
         </div> 
 
-        <div class="dht11" style="position: absolute; top: 500px; left: 280px;">
+        <div class="dht11" style="position: absolute; top: 540px; left: 280px;">
           <img src="img/temperature.png" style="width: 25px;">
           <p style="color: black">{{ temperature }}</p>
           <img src="img/humidity.png" style="width: 25px">
