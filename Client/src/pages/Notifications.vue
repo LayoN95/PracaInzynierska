@@ -6,7 +6,7 @@
         <div class="visualization" style="position: relative; width: 980px;">
         <img src="img/makieta.png">   
         <div class="tempVis" style="position: absolute; top: 300px; left: 350px;">
-          <img src="img/temperature.png">
+          <img src="img/temperature.png" style="width: 25px;">
           <p style="color: black">{{ temperature }}</p>
         </div>     
         </div>
