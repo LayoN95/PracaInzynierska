@@ -3,8 +3,12 @@
 
     <div class="col-md-12">
       <card>
-        <div class="visualization">
-        <img src="img/makieta.png">        </div>
+        <div class="visualization" style="position: relative">
+        <img src="img/makieta.png">   
+        <div class="tempVis" style="position: absolute; top: 50px; left: 50px;">
+          <p>123</p>
+        </div>     
+        </div>
       </card>
     </div>
   </div>
