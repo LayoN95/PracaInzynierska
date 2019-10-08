@@ -16,6 +16,8 @@
 </template>
 <script>
 
+  import axios from 'axios';
+
 
   export default {
     components: {
@@ -23,7 +25,7 @@
     },
     data() {
       return {
-        temperature: null
+        temperature: 25
       };
     },
     methods: {
