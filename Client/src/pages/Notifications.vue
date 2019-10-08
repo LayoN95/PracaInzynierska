@@ -18,7 +18,7 @@
           <p style="color: blacl"> {{ humidity }} </p>
         </div> 
 
-        <div class="window" style="position: absolute; top: 240px; left: 790px;">
+        <div class="window" style="position: absolute; top: 340px; left: 790px;">
           <img src="img/windowopen.png" style="width: 25px;">
           <p style="color: black">{{ temperature }}</p>
         </div> 
