@@ -1,7 +1,7 @@
 <template>
   <div class="row">
 
-    <div class="col-md-12">
+    <div class="col-md-12" style="position: relative; width: 980px;">
       <card>
         <div class="visualization" style="position: relative; width: 980px;">
         <img src="img/makieta.png">   
