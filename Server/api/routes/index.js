@@ -74,12 +74,30 @@ router.post('/leds/:ledId/:value', (req, res, next) => {
   {
     leds.led(req.params.ledId, 1)
     console.log("led ID: " + req.params.ledId + " value: " + req.params.value);
+
+    devicesSchema.findById('5d8a5d38456fa304cebf8f4a', function(err, doc) {
+      if (err) {
+          console.log("erorr not found");
+      }
+      doc.room_1 = value;
+      doc.save();
+     })
+
     res.status(200).json({
       message: ("Uruchomiono diodę")
     });
   } else {
     leds.led(req.params.ledId, 0)
     console.log("led ID: " + req.params.ledId + " value: " + req.params.value);
+
+    devicesSchema.findById('5d8a5d38456fa304cebf8f4a', function(err, doc) {
+      if (err) {
+          console.log("erorr not found");
+      }
+      doc.room_1 = value;
+      doc.save();
+      })
+
     res.status(200).json({
       message: ("Wyłączono diodę")
     });
