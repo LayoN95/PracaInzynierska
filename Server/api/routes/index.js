@@ -76,7 +76,20 @@ router.get('/pir', function(req, res, next) {
 router.post('/leds/:ledId/:value', (req, res, next) => {
   var room;
 
-  if (req.params.ledId == 18) {room = ".room_1"}
+  switch(req.params.ledId) {
+    case 18:
+      room = ".room_1";
+      break;
+    case 6:
+      room = ".room_2";
+      break;
+    case 21:
+      room = ".outdoor";
+      break;
+  }
+
+  //if (req.params.ledId == 18) {room = ".room_1"}
+
   if(req.params.value == '1')
   {
     leds.led(req.params.ledId, 1)
