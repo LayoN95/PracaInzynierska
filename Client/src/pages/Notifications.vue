@@ -19,8 +19,9 @@
         </div> 
 
         <div class="window" style="position: absolute; top: 300px; left: 790px;">
+          {{ imageOpen }}
           <img src="img/windowopen.png" style="width: 25px;">
-          <p style="color: black">{{ temperature }}</p>
+          <p style="color: black">{{ window }}</p>
         </div> 
 
         <div class="airconditioner" style="position: absolute; top: 600px; left: 540px;">
@@ -43,10 +44,44 @@
     },
     data() {
       return {
-        temperature: 25
+        temperature: 25,
+        imageOpen: '<img src="img/windowopen.png" style="width: 50px;">'
       };
     },
     methods: {
+                getData: function(event) {
+          axios.get(`${this.path}/devicestatus/`, {
+           headers: {
+                'Access-Control-Allow-Origin': '*',
+              }
+          })
+          .then((response) => {
+          var data = [];
+          var obj = response.data;
+          for (var i in obj.deviceStatus) {
+            data[i] = obj.deviceStatus[i];
+          }
+
+          //światła
+          this.lightStatus = obj.deviceStatus[0].state;
+
+          //okna
+          if(obj.deviceStatus[0].window_open <= 650) {
+            this.window = "zamknięte"
+          } else if(obj.deviceStatus[0].window_open >= 1500) {
+          this.window = "otwarte";
+          }
+
+          this.hcsr04 = obj.deviceStatus[0].hcsr04;
+          console.log(obj.deviceStatus[0].state);
+          console.log(this.lightStatus);
+              console.log(response);
+          })
+          .catch((error) => {
+              console.log(error);
+          });  
+
+        },
       getDS18B20: function (event) {
         axios.get('http://192.168.1.48:3000/', {
               headers: {
