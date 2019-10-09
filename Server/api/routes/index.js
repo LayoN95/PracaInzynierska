@@ -76,17 +76,7 @@ router.get('/pir', function(req, res, next) {
 router.post('/leds/:ledId/:value', (req, res, next) => {
   var room;
 
-  switch(req.params.ledId) {
-    case 18:
-      room = "room_1";
-      break;
-    case 6:
-      room = "room_2";
-      break;
-    case 21:
-      room = "outdoor";
-      break;
-  }
+
 
   //if (req.params.ledId == 18) {room = ".room_1"}
 
@@ -99,7 +89,19 @@ router.post('/leds/:ledId/:value', (req, res, next) => {
       if (err) {
           console.log("erorr not found");
       }
-      doc.room = req.params.value;
+
+      switch(req.params.ledId) {
+        case 18:
+          doc.room_1 = req.params.value;
+          break;
+        case 6:
+          doc.room_2 = req.params.value;
+          break;
+        case 21:
+          doc.outdoor = req.params.value;  
+          break;
+      }
+
       doc.save();
      })
 
@@ -114,7 +116,17 @@ router.post('/leds/:ledId/:value', (req, res, next) => {
       if (err) {
           console.log("erorr not found");
       }
-      doc.room_1 = req.params.value;
+      switch(req.params.ledId) {
+        case 18:
+          doc.room_1 = req.params.value;
+          break;
+        case 6:
+          doc.room_2 = req.params.value;
+          break;
+        case 21:
+          doc.outdoor = req.params.value;  
+          break;
+      }
       doc.save();
       })
 
