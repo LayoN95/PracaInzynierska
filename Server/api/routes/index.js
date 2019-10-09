@@ -7,6 +7,8 @@ const PIR = require('../models/pirHCSR501');
 const THERMOSTAT = require('../models/thermostat');
 const DEVICE_STATUS = require('../models/devicesStatus');
 
+
+
 const schedule = require('../midleware/schedule');
 const ds18b20 = require('../midleware/ds18b20');
 const dht11 = require('../midleware/dht11');
@@ -15,6 +17,8 @@ const leds = require('../midleware/leds');
 const thermostat = require('../midleware/thermostat');
 const servoControl = require('../midleware/servo');
 const hcsr = require('../midleware/hcsr');
+
+
 
 var test = require('./test.json');
 
@@ -75,7 +79,7 @@ router.post('/leds/:ledId/:value', (req, res, next) => {
     leds.led(req.params.ledId, 1)
     console.log("led ID: " + req.params.ledId + " value: " + req.params.value);
 
-    devicesSchema.findById('5d8a5d38456fa304cebf8f4a', function(err, doc) {
+    DEVICE_STATUS.findById('5d8a5d38456fa304cebf8f4a', function(err, doc) {
       if (err) {
           console.log("erorr not found");
       }
@@ -90,7 +94,7 @@ router.post('/leds/:ledId/:value', (req, res, next) => {
     leds.led(req.params.ledId, 0)
     console.log("led ID: " + req.params.ledId + " value: " + req.params.value);
 
-    devicesSchema.findById('5d8a5d38456fa304cebf8f4a', function(err, doc) {
+    DEVICE_STATUS.findById('5d8a5d38456fa304cebf8f4a', function(err, doc) {
       if (err) {
           console.log("erorr not found");
       }
