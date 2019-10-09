@@ -81,9 +81,9 @@ data() {
           this.lightStatus = obj.deviceStatus[0].state;
 
           //okna
-          if(obj.deviceStatus[0].window_open == 600) {
+          if(obj.deviceStatus[0].window_open <= 650) {
             this.window = "zamknięte"
-          } else if(obj.deviceStatus[0].window_open > 1500) {
+          } else if(obj.deviceStatus[0].window_open >= 1500) {
           this.window = "otwarte";
           }
 
