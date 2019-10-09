@@ -2,17 +2,18 @@
 <div class="row">
       <div class="col-md-6">
         <card>
-          <h4 slot="header">Light 1</h4>
+          <h4 slot="header">Światła</h4>
           <!--Layout button-->
-          <base-button slot="footer" v-on:click="turnOn" id="18" type="primary" fill>Room 1 On!</base-button>
-          <base-button slot="footer" v-on:click="turnOff" id="18" type="primary" fill>Room 1 Off!</base-button>
+          <base-button v-on:click="turnOn" id="18" type="primary" fill>Pokój 1 On!</base-button>
+          <base-button v-on:click="turnOff" id="18" type="primary" fill>Pokój 1 Off!</base-button>
 
-          <base-button slot="footer" v-on:click="turnOn" id="6" type="primary" fill>Room 2 On!</base-button>
-          <base-button slot="footer" v-on:click="turnOff" id="6" type="primary" fill>Room 2 Off!</base-button>
+          <base-button slot="footer" v-on:click="turnOn" id="6" type="primary" fill>Pokój 2 On!</base-button>
+          <base-button slot="footer" v-on:click="turnOff" id="6" type="primary" fill>Pokój 2 Off!</base-button>
 
           <base-button slot="footer" v-on:click="turnOn" id="21" type="primary" fill>On!</base-button>
           <base-button slot="footer" v-on:click="turnOff" id="21" type="primary" fill>Off!</base-button>
 
+          <!--
           <button v-on:click="turnOn" id="21">Turn the lights on!</button>
           <button v-on:click="turnOff" id="21">Turn the lights off!</button>
           
@@ -24,6 +25,7 @@
 
           <button v-on:click="turnOn" id="20">Turn the lights on!</button>
           <button v-on:click="turnOff" id="20">Turn the lights off!</button>
+          -->
         </card>
       </div>
       <div class="col-md-6">
