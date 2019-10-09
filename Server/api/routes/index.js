@@ -119,15 +119,20 @@ router.post('/leds/:ledId/:value', (req, res, next) => {
       switch(req.params.ledId) {
         case 18:
           doc.room_1 = req.params.value;
+          doc.save();
+
           break;
         case 6:
           doc.room_2 = req.params.value;
+          doc.save();
+
           break;
         case 21:
-          doc.outdoor = req.params.value;  
+          doc.outdoor = req.params.value;
+          doc.save();
+  
           break;
       }
-      doc.save();
       })
 
     res.status(200).json({
