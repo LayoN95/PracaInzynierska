@@ -41,7 +41,7 @@
       <div class="col-12">
         <card>
            <h4 slot="header"><i class="tim-icons icon-image-02 text-success "></i> Okna</h4>
-           <p>Stopień otwarcia okien: {{ window }}</p>
+           <p>Stan okna: {{ window }}</p>
         </card>
       </div>
 </div>
@@ -76,8 +76,17 @@ data() {
           for (var i in obj.deviceStatus) {
             data[i] = obj.deviceStatus[i];
           }
+
+          //światła
           this.lightStatus = obj.deviceStatus[0].state;
-          this.window = obj.deviceStatus[0].window_open;
+
+          //okna
+          if(obj.deviceStatus[0].window_open == 600) {
+            this.window = "zamknięte"
+          } else if(obj.deviceStatus[0].window_open > 1500) {
+          this.window = "otwarte";
+          }
+
           this.hcsr04 = obj.deviceStatus[0].hcsr04;
           console.log(obj.deviceStatus[0].state);
           console.log(this.lightStatus);

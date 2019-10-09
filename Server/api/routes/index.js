@@ -77,8 +77,7 @@ router.post('/leds/:ledId/:value', (req, res, next) => {
   if(req.params.value == '1')
   {
     leds.led(req.params.ledId, 1)
-    console.log("led ID: " + req.params.ledId + " value: " + req.params.value);
-
+    //console.log("led ID: " + req.params.ledId + " value: " + req.params.value);
     DEVICE_STATUS.findById('5d8a5d38456fa304cebf8f4a', function(err, doc) {
       if (err) {
           console.log("erorr not found");
@@ -86,7 +85,6 @@ router.post('/leds/:ledId/:value', (req, res, next) => {
       doc.room_1 = req.params.value;
       doc.save();
      })
-
     res.status(200).json({
       message: ("Uruchomiono diodę")
     });
