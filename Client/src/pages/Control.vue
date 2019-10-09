@@ -3,6 +3,10 @@
       <div class="col-md-6">
         <card>
           <h4 slot="header">Light 1</h4>
+          <!--Layout button-->
+          <base-button slot="footer" v-on:click="turnOn" id="18" type="primary" fill>Room 1 On!</base-button>
+          <base-button slot="footer" v-on:click="turnOff" id="18" type="primary" fill>Room 1 Off!</base-button>
+
           <button v-on:click="turnOn" id="21">Turn the lights on!</button>
           <button v-on:click="turnOff" id="21">Turn the lights off!</button>
           
