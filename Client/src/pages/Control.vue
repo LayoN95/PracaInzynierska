@@ -5,6 +5,12 @@
           <h4 slot="header">Light 1</h4>
           <button v-on:click="turnOn" id="21">Turn the lights on!</button>
           <button v-on:click="turnOff" id="21">Turn the lights off!</button>
+          
+          <button v-on:clock="turnOn" id="18">Room 1 on!</button>
+          <button v-on:clock="turnOff" id="18">Room 1 off!</button>
+
+          <button v-on:clock="turnOn" id="6">Room 1 on!</button>
+          <button v-on:clock="turnOff" id="6">Room 1 off!</button>
 
           <button v-on:click="turnOn" id="20">Turn the lights on!</button>
           <button v-on:click="turnOff" id="20">Turn the lights off!</button>
