@@ -78,13 +78,13 @@ router.post('/leds/:ledId/:value', (req, res, next) => {
 
   switch(req.params.ledId) {
     case 18:
-      room = ".room_1";
+      room = "room_1";
       break;
     case 6:
-      room = ".room_2";
+      room = "room_2";
       break;
     case 21:
-      room = ".outdoor";
+      room = "outdoor";
       break;
   }
 
@@ -99,7 +99,7 @@ router.post('/leds/:ledId/:value', (req, res, next) => {
       if (err) {
           console.log("erorr not found");
       }
-      doc + `${room}` = req.params.value;
+      doc.room = req.params.value;
       doc.save();
      })
 
