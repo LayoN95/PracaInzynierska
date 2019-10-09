@@ -7,6 +7,12 @@
           <base-button slot="footer" v-on:click="turnOn" id="18" type="primary" fill>Room 1 On!</base-button>
           <base-button slot="footer" v-on:click="turnOff" id="18" type="primary" fill>Room 1 Off!</base-button>
 
+          <base-button slot="footer" v-on:click="turnOn" id="6" type="primary" fill>Room 2 On!</base-button>
+          <base-button slot="footer" v-on:click="turnOff" id="6" type="primary" fill>Room 2 Off!</base-button>
+
+          <base-button slot="footer" v-on:click="turnOn" id="21" type="primary" fill>On!</base-button>
+          <base-button slot="footer" v-on:click="turnOff" id="21" type="primary" fill>Off!</base-button>
+
           <button v-on:click="turnOn" id="21">Turn the lights on!</button>
           <button v-on:click="turnOff" id="21">Turn the lights off!</button>
           
