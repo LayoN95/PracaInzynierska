@@ -19,7 +19,6 @@
         </div> 
 
         <div class="window" style="position: absolute; top: 300px; left: 790px;">
-          {{ imageOpen }}
           <img src="img/windowopen.png" style="width: 25px;">
           <p style="color: black">{{ window }}</p>
         </div> 
@@ -44,8 +43,7 @@
     },
     data() {
       return {
-        temperature: 25,
-        imageOpen: '<img src="img/windowopen.png" style="width: 50px;">'
+        temperature: 25
       };
     },
     methods: {
