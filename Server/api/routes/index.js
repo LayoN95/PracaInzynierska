@@ -74,6 +74,9 @@ router.get('/pir', function(req, res, next) {
 });
 
 router.post('/leds/:ledId/:value', (req, res, next) => {
+  
+  let columnName = `.room_${req.params.ledId}`;
+  
   if(req.params.value == '1')
   {
     leds.led(req.params.ledId, 1)
@@ -82,7 +85,8 @@ router.post('/leds/:ledId/:value', (req, res, next) => {
       if (err) {
           console.log("erorr not found");
       }
-      doc.room_1 = req.params.value;
+      console.log(columnName);
+      doc.columnName = req.params.value;
       doc.save();
      })
     res.status(200).json({
