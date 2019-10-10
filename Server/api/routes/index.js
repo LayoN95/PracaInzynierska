@@ -74,8 +74,16 @@ router.get('/pir', function(req, res, next) {
 });
 
 router.post('/leds/:ledId/:value', (req, res, next) => {
-  
-  let columnName = `.room_${req.params.ledId}`;
+  switch(req.params.ledId) {
+    case 18:
+    let columnName = `.room_1`;  
+    break;
+    case 6:
+      let columnName = `.room_2`;
+      break;
+
+  }
+  //let columnName = `.room_${req.params.ledId}`;
   
   if(req.params.value == '1')
   {
