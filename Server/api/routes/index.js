@@ -78,9 +78,9 @@ router.post('/leds/:ledId/:value', (req, res, next) => {
 
   if (req.params.ledId == 18)
   {
-    columnName = `.room_1`;
+    columnName = `room_1`;
   } else if(req.params.ledId == 6) {
-    columnName = `.room_2`;
+    columnName = `room_2`;
   }
   //let columnName = `.room_${req.params.ledId}`;
   
