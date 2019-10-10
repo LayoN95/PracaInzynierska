@@ -92,7 +92,7 @@ router.post('/leds/:ledId/:value', (req, res, next) => {
       if (err) {
           console.log("erorr not found");
       }
-      console.log(columnName);
+      console.log(doc.columnName);
       doc.columnName = req.params.value;
       doc.save();
      })
