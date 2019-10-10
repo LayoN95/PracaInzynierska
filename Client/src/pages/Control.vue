@@ -13,8 +13,8 @@
           <base-button v-on:click="turnOn" id="21" type="success" fill>On!</base-button>
           <base-button v-on:click="turnOff" id="21" type="success" fill>Off!</base-button>
           <br>
-          <base-button v-on:click="turnOn" id="21" type="warning" fill>Zewnątrz On!</base-button>
-          <base-button v-on:click="turnOff" id="21" type="danger" fill>Zewnątrz Off!</base-button>
+          <base-button v-on:click="turnOn" id="17" type="warning" fill>Zewnątrz On!</base-button>
+          <base-button v-on:click="turnOff" id="17" type="danger" fill>Zewnątrz Off!</base-button>
           <!--
           <button v-on:click="turnOn" id="21">Turn the lights on!</button>
           <button v-on:click="turnOff" id="21">Turn the lights off!</button>
