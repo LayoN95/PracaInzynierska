@@ -62,7 +62,7 @@
         <card>
            <h4 slot="header"><i class="tim-icons icon-image-02 text-success "></i> Okna</h4>
            <p>Stan okna: {{ window }}</p>
-            <progress-bar v-model="window_position" max="2500"></progress-bar>
+            <progress-bar value=window_position max="2500"></progress-bar>
 
         </card>
       </div>
