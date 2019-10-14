@@ -62,6 +62,8 @@
         <card>
            <h4 slot="header"><i class="tim-icons icon-image-02 text-success "></i> Okna</h4>
            <p>Stan okna: {{ window }}</p>
+           <b-progress :value="60" :max="100" show-progress animated></b-progress>
+
         </card>
       </div>
 </div>
