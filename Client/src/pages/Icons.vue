@@ -23,6 +23,15 @@
         <card>
            <h4 slot="header"><i class="tim-icons icon-bell-55 text-success "></i> Temperatura</h4>
            <p>Temperatura: {{ temperature }} </p>
+                     <knob-control
+          :min="0"
+          :max="35"
+          :size="100"
+          secondary-color="#66CC66"
+          text-color="#66CC66"
+          v-model="temperature"
+          id="temperatureControlKnob"
+          ></knob-control>
            <p>Wilgotność: {{ humidity }}</p>
         </card>
       </div>
@@ -49,8 +58,13 @@
 <script>
    import axios from 'axios';
    import Vue from 'vue';
+   import KnobControl from 'vue-knob-control'
+
 
 export default {
+  components: {
+    KnobControl
+  },
 data() {
         return {
         lightStatus: 5,
