@@ -34,6 +34,16 @@
           id="temperatureControlKnob"
           ></knob-control>
            <p>Wilgotność: {{ humidity }}</p>
+           <knob-control
+          :min="0"
+          :max="35"
+          :size="100"
+          :disabled="false"
+          secondary-color="#66CC66"
+          text-color="#66CC66"
+          v-model="humidity"
+          id="humidityControlKnob"
+          ></knob-control>
         </card>
       </div>
         <div class="col-lg-4">
