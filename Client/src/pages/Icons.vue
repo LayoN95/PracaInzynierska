@@ -62,7 +62,7 @@
         <card>
            <h4 slot="header"><i class="tim-icons icon-image-02 text-success "></i> Okna</h4>
            <p>Stan okna: {{ window }}</p>
-            <progress-bar :val="window_position" title="temperature" text="temperature" max="2500"></progress-bar>
+            <progress-bar :val="window_position" :title="temperature"  max="2500"></progress-bar>
 
               <vue-simple-progress size="large" :val="temperature" :text="temperature"></vue-simple-progress>
         </card>
