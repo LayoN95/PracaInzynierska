@@ -62,7 +62,9 @@
         <card>
            <h4 slot="header"><i class="tim-icons icon-image-02 text-success "></i> Okna</h4>
            <p>Stan okna: {{ window }}</p>
-            <vue-simple-progress size="large" :val="window_position" :max="2500"></vue-simple-progress>
+            <progress-bar val="30" max="2500"></progress-bar>
+
+              <vue-simple-progress size="large" :val="60" text="60%"></vue-simple-progress>
         </card>
       </div>
 </div>
