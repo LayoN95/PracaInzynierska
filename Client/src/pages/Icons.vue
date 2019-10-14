@@ -27,6 +27,7 @@
           :min="0"
           :max="35"
           :size="100"
+          :disabled="true"
           secondary-color="#66CC66"
           text-color="#66CC66"
           v-model="temperature"
