@@ -62,7 +62,7 @@
         <card>
            <h4 slot="header"><i class="tim-icons icon-image-02 text-success "></i> Okna</h4>
            <p>Stan okna: {{ window }}</p>
-           <b-progress :value="60" :max="100" show-progress animated></b-progress>
+            <progress-bar val="30"></progress-bar>
 
         </card>
       </div>
@@ -71,12 +71,15 @@
 <script>
    import axios from 'axios';
    import Vue from 'vue';
-   import KnobControl from 'vue-knob-control'
+   import KnobControl from 'vue-knob-control';
+   import ProgressBar from 'vue-simple-progress';
+
 
 
 export default {
   components: {
-    KnobControl
+    KnobControl,
+    ProgressBar,
   },
 data() {
         return {
