@@ -36,7 +36,7 @@
            <p>Wilgotność: {{ humidity }}</p>
            <knob-control
           :min="0"
-          :max="35"
+          :max="100"
           :size="100"
           :disabled="false"
           secondary-color="#66CC66"
