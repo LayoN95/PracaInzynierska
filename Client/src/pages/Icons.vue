@@ -62,7 +62,7 @@
         <card>
            <h4 slot="header"><i class="tim-icons icon-image-02 text-success "></i> Okna</h4>
            <p>Stan okna: {{ window }}</p>
-            <progress-bar val="30"></progress-bar>
+            <progress-bar v-model="window_position" max="2500"></progress-bar>
 
         </card>
       </div>
@@ -88,6 +88,7 @@ data() {
         temperature: null,
         humidity: null,
         window: null,
+        window_position: null,
         alarm: null,
         hcsr04: 5,
         path: 'http://192.168.1.48:3000'
@@ -109,8 +110,9 @@ data() {
 
           //światła
           this.lightStatus = obj.deviceStatus[0].state;
-
           //okna
+          this.window_position = obj.deviceStatus[0].window_open;
+
           if(obj.deviceStatus[0].window_open <= 650) {
             this.window = "zamknięte"
           } else if(obj.deviceStatus[0].window_open >= 1500) {
