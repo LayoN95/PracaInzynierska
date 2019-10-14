@@ -64,7 +64,7 @@
            <p>Stan okna: {{ window }}</p>
             <progress-bar :val="30" max="2500"></progress-bar>
 
-              <vue-simple-progress size="large" :val="60" text="60%"></vue-simple-progress>
+              <vue-simple-progress size="large" :val="temperature" :text="temperature"></vue-simple-progress>
         </card>
       </div>
 </div>
