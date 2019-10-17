@@ -163,7 +163,7 @@ data() {
               this.pirSensor = day + "." + month + " " + hours + ":" + minutes + ":" + seconds;
             }
 
-            //this.pirSensor = obj.pir[0].date;
+            this.pirSensor = obj.pir[0].date;
 
           })          
           
