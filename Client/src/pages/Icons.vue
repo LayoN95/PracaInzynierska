@@ -149,7 +149,7 @@ data() {
           }).then((response) => {
             var data = [];
             var obj = response.data;
-            var hours, minutes, seconds;
+            var hours, minutes, seconds, day, month;
             var dateHMS;
             var time;
             for (var i in obj.pir) {
@@ -158,7 +158,9 @@ data() {
               hours = dateHMS.getHours();
               minutes = dateHMS.getMinutes();
               seconds = dateHMS.getSeconds();
-              this.pirSensor = hours + ":" + minutes + ":" + seconds;
+              day = dateHMS.getDay();
+              month = dateHMS.getMonth();
+              this.pirSensor = day + "." + month + " " + hours + ":" + minutes + ":" + seconds;
             }
 
             //this.pirSensor = obj.pir[0].date;
