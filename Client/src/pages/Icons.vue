@@ -158,7 +158,7 @@ data() {
               hours = dateHMS.getHours();
               minutes = dateHMS.getMinutes();
               seconds = dateHMS.getSeconds();
-              day = dateHMS.getDay();
+              day = dateHMS.getDate();
               month = dateHMS.getMonth();
               this.pirSensor = day + "." + month + " " + hours + ":" + minutes + ":" + seconds;
             }
