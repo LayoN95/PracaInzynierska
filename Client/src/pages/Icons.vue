@@ -4,9 +4,9 @@
         <card>
           <h4 slot="header"><i class="tim-icons icon-bulb-63 text-success "></i> Światło</h4>
             <p>{{ /*User.ds18b20[0].temperature*/ lightStatus }} 123</p>
-            <p>Pokój nr 1: {{ room_1 }}</p>
-            <p>Pokój nr 2: {{ room_2 }}</p>
-            <p>Oświetlenie na zewnątrz: {{ outdoor }}</p>
+            <p>Pokój nr 1: {{ lightRoom_1 }}</p>
+            <p>Pokój nr 2: {{ lightRoom_2 }}</p>
+            <p>Oświetlenie na zewnątrz: {{ lightOutdoor }}</p>
         </card>
       </div>
       <div class="col-lg-4">
