@@ -120,6 +120,7 @@ data() {
           this.room_1 = obj.deviceStatus[0].room_1;
           this.room_2 = obj.deviceStatus[0].room_2;
           this.outdoor = obj.deviceStatus[0].outdoor;
+          console.log(this.room_1 + " " + this.room_2 + " " + this.outdoor);
           //okna
           this.window_position = obj.deviceStatus[0].window_open;
 
