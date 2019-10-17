@@ -120,7 +120,7 @@ data() {
           console.log(obj.deviceStatus[0].state)
           this.lightRoom_1 = obj.deviceStatus[0].room_1;
           console.log(obj.deviceStatus[0].room_1)
-
+          console.log(obj);
           
           //okna
           this.window_position = obj.deviceStatus[0].window_open;
