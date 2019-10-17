@@ -87,6 +87,7 @@ export default {
   },
 data() {
         return {
+        lightStatus: false,
         room_1: false,
         room_2: false,
         outdoor: false,
