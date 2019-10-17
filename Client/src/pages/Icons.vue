@@ -154,7 +154,7 @@ data() {
             var time;
             for (var i in obj.pir) {
               data[i] = obj.pir[i];
-              dateHMS = new Date(obj.records[i].date);
+              dateHMS = new Date(obj.pir[i].date);
               hours = dateHMS.getHours();
               minutes = dateHMS.getMinutes();
               seconds = dateHMS.getSeconds();
