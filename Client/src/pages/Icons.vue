@@ -162,7 +162,7 @@ data() {
               month = dateHMS.getMonth();
               this.pirSensor = day + "." + month + " " + hours + ":" + minutes + ":" + seconds;
             }
-
+            console.log(obj.pir[0]._id);
             this.pirSensor = obj.pir[0].date;
 
           })          
