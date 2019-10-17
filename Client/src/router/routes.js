@@ -19,7 +19,7 @@ const routes = [
     children: [
       {
         path: "dashboard",
-        name: "dashboard",
+        name: "wykresy",
         component: Dashboard
       },
       {
@@ -29,17 +29,17 @@ const routes = [
       },
       {
         path: "notifications",
-        name: "notifications",
+        name: "wizualizacja",
         component: Notifications
       },
       {
         path: "icons",
-        name: "icons",
+        name: "zestawienie",
         component: Icons
       },
       {
         path: "control",
-        name: "lights",
+        name: "sterowanie",
         component: Control
       },
       {

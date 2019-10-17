@@ -1,6 +1,6 @@
 {
   "dashboard": {
-    "completedTasks": "Completed Tasks",
+    "completedTasks": "Czujnik temperatury ds18b20",
     "dailySales": "Daily Sales",
     "performance": "Podgląd",
     "dht11": "DHT11",
@@ -116,8 +116,8 @@
     "shortTitle": "CT",
     "dashboard": "Wykresy",
     "icons": "Zestawienie",
-    "maps": "Sterowanie",
-    "notifications": "Notifications",
+    "control": "Sterowanie",
+    "notifications": "Wizualizacja",
     "userProfile": "User Profile",
     "tableList": "Table List",
     "typography": "Typography",
