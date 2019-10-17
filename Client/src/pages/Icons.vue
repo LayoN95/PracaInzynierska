@@ -53,6 +53,7 @@
         <card>
            <h4 slot="header"><i class="tim-icons icon-alert-circle-exc text-success "></i> Pir</h4>
            <p>Czujnik PIR: {{ alarm }}</p>
+           <p>Ostatni ruch: {{ pirSensor }}</p>
         </card>
       </div>
         <div class="col-lg-4">
@@ -91,6 +92,7 @@ data() {
         lightRoom_1: false,
         lightRoom_2: false,
         lightOutdoor: false,
+        pirSensor: null,
         thermostat: 22, 
         temperature: null,
         humidity: null,
@@ -103,6 +105,7 @@ data() {
     },
     methods: {
           getData: function(event) {
+            //DeviceStatus
           axios.get(`${this.path}/devicestatus/`, {
            headers: {
                 'Access-Control-Allow-Origin': '*',
@@ -137,7 +140,23 @@ data() {
           })
           .catch((error) => {
               console.log(error);
-          });  
+          });
+          //PirSensor
+          axios.get(`${this.path}/pirSensor/`, {
+           headers: {
+                'Access-Control-Allow-Origin': '*',
+              }
+          }).then((response) => {
+            var data = [];
+            var obj = response.data;
+            for (var i in obj.pir) {
+              data[i] = obj.pir[i];
+            }
+
+            this.pirSensor = obj.pir[0].date;
+
+          })          
+          
 
         },
         getDHT11: function(event) {
