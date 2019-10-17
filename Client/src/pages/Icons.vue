@@ -4,6 +4,9 @@
         <card>
           <h4 slot="header"><i class="tim-icons icon-bulb-63 text-success "></i> Światło</h4>
             <p>{{ /*User.ds18b20[0].temperature*/ lightStatus }} 123</p>
+            <p>Pokój nr 1: {{ room_1 }}</p>
+            <p>Pokój nr 2: {{ room_2 }}</p>
+            <p>Oświetlenie na zewnątrz: {{ outdoor }}</p>
         </card>
       </div>
       <div class="col-lg-4">
@@ -84,7 +87,9 @@ export default {
   },
 data() {
         return {
-        lightStatus: 5,
+        room_1: false,
+        room_2: false,
+        outdoor: false,
         thermostat: 22, 
         temperature: null,
         humidity: null,
@@ -111,6 +116,9 @@ data() {
 
           //światła
           this.lightStatus = obj.deviceStatus[0].state;
+          this.room_1 = obj.deviceStatus[0].room_1;
+          this.room_2 = obj.deviceStatus[0].room_2;
+          this.outdoor = obj.deviceStatus[0].outdoor;
           //okna
           this.window_position = obj.deviceStatus[0].window_open;
 
