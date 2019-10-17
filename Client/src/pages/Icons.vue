@@ -118,6 +118,7 @@ data() {
           //światła
           this.lightStatus = obj.deviceStatus[0].state;
           this.lightRoom_1 = obj.deviceStatus[0].room_1;
+          console.log("Light room 1" + obj.deviceStatus[0].room_1);
           this.lightRoom_2 = obj.deviceStatus[0].room_2;
           this.lightOutdoor = obj.deviceStatus[0].outdoor;
           console.log(this.lightRoom_1 + " " + this.lightRoom_2 + " " + this.lightOutdoor);
