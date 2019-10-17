@@ -88,9 +88,9 @@ export default {
 data() {
         return {
         lightStatus: false,
-        room_1: false,
-        room_2: false,
-        outdoor: false,
+        lightRoom_1: false,
+        lightRoom_2: false,
+        lightOutdoor: false,
         thermostat: 22, 
         temperature: null,
         humidity: null,
@@ -117,10 +117,10 @@ data() {
 
           //światła
           this.lightStatus = obj.deviceStatus[0].state;
-          this.room_1 = obj.deviceStatus[0].room_1;
-          this.room_2 = obj.deviceStatus[0].room_2;
-          this.outdoor = obj.deviceStatus[0].outdoor;
-          console.log(this.room_1 + " " + this.room_2 + " " + this.outdoor);
+          this.lightRoom_1 = obj.deviceStatus[0].room_1;
+          this.lightRoom_2 = obj.deviceStatus[0].room_2;
+          this.lightOutdoor = obj.deviceStatus[0].outdoor;
+          console.log(this.lightRoom_1 + " " + this.lightRoom_2 + " " + this.lightOutdoor);
           //okna
           this.window_position = obj.deviceStatus[0].window_open;
 
