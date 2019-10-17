@@ -203,7 +203,10 @@ router.get('/devicestatus', (req, res, next) => {
           state: doc.state,
           window_open: doc.window_open,
           hcsr04: doc.hcsr04,
-          date: doc.date
+          date: doc.date,
+          room_1: doc.room_1,
+          room_2: doc.room_2,
+          outdoor: doc.outdoor,
         }
       })
     });
