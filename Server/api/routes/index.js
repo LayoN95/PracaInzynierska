@@ -69,7 +69,7 @@ router.get('/dht11', function(req, res, next) {
 
 router.get('/pirSensor', function(req, res, next) {
   PIR
-  .find().sort({_id: 1}).limit(1)
+  .find().sort({_id: -1}).limit(1)
   .exec()
   .then(docs => {
     res.status(200).json({

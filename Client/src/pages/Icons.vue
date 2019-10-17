@@ -149,8 +149,16 @@ data() {
           }).then((response) => {
             var data = [];
             var obj = response.data;
+            var hours, minutes, seconds;
+            var dateHMS;
+            var time;
             for (var i in obj.pir) {
               data[i] = obj.pir[i];
+              dateHMS = new Date(obj.records[i].date);
+              hours = dateHMS.getHours();
+              minutes = dateHMS.getMinutes();
+              seconds = dateHMS.getSeconds();
+              this.pirSensor = hours + ":" + minutes + ":" + seconds;
             }
 
             this.pirSensor = obj.pir[0].date;
