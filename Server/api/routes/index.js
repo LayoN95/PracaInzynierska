@@ -67,6 +67,29 @@ router.get('/dht11', function(req, res, next) {
  });*/
 });
 
+router.get('/pirSensor', function(req, res, next) {
+  PIR
+  .find().sort({_id: -1}).limit(1)
+  .exec()
+  .then(docs => {
+    res.status(200).json({
+    pir: docs.map(doc => {
+        return {
+          _id: doc.id,
+          state: doc.state,
+          date: doc.date
+        }
+      })
+ 
+    });
+  })
+  .catch(err => {
+    res.status(500).json({
+      error: err
+    });
+  });
+});
+
 router.get('/pir', function(req, res, next) {
   res.status(200).json({
     message: (pir.count)
