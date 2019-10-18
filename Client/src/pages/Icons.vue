@@ -4,7 +4,7 @@
         <card>
           <h4 slot="header"><i class="tim-icons icon-bulb-63 text-success "></i> Światło</h4>
             <p>{{ /*User.ds18b20[0].temperature*/ lightStatus }} 123</p>
-            <p>Pokój nr 1: {{ if (lightRoom_1) {return "<img src="img/temperature.png" style="width: 25px;">"}  }} {{ lightRoom_1 }}</p>
+            <p>Pokój nr 1: <span v-html="rawHtml">bulb</span> {{ lightRoom_1 }}</p>
             <p>Pokój nr 2: {{ lightRoom_2 }}</p>
             <p>Oświetlenie na zewnątrz: {{ lightOutdoor }}</p>
         </card>
@@ -88,6 +88,7 @@ export default {
   },
 data() {
         return {
+        bulb: '<img src="img/temperature.png" style="width: 25px;">',
         lightStatus: false,
         lightRoom_1: false,
         lightRoom_2: false,

@@ -18,7 +18,7 @@ const watchHCSR04 = () => {
     } else {
       const endTick = tick;
       const diff = (endTick >> 0) - (startTick >> 0); // Unsigned 32 bit arithmetic
-      if((diff / 2 / MICROSECDONDS_PER_CM) < 15)
+      if((diff / 2 / MICROSECDONDS_PER_CM) < 9)
       {
         devicesSchema.findById('5d8a5d38456fa304cebf8f4a', function(err, doc) {
             if (err) {
