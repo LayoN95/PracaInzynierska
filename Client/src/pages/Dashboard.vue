@@ -290,7 +290,7 @@
         }
 
             let chartData =  {
-            labels: y,
+            labels: y.reverse(),
             datasets: [{
               label: "Temperature: ",
               fill: true,
