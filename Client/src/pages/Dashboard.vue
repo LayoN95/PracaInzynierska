@@ -354,7 +354,7 @@
         //console.log(this.purpleLineChart.chartData.datasets[0].data);
         //this.purpleLineChart.chartData.datasets[0].data = y;
         let chartData = {
-            labels: z,
+            labels: z.reverse(),
             datasets: [{
               label: "Temp: ",
               fill: true,
@@ -369,7 +369,7 @@
               pointHoverRadius: 4,
               pointHoverBorderWidth: 15,
               pointRadius: 4,
-              data: y,
+              data: y.reverse(),
             },
             {
               label: "Humid: ",
@@ -385,7 +385,7 @@
               pointHoverRadius: 4,
               pointHoverBorderWidth: 15,
               pointRadius: 4,
-              data: x,
+              data: x.reverse(),
             }]
           }
         this.purpleLineChart.chartData = chartData;
