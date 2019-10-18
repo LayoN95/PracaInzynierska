@@ -305,7 +305,7 @@
               pointHoverRadius: 4,
               pointHoverBorderWidth: 15,
               pointRadius: 4,
-              data: x,
+              data: x.reverse(),
             }]
             
           }
