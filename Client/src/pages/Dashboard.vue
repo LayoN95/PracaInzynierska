@@ -26,8 +26,6 @@
 
             <button v-on:click="fillData">fill Data</button> 
 
-            <button v-on:click="add">+5</button>
-
             <line-chart style="height: 100%"
                         ref="bigChart"
                         chart-id="big-line-chart"
@@ -139,11 +137,9 @@
     data() {
       var id = 21;
       var tabelaTemp = [12, 21, 43, 12, 12, 32];
-      
       return {
         Temperature: {},
         Dht11: {},
-        number: 24,
 
         bigLineChart: {
           allData: table,
@@ -234,10 +230,6 @@
       }
     },
     methods: {
-      add: function(event) {
-        this.number+=5;
-        console.log(this.number);
-      },
 
       fillData: function (event) {
         this.initBigChart();
@@ -277,7 +269,7 @@
       },
 
       getDS18B20: function (event) {
-        axios.get(`http://192.168.1.48:3000/${this.number}`, {
+        axios.get('http://192.168.1.48:3000/', {
               headers: {
                 'Access-Control-Allow-Origin': '*',
               }
