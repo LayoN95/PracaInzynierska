@@ -23,8 +23,8 @@ const hcsr = require('../midleware/hcsr');
 var test = require('./test.json');
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  DS18B20.find().sort({_id: -1 }).limit(24)  .exec()
+router.get('/:number', function(req, res, next) {
+  DS18B20.find().sort({_id: -1 }).limit(req.params.number)  .exec()
   .then(docs => {
     res.status(200).json({
       count: docs.length,
@@ -39,9 +39,9 @@ router.get('/', function(req, res, next) {
   })
 });
 
-router.get('/dht11/:number', function(req, res, next) {
+router.get('/dht11/', function(req, res, next) {
   DHT11
-  .find().sort({_id: -1 }).limit(req.params.number)
+  .find().sort({_id: -1 }).limit(24)
   .select('_id temperature humidity date')
   .exec()
   .then(docs => {
