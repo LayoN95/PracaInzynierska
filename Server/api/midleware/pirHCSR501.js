@@ -20,7 +20,8 @@ var alarm = 0;
                 console.log("erorr not found");
             }
             doc.state = alarm;
-                        doc.save();
+            doc.date = Date.now();
+            doc.save();
         })
     
         if (value = true) {
