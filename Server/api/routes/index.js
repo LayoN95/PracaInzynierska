@@ -17,6 +17,7 @@ const leds = require('../midleware/leds');
 const thermostat = require('../midleware/thermostat');
 const servoControl = require('../midleware/servo');
 const hcsr = require('../midleware/hcsr');
+const airConditioner = require('../midleware/airconditioner');
 
 
 
@@ -234,6 +235,13 @@ router.get('/devicestatus', (req, res, next) => {
       })
     });
   })
-})
+});
+
+router.post('/airconditioner/:value', (req,res,next) => {
+  airConditioner.airConditioner(req.params.value);
+  res.status(200).json({
+    message: (req.params.value)
+  })
+});
 
 module.exports = router;
