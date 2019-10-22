@@ -52,11 +52,11 @@
 
           <p>Pokój nr 1</p>
           <label for="timeStart">TurnOn: </label>
-          <input type="time" id="timeStart" v-model="timeStart" />
+          <input type="time" id="timeStart" v-model="timeStart" >
           <p>Start godzina: {{ timeStart }}</p>
 
           <label for="timeEnd">TurnOff: </label>
-          <input type="time" id="timeEnd" v-model="timeEnd" />
+          <input type="time" id="timeEnd" v-model="timeEnd" >
           <p>Stop godzina: {{ timeEnd }}</p>
           <button v-on:click="submit">Submit!</button>
 
