@@ -59,6 +59,8 @@
           <input type="time" id="timeEnd" v-model="timeEnd" />
           <p>Stop godzina: {{ timeEnd }}</p>
           <button v-on:click="submit">Submit!</button>
+          <base-button v-on:click="submit" id="21`" type="success" fill>On!</base-button>
+
 
           <p>Pokój nr 2</p>
           <label for="timeStart">TurnOn: </label>
