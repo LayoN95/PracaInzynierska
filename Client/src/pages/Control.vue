@@ -145,7 +145,7 @@
         var end = [];
         start = this.timeStart.split(':');
         end = this.timeEnd.split(':');
-        
+        var targetId = event.currentTarget.id;
         //Ustalenie aktualnej godziny
         var timeNow = new Date();
         console.log("TIME NOW: " + timeNow);
