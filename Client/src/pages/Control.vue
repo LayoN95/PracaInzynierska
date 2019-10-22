@@ -142,6 +142,8 @@
 
     
       submit: function (event) {
+                    var targetId = event.currentTarget.id;
+
         var start = [];
         var end = [];
         start = this.timeStart.split(':');
@@ -155,7 +157,7 @@
         var timeRightNow = hours + ":" + minutes;
         console.log("TIME RIGHT NOW: " + timeRightNow);
 
-        axios.post(`${this.path}/schedule/${start[0]}/${start[1]}/1/21`, {
+        axios.post(`${this.path}/schedule/${start[0]}/${start[1]}/1/${targetId}`, {
            headers: {
                 'Access-Control-Allow-Origin': '*',
               }
@@ -166,7 +168,7 @@
           .catch((error) => {
               console.log(error);
           });
-        axios.post(`${this.path}/schedule/${end[0]}/${end[1]}/0/21`, {
+        axios.post(`${this.path}/schedule/${end[0]}/${end[1]}/0/${targetId}`, {
            headers: {
                 'Access-Control-Allow-Origin': '*',
               }
