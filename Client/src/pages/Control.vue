@@ -68,7 +68,7 @@
           <label for="timeEnd">TurnOff: </label>
           <input type="time" id="timeEnd" v-model="timeEnd" />
           <p>Stop godzina: {{ timeEnd }}</p>
-          <button v-on:click="submit" id="18">Submit!</button>
+          <button v-on:click="submit">Submit!</button>
           
 
           <!--
@@ -145,7 +145,7 @@
         var end = [];
         start = this.timeStart.split(':');
         end = this.timeEnd.split(':');
-        var targetId = event.currentTarget.id;
+        
         //Ustalenie aktualnej godziny
         var timeNow = new Date();
         console.log("TIME NOW: " + timeNow);
