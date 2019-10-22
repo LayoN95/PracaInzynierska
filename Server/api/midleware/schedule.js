@@ -6,13 +6,13 @@ var rule = new schedule.RecurrenceRule();
 const ds18b20 = require('./ds18b20');
 
 
-function schedule1(min, hour, value) {
+function schedule1(min, hour, value, id) {
         rule.hour = hour;
         rule.minute = min;
         console.log(min + " " + hour + " " + value);
         var j = schedule.scheduleJob(rule, function(){
         console.log("schedule");
-        leds.led(21, parseInt(value));
+        leds.led(id, parseInt(value));
       });
 }
 

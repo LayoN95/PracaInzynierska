@@ -144,7 +144,7 @@
         var timeRightNow = hours + ":" + minutes;
         console.log("TIME RIGHT NOW: " + timeRightNow);
 
-        axios.post(`${this.path}/schedule/${start[0]}/${start[1]}/1`, {
+        axios.post(`${this.path}/schedule/${start[0]}/${start[1]}/1/21`, {
            headers: {
                 'Access-Control-Allow-Origin': '*',
               }
@@ -155,7 +155,7 @@
           .catch((error) => {
               console.log(error);
           });
-        axios.post(`${this.path}/schedule/${end[0]}/${end[1]}/0`, {
+        axios.post(`${this.path}/schedule/${end[0]}/${end[1]}/0/21`, {
            headers: {
                 'Access-Control-Allow-Origin': '*',
               }
