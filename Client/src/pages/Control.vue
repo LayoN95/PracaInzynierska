@@ -69,7 +69,8 @@
           <input type="time" id="timeEnd" v-model="timeEnd" />
           <p>Stop godzina: {{ timeEnd }}</p>
           <button v-on:click="submit" id="7">Submit!</button>
-          
+          <base-button v-on:click="submit" id="18" type="success" fill>On!</base-button>
+
 
           <!--
             <input v-model="thermostat" placeholder="Set temperature">
