@@ -58,7 +58,7 @@
           <label for="timeEnd">TurnOff: </label>
           <input type="time" id="timeEnd" v-model="timeEnd" />
           <p>Stop godzina: {{ timeEnd }}</p>
-          <button v-on:click="submit" id="21">Submit! id 21</button>
+          <button v-on:click="submit">Submit!</button>
 
           <p>Pokój nr 2</p>
           <label for="timeStart">TurnOn: </label>
@@ -68,7 +68,7 @@
           <label for="timeEnd">TurnOff: </label>
           <input type="time" id="timeEnd" v-model="timeEnd" />
           <p>Stop godzina: {{ timeEnd }}</p>
-          <button v-on:click="submit" id="18">Submit! id 18</button>
+          <button v-on:click="submit">Submit!</button>
           
 
           <!--
@@ -153,8 +153,8 @@
         var minutes = timeNow.getMinutes();
         var timeRightNow = hours + ":" + minutes;
         console.log("TIME RIGHT NOW: " + timeRightNow);
-        var targetId = event.currentTarget.id;
-        axios.post(`${this.path}/schedule/${start[0]}/${start[1]}/1/${targetId}`, {
+
+        axios.post(`${this.path}/schedule/${start[0]}/${start[1]}/1/21`, {
            headers: {
                 'Access-Control-Allow-Origin': '*',
               }
@@ -165,7 +165,7 @@
           .catch((error) => {
               console.log(error);
           });
-        axios.post(`${this.path}/schedule/${end[0]}/${end[1]}/0/${targetId}`, {
+        axios.post(`${this.path}/schedule/${end[0]}/${end[1]}/0/21`, {
            headers: {
                 'Access-Control-Allow-Origin': '*',
               }
