@@ -68,7 +68,7 @@
           <label for="timeEnd">TurnOff: </label>
           <input type="time" id="timeEnd" v-model="timeEnd" />
           <p>Stop godzina: {{ timeEnd }}</p>
-          <button v-on:click="submit">Submit!</button>
+          <button v-on:click="submit" id="7">Submit!</button>
           
 
           <!--
