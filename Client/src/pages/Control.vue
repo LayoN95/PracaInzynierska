@@ -46,10 +46,11 @@
           <button v-on:click="setTemperature">Zapisz</button>
         </card>
       </div>
-      <div class="col-md-6">
+      <div class="col-12">
         <card>
           <h4 slot="header">Schedule</h4>
 
+          <p>Pokój nr 1</p>
           <label for="timeStart">TurnOn: </label>
           <input type="time" id="timeStart" v-model="timeStart" />
           <p>Start godzina: {{ timeStart }}</p>
@@ -59,6 +60,15 @@
           <p>Stop godzina: {{ timeEnd }}</p>
           <button v-on:click="submit">Submit!</button>
 
+          <p>Pokój nr 2</p>
+          <label for="timeStart">TurnOn: </label>
+          <input type="time" id="timeStart" v-model="timeStart" />
+          <p>Start godzina: {{ timeStart }}</p>
+
+          <label for="timeEnd">TurnOff: </label>
+          <input type="time" id="timeEnd" v-model="timeEnd" />
+          <p>Stop godzina: {{ timeEnd }}</p>
+          <button v-on:click="submit">Submit!</button>
           
 
           <!--
