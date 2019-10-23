@@ -74,6 +74,14 @@
           <input type="time" id="timeEnd" v-model="timeEnd" />
           <base-button class="d-inline" v-on:click="submit" id="21" type="success" fill>Zapisz!</base-button>
 
+          <p>Sterowanie oknami</p>
+          <p class="d-inline">Godzina otwarcia: {{ timeStart }}</p>
+          <input class="d-inline" type="time" id="timeStart" v-model="windowOpen" />
+          
+          <p class="d-inline">Godzina zamknięcia: {{ timeEnd }}</p>
+          <input type="time" id="timeEnd" v-model="windowClose" />
+          <base-button class="d-inline" v-on:click="windowSubmit" id="window" type="success" fill>Zapisz!</base-button>
+
 
           <!--
             <input v-model="thermostat" placeholder="Set temperature">
@@ -134,6 +142,8 @@
         timeStart: null,
         dateEnd: null,
         timeEnd: null,
+        windowOpen: null,
+        windowClose: null,
         checked: null,
         thermostat: 21,
         servoControl: null,
@@ -143,6 +153,47 @@
     },
     methods: {
 
+            windowSubmit: function (event) {
+                    var targetId = event.currentTarget.id;
+
+        var start = [];
+        var end = [];
+        start = this.windowOpen.split(':');
+        end = this.windowClose.split(':');
+        
+        //Ustalenie aktualnej godziny
+        var timeNow = new Date();
+        console.log("TIME NOW: " + timeNow);
+        var hours = timeNow.getHours();
+        var minutes = timeNow.getMinutes();
+        var timeRightNow = hours + ":" + minutes;
+        console.log("TIME RIGHT NOW: " + timeRightNow);
+
+        axios.post(`${this.path}/windowschedule/${start[0]}/${start[1]}/2500/`, {
+           headers: {
+                'Access-Control-Allow-Origin': '*',
+              }
+          })
+          .then((response) => {
+              console.log(response);
+          })
+          .catch((error) => {
+              console.log(error);
+          });
+        axios.post(`${this.path}/windowschedule/${end[0]}/${end[1]}/600/`, {
+           headers: {
+                'Access-Control-Allow-Origin': '*',
+              }
+          })
+          .then((response) => {
+              console.log(response);
+          })
+          .catch((error) => {
+              console.log(error);
+          });
+            
+            
+            },
     
       submit: function (event) {
                     var targetId = event.currentTarget.id;
