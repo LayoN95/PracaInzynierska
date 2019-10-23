@@ -51,15 +51,11 @@
           <h4 slot="header">Schedule</h4>
 
           <p class="d-inline">Pokój nr 1</p>
-          <label class="d-inline" for="timeStart">TurnOn: </label>
           <input class="d-inline" type="time" id="timeStart" v-model="timeStart" />
-          <p class="d-inline">Start godzina: {{ timeStart }}</p>
-
-          <label class="d-inline" for="timeEnd">TurnOff: </label>
+          
+          <p class="d-inline">Stop godzina: {{ timeEnd }}</p>
           <input type="time" id="timeEnd" v-model="timeEnd" />
-          <p>Stop godzina: {{ timeEnd }}</p>
-          <button v-on:click="submit">Submit!</button>
-          <base-button v-on:click="submit" id="21" type="success" fill>On!</base-button>
+          <base-button class="d-inline" v-on:click="submit" id="21" type="success" fill>On!</base-button>
 
 
           <p>Pokój nr 2</p>
@@ -70,7 +66,6 @@
           <label for="timeEnd">TurnOff: </label>
           <input type="time" id="timeEnd" v-model="timeEnd" />
           <p>Stop godzina: {{ timeEnd }}</p>
-          <button v-on:click="submit" id="7">Submit!</button>
           <base-button v-on:click="submit" id="18" type="success" fill>On!</base-button>
 
 
