@@ -19,9 +19,11 @@ function schedule1(min, hour, value, id) {
 }
 
 function windowSchedule(min, hour, value) {
-  rule.hour = hour;
-  rule.minute = min;
-  var window = schedule.scheduleJob(rule, function(){
+  /*rule.hour = hour;
+  rule.minute = min;*/
+  dayOfWeek = [new schedule.Range(0, 6)];
+
+  var window = schedule.scheduleJob({hour: hour, minute: min, dayOfWeek}, function(){
     servo.servoControl(value);
   })
 }
