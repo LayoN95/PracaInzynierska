@@ -138,6 +138,7 @@
     },
     beforeMount() {
       this.getDS18B20();
+      this.getDHT11();
     }
   };
 
