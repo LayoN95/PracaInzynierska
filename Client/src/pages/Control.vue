@@ -51,7 +51,7 @@
           <h4 slot="header">Schedule</h4>
 
           <p class="d-inline">Pokój nr 1</p>
-          <p>Start godzina: {{ timeStart }}</p>
+          <p class="d-inline">Start godzina: {{ timeStart }}</p>
           <input class="d-inline" type="time" id="timeStart" v-model="timeStart" />
           
           <p class="d-inline">Stop godzina: {{ timeEnd }}</p>
