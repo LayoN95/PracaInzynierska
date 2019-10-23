@@ -8,14 +8,14 @@
 
         <div class="ds18b20" style="position: absolute; top: 240px; left: 280px;">
           <img src="img/temperature.png" style="width: 25px;">
-          <p style="color: black">{{ temperature }}</p>
+          <p class="d-inline" style="color: black">{{ temperature }}</p>
         </div> 
 
         <div class="dht11" style="position: absolute; top: 540px; left: 280px;">
           <img src="img/temperature.png" style="width: 25px;">
-          <p style="color: black">{{ dht11_temperature }}</p>
+          <p class="d-inline" style="color: black">{{ dht11_temperature }}</p>
           <img src="img/humidity.png" style="width: 25px">
-          <p style="color: blacl"> {{ humidity }} </p>
+          <p class="d-inline" style="color: black"> {{ humidity }} </p>
         </div> 
 
         <div class="window" style="position: absolute; top: 300px; left: 790px;">
