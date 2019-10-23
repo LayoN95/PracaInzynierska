@@ -1,4 +1,5 @@
 const leds = require('./leds');
+const servo = require('./servo');
 var schedule = require('node-schedule');
 var min, hour = 0;
 var value = false;
@@ -17,7 +18,15 @@ function schedule1(min, hour, value, id) {
       });
 }
 
+function windowSchedule(min, hour, value) {
+  rule.hour = hour;
+  rule.minute = min;
+  var window = schedule.scheduleJob(rule, function(){
+    servo.servoControl(value);
+  })
+}
 
+  module.exports.windowSchedule = windowSchedule;
   module.exports.schedule1 = schedule1;
   module.exports.min = min;
   module.exports.hour = hour;

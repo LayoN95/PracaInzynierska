@@ -154,6 +154,14 @@ router.post('/schedule/:hour/:min/:state/:id', (req, res, next) => {
   });
 });
 
+router.post('/windowschedule/:hour/:min/:value', (req, res, next) => {
+  schedule.windowSchedule(req.params.min, req.params.hour, req.params.value);
+  res.status(200).json({
+    message: (req.params.value)
+  });
+});
+
+
 router.get('/alarm', (req, res, next) => {
   PIR.findById('5d4c5a3d5af4f10b07a9bbde', function(err, doc) {
     if (err) {
