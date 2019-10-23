@@ -12,6 +12,7 @@ function schedule1(min, hour, value, id) {
         console.log(min + " " + hour + " " + value);
         var j = schedule.scheduleJob(rule, function(){
         console.log("schedule");
+        console.log(j);
         leds.led(id, parseInt(value));
       });
 }
