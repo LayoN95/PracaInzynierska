@@ -13,7 +13,7 @@
 
         <div class="dht11" style="position: absolute; top: 540px; left: 280px;">
           <img src="img/temperature.png" style="width: 25px;">
-          <p style="color: black">{{ temperature }}</p>
+          <p style="color: black">{{ dht11_temperature }}</p>
           <img src="img/humidity.png" style="width: 25px">
           <p style="color: blacl"> {{ humidity }} </p>
         </div> 
@@ -43,7 +43,9 @@
     },
     data() {
       return {
-        temperature: 25
+        temperature: 25,
+        dht11_temperature: 25,
+        humidity: 80
       };
     },
     methods: {
@@ -100,11 +102,45 @@
           console.log(error);
         });
       },
+
+      getDHT11: function(event) {
+
+      axios.get('http://192.168.1.48:3000/dht11', {
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+        }
+      })
+      .then((response) => {
+        var hours, minutes, seconds;
+        var dateHMS;
+        var obj = response.data;
+        var x = [];
+        var y = [];
+        var z = [];
+        this.dht11_temperature = obj.records[0].temperature;
+        this.humidity = obj.records[0].humidity;
+        /*for (var i in obj.records) {
+          x[i] = obj.records[i].humidity;
+          y[i] = obj.records[i].temperature;
+          dateHMS = new Date(obj.records[i].date);
+          hours = dateHMS.getHours();
+          minutes = dateHMS.getMinutes();
+          seconds = dateHMS.getSeconds();
+          z[i] = hours + ":" + minutes + ":" + seconds; 
+        }*/
+
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+      },
+
     },
     beforeMount() {
       this.getDS18B20();
     }
   };
+
 </script>
 <style>
 </style>
