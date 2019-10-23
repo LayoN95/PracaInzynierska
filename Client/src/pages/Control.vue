@@ -56,18 +56,23 @@
           
           <p class="d-inline">Stop godzina: {{ timeEnd }}</p>
           <input type="time" id="timeEnd" v-model="timeEnd" />
-          <base-button class="d-inline" v-on:click="submit" id="21" type="success" fill>On!</base-button>
-
+          <base-button class="d-inline" v-on:click="submit" id="18" type="success" fill>Zapisz!</base-button>
 
           <p>Pokój nr 2</p>
-          <label for="timeStart">TurnOn: </label>
-          <input type="time" id="timeStart" v-model="timeStart" />
-          <p>Start godzina: {{ timeStart }}</p>
-
-          <label for="timeEnd">TurnOff: </label>
+          <p class="d-inline">Start godzina: {{ timeStart }}</p>
+          <input class="d-inline" type="time" id="timeStart" v-model="timeStart" />
+          
+          <p class="d-inline">Stop godzina: {{ timeEnd }}</p>
           <input type="time" id="timeEnd" v-model="timeEnd" />
-          <p>Stop godzina: {{ timeEnd }}</p>
-          <base-button v-on:click="submit" id="18" type="success" fill>On!</base-button>
+          <base-button class="d-inline" v-on:click="submit" id="6" type="success" fill>Zapisz!</base-button>
+
+          <p>Oświetlenie na zewnątrz</p>
+          <p class="d-inline">Start godzina: {{ timeStart }}</p>
+          <input class="d-inline" type="time" id="timeStart" v-model="timeStart" />
+          
+          <p class="d-inline">Stop godzina: {{ timeEnd }}</p>
+          <input type="time" id="timeEnd" v-model="timeEnd" />
+          <base-button class="d-inline" v-on:click="submit" id="21" type="success" fill>Zapisz!</base-button>
 
 
           <!--
