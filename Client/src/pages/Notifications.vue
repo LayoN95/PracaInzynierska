@@ -46,7 +46,7 @@
         temperature: 25,
         dht11_temperature: 25,
         humidity: 8,
-        window: "img/temperature.png",
+        window: "img/windowopen.png",
         path: 'http://192.168.1.48:3000'
       };
     },
@@ -71,7 +71,7 @@
           if(obj.deviceStatus[0].window_open <= 650) {
             this.window = "img/windowclosed.png"
             console.log("okno zamknięte");
-          } else if(obj.deviceStatus[0].window_open >= 1500) {
+          } else if(obj.deviceStatus[0].window_open >= 650) {
           this.window = "img/windowopen.png";
             console.log("okno otwarte");
 
