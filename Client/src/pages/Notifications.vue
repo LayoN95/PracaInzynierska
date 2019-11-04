@@ -20,7 +20,7 @@
         </div> 
 
         <div class="window" style="position: absolute; top: 300px; left: 790px;">
-          <img src="{{ window }}" style="width: 25px;">
+          <img :src="window" style="width: 25px;">
           <p style="color: black">{{ window }}</p>
         </div> 
 
@@ -47,7 +47,7 @@
         temperature: 25,
         dht11_temperature: 25,
         humidity: 8,
-        window: ""
+        window: "img/windowopen.png"
       };
     },
     methods: {
@@ -71,7 +71,7 @@
           if(obj.deviceStatus[0].window_open <= 650) {
             this.window = "zamknięte"
           } else if(obj.deviceStatus[0].window_open >= 1500) {
-          this.window = "otwarte";
+          this.window = "img/windowopen.png";
           }
 
           this.hcsr04 = obj.deviceStatus[0].hcsr04;
