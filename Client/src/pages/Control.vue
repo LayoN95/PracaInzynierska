@@ -196,10 +196,34 @@
             },
     
       submit: function (event) {
-                    var targetId = event.currentTarget.id;
-
+        var targetId = event.currentTarget.id;
         var start = [];
-        var end = [];
+        var end = []
+
+        /*W bazie danych zmienna bool, jeżeli aktywne to true else wyczyszczeniu joba false*/
+                    /*
+                    Switch(targetId)
+                    {
+                      case: 18
+                      {
+                        start = this.timeStart_1.split(':');
+                        end = this.timeEnd_1.split(':');
+                      }
+                      case: 6
+                      {
+                        start = this.timeStart_2.split(':');
+                        end = this.timeEnd_2.split(':');
+                      }
+                      case: 21
+                      {
+                        start = this.timeStart_3.split(':');
+                        end = this.timeEnd_3.split(':');
+                      }
+                    }
+
+                    */
+
+;
         start = this.timeStart.split(':');
         end = this.timeEnd.split(':');
         

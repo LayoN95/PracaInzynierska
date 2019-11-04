@@ -77,7 +77,7 @@
         <card type="chart">
           <template slot="header">
             <h5 class="card-category">{{$t('dashboard.completedTasks')}}</h5>
-            <h3 class="card-title"><i class="tim-icons icon-send text-success "></i> DHT11 Humid</h3>
+            <h3 class="card-title"><i class="tim-icons icon-send text-success "></i> DS18B20</h3>
           </template>
           <div class="chart-area">
             <line-chart style="height: 100%"
