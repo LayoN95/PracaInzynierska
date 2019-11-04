@@ -69,7 +69,7 @@
 
           //okna
           if(obj.deviceStatus[0].window_open <= 650) {
-            this.window = "zamknięte"
+            this.window = "img/temperature.png"
           } else if(obj.deviceStatus[0].window_open >= 1500) {
           this.window = "img/windowopen.png";
           }
