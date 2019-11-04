@@ -32,7 +32,7 @@
         </div>
 
         <div class="light_2" style="position: absolute; top: 430px; left: 350px;">
-          <img :src="light" style="width: 25px;">
+          <img :src="light_2" style="width: 25px;">
         </div>
 
         </div>
@@ -75,6 +75,14 @@
 
           //światła
           this.lightStatus = obj.deviceStatus[0].state;
+          this.light_2 = obj.deviceStatus[0].room_2;
+          this.light_1 = obj.deviceStatus[0].room_1;
+
+          if(this.light_2) {
+            this.light_2 = "img/lightbulb.png";
+          } else {
+            this.light_2 = "img/lightbulboff.png";
+          }
 
           //okna
           if(obj.deviceStatus[0].window_open <= 650) {
