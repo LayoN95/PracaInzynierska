@@ -28,7 +28,7 @@
         </div> 
 
         <div class="light_1" style="position: absolute; top: 90px; left: 460px;">
-          <img :src="light" style="width: 25px;">
+          <img :src="light_1" style="width: 25px;">
         </div>
 
         <div class="light_2" style="position: absolute; top: 430px; left: 350px;">
