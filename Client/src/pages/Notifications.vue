@@ -70,8 +70,11 @@
           //okna
           if(obj.deviceStatus[0].window_open <= 650) {
             this.window = "img/temperature.png"
+            console.log("okno zamknięte");
           } else if(obj.deviceStatus[0].window_open >= 1500) {
           this.window = "img/windowopen.png";
+            console.log("okno otwarte");
+
           }
 
           this.hcsr04 = obj.deviceStatus[0].hcsr04;
