@@ -55,7 +55,8 @@
         dht11_temperature: 25,
         humidity: 8,
         window: "img/windowopen.png",
-        light: "img/lightbulb.png",
+        light_1: "img/lightbulb.png",
+        light_2: "img/lightbulb.png",
         path: 'http://192.168.1.48:3000'
       };
     },
@@ -75,16 +76,13 @@
 
           //światła
           this.lightStatus = obj.deviceStatus[0].state;
-          this.light_2 = obj.deviceStatus[0].room_2;
-          this.light_1 = obj.deviceStatus[0].room_1;
-
-          if(this.light_1) {
+          if(obj.deviceStatus[0].room_1) {
             this.light_1 = "img/lightbulb.png";
           } else {
             this.light_1 = "img/lightbulboff.png";
           }
 
-          if(this.light_2) {
+          if(obj.deviceStatus[0].room_2) {
             this.light_2 = "img/lightbulb.png";
           } else {
             this.light_2 = "img/lightbulboff.png";
