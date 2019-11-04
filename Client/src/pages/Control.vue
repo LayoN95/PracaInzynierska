@@ -203,13 +203,13 @@
 
         /*W bazie danych zmienna bool, jeżeli aktywne to true else wyczyszczeniu joba false*/
         switch(targetId) {
-          case "6": 
+          case "18": 
           {
             console.log("Case 18: ROOM 1");
             start = this.room_1_timeStart.split(':');
             end = this.room_1_timeEnd.split(':');
           }
-          case "18": 
+          case "6": 
           {
             console.log("Case 6: ROOM 2");
             start = this.room_2_timeStart.split(':');
