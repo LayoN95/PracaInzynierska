@@ -78,6 +78,12 @@
           this.light_2 = obj.deviceStatus[0].room_2;
           this.light_1 = obj.deviceStatus[0].room_1;
 
+          if(this.light_1) {
+            this.light_1 = "img/lightbulb.png";
+          } else {
+            this.light_1 = "img/lightbulboff.png";
+          }
+
           if(this.light_2) {
             this.light_2 = "img/lightbulb.png";
           } else {
