@@ -71,7 +71,7 @@
           if(obj.deviceStatus[0].window_open <= 650) {
             this.window = "img/windowclosed.png"
             console.log("okno zamknięte");
-          } else if(obj.deviceStatus[0].window_open >= 650) {
+          } else if(obj.deviceStatus[0].window_open >= 651) {
           this.window = "img/windowopen.png";
             console.log("okno otwarte");
 
