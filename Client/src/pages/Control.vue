@@ -220,8 +220,8 @@
           case "21": 
           {
             console.log("Case 21: OUTDOOR");
-            start = this.room_3_timeStart.split(':');
-            end = this.room_3_timeEnd.split(':');
+            start = this.outdoor_timeStart.split(':');
+            end = this.outdoor_timeEnd.split(':');
             break;
           }
         }
