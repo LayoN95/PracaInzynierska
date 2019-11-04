@@ -51,27 +51,27 @@
           <h4 slot="header">Schedule</h4>
 
           <p>Pokój nr 1</p>
-          <p class="d-inline">Start godzina: {{ timeStart }}</p>
-          <input class="d-inline" type="time" id="timeStart" v-model="timeStart" />
+          <p class="d-inline">Start godzina: {{ room_1_timeStart }}</p>
+          <input class="d-inline" type="time" id="timeStart" v-model="room_1_timeStart" />
           
-          <p class="d-inline">Stop godzina: {{ timeEnd }}</p>
-          <input type="time" id="timeEnd" v-model="timeEnd" />
+          <p class="d-inline">Stop godzina: {{ room_1_timeEnd }}</p>
+          <input type="time" id="timeEnd" v-model="room_1_timeEnd" />
           <base-button class="d-inline" v-on:click="submit" id="18" type="success" fill>Zapisz!</base-button>
 
           <p>Pokój nr 2</p>
-          <p class="d-inline">Start godzina: {{ timeStart }}</p>
-          <input class="d-inline" type="time" id="timeStart" v-model="timeStart" />
+          <p class="d-inline">Start godzina: {{ room_2_timeStart }}</p>
+          <input class="d-inline" type="time" id="timeStart" v-model="room_2_timeStart" />
           
-          <p class="d-inline">Stop godzina: {{ timeEnd }}</p>
-          <input type="time" id="timeEnd" v-model="timeEnd" />
+          <p class="d-inline">Stop godzina: {{ room_2_timeEnd }}</p>
+          <input type="time" id="timeEnd" v-model="room_2_timeEnd" />
           <base-button class="d-inline" v-on:click="submit" id="6" type="success" fill>Zapisz!</base-button>
 
           <p>Oświetlenie na zewnątrz</p>
-          <p class="d-inline">Start godzina: {{ timeStart }}</p>
-          <input class="d-inline" type="time" id="timeStart" v-model="timeStart" />
+          <p class="d-inline">Start godzina: {{ outdoor_timeStart }}</p>
+          <input class="d-inline" type="time" id="timeStart" v-model="outdoor_timeStart" />
           
-          <p class="d-inline">Stop godzina: {{ timeEnd }}</p>
-          <input type="time" id="timeEnd" v-model="timeEnd" />
+          <p class="d-inline">Stop godzina: {{ outdoor_timeEnd }}</p>
+          <input type="time" id="timeEnd" v-model="outdoor_timeEnd" />
           <base-button class="d-inline" v-on:click="submit" id="21" type="success" fill>Zapisz!</base-button>
 
           <p>Sterowanie oknami</p>
@@ -198,34 +198,34 @@
       submit: function (event) {
         var targetId = event.currentTarget.id;
         var start = [];
-        var end = []
+        var end = [];
 
         /*W bazie danych zmienna bool, jeżeli aktywne to true else wyczyszczeniu joba false*/
-                    /*
-                    Switch(targetId)
-                    {
-                      case: 18
-                      {
-                        start = this.timeStart_1.split(':');
-                        end = this.timeEnd_1.split(':');
-                      }
-                      case: 6
-                      {
-                        start = this.timeStart_2.split(':');
-                        end = this.timeEnd_2.split(':');
-                      }
-                      case: 21
-                      {
-                        start = this.timeStart_3.split(':');
-                        end = this.timeEnd_3.split(':');
-                      }
-                    }
+        switch(targetId) {
+          case 6: 
+          {
+            console.log("Case 6: ROOM 1");
+            start = this.room_1_timeStart.split(':');
+            end = this.room_1_timeEnd.split(':');
+          }
+          case 18: 
+          {
+            console.log("Case 18: ROOM 2");
+            start = this.room_2_timeStart.split(':');
+            end = this.room_2_timeEnd.split(':');
+          }
+          case 21: 
+          {
+            console.log("Case 21: OUTDOOR");
+            start = this.room_3_timeStart.split(':');
+            end = this.room_3_timeEnd.split(':');
+          }
+        }
 
-                    */
 
-;
-        start = this.timeStart.split(':');
-        end = this.timeEnd.split(':');
+
+        /*start = this.timeStart.split(':');
+        end = this.timeEnd.split(':');*/
         
         //Ustalenie aktualnej godziny
         var timeNow = new Date();
