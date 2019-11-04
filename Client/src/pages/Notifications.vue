@@ -48,7 +48,7 @@
         dht11_temperature: 25,
         humidity: 8,
         window: "img/temperature.png",
-        path: 'http://192.168.1.48:3000/'
+        path: 'http://192.168.1.48:3000'
       };
     },
     methods: {
