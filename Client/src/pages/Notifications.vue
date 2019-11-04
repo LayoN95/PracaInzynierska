@@ -27,7 +27,7 @@
           <img src="img/air-conditioner-off.png" style="width: 25px;">
         </div> 
 
-        <div class="light_1" style="position: absolute; top: 90px; left: 460px;">
+        <div class="light_1" style="position: absolute; top: 430px; left: 650px;">
           <img :src="light_1" style="width: 25px;">
         </div>
 
