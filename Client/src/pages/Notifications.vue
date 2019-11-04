@@ -31,7 +31,7 @@
           <img :src="light" style="width: 25px;">
         </div>
 
-        <div class="light_2" style="position: absolute; top: 500px; left: 320px;">
+        <div class="light_2" style="position: absolute; top: 400px; left: 340px;">
           <img :src="light" style="width: 25px;">
         </div>
 
