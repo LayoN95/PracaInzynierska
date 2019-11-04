@@ -21,7 +21,6 @@
 
         <div class="window" style="position: absolute; top: 300px; left: 790px;">
           <img :src="window" style="width: 25px;">
-          <p style="color: black">{{ window }}</p>
         </div> 
 
         <div class="airconditioner" style="position: absolute; top: 600px; left: 540px;">
@@ -70,7 +69,7 @@
 
           //okna
           if(obj.deviceStatus[0].window_open <= 650) {
-            this.window = "img/temperature.png"
+            this.window = "img/windowclosed.png"
             console.log("okno zamknięte");
           } else if(obj.deviceStatus[0].window_open >= 1500) {
           this.window = "img/windowopen.png";
