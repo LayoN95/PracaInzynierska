@@ -27,6 +27,10 @@
           <img src="img/air-conditioner-off.png" style="width: 25px;">
         </div> 
 
+        <div class="light_1" style="position: absolute; top: 50px; left: 500px;">
+          <img :src="light" style="width: 25px;">
+        </div>
+
         </div>
       </card>
     </div>
@@ -47,6 +51,7 @@
         dht11_temperature: 25,
         humidity: 8,
         window: "img/windowopen.png",
+        light: "img/lightbulb.png",
         path: 'http://192.168.1.48:3000'
       };
     },
@@ -71,7 +76,7 @@
           if(obj.deviceStatus[0].window_open <= 650) {
             this.window = "img/windowclosed.png"
             console.log("okno zamknięte");
-          } else if(obj.deviceStatus[0].window_open >= 651) {
+          } else if(obj.deviceStatus[0].window_open >= 1500) {
           this.window = "img/windowopen.png";
             console.log("okno otwarte");
 
