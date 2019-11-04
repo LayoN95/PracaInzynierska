@@ -47,7 +47,7 @@
         temperature: 25,
         dht11_temperature: 25,
         humidity: 8,
-        window: "img/windowopen.png"
+        window: "img/temperature.png"
       };
     },
     methods: {
