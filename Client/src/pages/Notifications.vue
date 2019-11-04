@@ -20,7 +20,7 @@
         </div> 
 
         <div class="window" style="position: absolute; top: 300px; left: 790px;">
-          <img src="img/windowopen.png" style="width: 25px;">
+          <img src="{{ window }}" style="width: 25px;">
           <p style="color: black">{{ window }}</p>
         </div> 
 
@@ -46,7 +46,8 @@
       return {
         temperature: 25,
         dht11_temperature: 25,
-        humidity: 80
+        humidity: 8,
+        window: ""
       };
     },
     methods: {
