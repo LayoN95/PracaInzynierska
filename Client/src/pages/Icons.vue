@@ -24,8 +24,11 @@
       </div>
         <div class="col-lg-4">
         <card>
+
            <h4 slot="header"><i class="tim-icons icon-bell-55 text-success "></i> Temperatura</h4>
-           <p>Temperatura: {{ temperature }} </p>
+          <table><tr>
+            <td>
+<p>Temperatura: {{ temperature }} </p>
                      <knob-control
           :min="0"
           :max="35"
@@ -36,8 +39,10 @@
           v-model="temperature"
           id="temperatureControlKnob"
           ></knob-control>
-           <p class="d-inline" >Wilgotność: {{ humidity }}</p>
-           <knob-control class="d-inline"
+            </td>
+            <td>
+              <p>Wilgotność: {{ humidity }}</p>
+           <knob-control
           :min="0"
           :max="100"
           :size="100"
@@ -47,6 +52,10 @@
           v-model="humidity"
           id="humidityControlKnob"
           ></knob-control>
+            </td>
+          </tr></table>
+           
+           
         </card>
       </div>
         <div class="col-lg-4">
