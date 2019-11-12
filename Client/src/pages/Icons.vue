@@ -26,7 +26,12 @@
         <card>
 
            <h4 slot="header"><i class="tim-icons icon-bell-55 text-success "></i> Temperatura</h4>
-          <table><tr>
+          <table>
+            <tr>
+              <td><p style="size: 30px;"> {{ temperature }} <p></td>
+              <td></td>
+            </tr>
+            <tr>
             <td>
 <p>Temperatura: {{ temperature }} </p>
                      <knob-control
