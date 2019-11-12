@@ -1,6 +1,6 @@
 <template>
     <div class="row">
-      <div class="col-12">
+      <div class="col-md-6">
         <card :title="table1.title">
           <div class="table-responsive">
             <base-table :data="table1.data"
@@ -8,19 +8,17 @@
                         thead-classes="text-primary">
             </base-table>
           </div>
-
-
         </card>
       </div>
 
-      <div class="col-12">
+      <div class="col-md-6">
         <card class="card-plain">
-          <!--<div class="table-full-width table-responsive">
-            <base-table :title="table2.title" :sub-title="table2.subTitle" :data="table2.data"
-                         :columns="table2.columns">
-
+            <div class="table-responsive">
+            <base-table :data="table1.data"
+                        :columns="table1.columns"
+                        thead-classes="text-primary">
             </base-table>
-          </div>-->
+          </div>
         </card>
       </div>
 
@@ -41,7 +39,6 @@ export default {
   data() {
 
     return {
-      
       table1: {
         title: "DHT 11 Table:",
         columns: [...tableColumns],
