@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <div class="row">
+   <!-- <div class="row">
       <div class="col-12">
         <card type="chart">
           <template slot="header">
@@ -13,13 +13,9 @@
 
             </div>
           </template>
-          <!-- Szeroki Wykres -->
           <div class="chart-area">
-            <!--<p>{{ /*User.ds18b20[0].temperature*/ Temperature }}</p>
-            <input v-model="id" placeholder="edit me">
-            <button v-on:click="turnOn">Turn the lights on!</button>
+     
 
-            <button v-on:click="turnOff">Turn the lights off!</button>-->
 
             <button v-on:click="getDS18B20">Get DS18B20 data from mongoDB</button>
             <button v-on:click="getDHT11">Get DHT11 data from mongoDB</button>
@@ -37,7 +33,7 @@
           </div>
         </card>
       </div>
-    </div>
+    </div> -->
     <div class="row">
       <div class="col-lg-4" :class="{'text-right': isRTL}">
         <card type="chart">
