@@ -27,13 +27,19 @@
 
            <h4 slot="header"><i class="tim-icons icon-bell-55 text-success "></i> Temperatura</h4>
           <table>
+            <tr><td colspan="2"><p>Termometr: DHT11/p></td></tr>
             <tr>
               <td><p style="font-size: 30px; color: #1df8ca;"> {{ temperature }} &#8451; </p></td>
               <td><p style="font-size: 30px; color: #1d8af8;"> {{ humidity }} % </p></td>
             </tr>
+            <tr><td colspan="2"><p>Termometr: DS18B20</p></td></tr>
             <tr>
+              
+              <td><p style="font-size: 30px; color: #1df8ca;"> {{ temperature }} &#8451; </p></td>
+            </tr>
+            <!-- <tr>
             <td>
-<p>Temperatura: {{ temperature }} </p>
+          <p>Temperatura: {{ temperature }} </p>
                      <knob-control
           :min="0"
           :max="35"
@@ -58,7 +64,8 @@
           id="humidityControlKnob"
           ></knob-control>
             </td>
-          </tr></table>
+          </tr> -->
+          </table>
            
            
         </card>
