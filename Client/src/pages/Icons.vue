@@ -2,7 +2,7 @@
 <div class="row">
       <div class="col-lg-4">
         <card>
-          <h4 slot="header"><i class="tim-icons icon-bulb-63 text-success "></i> Światło</h4>
+          <h3 slot="header"><i class="tim-icons icon-bulb-63 text-success "></i> Światło</h3>
             <p>Pokój nr 1: {{ lightRoom_1 }}</p>
             <p>Pokój nr 2: {{ lightRoom_2 }}</p>
             <p>Oświetlenie na zewnątrz: {{ lightOutdoor }}</p>
@@ -10,13 +10,13 @@
       </div>
       <div class="col-lg-4">
         <card>
-          <h4 slot="header"><i class="tim-icons icon-bell-55 text-success "></i> Termostat</h4>
+          <h3 slot="header"><i class="tim-icons icon-bell-55 text-success "></i> Termostat</h3>
           <p>Termostat: {{ thermostat }}</p>
         </card>
       </div>
       <div class="col-lg-4">
         <card>
-          <h4 slot="header"><i class="tim-icons icon-bell-55 text-success "></i> Alarm</h4>
+          <h3 slot="header"><i class="tim-icons icon-bell-55 text-success "></i> Alarm</h3>
           <p>Alarm: {{ alarm }}</p>
 
         </card>
@@ -24,7 +24,7 @@
         <div class="col-lg-4">
         <card>
 
-           <h4 slot="header"><i class="tim-icons icon-bell-55 text-success "></i> Temperatura</h4>
+           <h3 slot="header"><i class="tim-icons icon-bell-55 text-success "></i> Temperatura</h3>
           <table>
             <tr><td colspan="2"><p><img src="img/temperature.png" style="width: 25px;"> Termometr: DHT11</p></td></tr>
             <tr>
@@ -71,20 +71,20 @@
       </div>
         <div class="col-lg-4">
         <card>
-           <h4 slot="header"><i class="tim-icons icon-alert-circle-exc text-success "></i> Pir</h4>
+           <h3 slot="header"><i class="tim-icons icon-alert-circle-exc text-success "></i> Pir</h3>
            <p>Czujnik PIR: {{ alarm }}</p>
            <p>Ostatni ruch: {{ pirSensor }}</p>
         </card>
       </div>
         <div class="col-lg-4">
         <card>
-           <h4 slot="header"><i class="tim-icons icon-alert-circle-exc text-success "></i> HCSR</h4>
+           <h3 slot="header"><i class="tim-icons icon-alert-circle-exc text-success "></i> HCSR</h3>
            <p>Czujnik HCSR: {{ hcsr04 }}</p>
         </card>
       </div>
       <div class="col-12">
         <card>
-           <h4 slot="header"><i class="tim-icons icon-image-02 text-success "></i> Okna</h4>
+           <h3 slot="header"><i class="tim-icons icon-image-02 text-success "></i> Okna</h3>
            <p>Stan okna: {{ window }}</p>
             <progress-bar :val="window_position" :title="temperature"  :text="temperature" min="650" max="2500"></progress-bar>
 
