@@ -150,8 +150,6 @@
         timeStart: null,
         dateEnd: null,
         timeEnd: null,
-        windowOpen: null,
-        windowClose: null,
         checked: null,
         thermostat: 21,
         servoControl: null,
