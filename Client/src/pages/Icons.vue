@@ -36,8 +36,8 @@
           v-model="temperature"
           id="temperatureControlKnob"
           ></knob-control>
-           <p>Wilgotność: {{ humidity }}</p>
-           <knob-control
+           <p class="d-inline" >Wilgotność: {{ humidity }}</p>
+           <knob-control class="d-inline"
           :min="0"
           :max="100"
           :size="100"
