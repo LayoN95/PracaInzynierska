@@ -2,7 +2,7 @@
 <div class="row">
       <div class="col-md-6">
         <card>
-          <h4 slot="header">Światła</h4>
+          <h3 slot="header">Światła</h3>
           <!--Layout button-->
           <base-button v-on:click="turnOn" id="18" type="primary" fill>Pokój 1 On!</base-button>
           <base-button v-on:click="turnOff" id="18" type="primary" fill>Pokój 1 Off!</base-button>
@@ -32,7 +32,7 @@
       </div>
       <div class="col-md-6">
         <card>
-          <h4 slot="header">Termostat</h4>
+          <h3 slot="header">Termostat</h3>
           <knob-control
           :min="10"
           :max="35"
@@ -48,7 +48,7 @@
       </div>
       <div class="col-md-6">
         <card>
-          <h4 slot="header">Schedule</h4>
+          <h3 slot="header">Schedule</h3>
 
           <p>Pokój nr 1</p>
           <p class="d-inline">Start godzina: </p>
@@ -91,7 +91,7 @@
       </div>
         <div class="col-md-6">
         <card>
-          <h4 slot="header">ServoControl</h4>
+          <h3 slot="header">ServoControl</h3>
 
           <knob-control
           :min="600"
@@ -110,7 +110,7 @@
       </div>
       <div class="col-12">
         <card>
-          <h4 slot="header">Alarm</h4>
+          <h3 slot="header">Alarm</h3>
 
           <h1>Reset: </h1>
           <button v-on:click="reset">Reset!</button>
