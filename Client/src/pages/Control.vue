@@ -51,34 +51,34 @@
           <h4 slot="header">Schedule</h4>
 
           <p>Pokój nr 1</p>
-          <p class="d-inline">Start godzina: {{ room_1_timeStart }}</p>
+          <p class="d-inline">Start godzina: </p>
           <input class="d-inline" type="time" id="timeStart" v-model="room_1_timeStart" />
           
-          <p class="d-inline">Stop godzina: {{ room_1_timeEnd }}</p>
+          <p class="d-inline">Stop godzina: </p>
           <input type="time" id="timeEnd" v-model="room_1_timeEnd" />
           <base-button class="d-inline" v-on:click="submit" id="18" type="success" fill>Zapisz!</base-button>
 
           <p>Pokój nr 2</p>
-          <p class="d-inline">Start godzina: {{ room_2_timeStart }}</p>
+          <p class="d-inline">Start godzina: </p>
           <input class="d-inline" type="time" id="timeStart" v-model="room_2_timeStart" />
           
-          <p class="d-inline">Stop godzina: {{ room_2_timeEnd }}</p>
+          <p class="d-inline">Stop godzina: </p>
           <input type="time" id="timeEnd" v-model="room_2_timeEnd" />
           <base-button class="d-inline" v-on:click="submit" id="6" type="success" fill>Zapisz!</base-button>
 
           <p>Oświetlenie na zewnątrz</p>
-          <p class="d-inline">Start godzina: {{ outdoor_timeStart }}</p>
+          <p class="d-inline">Start godzina: </p>
           <input class="d-inline" type="time" id="timeStart" v-model="outdoor_timeStart" />
           
-          <p class="d-inline">Stop godzina: {{ outdoor_timeEnd }}</p>
+          <p class="d-inline">Stop godzina: </p>
           <input type="time" id="timeEnd" v-model="outdoor_timeEnd" />
           <base-button class="d-inline" v-on:click="submit" id="21" type="success" fill>Zapisz!</base-button>
 
           <p>Sterowanie oknami</p>
-          <p class="d-inline">Godzina otwarcia: {{ timeStart }}</p>
+          <p class="d-inline">Godzina otwarcia: </p>
           <input class="d-inline" type="time" id="timeStart" v-model="windowOpen" />
           
-          <p class="d-inline">Godzina zamknięcia: {{ timeEnd }}</p>
+          <p class="d-inline">Godzina zamknięcia: </p>
           <input type="time" id="timeEnd" v-model="windowClose" />
           <base-button class="d-inline" v-on:click="windowSubmit" id="window" type="success" fill>Zapisz!</base-button>
 
