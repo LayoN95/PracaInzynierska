@@ -1,10 +1,10 @@
 <template>
     <div class="row">
       <div class="col-md-6">
-        <card :title="table1.title">
+        <card :title="dht11_table.title">
           <div style="height: 200px;" class="table-responsive">
-            <base-table :data="table1.data"
-                        :columns="table1.columns"
+            <base-table :data="dht11_table.data"
+                        :columns="dht11_table.columns"
                         thead-classes="text-primary">
             </base-table>
           </div>
@@ -12,10 +12,10 @@
       </div>
 
       <div class="col-md-6">
-        <card :title="table1.title">
+        <card :title="ds18b20_table.title">
             <div class="table-responsive">
-            <base-table :data="table1.data"
-                        :columns="table1.columns"
+            <base-table :data="ds18b20_table.data"
+                        :columns="ds18b20_table.columns"
                         thead-classes="text-primary">
             </base-table>
           </div>
@@ -29,6 +29,7 @@ import { BaseTable } from "@/components";
   import axios from 'axios';
 
 var table = [];
+var ds_table = [];
 const tableColumns = ["temperature", "humidity", "date"];
  
 
@@ -39,10 +40,15 @@ export default {
   data() {
 
     return {
-      table1: {
+      dht11_table: {
         title: "DHT 11 Table:",
         columns: [...tableColumns],
         data: [...table]
+      },
+      ds18b20_table: {
+        title: "DS18B20 Table:",
+        columns: [...tableColumns],
+        data: [...ds_table]
       }
     };
   },
@@ -80,10 +86,29 @@ export default {
       .catch((error) => {
         console.log(error);
       }); 
-  }
+  },
+        getDS18B20: function (event) {
+        axios.get('http://192.168.1.48:3000/', {
+              headers: {
+                'Access-Control-Allow-Origin': '*',
+              }
+        })
+        .then((response) => {
+        var obj = response.data;
+        ds_table = response.data.ds18b20;
+        var x = [];
+        for (var i in obj.ds18b20) {
+          x[i] = obj.ds18b20[i].temperature;
+        }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      }
 },
 beforeMount(){
   this.getDHT11();
+  this.getDS18B20();
   console.log(tableData);
 
 }
