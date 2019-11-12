@@ -3,8 +3,7 @@
       <div class="col-lg-4">
         <card>
           <h4 slot="header"><i class="tim-icons icon-bulb-63 text-success "></i> Światło</h4>
-            <p>{{ /*User.ds18b20[0].temperature*/ lightStatus }} 123</p>
-            <p>Pokój nr 1: <img src="img/temperature.png" style="width: 25px;"> {{ lightRoom_1 }}</p>
+            <p>Pokój nr 1: {{ lightRoom_1 }}</p>
             <p>Pokój nr 2: {{ lightRoom_2 }}</p>
             <p>Oświetlenie na zewnątrz: {{ lightOutdoor }}</p>
         </card>
@@ -35,7 +34,7 @@
             <tr><td colspan="2"><p><img src="img/temperature.png" style="width: 25px;"> Termometr: DS18B20</p></td></tr>
             <tr>
               
-              <td><p style="font-size: 30px; color: #1df8ca;"> {{ temperature }} &#8451; </p></td>
+              <td><p style="font-size: 30px; color: #1df8ca;"> {{ ds18b20_temperature}} &#8451; </p></td>
             </tr>
             <!-- <tr>
             <td>
@@ -116,6 +115,7 @@ data() {
         pirSensor: null,
         thermostat: 22, 
         temperature: null,
+        ds18b20_temperature: null,
         humidity: null,
         window: null,
         window_position: null,
@@ -251,11 +251,31 @@ data() {
       .catch((error) => {
         console.log(error);
       });
-    }
+    },
+        getDS18B20: function (event) {
+        axios.get('http://192.168.1.48:3000/', {
+              headers: {
+                'Access-Control-Allow-Origin': '*',
+              }
+        })
+        .then((response) => {
+        var obj = response.data;
+        ds_table = response.data.ds18b20;
+        var x = [];
+        for (var i in obj.ds18b20) {
+          x[i] = obj.ds18b20[i].temperature;
+        }
+        this.ds18b20_temperature = x[0];
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      }
   
     
     },
       beforeMount() {
+      this.getDS18B20();  
       this.getData(); 
       this.getDHT11();
       this.getThermostat();
