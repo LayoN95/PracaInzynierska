@@ -260,7 +260,6 @@ data() {
         })
         .then((response) => {
         var obj = response.data;
-        ds_table = response.data.ds18b20;
         var x = [];
         for (var i in obj.ds18b20) {
           x[i] = obj.ds18b20[i].temperature;
