@@ -28,8 +28,8 @@
            <h4 slot="header"><i class="tim-icons icon-bell-55 text-success "></i> Temperatura</h4>
           <table>
             <tr>
-              <td><p style="font-size: 30px; color: green;"> {{ temperature }} &#8451; </p></td>
-              <td><p style="font-size: 30px; color: blue;"> {{ humidity }} % </p></td>
+              <td><p style="font-size: 30px; color: #16f4d0;"> {{ temperature }} &#8451; </p></td>
+              <td><p style="font-size: 30px; color: #153b50;"> {{ humidity }} % </p></td>
             </tr>
             <tr>
             <td>
