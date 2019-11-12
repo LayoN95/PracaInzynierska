@@ -27,12 +27,12 @@
 
            <h4 slot="header"><i class="tim-icons icon-bell-55 text-success "></i> Temperatura</h4>
           <table>
-            <tr><td colspan="2"><p>Termometr: DHT11</p></td></tr>
+            <tr><td colspan="2"><img src="img/temperature.png" style="width: 25px;"><h1>Termometr: DHT11</h1></td></tr>
             <tr>
               <td><p style="font-size: 30px; color: #1df8ca;"> {{ temperature }} &#8451; </p></td>
               <td><p style="font-size: 30px; color: #1d8af8;"> {{ humidity }} % </p></td>
             </tr>
-            <tr><td colspan="2"><p>Termometr: DS18B20</p></td></tr>
+            <tr><td colspan="2"><img src="img/temperature.png" style="width: 25px;"><h1>Termometr: DS18B20</h1></td></tr>
             <tr>
               
               <td><p style="font-size: 30px; color: #1df8ca;"> {{ temperature }} &#8451; </p></td>
