@@ -13,7 +13,7 @@
 
       <div class="col-md-6">
         <card :title="ds18b20_table.title">
-            <div style="height: 400px;" class="table-responsive">
+            <div style="height: 400px; overflow-x: hidden;" class="table-responsive">
             <base-table :data="ds18b20_table.data"
                         :columns="ds18b20_table.columns"
                         thead-classes="text-primary">
