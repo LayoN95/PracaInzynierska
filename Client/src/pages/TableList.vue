@@ -2,7 +2,7 @@
     <div class="row">
       <div class="col-md-6">
         <card :title="table1.title">
-          <div class="table-responsive">
+          <div style="height: 200px;" class="table-responsive">
             <base-table :data="table1.data"
                         :columns="table1.columns"
                         thead-classes="text-primary">
