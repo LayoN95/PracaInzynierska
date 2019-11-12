@@ -1,5 +1,6 @@
 <template>
   <div class="row">
+  <h3 class="card-title"><img src="img/temperature.png" style="width: 25px;">Wizualizacja</h3>
 
     <div class="col-md-12" style="position: relative; width: 980px;">
       <card>
