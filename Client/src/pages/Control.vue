@@ -52,7 +52,7 @@
 
           <p>Pokój nr 1</p>
           <p class="d-inline">Start godzina: {{ room_1_timeStart }}</p>
-          <input class="d-inline" type="time" id="timeStart" v-model="room_1_timeStart" />
+          <input class="d-inline" type="time" id="timeStart" default="18:20" v-model="room_1_timeStart" />
           
           <p class="d-inline">Stop godzina: {{ room_1_timeEnd }}</p>
           <input type="time" id="timeEnd" v-model="room_1_timeEnd" />
