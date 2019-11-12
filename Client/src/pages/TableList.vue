@@ -2,7 +2,7 @@
     <div class="row">
       <div class="col-md-6">
         <card :title="dht11_table.title">
-          <div style="height: 200px;" class="table-responsive">
+          <div style="height: 400px;" class="table-responsive">
             <base-table :data="dht11_table.data"
                         :columns="dht11_table.columns"
                         thead-classes="text-primary">
@@ -13,7 +13,7 @@
 
       <div class="col-md-6">
         <card :title="ds18b20_table.title">
-            <div class="table-responsive">
+            <div style="height: 400px;" class="table-responsive">
             <base-table :data="ds18b20_table.data"
                         :columns="ds18b20_table.columns"
                         thead-classes="text-primary">
