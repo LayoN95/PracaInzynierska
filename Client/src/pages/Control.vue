@@ -52,7 +52,7 @@
 
           <p>Pokój nr 1</p>
           <p class="d-inline">Start godzina: {{ room_1_timeStart }}</p>
-          <input class="d-inline" type="time" id="timeStart" default="18:20" v-model="room_1_timeStart" />
+          <input class="d-inline" type="time" id="timeStart" v-model="room_1_timeStart" />
           
           <p class="d-inline">Stop godzina: {{ room_1_timeEnd }}</p>
           <input type="time" id="timeEnd" v-model="room_1_timeEnd" />
@@ -137,6 +137,8 @@
     },
     data() {
         return {
+        room_1_timeStart: "18:30",
+        room_1_timeEnd: "20:00",
         id: null,
         dateStart: null,
         timeStart: null,
@@ -208,6 +210,7 @@
             console.log("Case 18: ROOM 1");
             start = this.room_1_timeStart.split(':');
             end = this.room_1_timeEnd.split(':');
+
             break;
           }
           case "6": 
