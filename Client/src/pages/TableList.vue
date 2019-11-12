@@ -12,7 +12,7 @@
       </div>
 
       <div class="col-md-6">
-        <card class="card-plain">
+        <card :title="table1.title">
             <div class="table-responsive">
             <base-table :data="table1.data"
                         :columns="table1.columns"
