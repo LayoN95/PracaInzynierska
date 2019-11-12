@@ -34,7 +34,7 @@
             <tr><td colspan="2"><p><img src="img/temperature.png" style="width: 25px;"> Termometr: DS18B20</p></td></tr>
             <tr>
               
-              <td><p style="font-size: 30px; color: #1df8ca;"> {{ ds18b20_temperature}} &#8451; </p></td>
+              <td><p style="font-size: 30px; color: #1df8ca;"> {{ ds18b20_temperature }} &#8451; </p></td>
             </tr>
             <!-- <tr>
             <td>
@@ -266,6 +266,7 @@ data() {
           x[i] = obj.ds18b20[i].temperature;
         }
         this.ds18b20_temperature = x[0];
+        console.log(x[0]);
         })
         .catch((error) => {
           console.log(error);
