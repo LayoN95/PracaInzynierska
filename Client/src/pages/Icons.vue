@@ -182,7 +182,12 @@ data() {
 
           //światła
           this.lightStatus = obj.deviceStatus[0].state;
-          this.lightRoom_1 = obj.deviceStatus[0].room_1;
+          //this.lightRoom_1 = obj.deviceStatus[0].room_1;
+          if(obj.deviceStatus[0].room_1){
+            this.lightRoom_1 = "Włączone";
+          }else {
+            this.lightRoom_1 = "Wyłączone";
+          }
           this.lightRoom_2 = obj.deviceStatus[0].room_2;
           this.lightOutdoor = obj.deviceStatus[0].outdoor;
           
