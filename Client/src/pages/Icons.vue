@@ -1,5 +1,43 @@
 <template>
 <div class="row">
+  <div class="col-lg-4">
+  <card>
+    <h3 slot="header"><i class="tim-icons icon-bulb-63 text-success"></i>Pokój nr 1</h3>
+    <table>
+            <tr>
+              <td><p style="font-size: 30px; color: #1df8ca;"> {{ temperature }} &#8451; </p></td>
+              <td><p style="font-size: 30px; color: #1d8af8;"> {{ humidity }} % </p></td>
+            </tr>
+    </table>
+  </card>
+  </div>
+
+  <div class="col-lg-4">
+  <card>
+    <h3 slot="header"><i class="tim-icons icon-bulb-63 text-success"></i>Pokój nr 2</h3>
+    <table>
+        <tr><td><p style="font-size: 30px; color: #1df8ca;"> {{ ds18b20_temperature }} &#8451; </p></td></tr>
+    </table>
+  </card>
+  </div>
+
+  <div class="col-lg-4">
+  <card>
+    <h3 slot="header"><i class="tim-icons icon-bulb-63 text-success"></i>Zewnątrz</h3>
+          <table>
+            <tr><td colspan="2"><p><img src="img/temperature.png" style="width: 25px;"> Termometr: DHT11</p></td></tr>
+            <tr>
+              <td><p style="font-size: 30px; color: #1df8ca;"> {{ temperature }} &#8451; </p></td>
+              <td><p style="font-size: 30px; color: #1d8af8;"> {{ humidity }} % </p></td>
+            </tr>
+            <tr><td colspan="2"><p><img src="img/temperature.png" style="width: 25px;"> Termometr: DS18B20</p></td></tr>
+            <tr>
+              
+              <td><p style="font-size: 30px; color: #1df8ca;"> {{ ds18b20_temperature }} &#8451; </p></td>
+            </tr>
+          </table>
+  </card>
+  </div>
       <div class="col-lg-4">
         <card>
           <h3 slot="header"><i class="tim-icons icon-bulb-63 text-success "></i> Światło</h3>
