@@ -3,8 +3,8 @@
   <div class="col-lg-4">
   <card>
     <h3 slot="header"><i class="tim-icons icon-bulb-63 text-success"></i>Pokój nr 1</h3>
-    <p>Pokój nr 1: {{ lightRoom_1 }}</p>
-     <img :src="lightRoom_1" style="width: 25px;">
+    <p>Pokój nr 1: <img :src="lightRoom_1" style="width: 25px;"></p>
+     
     <table>
             <tr>
               <td><p style="font-size: 30px; color: #1df8ca;"> {{ temperature }} &#8451; </p></td>
@@ -17,7 +17,7 @@
   <div class="col-lg-4">
   <card>
     <h3 slot="header"><i class="tim-icons icon-bulb-63 text-success"></i>Pokój nr 2</h3>
-    <p>Pokój nr 2: {{ lightRoom_2 }}</p>
+    <p>Pokój nr 2: <img :src="lightRoom_2" style="width: 25px;"></p>
     <table>
         <tr><td><p style="font-size: 30px; color: #1df8ca;"> {{ ds18b20_temperature }} &#8451; </p></td></tr>
     </table>
@@ -27,7 +27,7 @@
   <div class="col-lg-4">
   <card>
     <h3 slot="header"><i class="tim-icons icon-bulb-63 text-success"></i>Zewnątrz</h3>
-          <p>Oświetlenie na zewnątrz: {{ lightOutdoor }}</p>
+          <p>Oświetlenie na zewnątrz: <img :src="lightOutdoor" style="width: 25px;"></p>
           <table>
             <tr><td colspan="2"><p><img src="img/temperature.png" style="width: 25px;"> Termometr: DHT11</p></td></tr>
             <tr>
@@ -182,16 +182,28 @@ data() {
           }
 
           //światła
-          this.lightStatus = obj.deviceStatus[0].state;
           //this.lightRoom_1 = obj.deviceStatus[0].room_1;
+          //Pokój 1
           if(obj.deviceStatus[0].room_1){
             this.lightRoom_1 = "img/lightbulb.png";
           }else {
             this.lightRoom_1 = "img/lightbulboff.png";
           }
-          this.lightRoom_2 = obj.deviceStatus[0].room_2;
-          this.lightOutdoor = obj.deviceStatus[0].outdoor;
-          
+
+          //Pokój 2
+          //this.lightRoom_2 = obj.deviceStatus[0].room_2;
+          if(obj.deviceStatus[0].room_2){
+            this.lightRoom_2 = "img/lightbulb.png";
+          }else {
+            this.lightRoom_2 = "img/lightbulboff.png";
+          }
+          //Zewnątrz
+          //this.lightOutdoor = obj.deviceStatus[0].outdoor;
+          if(obj.deviceStatus[0].outdoor){
+            this.lightOutdoor = "img/lightbulb.png";
+          }else {
+            this.lightOutdoor = "img/lightbulboff.png";
+          }
           //okna
           this.window_position = obj.deviceStatus[0].window_open;
 
