@@ -61,7 +61,7 @@
           </template>
           <div class="chart-area">
             <bar-chart style="height: 100%"
-                       chart-id="blue-bar-chart"
+                       chart-id="green-line-chart"
                        :chart-data="blueBarChart.chartData"
                        :gradient-stops="blueBarChart.gradientStops"
                        :extra-options="blueBarChart.extraOptions">
