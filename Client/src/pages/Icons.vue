@@ -4,6 +4,7 @@
   <card>
     <h3 slot="header"><i class="tim-icons icon-bulb-63 text-success"></i>Pokój nr 1</h3>
     <p>Pokój nr 1: {{ lightRoom_1 }}</p>
+     <img :src="lightRoom_1" style="width: 25px;">
     <table>
             <tr>
               <td><p style="font-size: 30px; color: #1df8ca;"> {{ temperature }} &#8451; </p></td>
@@ -184,9 +185,9 @@ data() {
           this.lightStatus = obj.deviceStatus[0].state;
           //this.lightRoom_1 = obj.deviceStatus[0].room_1;
           if(obj.deviceStatus[0].room_1){
-            this.lightRoom_1 = "Włączone";
+            this.lightRoom_1 = "img/lightbulb.png";
           }else {
-            this.lightRoom_1 = "Wyłączone";
+            this.lightRoom_1 = "img/lightbulboff.png";
           }
           this.lightRoom_2 = obj.deviceStatus[0].room_2;
           this.lightOutdoor = obj.deviceStatus[0].outdoor;
