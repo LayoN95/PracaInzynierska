@@ -3,6 +3,7 @@
   <div class="col-lg-4">
   <card>
     <h3 slot="header"><i class="tim-icons icon-bulb-63 text-success"></i>Pokój nr 1</h3>
+    <p>Pokój nr 1: {{ lightRoom_1 }}</p>
     <table>
             <tr>
               <td><p style="font-size: 30px; color: #1df8ca;"> {{ temperature }} &#8451; </p></td>
@@ -15,6 +16,7 @@
   <div class="col-lg-4">
   <card>
     <h3 slot="header"><i class="tim-icons icon-bulb-63 text-success"></i>Pokój nr 2</h3>
+    <p>Pokój nr 2: {{ lightRoom_2 }}</p>
     <table>
         <tr><td><p style="font-size: 30px; color: #1df8ca;"> {{ ds18b20_temperature }} &#8451; </p></td></tr>
     </table>
@@ -24,6 +26,7 @@
   <div class="col-lg-4">
   <card>
     <h3 slot="header"><i class="tim-icons icon-bulb-63 text-success"></i>Zewnątrz</h3>
+          <p>Oświetlenie na zewnątrz: {{ lightOutdoor }}</p>
           <table>
             <tr><td colspan="2"><p><img src="img/temperature.png" style="width: 25px;"> Termometr: DHT11</p></td></tr>
             <tr>
