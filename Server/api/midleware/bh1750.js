@@ -1,4 +1,5 @@
 var BH1750 = require('bh1750');
+var LEDS = require('../midleware/leds');
 var light = new BH1750({
      address: 0x23,
     device: '/dev/i2c-1',
@@ -15,6 +16,11 @@ light.readLight(function(err, value){
     } else {
         console.log("light value is: ", value, "lx");
         lightRead = value;
+        if (value < 13){
+            LED.led(20,1);
+        }else {
+            LED.led(20,0);
+        }
         module.exports.lightRead = lightRead;
     }
 });
