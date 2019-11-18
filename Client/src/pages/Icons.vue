@@ -28,6 +28,7 @@
   <card>
     <h3 slot="header"><i class="tim-icons icon-bulb-63 text-success"></i>Zewnątrz</h3>
           <p>Oświetlenie na zewnątrz: <img :src="lightOutdoor" style="width: 25px;"></p>
+          <p>Natężenie światła: {{ lightRead }}</p>
           <table>
             <tr><td colspan="2"><p><img src="img/temperature.png" style="width: 25px;"> Termometr: DHT11</p></td></tr>
             <tr>
@@ -150,6 +151,7 @@ export default {
 data() {
         return {
         bulb: '<img src="img/temperature.png" style="width: 25px;">',
+        lightRead: 0,
         lightStatus: false,
         lightRoom_1: false,
         lightRoom_2: false,
@@ -338,6 +340,7 @@ data() {
           }
         }).then((response) => {
           var obj = response.data;
+          this.lightRead = obj.message;
           console.log("lightRead: " + obj.message);
 
         }).catch((error) => {
