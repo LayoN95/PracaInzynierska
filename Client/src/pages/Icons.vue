@@ -3,7 +3,7 @@
   <div class="col-lg-4">
   <card>
     <h3 slot="header"><i class="tim-icons icon-bulb-63 text-success"></i>Pokój nr 1</h3>
-    <p>Oświetlenie: <img :src="lightRoom_1" style="width: 25px;"></p>
+    <h4>Oświetlenie: <img :src="lightRoom_1" style="width: 25px;"></h4>
      
     <table>
             <tr>
@@ -17,7 +17,7 @@
   <div class="col-lg-4">
   <card>
     <h3 slot="header"><i class="tim-icons icon-bulb-63 text-success"></i>Pokój nr 2</h3>
-    <p>Oświetlenie: <img :src="lightRoom_2" style="width: 25px;"></p>
+    <h4>Oświetlenie: <img :src="lightRoom_2" style="width: 25px;"></h4>
     <table>
         <tr><td><p style="font-size: 30px; color: #1df8ca;"><img src="img/temperature.png" style="width: 25px;"> {{ ds18b20_temperature }} &#8451; </p></td></tr>
     </table>
@@ -27,20 +27,20 @@
   <div class="col-lg-4">
   <card>
     <h3 slot="header"><i class="tim-icons icon-bulb-63 text-success"></i>Zewnątrz</h3>
-          <p>Oświetlenie na zewnątrz: <img :src="lightOutdoor" style="width: 25px;"></p>
+          <h4>Oświetlenie na zewnątrz: <img :src="lightOutdoor" style="width: 25px;"></h4>
           <table>
-            <tr><td><p>Natężenie światła:</p></td></tr>
+            <tr><td><h4>Natężenie światła</h4></td></tr>
             <tr><td><p style="font-size: 30px; color: #ffcc33;"><img src="img/sunny.png" style="width: 25px;"> {{ lightRead }} lx</p></td></tr>
             <tr><td><h4>Temperatura</h4></td><td><h4>Wilgotność</h4></td></tr>
             <tr>
               <td><p style="font-size: 30px; color: #1df8ca;"><img src="img/temperature.png" style="width: 25px;"> {{ temperature }} &#8451; </p></td>
               <td><p style="font-size: 30px; color: #1d8af8;"><img src="img/humidity.png" style="width: 25px;"> {{ humidity }} % </p></td>
             </tr>
-            <tr><td colspan="2"><p>Termometr: DS18B20</p></td></tr>
+            <!-- <tr><td colspan="2"><p>Termometr: DS18B20</p></td></tr>
             <tr>
               
               <td><p style="font-size: 30px; color: #1df8ca;"><img src="img/temperature.png" style="width: 25px;"> {{ ds18b20_temperature }} &#8451; </p></td>
-            </tr>
+            </tr> -->
           </table>
   </card>
   </div>
