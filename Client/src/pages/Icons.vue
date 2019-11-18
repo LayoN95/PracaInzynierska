@@ -31,7 +31,7 @@
           <table>
             <tr><td><p>Natężenie światła:</p></td></tr>
             <tr><td><p style="font-size: 30px; color: #ffcc33;"><img src="img/sunny.png" style="width: 25px;"> {{ lightRead }} lx</p></td></tr>
-            <tr><td><h3>Temperatura</h3></td><td><h3>Wilgotność</h3></td></tr>
+            <tr><td><h4>Temperatura</h4></td><td><h4>Wilgotność</h4></td></tr>
             <tr>
               <td><p style="font-size: 30px; color: #1df8ca;"><img src="img/temperature.png" style="width: 25px;"> {{ temperature }} &#8451; </p></td>
               <td><p style="font-size: 30px; color: #1d8af8;"><img src="img/humidity.png" style="width: 25px;"> {{ humidity }} % </p></td>
