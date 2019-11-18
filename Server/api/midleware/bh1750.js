@@ -14,8 +14,8 @@ light.readLight(function(err, value){
         console.log("light error: " + err);
         throw err;
     } else {
-        console.log("light value is: ", value, "lx");
-        lightRead = value;
+        console.log("light value is: ", value.toFixed(1), "lx");
+        lightRead = value.toFixed(1);
         if (value < 13){
             LEDS.led(21,1);
             console.log("Turn light on!");
