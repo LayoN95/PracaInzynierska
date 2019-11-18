@@ -216,9 +216,9 @@ data() {
           }
 
           this.hcsr04 = obj.deviceStatus[0].hcsr04;
-          console.log(obj.deviceStatus[0].state);
-          console.log(this.lightStatus);
-              console.log(response);
+          //console.log(obj.deviceStatus[0].state);
+          //console.log(this.lightStatus);
+              //console.log(response);
           })
           .catch((error) => {
               console.log(error);
@@ -244,7 +244,7 @@ data() {
               month = dateHMS.getMonth();
               this.pirSensor = day + "." + month + " " + hours + ":" + minutes + ":" + seconds;
             }
-            console.log(obj.pir[0]._id);
+            //console.log(obj.pir[0]._id);
             this.pirSensor = obj.pir[0].date;
 
           })          
@@ -277,9 +277,9 @@ data() {
         }
         this.temperature = y[0];
         this.humidity = x[0];
-        console.log(x[0]);
-        console.log(y[0]);
-        console.log(z[0]);
+        //console.log(x[0]);
+        //console.log(y[0]);
+        //console.log(z[0]);
       })
       .catch((error) => {
         console.log(error);
@@ -326,7 +326,7 @@ data() {
           x[i] = obj.ds18b20[i].temperature;
         }
         this.ds18b20_temperature = x[0];
-        console.log(x[0]);
+        //console.log(x[0]);
         })
         .catch((error) => {
           console.log(error);
@@ -341,7 +341,7 @@ data() {
         }).then((response) => {
           var obj = response.data;
           this.lightRead = obj.message;
-          console.log("lightRead: " + obj.message);
+          //console.log("lightRead: " + obj.message);
 
         }).catch((error) => {
           console.log(error);
