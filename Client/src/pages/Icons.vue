@@ -353,6 +353,7 @@ data() {
       this.getDHT11();
       this.getThermostat();
       this.getAlarm();
+      this.getLight();
    
     },
     mounted() {
