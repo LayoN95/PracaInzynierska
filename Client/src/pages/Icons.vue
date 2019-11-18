@@ -7,6 +7,10 @@
      
     <table>
             <tr>
+              <td><h4>Temperatura</h4></td>
+              <td><h4>Wilgotność</h4></td>
+            </tr>
+            <tr>
               <td><p style="font-size: 30px; color: #1df8ca;"><img src="img/temperature.png" style="width: 25px;"> {{ temperature }} &#8451; </p></td>
               <td><p style="font-size: 30px; color: #1d8af8;"><img src="img/humidity.png" style="width: 25px;"> {{ humidity }} % </p></td>
             </tr>
@@ -19,7 +23,18 @@
     <h3 slot="header"><i class="tim-icons icon-bulb-63 text-success"></i>Pokój nr 2</h3>
     <h4>Oświetlenie: <img :src="lightRoom_2" style="width: 25px;"></h4>
     <table>
-        <tr><td><p style="font-size: 30px; color: #1df8ca;"><img src="img/temperature.png" style="width: 25px;"> {{ ds18b20_temperature }} &#8451; </p></td></tr>
+      <tr>
+        <td>
+          <h4>Temperatura</h4>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="font-size: 30px; color: #1df8ca;">
+            <img src="img/temperature.png" style="width: 25px;"> {{ ds18b20_temperature }} &#8451; 
+          </p>
+        </td>
+      </tr>
     </table>
   </card>
   </div>
