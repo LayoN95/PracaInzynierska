@@ -69,15 +69,15 @@
 
            <h3 slot="header"><i class="tim-icons icon-bell-55 text-success "></i> Temperatura</h3>
           <table>
-            <tr><td colspan="2"><p><img src="img/temperature.png" style="width: 25px;"> Termometr: DHT11</p></td></tr>
+            <tr><td colspan="2"><p> Termometr: DHT11</p></td></tr>
             <tr>
-              <td><p style="font-size: 30px; color: #1df8ca;"> {{ temperature }} &#8451; </p></td>
-              <td><p style="font-size: 30px; color: #1d8af8;"> {{ humidity }} % </p></td>
+              <td><p style="font-size: 30px; color: #1df8ca;"><img src="img/temperature.png" style="width: 25px;"> {{ temperature }} &#8451; </p></td>
+              <td><p style="font-size: 30px; color: #1d8af8;"><img src="img/humidity.png" style="width: 25px;"> {{ humidity }} % </p></td>
             </tr>
-            <tr><td colspan="2"><p><img src="img/temperature.png" style="width: 25px;"> Termometr: DS18B20</p></td></tr>
+            <tr><td colspan="2"><p> Termometr: DS18B20</p></td></tr>
             <tr>
               
-              <td><p style="font-size: 30px; color: #1df8ca;"> {{ ds18b20_temperature }} &#8451; </p></td>
+              <td><p style="font-size: 30px; color: #1df8ca;"><img src="img/temperature.png" style="width: 25px;"> {{ ds18b20_temperature }} &#8451; </p></td>
             </tr>
             <!-- <tr>
             <td>
