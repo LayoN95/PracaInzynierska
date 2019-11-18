@@ -6,6 +6,14 @@
     <h4>Oświetlenie: <img :src="lightRoom_1" style="width: 25px;"></h4>
      
     <table>
+            <tr>
+              <td>
+                <base-button v-on:click="turnOn" id="18" type="primary" fill>Włącz</base-button>
+              </td>
+              <td>
+                <base-button v-on:click="turnOn" id="18" type="primary" fill>Wyłącz</base-button>
+              </td>
+            </tr>
             <tr style="text-align: center;">
               <td><h4>Temperatura</h4></td>
               <td><h4>Wilgotność</h4></td>
