@@ -17,9 +17,11 @@ light.readLight(function(err, value){
         console.log("light value is: ", value, "lx");
         lightRead = value;
         if (value < 13){
-            LED.led(20,1);
+            LEDS.led(21,1);
+            console.log("Turn light on!");
         }else {
-            LED.led(20,0);
+            LEDS.led(21,0);
+            console.log("Turn light off!");
         }
         module.exports.lightRead = lightRead;
     }
