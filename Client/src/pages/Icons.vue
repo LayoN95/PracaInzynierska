@@ -3,7 +3,7 @@
   <div class="col-lg-4">
   <card>
     <h3 slot="header"><i class="tim-icons icon-bulb-63 text-success"></i>Pokój nr 1</h3>
-    <p>Pokój nr 1: <img :src="lightRoom_1" style="width: 25px;"></p>
+    <p>Oświetlenie: <img :src="lightRoom_1" style="width: 25px;"></p>
      
     <table>
             <tr>
@@ -17,7 +17,7 @@
   <div class="col-lg-4">
   <card>
     <h3 slot="header"><i class="tim-icons icon-bulb-63 text-success"></i>Pokój nr 2</h3>
-    <p>Pokój nr 2: <img :src="lightRoom_2" style="width: 25px;"></p>
+    <p>Oświetlenie: <img :src="lightRoom_2" style="width: 25px;"></p>
     <table>
         <tr><td><p style="font-size: 30px; color: #1df8ca;"> {{ ds18b20_temperature }} &#8451; </p></td></tr>
     </table>
