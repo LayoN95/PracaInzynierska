@@ -3,15 +3,19 @@
   <div class="col-lg-4">
   <card>
     <h3 slot="header"><i class="tim-icons icon-bulb-63 text-success"></i>Pokój nr 1</h3>
-    <h4>Oświetlenie: <img :src="lightRoom_1" style="width: 25px;"></h4>
      
     <table>
+            <tr style="text-align: center;">
+              <td>
+                <h4>Oświetlenie: <img :src="lightRoom_1" style="width: 25px;"></h4>
+              </td>
+            </tr>
             <tr>
               <td>
-                <base-button v-on:click="turnOn" id="18" type="primary" fill>Włącz</base-button>
+                <base-button v-on:click="turnOn" id="18" type="success" fill>Włącz</base-button>
               </td>
               <td>
-                <base-button v-on:click="turnOn" id="18" type="primary" fill>Wyłącz</base-button>
+                <base-button v-on:click="turnOn" id="18" type="danger" fill>Wyłącz</base-button>
               </td>
             </tr>
             <tr style="text-align: center;">
