@@ -28,8 +28,9 @@
   <card>
     <h3 slot="header"><i class="tim-icons icon-bulb-63 text-success"></i>Zewnątrz</h3>
           <p>Oświetlenie na zewnątrz: <img :src="lightOutdoor" style="width: 25px;"></p>
-          <p><img src="img/sunny.png" style="width: 25px;">Natężenie światła: {{ lightRead }} lx</p>
           <table>
+            <tr><td><p>Natężenie światła:</p></td></tr>
+            <tr><td><p style="font-size: 30px; color: #ffcc33;"><img src="img/sunny.png" style="width: 25px;"> {{ lightRead }} lx</p></td></tr>
             <tr><td colspan="2"><p>Termometr: DHT11</p></td></tr>
             <tr>
               <td><p style="font-size: 30px; color: #1df8ca;"><img src="img/temperature.png" style="width: 25px;"> {{ temperature }} &#8451; </p></td>
