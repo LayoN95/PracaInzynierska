@@ -329,6 +329,20 @@ data() {
         .catch((error) => {
           console.log(error);
         });
+      },
+
+      getLight: function (event) {
+        axios.get('http://192.168.1.48:3000/light', {
+          headers: {
+                'Access-Control-Allow-Origin': '*',
+          }
+        }).then((response) => {
+          var obj = response.data;
+          console.log("lightRead: " + obj);
+
+        }).catch((error) => {
+          console.log(error);
+        });
       }
   
     
