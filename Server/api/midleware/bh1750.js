@@ -15,6 +15,7 @@ light.readLight(function(err, value){
     } else {
         console.log("light value is: ", value, "lx");
         lightRead = value;
+        module.exports.lightRead = lightRead;
     }
 });
 }, 15000);
