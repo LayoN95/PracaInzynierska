@@ -338,7 +338,7 @@ data() {
           }
         }).then((response) => {
           var obj = response.data;
-          console.log("lightRead: " + obj);
+          console.log("lightRead: " + obj.message);
 
         }).catch((error) => {
           console.log(error);
