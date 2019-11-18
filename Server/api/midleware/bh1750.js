@@ -7,7 +7,7 @@ var light = new BH1750({
 });
 
 console.log("BH1750");
- setInterval(function() {
+ setInterval(function lightRead() {
 light.readLight(function(err, value){
     if (err) {
         console.log("light error: " + err);
@@ -17,3 +17,4 @@ light.readLight(function(err, value){
     }
 });
 }, 15000);
+module.exports.lightRead = lightRead;

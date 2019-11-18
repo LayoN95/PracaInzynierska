@@ -253,4 +253,10 @@ router.post('/airconditioner/:value', (req,res,next) => {
   })
 });
 
+router.post('/light', (req,res,next) => {
+  res.status(200).json({
+    message: (BH1750.lightRead)
+  });
+});
+
 module.exports = router;
