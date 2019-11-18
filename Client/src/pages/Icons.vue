@@ -6,7 +6,7 @@
     <h4>Oświetlenie: <img :src="lightRoom_1" style="width: 25px;"></h4>
      
     <table>
-            <tr>
+            <tr style="align: center;">
               <td><h4>Temperatura</h4></td>
               <td><h4>Wilgotność</h4></td>
             </tr>
