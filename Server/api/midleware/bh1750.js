@@ -18,5 +18,5 @@ light.readLight(function(err, value){
         module.exports.lightRead = lightRead;
     }
 });
-}, 15000);
+}, 30000);
 module.exports.lightRead = lightRead;
