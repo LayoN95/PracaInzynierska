@@ -55,7 +55,7 @@ app.use(function (req,res, next) {
      next(); 
 })
 //SOCKET.IO
-var io = require('socket.io').listen('http://192.168.1.48:8081'/*ServerIO.server*/);
+var io = require('socket.io')('http://192.168.1.48:8081'/*ServerIO.server*/);
 //io.set('origins', '*:*');
 io.set('origins', 'http://192.168.1.48:8081');
 
