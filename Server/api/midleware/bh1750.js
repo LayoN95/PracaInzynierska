@@ -18,13 +18,13 @@ light.readLight(function(err, value){
         console.log("light value is: ", value.toFixed(1), "lx");
 
         socket.emit('BH1750', { light: value.toFixed(1)});
+        var ledId = "21";
 
         lightRead = value.toFixed(1);
         if (value < 13){
-            LEDS.led(21,1);
+            LEDS.led(ledId,1);
             console.log("Turn light on!");
         }else {
-            var ledId = "21";
             LEDS.led(ledId,0);
             console.log("Turn light off!");
         }
