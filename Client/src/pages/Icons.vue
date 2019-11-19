@@ -230,7 +230,7 @@ data() {
             })
             .then((response) => {
               console.log(response);
-              console.log("REFS" + targetId);
+              //console.log("REFS" + targetId);
             })
             .catch((error) => {
               console.log(error);
@@ -433,43 +433,43 @@ data() {
       },
       getDataFromSockets: function(event){
         socket.on('BH1750_BROADCAST', (data) => {
-        console.log("BH1750_BROADCAST" + data.light);
+        //console.log("BH1750_BROADCAST" + data.light);
         this.lightRead = data.light;
-        console.log("LIGHT_READ: " + this.lightRead);
+        //console.log("LIGHT_READ: " + this.lightRead);
         });
         socket.on('DS18B20_BROADCAST', (data) => {
-        console.log("DS18B20 BROADCAST ON WEBSITE" + data.temp);
+        //console.log("DS18B20 BROADCAST ON WEBSITE" + data.temp);
         this.ds18b20_temperature = data.temp;
-        console.log("DS18B20_temp afret broadcast" + this.ds18b20_temperature);
+        //console.log("DS18B20_temp afret broadcast" + this.ds18b20_temperature);
         })
         socket.on('DHT11_BROADCAST', (data) => {
           this.temperature = data.temp;
           this.humidity = data.humid;
-          console.log("DHT11_BROADCAST Temp: " + data.temp + " Humid: " + data.humid);
+          //console.log("DHT11_BROADCAST Temp: " + data.temp + " Humid: " + data.humid);
         })
         socket.on('HCSR501_BROADCAST', (data) => {
           this.alarm = data.state;   
         })
         socket.on('HCSR04_BROADCAST', (data) => {
           this.hcsr04 = data.dist;
-          console.log("HCSR04_BROADCAST: " + data.dist);
+          //console.log("HCSR04_BROADCAST: " + data.dist);
         })
         socket.on('LED_18_BROADCAST', (data) => {
-          console.log("LED_18_BROADCAST: " + data.state);
+          //console.log("LED_18_BROADCAST: " + data.state);
           if(data.state){this.lightRoom_1 = "img/lightbulb.png";
           }else {
             this.lightRoom_1 = "img/lightbulboff.png";
           }
         })
         socket.on('LED_6_BROADCAST', (data) => {
-          console.log("LED_6_BROADCAST: " + data.state);
+          //console.log("LED_6_BROADCAST: " + data.state);
           if(data.state){this.lightRoom_2 = "img/lightbulb.png";
           }else {
             this.lightRoom_2 = "img/lightbulboff.png";
           }
         })
         socket.on('LED_21_BROADCAST', (data) => {
-          console.log("LED_21_BROADCAST: " + data.state);
+          //console.log("LED_21_BROADCAST: " + data.state);
           if(data.state){this.lightOutdoor = "img/lightbulb.png";
           }else {
             this.lightOutdoor = "img/lightbulboff.png";
