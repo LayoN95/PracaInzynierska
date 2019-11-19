@@ -30,11 +30,11 @@
         </div> 
 
         <div class="light_1" style="position: absolute; top: 430px; left: 650px;">
-          <img :src="lightRoom_1 " style="width: 25px;">
+          <img :src="lightRoom_1" style="width: 25px;">
         </div>
 
         <div class="light_2" style="position: absolute; top: 430px; left: 350px;">
-          <img :src="light_2" style="width: 25px;">
+          <img :src="lightRoom_2" style="width: 25px;">
         </div>
 
         <div class="light intensity" style="position: absolute; top: 100px; left: 130px;">
@@ -66,6 +66,7 @@
         window: "img/windowopen.png",
         light_1: "img/lightbulb.png",
         light_2: "img/lightbulb.png",
+        lightRoom_1: false,
         path: 'http://192.168.1.48:3000'
       };
     },
@@ -100,15 +101,15 @@
           //światła
           this.lightStatus = obj.deviceStatus[0].state;
           if(obj.deviceStatus[0].room_1) {
-            this.light_1 = "img/lightbulb.png";
+            this.lightRoom_1 = "img/lightbulb.png";
           } else {
-            this.light_1 = "img/lightbulboff.png";
+            this.lightRoom_1 = "img/lightbulboff.png";
           }
 
           if(obj.deviceStatus[0].room_2) {
-            this.light_2 = "img/lightbulb.png";
+            this.lightRoom_2 = "img/lightbulb.png";
           } else {
-            this.light_2 = "img/lightbulboff.png";
+            this.lightRoom_2 = "img/lightbulboff.png";
           }
 
           //okna
