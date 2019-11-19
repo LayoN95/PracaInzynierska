@@ -60,7 +60,7 @@ Vue.use(new VueSocketIO({
     sockets: {
       connect: function(event) {
         console.log('socket connected');
-        socket.emit('emit_method', "CONECTED");
+        this.socket.emit('emit_method', "CONECTED");
       },
       news: function(data){
         console.log(data);
@@ -71,10 +71,10 @@ Vue.use(new VueSocketIO({
     },
     methods: {
       clickButton: function(data) {
-        this.$socket.emit('emit_method', data)
+        this.socket.emit('emit_method', data)
       },
       first_emit: function(event){
-        io.emit('emit_method', {message: 'hello'})
+        this.socket.emit('emit_method', {message: 'hello'})
       }
 
     },

@@ -67,6 +67,9 @@ io.on('connection', function(socket) {
   socket.on('my other event', function (data) {
     console.log(data);
   });
+  socket.on('emit_method', function(data){
+    io.emit('MESSAGE', data);
+  })
 });
 
 //========== */
