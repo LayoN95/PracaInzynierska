@@ -20,7 +20,7 @@
 <script>
   import EditProfileForm from './Profile/EditProfileForm';
   import UserCard from './Profile/UserCard';
-  import io from 'socket.io-client';
+  //import io from 'socket.io-client';
 
   /*
   import Vue from 'vue';
@@ -33,6 +33,10 @@ Vue.use(new VueSocketIO({
 
   //const socket = io('http://192.168.1.48:3000');
   var socket = require('socket.io-client')('http://192.168.1.48:3000');
+  socket.on("connect", function () {
+        console.log("Connected to server");
+  });
+
   export default {
     components: {
       EditProfileForm,

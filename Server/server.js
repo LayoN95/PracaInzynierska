@@ -6,6 +6,6 @@ const port = process.env.PORT || 3000;
 
 const server = http.createServer(app);
 server.listen(port);
-console.log("Serwer działa na porcie " + server.address().port);
+console.log("Serwer działa na porcie " + server.address());
 
 module.exports.server = server;
