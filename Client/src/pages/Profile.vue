@@ -20,7 +20,7 @@
 <script>
   import EditProfileForm from './Profile/EditProfileForm';
   import UserCard from './Profile/UserCard';
-  //import io from 'socket.io-client';
+  import io from 'socket.io-client';
 
   /*
   import Vue from 'vue';
@@ -31,11 +31,7 @@ Vue.use(new VueSocketIO({
 }))
 */
 
-  //const socket = io('http://192.168.1.48:3000');
-  var socket = require('socket.io-client')('http://192.168.1.48:3000');
-  socket.on("connect", function () {
-        console.log("Connected to server");
-  });
+  const socket = io("http://192.168.1.48:3000");
 
   export default {
     components: {
@@ -63,7 +59,7 @@ Vue.use(new VueSocketIO({
           description: `Do not be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...`,
         }
       }
-    }/*,
+    },
     sockets: {
       connect: function(event) {
         console.log('socket connected');
@@ -87,7 +83,7 @@ Vue.use(new VueSocketIO({
     },
     beforeMount(){
       this.first_emit();
-    }*/
+    }
   /*,
     methods: {
       sendMessage(e){
