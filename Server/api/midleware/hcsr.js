@@ -22,17 +22,19 @@ const watchHCSR04 = () => {
       const diff = (endTick >> 0) - (startTick >> 0); // Unsigned 32 bit arithmetic
       if((diff / 2 / MICROSECDONDS_PER_CM) < 9)
       {
-        devicesSchema.findById('5d8a5d38456fa304cebf8f4a', function(err, doc) {
+        socket.emit('HCSR04', { dist: (diff / 2 / MICROSECDONDS_PER_CM)});
+        
+        if((diff / 2 / MICROSECDONDS_PER_CM) < 5)
+        {
+          devicesSchema.findById('5d8a5d38456fa304cebf8f4a', function(err, doc) {
             if (err) {
                 console.log("erorr not found");
             }
             doc.hcsr04 = (diff / 2 / MICROSECDONDS_PER_CM);
             doc.save();
-            socket.emit('HCSR04', { dist: (diff / 2 / MICROSECDONDS_PER_CM)});
         })
-        console.log(diff / 2 / MICROSECDONDS_PER_CM);
-      }
-      
+        }
+      } 
     }
   });
 };
