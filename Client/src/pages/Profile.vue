@@ -7,7 +7,11 @@
     <div class="col-md-4">
       <user-card :user="user"></user-card>
     </div>
+    <div class="col-md-8">
+      <h1>SOCKET.IO</h1>
+    </div>
   </div>
+
 </template>
 <script>
   import EditProfileForm from './Profile/EditProfileForm';

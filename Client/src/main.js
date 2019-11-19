@@ -8,6 +8,14 @@ import router from "./router/index";
 import BlackDashboard from "./plugins/blackDashboard";
 import i18n from "./i18n"
 import './registerServiceWorker'
+
+//Socket.io
+import socketio from 'scoket.io';
+import VueSocketIO from 'vue-socket.io';
+
+export const SocketInstance = socketio('http://192.168.1.48:4001');
+Vue.use(VueSocketIO, SocketInstance);
+//=========
 Vue.use(BlackDashboard);
 Vue.use(VueRouter);
 Vue.use(RouterPrefetch);
