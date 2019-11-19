@@ -36,7 +36,6 @@ process.env.MONGO_ATLAS_PW +
 
 mongoose.Promise = global.Promise;
 var app = express();
-var server = app.listen(3000);
 app.use(cors({origin: '*'}));
 app.use(function (req,res, next) {
      // Website you wish to allow to connect
