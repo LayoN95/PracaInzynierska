@@ -34,6 +34,9 @@ io.on('connection', function(socket) {
       console.log("DS18B20 EMIT FROM SERVER: " + data.temp);
   })
 });
+    socket.on('DHT11', function(data){
+        io.emit('DHT11_BROADCAST', data);
+    });
 
 //module.exports.serverListen = serverListen;
 

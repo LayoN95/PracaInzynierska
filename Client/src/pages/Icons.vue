@@ -410,6 +410,11 @@ data() {
         this.ds18b20_temperature = data.temp;
         console.log("DS18B20_temp afret broadcast" + this.ds18b20_temperature);
         })
+        socket.on('DHT11_BROADCAST', (data) => {
+          this.temperature = data.temp;
+          this.humidity = data.humid;
+          console.log("DHT11_BROADCAST Temp: " + data.temp + " Humid: " + data.humid);
+        })
       }
 
   
