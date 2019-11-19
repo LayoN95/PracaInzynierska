@@ -20,9 +20,9 @@ process.env.MONGO_ATLAS_PW +
 
 mongoose.Promise = global.Promise;
 var app = express();
-
+/*
 //SOCKET.IO
-//
+
 var io = require('socket.io')(server);
 io.set('origins', '*:*');
 
@@ -34,7 +34,7 @@ io.on('connection', function(socket) {
   });
 });
 
-//========== 
+//========== */
 
 
 // view engine setup
