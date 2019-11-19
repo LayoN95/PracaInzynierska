@@ -4,9 +4,9 @@ const app = require('./app');
 
 const port = process.env.PORT || 3000;
 
-//const server = http.createServer(app);
+const server = http.createServer(app);
 //server.listen(port);
-var server = app.listen(port);
+server.listen(port);
 //console.log("Serwer działa na porcie " + serverListen.address().port);
 
 var io = require('socket.io').listen(server);
