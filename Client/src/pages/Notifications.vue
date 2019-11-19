@@ -40,6 +40,7 @@
         <div class="light intensity" style="position: absolute; top: 430px; left: 350px;">
          <p class="d-inline" style="font-size: 30px; color: #ffcc33;"><img src="img/sunny.png" style="width: 25px;"> {{ lightRead }} lx</p>
         </div>
+        </div>
       </card>
     </div>
   </div>
