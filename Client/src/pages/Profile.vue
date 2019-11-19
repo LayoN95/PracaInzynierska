@@ -78,11 +78,15 @@ Vue.use(new VueSocketIO({
       first_emit: function(event){
         console.log("EMIT");
         socket.emit('emit_method', {message: 'hello'})
+      },
+      writeText: function(event){
+        console.log("WRITE TEXT METHOD");
       }
 
     },
     beforeMount(){
       this.first_emit();
+      this.writeText();
     }
   /*,
     methods: {
@@ -90,7 +94,7 @@ Vue.use(new VueSocketIO({
         e.preventDefault();
       }
     }*/
-  }
+  };
 </script>
 <style>
 </style>
