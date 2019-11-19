@@ -405,6 +405,11 @@ data() {
         this.lightRead = data.light;
         console.log("LIGHT_READ: " + this.lightRead);
         });
+        socket.on('DS18B20_BROADCAST', (data) => {
+        console.log("DS18B20 BROADCAST ON WEBSITE" + data.temp);
+        this.ds18b20_temperature = data.temp;
+        console.log("DS18B20_temp afret broadcast" + this.ds18b20_temperature);
+        })
       }
 
   
