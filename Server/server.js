@@ -6,7 +6,7 @@ const app = require('./app');
 
 //const server = http.createServer(app);
 //server.listen(port);
-var server = app.listen(port);
+var server = app.listen(3000);
 //console.log("Serwer działa na porcie " + serverListen.address().port);
 
 var io = require('socket.io').listen(server);
