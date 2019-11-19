@@ -164,23 +164,25 @@
            
            
         </card>
+        
       </div>
         <div class="col-lg-4">
         <card>
            <h3 slot="header"><i class="tim-icons icon-alert-circle-exc text-success "></i>Detektory ruchu</h3>
-           <p style="font-size: 30px;"><img src="img/motion-sensor.png" style="width: 25px;">Czujnik PIR: {{ alarm }}</p>
+           <h4><img src="img/motion-sensor.png" style="width: 25px;">Czujnik PIR: {{ alarm }}</h4>
            <p>Ostatni ruch: {{ pirSensor }}</p>
-           <p style="font-size: 30px;"><img src="img/motion-sensor.png" style="width: 25px;">Czujnik HCSR: {{ hcsr04 }}</p>
+           <h4><img src="img/motion-sensor.png" style="width: 25px;">Czujnik HCSR: {{ hcsr04 }}</h4>
         </card>
       </div>
+      <!--
         <div class="col-lg-4">
         <card>
            <h3 slot="header"><i class="tim-icons icon-alert-circle-exc text-success "></i> HCSR</h3>
 
            
         </card>
-      </div>
-      <div class="col-12">
+      </div> -->
+      <div class="col-lg-4">
         <card>
            <h3 slot="header"><i class="tim-icons icon-image-02 text-success "></i> Okna</h3>
            <p>Stan okna: {{ window }}</p>
