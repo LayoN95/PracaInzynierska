@@ -30,6 +30,9 @@ Vue.use(new VueSocketIO({
   connection: 'http://192.168.1.48:8081'
 }))
 */
+
+  const socket = io('http://192.168.1.48:3000');
+
   export default {
     components: {
       EditProfileForm,
@@ -37,7 +40,7 @@ Vue.use(new VueSocketIO({
     },
     data() {
       return {
-        socket : io('http://192.168.1.48:8081'),
+        //socket : io('http://192.168.1.48:3000'),
 
         model: {
           company: 'Creative Code Inc.',
