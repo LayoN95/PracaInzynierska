@@ -11,7 +11,7 @@ const mongoose = require('mongoose');
 // CORS SETTINGS
 const cors = require('cors');
 
-var whitelist = ['http://192.168.1.48:8081', 'http://192.168/1/48:3000'];
+var whitelist = ['http://192.168.1.48:8081', 'http://192.168/1/48:3000']
 var corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1 || !origin) {
