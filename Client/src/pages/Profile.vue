@@ -70,7 +70,7 @@ Vue.use(new VueSocketIO({
       customEmit: function (data) {
         console.log('this method was fired by the socket server eg: io.');
       },
-      bh1750: function (data) {
+      BH1750: function (data) {
         console.log(data);
       }
     },
