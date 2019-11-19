@@ -1,5 +1,7 @@
 var BH1750 = require('bh1750');
 var LEDS = require('../midleware/leds');
+var socket = require('socket.io-client')('http://192.168.1.48:3000');
+
 var light = new BH1750({
      address: 0x23,
     device: '/dev/i2c-1',
@@ -15,6 +17,9 @@ light.readLight(function(err, value){
         throw err;
     } else {
         console.log("light value is: ", value.toFixed(1), "lx");
+
+        socket.emit('BH1750', { light: value.toFixed(1)});
+
         lightRead = value.toFixed(1);
         if (value < 13){
             LEDS.led(21,1);
