@@ -94,7 +94,7 @@ Vue.use(new VueSocketIO({
 
     },
     mounted(){
-      writeText();
+      this.writeText();
     },
 
     beforeMount(){
