@@ -168,14 +168,15 @@
         <div class="col-lg-4">
         <card>
            <h3 slot="header"><i class="tim-icons icon-alert-circle-exc text-success "></i> Pir</h3>
-           <p>Czujnik PIR: {{ alarm }}</p>
+           <p><img src="img/motion-sensor.png" style="width: 25px;">Czujnik PIR: {{ alarm }}</p>
            <p>Ostatni ruch: {{ pirSensor }}</p>
         </card>
       </div>
         <div class="col-lg-4">
         <card>
            <h3 slot="header"><i class="tim-icons icon-alert-circle-exc text-success "></i> HCSR</h3>
-           <p>Czujnik HCSR: {{ hcsr04 }}</p>
+
+           <p><img src="img/motion-sensor.png" style="width: 25px;">Czujnik HCSR: {{ hcsr04 }}</p>
         </card>
       </div>
       <div class="col-12">
