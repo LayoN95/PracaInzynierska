@@ -207,21 +207,21 @@
           //console.log("HCSR04_BROADCAST: " + data.dist);
         })
         socket.on('LED_18_BROADCAST', (data) => {
-          //console.log("LED_18_BROADCAST: " + data.state);
+          console.log("LED_18_BROADCAST: " + data.state);
           if(data.state){this.lightRoom_1 = "img/lightbulb.png";
           }else {
             this.lightRoom_1 = "img/lightbulboff.png";
           }
         })
         socket.on('LED_6_BROADCAST', (data) => {
-          //console.log("LED_6_BROADCAST: " + data.state);
+          console.log("LED_6_BROADCAST: " + data.state);
           if(data.state){this.lightRoom_2 = "img/lightbulb.png";
           }else {
             this.lightRoom_2 = "img/lightbulboff.png";
           }
         })
         socket.on('LED_21_BROADCAST', (data) => {
-          //console.log("LED_21_BROADCAST: " + data.state);
+          console.log("LED_21_BROADCAST: " + data.state);
           if(data.state){this.lightOutdoor = "img/lightbulb.png";
           }else {
             this.lightOutdoor = "img/lightbulboff.png";
