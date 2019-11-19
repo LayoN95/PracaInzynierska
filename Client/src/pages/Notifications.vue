@@ -236,6 +236,10 @@
       this.getDHT11();
       this.getData();
     },
+    mounted() {
+      this.getDataFromSockets();
+
+    }
   };
 
 </script>
