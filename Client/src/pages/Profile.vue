@@ -71,7 +71,7 @@ Vue.use(new VueSocketIO({
         console.log('this method was fired by the socket server eg: io.');
       },
       BH1750_BROADCAST: function (data) {
-        console.log("BROADCAST");
+        console.log("BROADCAST" + data.light);
       }
     },
     methods: {
@@ -83,10 +83,17 @@ Vue.use(new VueSocketIO({
         socket.emit('emit_method', {message: 'hello'})
       },
       writeText: function(event){
+        sockets.subscribe('BH1750', (data) => {
+        console.log(data.light);
+        });
         console.log("WRITE TEXT METHOD");
       }
 
     },
+    mounted(){
+      writeText();
+    },
+
     beforeMount(){
       this.first_emit();
       this.writeText();
