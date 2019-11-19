@@ -71,7 +71,7 @@ Vue.use(new VueSocketIO({
         console.log('this method was fired by the socket server eg: io.');
       },
       BH1750_BROADCAST: function (data) {
-        console.log(data);
+        console.log("BROADCAST");
       }
     },
     methods: {
