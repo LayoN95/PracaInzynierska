@@ -62,6 +62,9 @@ Vue.use(new VueSocketIO({
         console.log('socket connected');
         socket.emit('emit_method', "CONECTED");
       },
+      news: function(data){
+        console.log(data);
+      },
       customEmit: function (data) {
         console.log('this method was fired by the socket server eg: io.');
       }
