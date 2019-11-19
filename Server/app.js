@@ -54,7 +54,7 @@ app.use(function (req,res, next) {
  
      // Pass to next layer of middleware
      next(); 
-})
+})/*
 //SOCKET.IO
 var io = require('socket.io').listen(server);
 //io.set('origins', '*:*');
