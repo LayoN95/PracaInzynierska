@@ -2,16 +2,16 @@ const http = require('http');
 const app = require('./app');
 
 
-//const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000;
 
 //const server = http.createServer(app);
 //server.listen(port);
-var server = app.listen(3000);
+var server = app.listen(port);
 //console.log("Serwer działa na porcie " + serverListen.address().port);
 
 var io = require('socket.io').listen(server);
 //io.set('origins', '*:*');
-io.set('origins', 'http://192.168.1.48:8081');
+//io.set('origins', 'http://192.168.1.48:8081');
 
 io.on('connection', function(socket) {
   console.log("SOCKET.IO DZIAŁA");
