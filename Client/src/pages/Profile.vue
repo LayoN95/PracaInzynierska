@@ -20,7 +20,6 @@
 <script>
   import EditProfileForm from './Profile/EditProfileForm';
   import UserCard from './Profile/UserCard';
-  import io from 'socket.io-client';
 
   /*
   import Vue from 'vue';
@@ -31,7 +30,6 @@ Vue.use(new VueSocketIO({
 }))
 */
 
-  const socket = io("http://192.168.1.48:3000");
 
   export default {
     components: {
@@ -60,31 +58,11 @@ Vue.use(new VueSocketIO({
         }
       }
     },
-    sockets: {
-      connect: function(event) {
-        console.log('socket connected');
-      }
-    },
+
     methods: {
-      clickButton: function(data) {
-        this.socket.emit('emit_method', data)
-      },
-      first_emit: function(event){
-        console.log("EMIT");
-        socket.emit('emit_method', {message: 'hello'})
-      },
-      getDataFromSockets: function(event){
-        socket.on('BH1750_BROADCAST', (data) => {
-        console.log("BH1750_BROADCAST" + data.light);
-        this.lightTest = data.light;
-        console.log("lightTest" + this.lightTest);
-        console.log("lightRead" + this.lightRead);
-        });
-      }
 
     },
     mounted(){
-      this.getDataFromSockets();
     },
 
     beforeMount(){

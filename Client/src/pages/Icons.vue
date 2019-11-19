@@ -181,11 +181,13 @@
 </div>
 </template>
 <script>
-   import axios from 'axios';
-   import Vue from 'vue';
-   import KnobControl from 'vue-knob-control';
-   import ProgressBar from 'vue-simple-progress';
+    import axios from 'axios';
+    import Vue from 'vue';
+    import KnobControl from 'vue-knob-control';
+    import ProgressBar from 'vue-simple-progress';
+    import io from 'socket.io-client';
 
+  const socket = io("http://192.168.1.48:3000");
 
 
 export default {
@@ -196,8 +198,7 @@ export default {
 data() {
         return {
         bulb: '<img src="img/temperature.png" style="width: 25px;">',
-        lightRead: 0,
-        lightTest: 0,
+        lightRead: 0,       
         lightStatus: false,
         lightRoom_1: false,
         lightRoom_2: false,
@@ -213,6 +214,11 @@ data() {
         hcsr04: 5,
         path: 'http://192.168.1.48:3000'
       };
+    },
+    sockets: {
+        connect: function(event) {
+        console.log('socket connected');
+      }
     },
     methods: {
           getData: function(event) {
@@ -392,7 +398,15 @@ data() {
         }).catch((error) => {
           console.log(error);
         });
+      },
+      getDataFromSockets: function(event){
+        socket.on('BH1750_BROADCAST', (data) => {
+        console.log("BH1750_BROADCAST" + data.light);
+        lightRead = data.light;
+        console.log("LIGHT_READ: " + lightRead);
+        });
       }
+
   
     
     },
@@ -406,6 +420,7 @@ data() {
    
     },
     mounted() {
+      this.getDataFromSockets();
 
     }  
   };
