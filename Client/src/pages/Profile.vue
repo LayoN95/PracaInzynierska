@@ -83,10 +83,10 @@ Vue.use(new VueSocketIO({
         socket.emit('emit_method', {message: 'hello'})
       },
       writeText: function(event){
-        socket.subscribe('BH1750', (data) => {
+        socket.exchange.subscribe('BH1750', (data) => {
         console.log(data.light);
         });
-        socket.subscribe('BH1750_BROADCAST', (data) => {
+        socket.exchange.subscribe('BH1750_BROADCAST', (data) => {
         console.log(data.light);
         });
         console.log("WRITE TEXT METHOD");
