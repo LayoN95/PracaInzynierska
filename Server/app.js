@@ -4,6 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var ServerIO = require('../Server/server');
+
 const mongoose = require('mongoose');
 
 const cors = require('cors');
@@ -20,10 +22,10 @@ process.env.MONGO_ATLAS_PW +
 
 mongoose.Promise = global.Promise;
 var app = express();
-/*
+
 //SOCKET.IO
 
-var io = require('socket.io')(server);
+var io = require('socket.io')(ServerIO.server);
 io.set('origins', '*:*');
 
 io.on('connection', function(socket) {
