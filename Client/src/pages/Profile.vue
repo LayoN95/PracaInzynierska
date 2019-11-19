@@ -56,10 +56,11 @@ Vue.use(new VueSocketIO({
           description: `Do not be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...`,
         }
       }
-    }/*,
+    },
     sockets: {
       connect: function(event) {
         console.log('socket connected');
+        this.$socket.emit('emit_method', "CONECTED");
       },
       customEmit: function (data) {
         console.log('this method was fired by the socket server eg: io.');
@@ -69,7 +70,7 @@ Vue.use(new VueSocketIO({
       clickButton: function(data) {
         this.$socket.emit('emit_method', data)
       }
-    }*/
+    }
   /*,
     methods: {
       sendMessage(e){
