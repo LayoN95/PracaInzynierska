@@ -36,6 +36,10 @@ io.on('connection', function(socket) {
   socket.on('DHT11', function(data){
   io.emit('DHT11_BROADCAST', data);
   })
+  socket.on('HCSR501', function(data){
+      io.emit('HCSR501_BROADCAST', data);
+      console.log("HCSR501_BROADCAST" + data.state);
+  })
 });
   
 

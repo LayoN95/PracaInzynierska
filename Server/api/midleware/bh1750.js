@@ -9,8 +9,7 @@ var light = new BH1750({
     length: 2
 });
 var lightRead = 0;
-console.log("BH1750");
- setInterval(function() {
+setInterval(function() {
 light.readLight(function(err, value){
     if (err) {
         console.log("light error: " + err);

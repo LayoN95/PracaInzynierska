@@ -3,6 +3,8 @@ var Gpio = require('onoff').Gpio,
 const pirSchema = require('../models/pirHCSR501');
 const mongoose = require('mongoose');
 const LED = require('../midleware/leds')
+var socket = require('socket.io-client')('http://192.168.1.48:3000');
+
 
 var count = 0;
 var alarm = 0;
@@ -11,6 +13,7 @@ var alarm = 0;
 
 
     pir.watch(function (err, value) {
+        socket.emit('HCSR501', { state: value});
         if (err) exit(err);
         console.log(value ? 'Ktos tu jest!' : ' Juz Nie!');
         alarm = 1;
@@ -27,7 +30,6 @@ var alarm = 0;
         if (value = true) {
             LED.led(20,1);
         }
-
         module.exports.alarm = alarm;
         module.exports.count = count;
         console.log('Intruder detected' + count + " " +  alarm);

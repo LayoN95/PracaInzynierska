@@ -415,6 +415,10 @@ data() {
           this.humidity = data.humid;
           console.log("DHT11_BROADCAST Temp: " + data.temp + " Humid: " + data.humid);
         })
+        socket.on('HCSR501_BROADCAST', (data) => {
+          this.alarm = data.state;
+          
+        })
       }
 
   
