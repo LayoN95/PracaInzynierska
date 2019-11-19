@@ -197,6 +197,7 @@ data() {
         return {
         bulb: '<img src="img/temperature.png" style="width: 25px;">',
         lightRead: 0,
+        lightTest: 0,
         lightStatus: false,
         lightRoom_1: false,
         lightRoom_2: false,
