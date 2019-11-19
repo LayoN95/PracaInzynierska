@@ -15,6 +15,9 @@
 </template>
 
 
+
+<script src="/socket.io/socket.io.js"></script>
+
 <script>
   import EditProfileForm from './Profile/EditProfileForm';
   import UserCard from './Profile/UserCard';
@@ -29,7 +32,7 @@
       mutationPrefix: 'SOCKET_'
     }
   }));*/
-  //var socket = io();
+  var socket = io();
 
   export default {
     components: {
