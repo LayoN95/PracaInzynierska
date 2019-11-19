@@ -20,13 +20,16 @@
 <script>
   import EditProfileForm from './Profile/EditProfileForm';
   import UserCard from './Profile/UserCard';
+  import io from 'socket.io-client';
+
+  /*
   import Vue from 'vue';
   import VueSocketIO from 'vue-socket.io';
 
 Vue.use(new VueSocketIO({
   connection: 'http://192.168.1.48:8081'
 }))
-
+*/
   export default {
     components: {
       EditProfileForm,
@@ -34,6 +37,8 @@ Vue.use(new VueSocketIO({
     },
     data() {
       return {
+        socket : io('localhost:3000'),
+
         model: {
           company: 'Creative Code Inc.',
           email: 'mike@email.com',
@@ -51,7 +56,7 @@ Vue.use(new VueSocketIO({
           description: `Do not be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...`,
         }
       }
-    },
+    }/*,
     sockets: {
       connect: function(event) {
         console.log('socket connected');
@@ -64,7 +69,13 @@ Vue.use(new VueSocketIO({
       clickButton: function(data) {
         this.$socket.emit('emit_method', data)
       }
-    }
+    }*/
+  /*,
+    methods: {
+      sendMessage(e){
+        e.preventDefault();
+      }
+    }*/
   }
 </script>
 <style>
