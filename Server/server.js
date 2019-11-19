@@ -43,6 +43,15 @@ io.on('connection', function(socket) {
   socket.on('HCSR04', function(data){
       io.emit('HCSR04_BROADCAST', data);
   })
+  socket.on('LED_18', function(data){
+      io.emit('LED_18_BROADCAST', data);
+  })
+  socket.on('LED_6', function(data){
+    io.emit('LED_6_BROADCAST', data);
+})
+  socket.on('LED_21', function(data){
+      io.emit('LED_21_BROADCAST', data);
+  })
 });
   
 
