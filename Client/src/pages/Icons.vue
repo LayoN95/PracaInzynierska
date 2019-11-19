@@ -400,11 +400,10 @@ data() {
         });
       },
       getDataFromSockets: function(event){
-        console.log("LIGHT_READ BEFORE SOCKET: " + lightRead);
         socket.on('BH1750_BROADCAST', (data) => {
         console.log("BH1750_BROADCAST" + data.light);
         this.lightRead = data.light;
-        console.log("LIGHT_READ: " + lightRead);
+        console.log("LIGHT_READ: " + this.lightRead);
         });
       }
 
