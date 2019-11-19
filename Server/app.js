@@ -41,13 +41,14 @@ app.use(cors(corsOptions));
 //SOCKET.IO
 
 var io = require('socket.io')(ServerIO.server);
-io.set('origins', '*:*');
+//io.set('origins', '*:*');
 
 io.on('connection', function(socket) {
   socket.emit('news', { hello: 'world' });
   socket.on('my other event', function (data) {
     console.log(data);
     console.log(socket.id);
+    console.log("SOCKET.IO DZIAŁA");
   });
 });
 
