@@ -63,15 +63,6 @@ Vue.use(new VueSocketIO({
     sockets: {
       connect: function(event) {
         console.log('socket connected');
-      },
-      news: function(data){
-        console.log(data);
-      },
-      customEmit: function (data) {
-        console.log('this method was fired by the socket server eg: io.');
-      },
-      BH1750_BROADCAST: function (data) {
-        console.log("BROADCAST" + data.light);
       }
     },
     methods: {
@@ -82,24 +73,19 @@ Vue.use(new VueSocketIO({
         console.log("EMIT");
         socket.emit('emit_method', {message: 'hello'})
       },
-      writeText: function(event){
-        socket.on('BH1750', (data) => {
-        console.log("BH1750" + data.light);
-        });
+      getDataFromSockets: function(event){
         socket.on('BH1750_BROADCAST', (data) => {
         console.log("BH1750_BROADCAST" + data.light);
         });
-        console.log("WRITE TEXT METHOD");
       }
 
     },
     mounted(){
-      this.writeText();
+      this.getDataFromSockets();
     },
 
     beforeMount(){
       this.first_emit();
-      this.writeText();
     }
   /*,
     methods: {
