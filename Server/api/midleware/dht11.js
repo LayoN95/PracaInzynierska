@@ -33,12 +33,12 @@ var j = schedule.scheduleJob(rule, function(){
         if (!err) {
             temp = temperature.toFixed(1);
             humid = humidity.toFixed(1);
-            console.log(temp + " " + humid); 
+            //console.log(temp + " " + humid); 
             module.exports.temp = temperature;
             module.exports.humid = humidity;
-            console.log('temp: ' + temperature.toFixed(1) + '°C, ' +
-                'humidity: ' + humidity.toFixed(1) + '%'
-            );
+            //console.log('temp: ' + temperature.toFixed(1) + '°C, ' +
+            //    'humidity: ' + humidity.toFixed(1) + '%'
+           // );
         }
     });
     const DHT11schema = dht11Schema({

@@ -27,18 +27,18 @@ io.on('connection', function(socket) {
   });
   socket.on('BH1750', function(data){
       io.emit('BH1750_BROADCAST', data);
-      console.log("BH1750 BROADCAST DZIAŁA!" + data.light);
+      //console.log("BH1750 BROADCAST DZIAŁA!" + data.light);
   });
   socket.on('DS18B20', function(data){
       io.emit('DS18B20_BROADCAST', data);
-      console.log("DS18B20 EMIT FROM SERVER: " + data.temp);
+      //console.log("DS18B20 EMIT FROM SERVER: " + data.temp);
   })
   socket.on('DHT11', function(data){
   io.emit('DHT11_BROADCAST', data);
   })
   socket.on('HCSR501', function(data){
       io.emit('HCSR501_BROADCAST', data);
-      console.log("HCSR501_BROADCAST" + data.state);
+      //console.log("HCSR501_BROADCAST" + data.state);
   })
   socket.on('HCSR04', function(data){
       io.emit('HCSR04_BROADCAST', data);
