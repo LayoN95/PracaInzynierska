@@ -42,10 +42,10 @@
             </tr>
             <tr>
               <td>
-                <base-button v-on:click="turnOn" id="18" type="success" fill>Włącz</base-button>
+                <base-button v-on:click="turnOn" id="6" type="success" fill>Włącz</base-button>
               </td>
               <td>
-                <base-button v-on:click="turnOff" id="18" type="danger" fill>Wyłącz</base-button>
+                <base-button v-on:click="turnOff" id="6" type="danger" fill>Wyłącz</base-button>
               </td>
             </tr>      
       <tr style="text-align: center;">
