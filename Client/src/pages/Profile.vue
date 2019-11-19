@@ -37,7 +37,7 @@ Vue.use(new VueSocketIO({
     },
     data() {
       return {
-        socket : io('localhost:3000'),
+        socket : io('http://192.168.1.48:3000'),
 
         model: {
           company: 'Creative Code Inc.',
