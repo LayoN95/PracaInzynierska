@@ -10,12 +10,12 @@
 
         <div class="ds18b20" style="position: absolute; top: 240px; left: 280px;">
           <img src="img/temperature.png" style="width: 25px;">
-          <p class="d-inline"  style="color: black; font-size: 30px;">{{ temperature }}</p>
+          <p class="d-inline"  style="color: black; font-size: 30px;">{{ ds18b20_temperature }}</p>
         </div> 
 
         <div class="dht11" style="position: absolute; top: 540px; left: 280px;">
           <img src="img/temperature.png" style="width: 25px;">
-          <p class="d-inline" style="color: black; font-size: 30px;">{{ dht11_temperature }}</p>
+          <p class="d-inline" style="color: black; font-size: 30px;">{{ temperature }}</p>
           <br>
           <img src="img/humidity.png" style="width: 25px">
           <p class="d-inline" style="color: black; font-size: 30px;"> {{ humidity }} </p>
@@ -59,9 +59,9 @@
     },
     data() {
       return {
-        temperature: 25,
-        dht11_temperature: 25,
-        humidity: 8,
+        ds18b20_temperature: 0,
+        temperature: 0,
+        humidity: 0,
         lightRead: 0,
         window: "img/windowopen.png",
         light_1: "img/lightbulb.png",
