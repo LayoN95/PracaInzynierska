@@ -23,7 +23,7 @@ setInterval(function () {
 
         }
     });
-}, 10000);
+}, 60000);
  
 var rule = new schedule.RecurrenceRule();
 
