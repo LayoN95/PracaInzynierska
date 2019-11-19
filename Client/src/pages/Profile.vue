@@ -31,8 +31,8 @@ Vue.use(new VueSocketIO({
 }))
 */
 
-  const socket = io('http://192.168.1.48:3000');
-
+  //const socket = io('http://192.168.1.48:3000');
+  var socket = require('socket.io-client')('http://192.168.1.48:3000');
   export default {
     components: {
       EditProfileForm,
