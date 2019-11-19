@@ -72,7 +72,14 @@ Vue.use(new VueSocketIO({
     methods: {
       clickButton: function(data) {
         this.$socket.emit('emit_method', data)
+      },
+      first_emit: function(event){
+        this.$socket.emit('emit_method', {message: 'hello'})
       }
+
+    },
+    beforeMount(){
+      first_emit();
     }
   /*,
     methods: {
