@@ -74,7 +74,7 @@ Vue.use(new VueSocketIO({
         this.$socket.emit('emit_method', data)
       },
       first_emit: function(event){
-        this.$socket.emit('emit_method', {message: 'hello'})
+        io.emit('emit_method', {message: 'hello'})
       }
 
     },
