@@ -14,12 +14,11 @@
 
 </template>
 
-<script src="/socket.io/socket.io.js"></script>
 
 <script>
   import EditProfileForm from './Profile/EditProfileForm';
   import UserCard from './Profile/UserCard';
-  import VueSocketIO from 'vue-socket.io';
+ // import VueSocketIO from 'vue-socket.io';
 
  /* Vue.use(new VueSocketIO({
     debug: true,
