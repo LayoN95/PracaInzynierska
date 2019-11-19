@@ -30,7 +30,7 @@
         </div> 
 
         <div class="light_1" style="position: absolute; top: 430px; left: 650px;">
-          <img :src="this.lightRoom_1 " style="width: 25px;">
+          <img :src="lightRoom_1 " style="width: 25px;">
         </div>
 
         <div class="light_2" style="position: absolute; top: 430px; left: 350px;">
