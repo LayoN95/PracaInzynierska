@@ -77,6 +77,7 @@ Vue.use(new VueSocketIO({
         socket.on('BH1750_BROADCAST', (data) => {
         console.log("BH1750_BROADCAST" + data.light);
         this.lightRead = data.light;
+        console.log("lightRead" + this.lightRead);
         });
       }
 
