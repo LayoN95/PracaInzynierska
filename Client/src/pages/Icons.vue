@@ -174,7 +174,7 @@
         <card>
            <h3 slot="header"><i class="tim-icons icon-image-02 text-success "></i> Okna</h3>
            <p>Stan okna: {{ window }}</p>
-           <p>{{ myVar.myVar }}</p>
+           <p>{{ myVar }}</p>
             <progress-bar :val="window_position" :title="temperature"  :text="temperature" min="650" max="2500"></progress-bar>
 
         </card>
