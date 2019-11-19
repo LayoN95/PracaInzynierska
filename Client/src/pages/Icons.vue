@@ -171,7 +171,7 @@
 
         
      
-        <div class="col-md-6">
+        <div class="col-lg-4">
         <card style="height: 200px;"> 
            <h3 slot="header"><i class="tim-icons icon-alert-circle-exc text-success "></i>Detektory ruchu</h3>
            <h4><img src="img/motion-sensor.png" style="width: 25px;">Czujnik PIR: {{ alarm }}</h4>
@@ -187,11 +187,29 @@
            
         </card>
       </div> -->
-      <div class="col-md-6">
+      <div class="col-lg-4">
         <card style="height: 200px;">
            <h3 slot="header"><i class="tim-icons icon-image-02 text-success "></i> Okna</h3>
            <p>Stan okna: {{ window }}</p>
             <progress-bar :val="window_position" :text="window_position" min="650" max="2500"></progress-bar>
+
+        </card>
+      </div>
+        <div class="col-lg-4">
+        <card style="height: 200px;">
+           <h3 slot="header"><i class="tim-icons icon-image-02 text-success "></i>Termostat</h3>
+
+          <knob-control
+          :min="10"
+          :max="35"
+          :size="100"
+          secondary-color="#66CC66"
+          text-color="#66CC66"
+          v-model="thermostat"
+          id="thermostatKnob"
+          ></knob-control>
+          <label for="thermostatKnob">Ustaw temperaturę</label>
+          <button v-on:click="setTemperature">Zapisz</button>
 
         </card>
       </div>
@@ -220,6 +238,7 @@ data() {
         lightRoom_1: false,
         lightRoom_2: false,
         lightOutdoor: false,
+        thermostat: 21,
         pirSensor: null,
         thermostat: 22, 
         temperature: 0,
@@ -269,6 +288,21 @@ data() {
               console.log(error);
               
             });
+      },
+            setTemperature: function (event) {
+              
+             axios.post(`${this.path}/thermostat/${this.thermostat}`, {
+              headers: {
+                'Access-Control-Allow-Origin': '*',
+              }
+            })
+            .then((response) => {
+              console.log(response);
+                                    })
+            .catch((error) => {
+              console.log(error);
+              
+            });       
       },
           getData: function(event) {
             //DeviceStatus
