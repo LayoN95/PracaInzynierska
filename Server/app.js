@@ -23,7 +23,7 @@ var app = express();
 
 //SOCKET.IO
 
-var io = require('socket.io')(server);
+var io = require('socket.io')(app);
 io.set('origins', '*:*');
 
 io.on('connection', function(socket) {
