@@ -48,6 +48,9 @@
 <script>
 
   import axios from 'axios';
+      import io from 'socket.io-client';
+
+  const socket = io("http://192.168.1.48:3000");
 
 
   export default {
