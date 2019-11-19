@@ -84,6 +84,8 @@
           </table>
   </card>
   </div>
+  <!-- Do usunięcia -->
+  <!--
       <div class="col-lg-4">
         <card>
           <h3 slot="header"><i class="tim-icons icon-bulb-63 text-success "></i> Światło</h3>
@@ -105,6 +107,8 @@
 
         </card>
       </div>
+
+    -->
         <div class="col-lg-4">
         <card>
 
