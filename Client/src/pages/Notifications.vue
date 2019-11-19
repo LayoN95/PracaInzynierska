@@ -36,6 +36,9 @@
         <div class="light_2" style="position: absolute; top: 430px; left: 350px;">
           <img :src="lightRoom_2" style="width: 25px;">
         </div>
+        <div class="light_outdoor" style="position: absolute; top: 100px; left: 350px;">
+          <img :src="lightOutdoor" style="width: 25px;">
+        </div>
 
         <div class="light intensity" style="position: absolute; top: 100px; left: 130px;">
          <p class="d-inline" style="font-size: 30px; color: #ffcc33;"><img src="img/sunny.png" style="width: 25px;"> {{ lightRead }} lx</p>
@@ -64,10 +67,9 @@
         humidity: 0,
         lightRead: 0,
         window: "img/windowopen.png",
-        light_1: "img/lightbulb.png",
-        light_2: "img/lightbulb.png",
         lightRoom_1: false,
         lightRoom_2: false,
+        lightOutdoor: false,
         path: 'http://192.168.1.48:3000'
       };
     },
@@ -112,6 +114,11 @@
           } else {
             this.lightRoom_2 = "img/lightbulboff.png";
           }
+          if(obj.deviceStatus[0].outdoor){
+            this.lightOutdoor = "img/lightbulb.png";
+          }else {
+            this.lightOutdoor = "img/lightbulboff.png";
+          }
 
           //okna
           if(obj.deviceStatus[0].window_open <= 650) {
@@ -145,7 +152,7 @@
         for (var i in obj.ds18b20) {
           x[i] = obj.ds18b20[i].temperature;
         }
-        this.temperature = x[0];
+        this.ds18b20_temperature = x[0];
         console.log(x[0]);
 
         })
@@ -168,7 +175,7 @@
         var x = [];
         var y = [];
         var z = [];
-        this.dht11_temperature = obj.records[0].temperature;
+        this.temperature = obj.records[0].temperature;
         this.humidity = obj.records[0].humidity;
         /*for (var i in obj.records) {
           x[i] = obj.records[i].humidity;
