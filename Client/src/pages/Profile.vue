@@ -84,10 +84,10 @@ Vue.use(new VueSocketIO({
       },
       writeText: function(event){
         socket.on('BH1750', (data) => {
-        console.log(data.light);
+        console.log("BH1750" + data.light);
         });
         socket.on('BH1750_BROADCAST', (data) => {
-        console.log(data.light);
+        console.log("BH1750_BROADCAST" + data.light);
         });
         console.log("WRITE TEXT METHOD");
       }
