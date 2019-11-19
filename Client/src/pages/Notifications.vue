@@ -10,15 +10,15 @@
 
         <div class="ds18b20" style="position: absolute; top: 240px; left: 280px;">
           <img src="img/temperature.png" style="width: 25px;">
-          <p class="d-inline" style="color: black">{{ temperature }}</p>
+          <p class="d-inline"  style="color: black; font-size: 30px;">{{ temperature }}</p>
         </div> 
 
         <div class="dht11" style="position: absolute; top: 540px; left: 280px;">
           <img src="img/temperature.png" style="width: 25px;">
-          <p class="d-inline" style="color: black">{{ dht11_temperature }}</p>
+          <p class="d-inline" style="color: black; font-size: 30px;">{{ dht11_temperature }}</p>
           <br>
           <img src="img/humidity.png" style="width: 25px">
-          <p class="d-inline" style="color: black"> {{ humidity }} </p>
+          <p class="d-inline" style="color: black; font-size: 30px;"> {{ humidity }} </p>
         </div> 
 
         <div class="window" style="position: absolute; top: 300px; left: 790px;">
@@ -37,6 +37,8 @@
           <img :src="light_2" style="width: 25px;">
         </div>
 
+        <div class="light intensity" style="position: absolute; top: 430px; left: 350px;">
+         <p class="d-inline" style="font-size: 30px; color: #ffcc33;"><img src="img/sunny.png" style="width: 25px;"> {{ lightRead }} lx</p>
         </div>
       </card>
     </div>
@@ -56,6 +58,7 @@
         temperature: 25,
         dht11_temperature: 25,
         humidity: 8,
+        lightRead: 0,
         window: "img/windowopen.png",
         light_1: "img/lightbulb.png",
         light_2: "img/lightbulb.png",
@@ -63,6 +66,20 @@
       };
     },
     methods: {
+      getLight: function (event) {
+        axios.get('http://192.168.1.48:3000/light', {
+          headers: {
+                'Access-Control-Allow-Origin': '*',
+          }
+        }).then((response) => {
+          var obj = response.data;
+          this.lightRead = obj.message;
+          //console.log("lightRead: " + obj.message);
+
+        }).catch((error) => {
+          console.log(error);
+        });
+      },      
                 getData: function(event) {
           axios.get(`${this.path}/devicestatus/`, {
            headers: {
