@@ -59,7 +59,7 @@ Vue.use(new VueSocketIO({
           description: `Do not be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...`,
         }
       }
-    },
+    }/*,
     sockets: {
       connect: function(event) {
         console.log('socket connected');
@@ -83,7 +83,7 @@ Vue.use(new VueSocketIO({
     },
     beforeMount(){
       this.first_emit();
-    }
+    }*/
   /*,
     methods: {
       sendMessage(e){
