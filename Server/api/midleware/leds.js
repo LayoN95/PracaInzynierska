@@ -18,19 +18,19 @@ const devicesSchema = require('../models/devicesStatus');
         switch(ledId) {
             case 18: 
             {
-              console.log("Case 18: ROOM 1");
+              console.log("inside LED Case 18: ROOM 1");
               socket.emit('LED_18', {state: value});
               break;
             }
             case 6: 
             {
-              console.log("Case 6: ROOM 2");
+              console.log("inside LED Case 6: ROOM 2");
               socket.emit('LED_6', {state: value});  
               break;
             }
             case 21: 
             {
-              console.log("Case 21: OUTDOOR");
+              console.log("inside LED Case 21: OUTDOOR");
               socket.emit('LED_21', {state: value});
               break;
             }
