@@ -1,6 +1,6 @@
 <template>
 <div class="row">
-  <div class="col-lg-4">
+  <div class="col-lg-4" style="height: 500px;">
   <card>
     <h3 slot="header"><i class="tim-icons icon-bulb-63 text-success"></i>Pokój nr 1</h3>
      
