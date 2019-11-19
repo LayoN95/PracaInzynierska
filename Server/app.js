@@ -36,6 +36,7 @@ process.env.MONGO_ATLAS_PW +
 
 mongoose.Promise = global.Promise;
 var app = express();
+var server = app.listen(3000);
 app.use(cors({origin: '*'}));
 app.use(function (req,res, next) {
      // Website you wish to allow to connect
@@ -55,7 +56,7 @@ app.use(function (req,res, next) {
      next(); 
 })
 //SOCKET.IO
-var io = require('socket.io').listen(ServerIO.serverListen);
+var io = require('socket.io').listen(server);
 //io.set('origins', '*:*');
 io.set('origins', 'http://192.168.1.48:8081');
 
