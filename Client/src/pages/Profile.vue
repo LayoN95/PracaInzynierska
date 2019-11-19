@@ -60,7 +60,7 @@ Vue.use(new VueSocketIO({
     sockets: {
       connect: function(event) {
         console.log('socket connected');
-        this.$socket.emit('emit_method', "CONECTED");
+        socket.emit('emit_method', "CONECTED");
       },
       customEmit: function (data) {
         console.log('this method was fired by the socket server eg: io.');
