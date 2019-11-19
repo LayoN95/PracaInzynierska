@@ -117,6 +117,7 @@
       </div>
 
     -->
+    <!--
         <div class="col-lg-4">
         <card>
 
@@ -132,6 +133,13 @@
               
               <td><p style="font-size: 30px; color: #1df8ca;"><img src="img/temperature.png" style="width: 25px;"> {{ ds18b20_temperature }} &#8451; </p></td>
             </tr>
+
+                      </table>
+           
+           
+        </card>
+         </div>
+        -->
             <!-- <tr>
             <td>
           <p>Temperatura: {{ temperature }} </p>
@@ -160,13 +168,10 @@
           ></knob-control>
             </td>
           </tr> -->
-          </table>
-           
-           
-        </card>
+
         
-      </div>
-        <div class="col-lg-4">
+     
+        <div class="col-md-6">
         <card>
            <h3 slot="header"><i class="tim-icons icon-alert-circle-exc text-success "></i>Detektory ruchu</h3>
            <h4><img src="img/motion-sensor.png" style="width: 25px;">Czujnik PIR: {{ alarm }}</h4>
@@ -182,7 +187,7 @@
            
         </card>
       </div> -->
-      <div class="col-lg-4">
+      <div class="col-md-6">
         <card>
            <h3 slot="header"><i class="tim-icons icon-image-02 text-success "></i> Okna</h3>
            <p>Stan okna: {{ window }}</p>
