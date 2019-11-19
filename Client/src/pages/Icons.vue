@@ -174,6 +174,7 @@
         <card>
            <h3 slot="header"><i class="tim-icons icon-image-02 text-success "></i> Okna</h3>
            <p>Stan okna: {{ window }}</p>
+           <p>{{ myVar.myVar }}</p>
             <progress-bar :val="window_position" :title="temperature"  :text="temperature" min="650" max="2500"></progress-bar>
 
         </card>
@@ -181,6 +182,7 @@
 </div>
 </template>
 <script>
+    import myVar from './config.js';
     import axios from 'axios';
     import Vue from 'vue';
     import KnobControl from 'vue-knob-control';
