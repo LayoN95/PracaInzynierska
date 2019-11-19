@@ -5,6 +5,8 @@ var socket = require('socket.io-client')('http://192.168.1.48:3000');
 
 
     function led(ledId, value) {
+        var check_led = ledId;
+        console.log("CHECK_KED: " + check_led);
         switch(ledId) {
             case "18": 
             {
