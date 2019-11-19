@@ -67,6 +67,7 @@
         light_1: "img/lightbulb.png",
         light_2: "img/lightbulb.png",
         lightRoom_1: false,
+        lightRoom_2: false,
         path: 'http://192.168.1.48:3000'
       };
     },
