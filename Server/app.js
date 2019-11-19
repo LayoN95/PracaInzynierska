@@ -22,7 +22,7 @@ mongoose.Promise = global.Promise;
 var app = express();
 
 //SOCKET.IO
-
+//
 var io = require('socket.io')(server);
 io.set('origins', '*:*');
 
