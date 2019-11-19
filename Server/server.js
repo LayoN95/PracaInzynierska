@@ -24,7 +24,11 @@ io.on('connection', function(socket) {
   socket.on('emit_method', function(data){
     io.emit('MESSAGE', data);
     console.log(data);
-  })
+  });
+  socket.on('BH1750', function(data){
+      io.emit('BH1750_BROADCAST', data);
+      console.log("BH1750 BROADCAST DZIAŁA!");
+  });
 });
 
 //module.exports.serverListen = serverListen;
