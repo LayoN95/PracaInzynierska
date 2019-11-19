@@ -1,5 +1,7 @@
 const Gpio = require('pigpio').Gpio;
 const devicesSchema = require('../models/devicesStatus');
+var socket = require('socket.io-client')('http://192.168.1.48:3000');
+
 
 
 // The number of microseconds it takes sound to travel 1cm at 20 degrees celcius
@@ -26,6 +28,7 @@ const watchHCSR04 = () => {
             }
             doc.hcsr04 = (diff / 2 / MICROSECDONDS_PER_CM);
             doc.save();
+            socket.emit('HCSR04', { dist: (diff / 2 / MICROSECDONDS_PER_CM)});
         })
         console.log(diff / 2 / MICROSECDONDS_PER_CM);
       }

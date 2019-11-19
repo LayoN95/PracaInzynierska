@@ -40,6 +40,9 @@ io.on('connection', function(socket) {
       io.emit('HCSR501_BROADCAST', data);
       console.log("HCSR501_BROADCAST" + data.state);
   })
+  socket.on('HCSR04', function(data){
+      io.emit('HCSR04_BROADCAST', data);
+  })
 });
   
 

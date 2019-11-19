@@ -416,8 +416,11 @@ data() {
           console.log("DHT11_BROADCAST Temp: " + data.temp + " Humid: " + data.humid);
         })
         socket.on('HCSR501_BROADCAST', (data) => {
-          this.alarm = data.state;
-          
+          this.alarm = data.state;   
+        })
+        socket.on('HCSR04_BROADCAST', (data) => {
+          this.hcsr04 = data.dist;
+          console.log("HCSR04_BROADCAST: " + data.dist);
         })
       }
 
