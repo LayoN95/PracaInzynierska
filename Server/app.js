@@ -21,7 +21,6 @@ var corsOptions = {
     }
   }
 }
-app.use(cors(corsOptions));
 
 //================================
 
@@ -37,6 +36,7 @@ process.env.MONGO_ATLAS_PW +
 
 mongoose.Promise = global.Promise;
 var app = express();
+app.use(cors(corsOptions));
 
 //SOCKET.IO
 
