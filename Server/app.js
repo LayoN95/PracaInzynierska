@@ -39,10 +39,8 @@ var app = express();
 app.use(cors(corsOptions));
 
 //SOCKET.IO
-var allowedOrigins = "192.168.1.48*";
-var io = require('socket.io')(ServerIO.server);
+var io = require('socket.io').listen(ServerIO.server);
 //io.set('origins', '*:*');
-io(ServerIO.server, {origins:allowedOrigins});
 
 io.on('connection', function(socket) {
   socket.emit('news', { hello: 'world' });
