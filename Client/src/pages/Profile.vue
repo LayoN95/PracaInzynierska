@@ -16,23 +16,11 @@
 
 
 
-<script src="/socket.io/socket.io.js"></script>
 
 <script>
   import EditProfileForm from './Profile/EditProfileForm';
   import UserCard from './Profile/UserCard';
- // import VueSocketIO from 'vue-socket.io';
-
- /* Vue.use(new VueSocketIO({
-    debug: true,
-    connection: 'http://192.168.1.48:8081',
-    vuex: {
-      store,
-      actionPrefix: 'SOCKET_',
-      mutationPrefix: 'SOCKET_'
-    }
-  }));*/
-  var socket = io();
+  import Vue from 'vue';
 
   export default {
     components: {
