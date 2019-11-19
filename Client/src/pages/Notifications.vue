@@ -37,7 +37,7 @@
           <img :src="light_2" style="width: 25px;">
         </div>
 
-        <div class="light intensity" style="position: absolute; top: 100px; left: 350px;">
+        <div class="light intensity" style="position: absolute; top: 100px; left: 100px;">
          <p class="d-inline" style="font-size: 30px; color: #ffcc33;"><img src="img/sunny.png" style="width: 25px;"> {{ lightRead }} lx</p>
         </div>
         </div>
