@@ -29,7 +29,7 @@
       mutationPrefix: 'SOCKET_'
     }
   }));*/
-  var socket = io();
+  //var socket = io();
 
   export default {
     components: {
