@@ -1,7 +1,7 @@
 <template>
 <div class="row">
   <div class="col-lg-4">
-  <card  style="height: 500px;">
+  <card  style="height: 400px;">
     <h3 slot="header"><i class="tim-icons icon-bulb-63 text-success"></i>Pokój nr 1</h3>
      
     <table>
@@ -31,7 +31,7 @@
   </div>
 
   <div class="col-lg-4">
-  <card>
+  <card style="height: 400px;">
     <h3 slot="header"><i class="tim-icons icon-bulb-63 text-success"></i>Pokój nr 2</h3>
     
     <table>
@@ -65,7 +65,7 @@
   </div>
 
   <div class="col-lg-4">
-  <card>
+  <card style="height: 400px;">
     <h3 slot="header"><i class="tim-icons icon-bulb-63 text-success"></i>Zewnątrz</h3>
           <h4>Oświetlenie na zewnątrz: <img :src="lightOutdoor" style="width: 25px;"></h4>
           <table>
