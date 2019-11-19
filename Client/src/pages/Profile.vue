@@ -15,7 +15,19 @@
 </template>
 <script>
   import EditProfileForm from './Profile/EditProfileForm';
-  import UserCard from './Profile/UserCard'
+  import UserCard from './Profile/UserCard';
+  import VueSocketIO from 'vue-socket.io';
+
+  Vue.use(new VueSocketIO({
+    debug: true,
+    connection: 'http://192.168.1.48:4001',
+    vuex: {
+      store,
+      actionPrefix: 'SOCKET_',
+      mutationPrefix: 'SOCKET_'
+    }
+  }))
+
   export default {
     components: {
       EditProfileForm,
@@ -39,6 +51,20 @@
           title: 'Ceo/Co-Founder',
           description: `Do not be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...`,
         }
+      }
+    },
+    sockets: {
+      connect: function(event) {
+        console.log('socket connected');
+        this.$socket.emit('hi!');
+      },
+      customEmit: function (data) {
+        console.log('this method was fired by the socket server eg: io.');
+      }
+    },
+    methods: {
+      clickButton: function(data) {
+        this.$socket.emit('emit_method', data)
       }
     }
   }
