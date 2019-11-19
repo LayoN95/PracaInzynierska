@@ -24,7 +24,8 @@ light.readLight(function(err, value){
             LEDS.led(21,1);
             console.log("Turn light on!");
         }else {
-            LEDS.led(21,0);
+            var ledId = "21";
+            LEDS.led(ledId,0);
             console.log("Turn light off!");
         }
         module.exports.lightRead = lightRead;
