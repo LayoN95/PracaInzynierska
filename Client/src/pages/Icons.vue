@@ -191,7 +191,7 @@
         <card style="height: 200px;">
            <h3 slot="header"><i class="tim-icons icon-image-02 text-success "></i> Okna</h3>
            <p>Stan okna: {{ window }}</p>
-            <progress-bar :val="window_position" :title="window_position"  :text="temperature" min="650" max="2500"></progress-bar>
+            <progress-bar :val="window_position" :text="window_position" min="650" max="2500"></progress-bar>
 
         </card>
       </div>
