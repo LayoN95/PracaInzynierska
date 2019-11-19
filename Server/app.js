@@ -37,9 +37,7 @@ process.env.MONGO_ATLAS_PW +
 mongoose.Promise = global.Promise;
 var app = express();
 app.use(cors(corsOptions));
-app.listen(8082, function(){
-  console.log("CORS ALLOWED 8081");
-});
+
 
 //SOCKET.IO
 
