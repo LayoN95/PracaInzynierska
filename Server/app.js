@@ -27,7 +27,7 @@ var server = require('http').Server(app);
 var io = require('socket.io')(server);
 io.set('origins', '*:*');
 
-server.listen(8082);
+server.listen(8081);
 
 io.on('connection', function(socket) {
   socket.emit('news', { hello: 'world' });

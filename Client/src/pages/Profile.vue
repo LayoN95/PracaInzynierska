@@ -24,7 +24,7 @@
   import VueSocketIO from 'vue-socket.io';
 
 Vue.use(new VueSocketIO({
-  connection: 'http://192.168.1.48:8082'
+  connection: 'http://192.168.1.48:8081'
 }))
 
   export default {
