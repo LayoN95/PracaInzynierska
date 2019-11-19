@@ -66,7 +66,6 @@ Vue.use(new VueSocketIO({
     },
 
     beforeMount(){
-      this.first_emit();
     }
   /*,
     methods: {
