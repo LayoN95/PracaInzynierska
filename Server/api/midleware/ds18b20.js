@@ -17,7 +17,8 @@ setInterval(function () {
             console.log(err);
             console.log("Brak urządzenia");
         } else {
-
+            temp = temperature;    
+            module.exports.temp = temp;
             socket.emit('DS18B20', { temp: temperature.toFixed(1)});
             //console.log("SOCKET EMIT DS18B20: " + temperature);
 
@@ -40,7 +41,7 @@ var j = schedule.scheduleJob(rule, function(){
             //console.log("temperature" + temperature);
             temp = temperature;
             //console.log("temp:" + temp);
-            module.exports.temp = temp;
+            
 
         }
     });
