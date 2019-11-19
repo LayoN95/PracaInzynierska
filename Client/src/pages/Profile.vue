@@ -13,12 +13,15 @@
   </div>
 
 </template>
+
+<script src="/socket.io/socket.io.js"></script>
+
 <script>
   import EditProfileForm from './Profile/EditProfileForm';
   import UserCard from './Profile/UserCard';
   import VueSocketIO from 'vue-socket.io';
 
-  Vue.use(new VueSocketIO({
+ /* Vue.use(new VueSocketIO({
     debug: true,
     connection: 'http://192.168.1.48:8081',
     vuex: {
@@ -26,7 +29,8 @@
       actionPrefix: 'SOCKET_',
       mutationPrefix: 'SOCKET_'
     }
-  }));
+  }));*/
+  var socket = io();
 
   export default {
     components: {
@@ -52,7 +56,7 @@
           description: `Do not be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...`,
         }
       }
-    },
+    }/*,
     sockets: {
       connect: function(event) {
         console.log('socket connected');
@@ -65,7 +69,7 @@
       clickButton: function(data) {
         this.$socket.emit('emit_method', data)
       }
-    }
+    }*/
   }
 </script>
 <style>
