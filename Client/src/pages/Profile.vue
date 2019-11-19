@@ -79,7 +79,7 @@ Vue.use(new VueSocketIO({
 
     },
     beforeMount(){
-      first_emit();
+      this.first_emit();
     }
   /*,
     methods: {
