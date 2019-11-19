@@ -5,6 +5,9 @@ var socket = require('socket.io-client')('http://192.168.1.48:3000');
 
 
     function led(ledId, value) {
+
+        console.log("FUNKCJA DZIALA " + ledId + " " + value);
+
         var check_led = ledId;
         console.log("CHECK_KED: " + check_led);
         switch(ledId) {
@@ -27,7 +30,7 @@ var socket = require('socket.io-client')('http://192.168.1.48:3000');
               break;
             }
           }
-        console.log("FUNKCJA DZIALA " + ledId + " " + value);
+
         var LED = new Gpio(ledId, 'out'); 
         devicesSchema.findById('5d8a5d38456fa304cebf8f4a', function(err, doc) {
             if (err) {
