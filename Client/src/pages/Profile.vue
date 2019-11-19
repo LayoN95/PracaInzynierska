@@ -20,13 +20,13 @@
 
   Vue.use(new VueSocketIO({
     debug: true,
-    connection: 'http://192.168.1.48:4001',
+    connection: 'http://192.168.1.48:8081',
     vuex: {
       store,
       actionPrefix: 'SOCKET_',
       mutationPrefix: 'SOCKET_'
     }
-  }))
+  }));
 
   export default {
     components: {
