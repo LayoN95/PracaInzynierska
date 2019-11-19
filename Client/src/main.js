@@ -10,7 +10,7 @@ import i18n from "./i18n"
 import './registerServiceWorker'
 
 //Socket.io
-import socketio from 'scoket.io';
+import socketio from 'socket.io';
 import VueSocketIO from 'vue-socket.io';
 
 export const SocketInstance = socketio('http://192.168.1.48:4001');
