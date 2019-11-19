@@ -8,7 +8,22 @@ var ServerIO = require('../Server/server');
 
 const mongoose = require('mongoose');
 
+// CORS SETTINGS
 const cors = require('cors');
+
+var whitelist = ['http://192.168.1.48:8082', 'http://192.168/1/48:3000'];
+var corsOptions = {
+  origin: function (origin, callback) {
+    if (whitelist.indexOf(origin) !== -1) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
+}
+app.use(cors(corsOptions));
+
+//================================
 
 var indexRouter = require('./api/routes/index');
 var usersRouter = require('./api/routes/users');
@@ -49,7 +64,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(cors());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
