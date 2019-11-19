@@ -16,7 +16,7 @@ const devicesSchema = require('../models/devicesStatus');
         })
 
         LED.writeSync(value);
-        switch(targetId) {
+        switch(ledId) {
             case "18": 
             {
               console.log("Case 18: ROOM 1");
