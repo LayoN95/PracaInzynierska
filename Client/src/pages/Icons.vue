@@ -182,7 +182,6 @@
 </div>
 </template>
 <script>
-    import myVar from './config.js';
     import axios from 'axios';
     import Vue from 'vue';
     import KnobControl from 'vue-knob-control';
@@ -223,6 +222,38 @@ data() {
       }
     },
     methods: {
+            turnOn: function (event) {
+            var targetId = event.currentTarget.id;
+            axios.post('http://192.168.1.48:3000/leds/' + targetId /*this.id*/ + '/1', {
+              headers: {
+                'Access-Control-Allow-Origin': '*',
+              }
+            })
+            .then((response) => {
+              console.log(response);
+              console.log("REFS" + targetId);
+            })
+            .catch((error) => {
+              console.log(error);
+              
+            });
+      },
+      turnOff: function (event) {
+            var targetId = event.currentTarget.id;
+
+            axios.post('http://192.168.1.48:3000/leds/' + targetId /*this.id*/+ '/0', {
+              headers: {
+                'Access-Control-Allow-Origin': '*',
+              }
+            })
+            .then((response) => {
+              console.log(response)   
+            })
+            .catch((error) => {
+              console.log(error);
+              
+            });
+      },
           getData: function(event) {
             //DeviceStatus
           axios.get(`${this.path}/devicestatus/`, {
