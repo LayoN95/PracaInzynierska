@@ -69,6 +69,14 @@
     <h3 slot="header"><i class="tim-icons icon-bulb-63 text-success"></i>Zewnątrz</h3>
           <h4>Oświetlenie na zewnątrz: <img :src="lightOutdoor" style="width: 25px;"></h4>
           <table>
+            <tr>
+              <td>
+                <base-button v-on:click="turnOn" id="21" type="success" fill>Włącz</base-button>
+              </td>
+              <td>
+                <base-button v-on:click="turnOff" id="21" type="danger" fill>Wyłącz</base-button>
+              </td>
+            </tr>
             <tr style="text-align: center;"><td><h4>Natężenie światła</h4></td></tr>
             <tr><td><p style="font-size: 30px; color: #ffcc33;"><img src="img/sunny.png" style="width: 25px;"> {{ lightRead }} lx</p></td></tr>
             <tr style="text-align: center;"><td><h4>Temperatura</h4></td><td><h4>Wilgotność</h4></td></tr>
