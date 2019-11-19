@@ -21,6 +21,7 @@
   import EditProfileForm from './Profile/EditProfileForm';
   import UserCard from './Profile/UserCard';
   import Vue from 'vue';
+  import VueSocketIO from 'vue-socket.io';
 
   export default {
     components: {
