@@ -172,7 +172,7 @@
         
      
         <div class="col-md-6">
-        <card style="height: 180px;"> 
+        <card style="height: 200px;"> 
            <h3 slot="header"><i class="tim-icons icon-alert-circle-exc text-success "></i>Detektory ruchu</h3>
            <h4><img src="img/motion-sensor.png" style="width: 25px;">Czujnik PIR: {{ alarm }}</h4>
            <p>Ostatni ruch: {{ pirSensor }}</p>
@@ -188,7 +188,7 @@
         </card>
       </div> -->
       <div class="col-md-6">
-        <card style="height: 180px;">
+        <card style="height: 200px;">
            <h3 slot="header"><i class="tim-icons icon-image-02 text-success "></i> Okna</h3>
            <p>Stan okna: {{ window }}</p>
             <progress-bar :val="window_position" :title="temperature"  :text="temperature" min="650" max="2500"></progress-bar>
