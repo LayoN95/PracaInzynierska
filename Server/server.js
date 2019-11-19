@@ -5,11 +5,12 @@ const app = require('./app');
 const port = process.env.PORT || 3000;
 
 const server = http.createServer(app);
+server.listen(port);
 
+/*
 //SOCKET.IO
 var io = require('socket.io')(server);
 
-server.listen(port);
 
 io.on('connection', function (socket) {
     socket.emit('news', { hello: 'world' });
@@ -18,4 +19,5 @@ io.on('connection', function (socket) {
     });
   });
 
-  //=======
+  //======= 
+  */
