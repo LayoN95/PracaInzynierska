@@ -198,7 +198,9 @@
         <div class="col-lg-4">
         <card style="height: 200px;">
            <h3 slot="header"><i class="tim-icons icon-image-02 text-success "></i>Termostat</h3>
-
+          <table>
+            <tr>
+              <td>
           <knob-control
           :min="10"
           :max="35"
@@ -207,9 +209,16 @@
           text-color="#66CC66"
           v-model="thermostat"
           id="thermostatKnob"
-          ></knob-control>
-          <label for="thermostatKnob">Ustaw temperaturę</label>
-          <button v-on:click="setTemperature">Zapisz</button>
+          ></knob-control>                
+              </td>
+              <td>
+          <base-button v-on:click="setTemperature" type="success" fill>Ustaw</base-button>
+              </td>
+            </tr>
+          </table>
+
+
+
 
         </card>
       </div>
