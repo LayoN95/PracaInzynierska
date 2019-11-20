@@ -14,11 +14,8 @@
         </div> 
 
         <div class="dht11" style="position: absolute; top: 550px; left: 270px;">
-          <img src="img/temperature.png" style="width: 32px;">
-          <p style="color: black; font-size: 25px;">{{ temperature }}&#8451;</p>
-          <br>
-          <img src="img/humidity.png" style="width: 32px">
-          <p style="color: black; font-size: 25px;"> {{ humidity }}% </p>
+          <p style="color: black; font-size: 25px;"><img src="img/temperature.png" style="width: 32px;">{{ temperature }}&#8451;</p>
+          <p style="color: black; font-size: 25px;"><img src="img/humidity.png" style="width: 32px">{{ humidity }}% </p>
         </div> 
 
         <div class="window" style="position: absolute; top: 300px; left: 790px;">
