@@ -36,9 +36,9 @@
         </div>
 
         <div class="light intensity" style="position: absolute; top: 100px; left: 130px;">
-         <p style="font-size: 20px; color: #ffcc33;"><img src="img/sunny.png" style="width: 32px;"> {{ lightRead }} lx</p>
-         <p style="font-size: 20px; color: #ffcc33;"><img src="img/temperature.png" style="width: 32px;"> {{ temperature }}</p>
-          <p style="font-size: 20px; color: #ffcc33;"><img src="img/humidity.png" style="width: 32px;"> {{ humidity }}</p> 
+         <p style="font-size: 20px; color: black"><img src="img/sunny.png" style="width: 32px;"> {{ lightRead }} lx</p>
+         <p style="font-size: 20px; color: black"><img src="img/temperature.png" style="width: 32px;"> {{ temperature }}</p>
+          <p style="font-size: 20px; color: black"><img src="img/humidity.png" style="width: 32px;"> {{ humidity }}</p> 
         </div>
 
         <div class="motion_sensor_1" style="position: absolute; top: 230px; left: 270px; transform:rotate(135deg);">
