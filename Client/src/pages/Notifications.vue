@@ -74,6 +74,8 @@
     },
     data() {
       return {
+        hcsr04: 'img/motion-sensor.png',
+        hcsr501: 'img/motion-sensor.png',
         radiator_led: "img/led.png",
         air_conditioner_led: "img/led.png",
         ds18b20_temperature: 0,
@@ -297,6 +299,20 @@
         })
         socket.on('air_conditioner_turn_on_BROADCAST', (data) => {
           this.air_conditioner_led = "img/green_led.png";
+        })
+        socket.on('HCSR501_BROADCAST', (data) => {
+          if(data.state){
+            this.hcsr501 = 'img/motion-sensor_on.png';
+          } else {
+            this.hcsr501 = 'img/motion-sensor.png';
+          }
+        })
+        socket.on('HCSR04_BROADCAST', (data) => {
+          if(data.dist < 5){
+            this.hcsr04 = 'img/motion-sensor_on.png';
+          } else {
+            this.hcsr04 = 'img/motion-sensor.png';
+          }
         })
       }
         
