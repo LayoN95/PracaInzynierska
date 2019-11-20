@@ -22,7 +22,7 @@
         </div> 
 
         <div class="airconditioner" style="position: absolute; top: 600px; left: 540px; transform:rotate(180deg);">
-          <img src="img/air-conditioner.png" style="width: 32px;"><img src="img/green_led.png">
+          <img src="img/air-conditioner.png" style="width: 32px;"><img :src="air_conditioner_led">
         </div> 
 
         <div class="light_1" style="position: absolute; top: 430px; left: 650px;">
@@ -50,7 +50,7 @@
           <img src="img/motion-sensor.png" style="width: 32px;">
         </div>
         <div class="heat_radiator" style="position: absolute; top: 595px; left: 720px;">
-          <img src="img/radiator.png"><img src="img/green_led.png">
+          <img src="img/radiator.png"><img :src="radiator_led">
         </div>
         <div class="alarm" style="position: absolute; top: 320px; left: 175px;">
           <img src="img/red_led.png">
@@ -74,6 +74,8 @@
     },
     data() {
       return {
+        radiator_led: "img/led.png",
+        air_conditioner_led: "img/led.png",
         ds18b20_temperature: 0,
         temperature: 0,
         humidity: 0,
@@ -262,7 +264,20 @@
             this.lightOutdoor = "img/lightbulboff.png";
           }
         })
+        socket.on('heater_turn_on_BROADCAST', (data) => {
+          this.radiator_led = "img/green_led.png";
+        })
+        socket.on('heater_turn_off_BROADCAST', (data) => {
+          this.radiator_led = "img/led.png";
+        })
+        socket.on('air_conditioner_turn_off_BROADCAST', (data) => {
+          this.air_conditioner_led = "img/led.png";
+        })
+        socket.on('air_conditioner_turn_on_BROADCAST', (data) => {
+          this.air_conditioner_led = "img/green_led.png";
+        })
       }
+        
 
     },
     beforeMount() {

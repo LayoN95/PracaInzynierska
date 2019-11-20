@@ -48,9 +48,21 @@ io.on('connection', function(socket) {
   })
   socket.on('LED_6', function(data){
     io.emit('LED_6_BROADCAST', data);
-})
+  })
   socket.on('LED_21', function(data){
       io.emit('LED_21_BROADCAST', data);
+  })
+  socket.on('heater_turn_on', function(data){
+    io.emit('heater_turn_on_BROADCAST', data);
+  })
+  socket.on('heater_turn_off', function(data){
+    io.emit('heater_turn_off_BROADCAST', data);
+  })
+  socket.on('air_conditioner_turn_off', function(data){
+    io.emit('air_conditioner_turn_off_BROADCAST', data);
+  })
+  socket.on('air_conditioner_turn_on', function(data){
+    io.emit('air_conditioner_turn_on_BROADCAST', data);
   })
 });
   
