@@ -12,7 +12,7 @@
           <p style="color: black; font-size: 20px;"><img src="img/temperature.png" style="width: 32px;">{{ ds18b20_temperature }}&#8451;</p>
         </div> 
 
-        <div class="dht11" style="position: absolute; top: 5950px; left: 270px;">
+        <div class="dht11" style="position: absolute; top: 595px; left: 270px;">
           <p style="color: black; font-size: 20px;"><img src="img/temperature.png" style="width: 32px;">{{ temperature }}&#8451; <img src="img/humidity.png" style="width: 32px"> {{ humidity }}%</p>
         </div> 
 
