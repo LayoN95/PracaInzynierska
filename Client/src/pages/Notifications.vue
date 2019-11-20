@@ -146,10 +146,6 @@
 
           }
 
-          this.hcsr04 = obj.deviceStatus[0].hcsr04;
-          console.log(obj.deviceStatus[0].state);
-          console.log(this.lightStatus);
-              console.log(response);
           })
           .catch((error) => {
               console.log(error);
