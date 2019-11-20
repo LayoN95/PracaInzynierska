@@ -3,6 +3,7 @@
     <div class="col-md-12">
       <card>
       <img :src="camera_picture">
+      <iframe src="http://192.168.1.152:8080/browserfs.html"></iframe>
       </card>
     </div>
 
