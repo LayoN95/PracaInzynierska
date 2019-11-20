@@ -53,7 +53,7 @@
         <card>
           <h3 slot="header">Schedule</h3>
 
-          <p>Pokój nr 1</p>
+          <h3>Oświetlenie pokój nr 1</h3>
           <p class="d-inline">Od: </p>
           <input class="d-inline" type="time" id="timeStart" v-model="room_1_timeStart" />
           
@@ -61,7 +61,7 @@
           <input type="time" id="timeEnd" v-model="room_1_timeEnd" />
           <base-button class="d-inline" v-on:click="submit" id="18" type="success" fill>Zapisz!</base-button>
 
-          <p>Pokój nr 2</p>
+          <h3>Oświetlenie pokój nr 2</h3>
           <p class="d-inline">Od: </p>
           <input class="d-inline" type="time" id="timeStart" v-model="room_2_timeStart" />
           
@@ -69,7 +69,7 @@
           <input type="time" id="timeEnd" v-model="room_2_timeEnd" />
           <base-button class="d-inline" v-on:click="submit" id="6" type="success" fill>Zapisz!</base-button>
 
-          <p>Oświetlenie na zewnątrz</p>
+          <h3>Oświetlenie na zewnątrz</h3>
           <p class="d-inline">Od: </p>
           <input class="d-inline" type="time" id="timeStart" v-model="outdoor_timeStart" />
           
@@ -77,7 +77,7 @@
           <input type="time" id="timeEnd" v-model="outdoor_timeEnd" />
           <base-button class="d-inline" v-on:click="submit" id="21" type="success" fill>Zapisz!</base-button>
 
-          <p>Sterowanie oknami</p>
+          <h3>Sterowanie oknami</h3>
           <p class="d-inline">Od: </p>
           <input class="d-inline" type="time" id="timeStart" v-model="windowOpen" />
           
