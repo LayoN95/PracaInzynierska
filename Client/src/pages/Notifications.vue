@@ -25,7 +25,7 @@
           <img src="img/window.png" style="width: 32px;">
         </div> 
 
-        <div class="airconditioner" style="position: absolute; top: 600px; left: 540px;">
+        <div class="airconditioner" style="position: absolute; top: 600px; left: 540px; transform:rotate(180deg);">
           <img src="img/air-conditioner.png" style="width: 32px;">
         </div> 
 
@@ -43,11 +43,11 @@
         <div class="light intensity" style="position: absolute; top: 100px; left: 130px;">
          <p class="d-inline" style="font-size: 30px; color: #ffcc33;"><img src="img/sunny.png" style="width: 32px;"> {{ lightRead }} lx</p>
         </div>
-        <div class="motion_sensor_1" style="position: absolute; top: 230px; left: 270px;">
-          <img src="img/motion-sensor.png">
+        <div class="motion_sensor_1" style="position: absolute; top: 230px; left: 270px; transform:rotate(135deg);">
+          <img src="img/motion-sensor.png" style="width: 32px;">
         </div>
-        <div class="motion_sensor_2" style="position: absolute; top: 510px; left: 270px;">
-          <img src="img/motion-sensor.png">
+        <div class="motion_sensor_2" style="position: absolute; top: 510px; left: 270px; transform:rotate(90deg);">
+          <img src="img/motion-sensor.png" style="width: 32px;">
         </div>
         <div class="heat_radiator" style="position: absolute; top:595; left: 720;">
           <img src="img/radiator.png">
