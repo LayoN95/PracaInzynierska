@@ -35,7 +35,7 @@
       </div>
     </div> -->
     <div class="row">
-      <div class="col-lg-4" :class="{'text-right': isRTL}">
+      <div class="col-md-6" :class="{'text-right': isRTL}">
         <card type="chart">
           <template slot="header">
             <h5 class="card-category">{{$t('dashboard.dht11')}}</h5>
@@ -53,7 +53,7 @@
           </div>
         </card>
       </div>
-      <div class="col-lg-4" :class="{'text-right': isRTL}">
+      <!--<div class="col-lg-4" :class="{'text-right': isRTL}">
         <card type="chart">
           <template slot="header">
             <h5 class="card-category">{{$t('dashboard.dailySales')}}</h5>
@@ -68,8 +68,8 @@
             </bar-chart>
           </div>
         </card>
-      </div>
-      <div class="col-lg-4" :class="{'text-right': isRTL}">
+      </div> -->
+      <div class="col-md-6" :class="{'text-right': isRTL}">
         <card type="chart">
           <template slot="header">
             <h5 class="card-category">{{$t('dashboard.completedTasks')}}</h5>
