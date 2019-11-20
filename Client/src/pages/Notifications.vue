@@ -44,10 +44,10 @@
           <p style="font-size: 30px; color: #ffcc33;"><img src="img/humidity.png" style="width: 32px;"> {{ humidity }}</p>
         </div>
         <div class="motion_sensor_1" style="position: absolute; top: 230px; left: 270px; transform:rotate(135deg);">
-          <img :src="hcsr04" style="width: 32px;">
+          <img :src="hcsr501" style="width: 32px;">
         </div>
         <div class="motion_sensor_2" style="position: absolute; top: 510px; left: 270px; transform:rotate(90deg);">
-          <img :src="hcsr501" style="width: 32px;">
+          <img :src="hcsr04" style="width: 32px;">
         </div>
         <div class="heat_radiator" style="position: absolute; top: 595px; left: 720px;">
           <img src="img/radiator.png"><img :src="radiator_led">
