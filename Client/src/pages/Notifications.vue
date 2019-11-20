@@ -24,11 +24,11 @@
           <img src="img/air-conditioner.png" style="width: 32px;  transform:rotate(180deg);"><img :src="air_conditioner_led">
         </div> 
 
-        <div class="light_1" style="position: absolute; top: 430px; left: 650px;">
+        <div class="light_1" style="position: absolute; top: 450px; left: 700px;">
           <img :src="lightRoom_1" style="width: 32px;">
         </div>
 
-        <div class="light_2" style="position: absolute; top: 430px; left: 350px;">
+        <div class="light_2" style="position: absolute; top: 450px; left: 350px;">
           <img :src="lightRoom_2" style="width: 32px;">
         </div>
         <div class="light_outdoor" style="position: absolute; top: 100px; left: 350px;">
@@ -47,7 +47,7 @@
         <div class="motion_sensor_2" style="position: absolute; top: 510px; left: 270px; transform:rotate(90deg);">
           <img :src="hcsr04" style="width: 32px;">
         </div>
-        <div class="heat_radiator" style="position: absolute; top: 595px; left: 720px;">
+        <div class="heat_radiator" style="position: absolute; top: 600px; left: 720px;">
           <img src="img/radiator.png"><img :src="radiator_led">
         </div>
         <div class="alarm" style="position: absolute; top: 320px; left: 175px;">
