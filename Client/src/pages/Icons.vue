@@ -190,6 +190,8 @@
       <div class="col-lg-4">
         <card style="height: 200px;">
            <h3 slot="header"><i class="tim-icons icon-image-02 text-success "></i> Okna</h3>
+           <base-button v-on:click="open" type="success" fill>Otwórz</base-button>
+           <base-button v-on:clicl="close" type="danger" fill>Zamknij</base-button>
            <p>Stan okna: {{ window }}</p>
             <progress-bar :val="window_position" :text="window_position" min="650" max="2500"></progress-bar>
 
@@ -266,6 +268,29 @@ data() {
       }
     },
     methods: {
+      open: function(){
+          axios.post(`${this.path}/servo/2500`, {
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+             }  
+          }).then((response) => {
+             console.log(response);
+          }).catch((error) => {
+             console.log(error);        
+          });
+      },
+      close: function(){
+          axios.post(`${this.path}/servo/600`, {
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+             }  
+          }).then((response) => {
+             console.log(response);
+          }).catch((error) => {
+             console.log(error);        
+          });
+
+      },
             turnOn: function (event) {
             var targetId = event.currentTarget.id;
             axios.post('http://192.168.1.48:3000/leds/' + targetId /*this.id*/ + '/1', {

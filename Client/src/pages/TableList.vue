@@ -22,7 +22,7 @@
         </card>
       </div>
 <!--=====================================================================================================--> 
-
+<!--
       <div class="col-md-6">
         <card :title="dht11_table.title">
           <div style="height: 400px; overflow-x: hidden;" class="table-responsive">
@@ -44,7 +44,7 @@
           </div>
         </card>
       </div>
-
+-->
     </div>
 </template>
 <script>
