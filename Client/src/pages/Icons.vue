@@ -191,7 +191,7 @@
         <card style="height: 200px;">
            <h3 slot="header"><i class="tim-icons icon-image-02 text-success "></i> Okna</h3>
            <base-button v-on:click="open" type="success" fill>Otwórz</base-button>
-           <base-button v-on:clicl="close_window" type="danger" fill>Zamknij</base-button>
+           <base-button v-on:click="close_window" type="danger" fill>Zamknij</base-button>
            <p>Stan okna: {{ window }}</p>
             <progress-bar :val="window_position" :text="window_position" min="650" max="2500"></progress-bar>
 
