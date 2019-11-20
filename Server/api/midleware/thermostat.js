@@ -26,7 +26,7 @@ if (ds18b20.temp < temp) {
         doc.save();
        })
 
-} else if (ds18b20.temp >= temp) {
+} else if (ds18b20.temp == temp) {
     console.log("Turn off the heater");
     console.log("turn air conditioner off");
     socket.emit('heater_turn_off', {value: false});

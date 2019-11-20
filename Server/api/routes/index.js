@@ -240,6 +240,8 @@ router.get('/devicestatus', (req, res, next) => {
           room_1: doc.room_1,
           room_2: doc.room_2,
           outdoor: doc.outdoor,
+          radiator: doc.radiator,
+          air_conditioner: doc.air_conditioner
         }
       })
     });

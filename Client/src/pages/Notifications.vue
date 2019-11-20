@@ -220,6 +220,28 @@
           console.log(error);
         });
       },
+        getDevicesStatus: function (event) {
+        axios.get(`${this.path}/devicestatus/`, {
+          headers: {
+                'Access-Control-Allow-Origin': '*',
+          }
+        }).then((response) => {
+          let obj = response.data;
+          if(obj.deviceStatus[0].radiator) {
+            this.radiator_led = 'img/green_led.png';
+          } else {
+            this.radiator_led = 'img/led.png';
+          }
+          if(obj.deviceStatus[0].air_conditioner) {
+            this.air_conditioner_led = 'img/green_led.png';
+          } else {
+            this.air_conditioner_led = 'img/led.png';
+          }
+
+        }).catch((error) => {
+          console.log(error);
+        });
+      },
         getDataFromSockets: function(event){
         socket.on('BH1750_BROADCAST', (data) => {
         //console.log("BH1750_BROADCAST" + data.light);

@@ -8,6 +8,8 @@ const devicesSchema = mongoose.Schema({
     room_1: {type: Boolean, required: true},
     room_2: {type: Boolean, required: true},
     outdoor: {type: Boolean, required: true},
+    radiator: {type: Boolean, required: true},
+    air_conditioner: {type: Boolean, required: true},
     date: {type: Date, default: Date.now }
 });
 
