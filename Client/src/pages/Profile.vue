@@ -2,8 +2,7 @@
   <div class="row">
     <div class="col-md-12">
       <card>
-      <img :src="camera_picture">
-      <iframe src="http://192.168.1.152:8080/browserfs.html"></iframe>
+      <iframe style="width: 100%;" src="http://192.168.1.152:8080/browserfs.html"></iframe>
       </card>
     </div>
 
