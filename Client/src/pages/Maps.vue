@@ -1,9 +1,11 @@
 <template>
-<div class="row">
+
+  <div class="row">
+    <!-- 
       <div class="col-md-6">
         <card>
           <h3 slot="header">Światła</h3>
-          <!--Layout button-->
+          Layout button
           <base-button v-on:click="turnOn" id="18" type="primary" fill>Pokój 1 On!</base-button>
           <base-button v-on:click="turnOff" id="18" type="primary" fill>Pokój 1 Off!</base-button>
           <br>
@@ -15,7 +17,7 @@
           <br>
           <base-button v-on:click="turnOn" id="17" type="warning" fill>Zewnątrz On!</base-button>
           <base-button v-on:click="turnOff" id="17" type="danger" fill>Zewnątrz Off!</base-button>
-          <!--
+          
           <button v-on:click="turnOn" id="21">Turn the lights on!</button>
           <button v-on:click="turnOff" id="21">Turn the lights off!</button>
           
@@ -27,7 +29,7 @@
 
           <button v-on:click="turnOn" id="20">Turn the lights on!</button>
           <button v-on:click="turnOff" id="20">Turn the lights off!</button>
-          -->
+          
         </card>
       </div>
       <div class="col-md-6">
@@ -46,39 +48,40 @@
           <button v-on:click="setTemperature">Zapisz</button>
         </card>
       </div>
-      <div class="col-md-6">
+      -->
+      <div class="col-12">
         <card>
           <h3 slot="header">Schedule</h3>
 
           <p>Pokój nr 1</p>
-          <p class="d-inline">Start godzina: </p>
+          <p class="d-inline">Od: </p>
           <input class="d-inline" type="time" id="timeStart" v-model="room_1_timeStart" />
           
-          <p class="d-inline">Stop godzina: </p>
+          <p class="d-inline">Do: </p>
           <input type="time" id="timeEnd" v-model="room_1_timeEnd" />
           <base-button class="d-inline" v-on:click="submit" id="18" type="success" fill>Zapisz!</base-button>
 
           <p>Pokój nr 2</p>
-          <p class="d-inline">Start godzina: </p>
+          <p class="d-inline">Od: </p>
           <input class="d-inline" type="time" id="timeStart" v-model="room_2_timeStart" />
           
-          <p class="d-inline">Stop godzina: </p>
+          <p class="d-inline">Do: </p>
           <input type="time" id="timeEnd" v-model="room_2_timeEnd" />
           <base-button class="d-inline" v-on:click="submit" id="6" type="success" fill>Zapisz!</base-button>
 
           <p>Oświetlenie na zewnątrz</p>
-          <p class="d-inline">Start godzina: </p>
+          <p class="d-inline">Od: </p>
           <input class="d-inline" type="time" id="timeStart" v-model="outdoor_timeStart" />
           
-          <p class="d-inline">Stop godzina: </p>
+          <p class="d-inline">Do: </p>
           <input type="time" id="timeEnd" v-model="outdoor_timeEnd" />
           <base-button class="d-inline" v-on:click="submit" id="21" type="success" fill>Zapisz!</base-button>
 
           <p>Sterowanie oknami</p>
-          <p class="d-inline">Godzina otwarcia: </p>
+          <p class="d-inline">Od: </p>
           <input class="d-inline" type="time" id="timeStart" v-model="windowOpen" />
           
-          <p class="d-inline">Godzina zamknięcia: </p>
+          <p class="d-inline">Do: </p>
           <input type="time" id="timeEnd" v-model="windowClose" />
           <base-button class="d-inline" v-on:click="windowSubmit" id="window" type="success" fill>Zapisz!</base-button>
 
@@ -89,6 +92,7 @@
 
         </card>
       </div>
+      <!--
         <div class="col-md-6">
         <card>
           <h3 slot="header">ServoControl</h3>
@@ -103,11 +107,12 @@
           id="servoControlKnob"
           ></knob-control>
           <base-button slot="footer" v-on:click="servoSubmit" type="primary" fill>Save</base-button>
-          <!--<input v-model="servoControl" placeholder="edit me">-->
 
           <button v-on:click="servoSubmit">Submit!</button>
         </card>
       </div>
+      -->
+      <!--
       <div class="col-12">
         <card>
           <h3 slot="header">Alarm</h3>
@@ -121,6 +126,7 @@
 
         </card>
       </div>
+      -->
 </div>
 </template>
 <script>
