@@ -21,8 +21,8 @@
           <img src="img/window.png" style="width: 32px;">
         </div> 
 
-        <div class="airconditioner" style="position: absolute; top: 600px; left: 540px; transform:rotate(180deg);">
-          <img src="img/air-conditioner.png" style="width: 32px;"><img :src="air_conditioner_led">
+        <div class="airconditioner" style="position: absolute; top: 600px; left: 540px;">
+          <img src="img/air-conditioner.png" style="width: 32px;  transform:rotate(180deg);"><img :src="air_conditioner_led">
         </div> 
 
         <div class="light_1" style="position: absolute; top: 430px; left: 650px;">
