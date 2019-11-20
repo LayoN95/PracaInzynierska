@@ -269,7 +269,9 @@ data() {
     },
     methods: {
       open: function(){
-          axios.post(`${this.path}/servo/2500`, {
+          let value = 2500;
+        console.log("Zamknięto" + this.value);
+          axios.post(`${this.path}/servo/${this.value}`, {
           headers: {
             'Access-Control-Allow-Origin': '*',
              }  
@@ -280,7 +282,9 @@ data() {
           });
       },
       close: function(){
-          axios.post(`${this.path}/servo/600`, {
+        let value = 600;
+        console.log("Otwarto" + this.value);
+          axios.post(`${this.path}/servo/${this.value}`, {
           headers: {
             'Access-Control-Allow-Origin': '*',
              }  
