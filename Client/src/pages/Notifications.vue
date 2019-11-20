@@ -10,15 +10,15 @@
 
         <div class="ds18b20" style="position: absolute; top: 385px; left: 270px;">
           <img src="img/temperature.png" style="width: 32px;">
-          <p class="d-inline"  style="color: black; font-size: 30px;">{{ ds18b20_temperature }}</p>
+          <p class="d-inline"  style="color: black; font-size: 30px;">{{ ds18b20_temperature }} &#8451;</p>
         </div> 
 
         <div class="dht11" style="position: absolute; top: 540px; left: 280px;">
           <img src="img/temperature.png" style="width: 32px;">
-          <p class="d-inline" style="color: black; font-size: 30px;">{{ temperature }}</p>
+          <p class="d-inline" style="color: black; font-size: 30px;">{{ temperature }} &#8451;</p>
           <br>
           <img src="img/humidity.png" style="width: 32px">
-          <p class="d-inline" style="color: black; font-size: 30px;"> {{ humidity }} </p>
+          <p class="d-inline" style="color: black; font-size: 30px;"> {{ humidity }} % </p>
         </div> 
 
         <div class="window" style="position: absolute; top: 300px; left: 790px;">
