@@ -45,6 +45,7 @@
         </div>
         <div class="temperature_outside" style="position: absolute; top: 150px; left: 130px;">
           <p class="d-inline" style="font-size: 30px; color: #ffcc33;"><img src="img/temperature.png" style="width: 32px;"> {{ temperature }}</p>
+          <br>
           <p class="d-inline" style="font-size: 30px; color: #ffcc33;"><img src="img/humidity.png" style="width: 32px;"> {{ humidity }}</p>
         </div>
         <div class="motion_sensor_1" style="position: absolute; top: 230px; left: 270px; transform:rotate(135deg);">
