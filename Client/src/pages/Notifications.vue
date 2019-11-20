@@ -10,15 +10,15 @@
 
         <div class="ds18b20" style="position: absolute; top: 385px; left: 270px;">
           <img src="img/temperature.png" style="width: 32px;">
-          <p class="d-inline"  style="color: black; font-size: 30px;">{{ ds18b20_temperature }} &#8451;</p>
+          <p class="d-inline"  style="color: black; font-size: 30px;">{{ ds18b20_temperature }}&#8451;</p>
         </div> 
 
         <div class="dht11" style="position: absolute; top: 540px; left: 280px;">
           <img src="img/temperature.png" style="width: 32px;">
-          <p class="d-inline" style="color: black; font-size: 30px;">{{ temperature }} &#8451;</p>
+          <p class="d-inline" style="color: black; font-size: 30px;">{{ temperature }}&#8451;</p>
           <br>
           <img src="img/humidity.png" style="width: 32px">
-          <p class="d-inline" style="color: black; font-size: 30px;"> {{ humidity }} % </p>
+          <p class="d-inline" style="color: black; font-size: 30px;"> {{ humidity }}% </p>
         </div> 
 
         <div class="window" style="position: absolute; top: 300px; left: 790px;">
@@ -43,6 +43,17 @@
         <div class="light intensity" style="position: absolute; top: 100px; left: 130px;">
          <p class="d-inline" style="font-size: 30px; color: #ffcc33;"><img src="img/sunny.png" style="width: 32px;"> {{ lightRead }} lx</p>
         </div>
+        <div class="motion_sensor_1" style="position: absolute; top: 230px; left: 270px;">
+          <img src="img/motion-sensor.png">
+        </div>
+        <div class="motion_sensor_2" style="position: absolute; top: 510px; left: 270px;">
+          <img src="img/motion-sensor.png">
+        </div>
+        <div class="heat_radiator" style="position: absolute; top:595; left: 720;">
+          <img src="img/radiator.png">
+        </div>
+        <div class="alarm" style="position: absolute; top: 320px; left: 175px;">
+          <img src="img/red_led.png">
         </div>
       </card>
     </div>
