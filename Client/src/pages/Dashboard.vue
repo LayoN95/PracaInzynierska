@@ -342,8 +342,11 @@
           y[i] = obj.records[i].temperature;
           dateHMS = new Date(obj.records[i].date);
           hours = dateHMS.getHours();
+          if(hours == 0){hours = "00"};
           minutes = dateHMS.getMinutes();
+          if (minutes == 0){minutes = "00"};
           seconds = dateHMS.getSeconds();
+          if (seconds == 0){seconds = "00"};
           z[i] = hours + ":" + minutes + ":" + seconds; 
         }
 
