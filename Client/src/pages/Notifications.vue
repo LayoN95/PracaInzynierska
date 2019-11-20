@@ -307,6 +307,7 @@
       this.getDHT11();
       this.getData();
       this.getLight();
+      this.getDevicesStatus();
     },
     mounted() {
       this.getDataFromSockets();

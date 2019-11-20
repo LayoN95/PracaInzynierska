@@ -25,6 +25,13 @@ if (ds18b20.temp < temp) {
         doc.radiator = true;
         doc.save();
        })
+       DEVICE_STATUS.findById('5d8a5d38456fa304cebf8f4a', function(err, doc) {
+        if (err) {
+            console.log("erorr not found");
+        }
+        doc.air_conditioner = false;
+        doc.save();
+       })
 
 } else if (ds18b20.temp == temp) {
     console.log("Turn off the heater");
@@ -59,7 +66,13 @@ if (ds18b20.temp < temp) {
         doc.air_conditioner = true;
         doc.save();
        })
-
+       DEVICE_STATUS.findById('5d8a5d38456fa304cebf8f4a', function(err, doc) {
+        if (err) {
+            console.log("erorr not found");
+        }
+        doc.radiator = false;
+        doc.save();
+       })
 }}, 60000);
 
 module.exports.setTemp = setTemp;
