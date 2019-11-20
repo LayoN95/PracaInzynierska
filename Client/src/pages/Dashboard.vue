@@ -280,8 +280,11 @@
           x[i] = obj.ds18b20[i].temperature;
           dateHMS = new Date(obj.ds18b20[i].date);
           hours = dateHMS.getHours();
+          if(hours == 0){hours = "00"};
           minutes = dateHMS.getMinutes();
+          if (minutes == 0){minutes = "00"};
           seconds = dateHMS.getSeconds();
+          if (seconds == 0){seconds = "00"};
           y[i] = hours + ":" + minutes + ":" + seconds;
         }
 
