@@ -43,6 +43,10 @@
         <div class="light intensity" style="position: absolute; top: 100px; left: 130px;">
          <p class="d-inline" style="font-size: 30px; color: #ffcc33;"><img src="img/sunny.png" style="width: 32px;"> {{ lightRead }} lx</p>
         </div>
+        <div class="temperature_outside" style="position: absolure; top: 150px; left: 130px;">
+          <p class="d-inline" style="font-size: 30px; color: #ffcc33;"><img src="img/temperature.png" style="width: 32px;"> {{ temperature }}</p>
+          <p class="d-inline" style="font-size: 30px; color: #ffcc33;"><img src="img/humidity.png" style="width: 32px;"> {{ humidity }}</p>
+        </div>
         <div class="motion_sensor_1" style="position: absolute; top: 230px; left: 270px; transform:rotate(135deg);">
           <img src="img/motion-sensor.png" style="width: 32px;">
         </div>
