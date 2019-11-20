@@ -17,7 +17,8 @@ console.log(`Thermostat SET temperature ${temp}`);
 if (ds18b20.temp < temp) {
     console.log("Turn on the heater.");
     socket.emit('heater_turn_on', {value: true});
-    
+    socket.emit('air_conditioner_turn_off', {value: false});
+
     DEVICE_STATUS.findById('5d8a5d38456fa304cebf8f4a', function(err, doc) {
         if (err) {
             console.log("erorr not found");
@@ -47,7 +48,8 @@ if (ds18b20.temp < temp) {
 } else if (ds18b20.temp > temp){
     console.log("Turn air conditioner on");
     socket.emit('air_conditioner_turn_on', {value: true});
-    
+    socket.emit('heater_turn_off', {value: false});
+
     DEVICE_STATUS.findById('5d8a5d38456fa304cebf8f4a', function(err, doc) {
         if (err) {
             console.log("erorr not found");
