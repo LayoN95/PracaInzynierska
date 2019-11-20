@@ -271,7 +271,7 @@ data() {
       open: function(){
           let value = 2500;
         console.log("Zamknięto" + this.value);
-          axios.post(`${this.path}/servo/${this.value}`, {
+          axios.post(`${this.path}/servo/2500`, {
           headers: {
             'Access-Control-Allow-Origin': '*',
              }  
@@ -284,7 +284,7 @@ data() {
       close: function(){
         let value = 600;
         console.log("Otwarto" + this.value);
-          axios.post(`${this.path}/servo/${this.value}`, {
+          axios.post(`${this.path}/servo/600`, {
           headers: {
             'Access-Control-Allow-Origin': '*',
              }  
