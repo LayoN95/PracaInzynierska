@@ -53,14 +53,13 @@
         <card>
           <h3 slot="header">Schedule</h3>
 
-          <h3>Oświetlenie pokój nr 1</h3>
-          <p class="d-inline">Od: </p>
+          <h3>Oświetlenie pokój nr 1 od: 
           <input class="d-inline" type="time" id="timeStart" v-model="room_1_timeStart" />
           
-          <p class="d-inline">Do: </p>
+           Do:
           <input type="time" id="timeEnd" v-model="room_1_timeEnd" />
+          </h3>   
           <base-button class="d-inline" v-on:click="submit" id="18" type="success" fill>Zapisz!</base-button>
-
           <h3>Oświetlenie pokój nr 2</h3>
           <p class="d-inline">Od: </p>
           <input class="d-inline" type="time" id="timeStart" v-model="room_2_timeStart" />
