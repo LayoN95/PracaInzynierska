@@ -1,7 +1,7 @@
 {
   "dashboard": {
     "completedTasks": "Czujnik temperatury ds18b20",
-    "dailySales": "Daily Sales",
+    "dailySales": "Wykres słupkowy",
     "performance": "Podgląd",
     "dht11": "DHT11",
     "simpleTable": "Simple Table",

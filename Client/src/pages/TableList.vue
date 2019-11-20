@@ -134,6 +134,10 @@ beforeMount(){
   this.getDS18B20();
   console.log(tableData);
 
+},
+mounted(){
+  this.getDHT11();
+  this.getDS18B20();  
 }
 }
 </script>

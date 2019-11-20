@@ -192,6 +192,20 @@
         console.log(error);
       });
       },
+            getLight: function (event) {
+        axios.get('http://192.168.1.48:3000/light', {
+          headers: {
+                'Access-Control-Allow-Origin': '*',
+          }
+        }).then((response) => {
+          var obj = response.data;
+          this.lightRead = obj.message;
+          //console.log("lightRead: " + obj.message);
+
+        }).catch((error) => {
+          console.log(error);
+        });
+      },
         getDataFromSockets: function(event){
         socket.on('BH1750_BROADCAST', (data) => {
         //console.log("BH1750_BROADCAST" + data.light);
@@ -243,6 +257,7 @@
       this.getDS18B20();
       this.getDHT11();
       this.getData();
+      this.getLight();
     },
     mounted() {
       this.getDataFromSockets();
