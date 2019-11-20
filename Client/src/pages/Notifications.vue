@@ -50,7 +50,7 @@
           <img src="img/motion-sensor.png" style="width: 32px;">
         </div>
         <div class="heat_radiator" style="position: absolute; top: 595px; left: 720px;">
-          <img src="img/radiator.png">
+          <img src="img/radiator.png"><img src="img/green_led.png">
         </div>
         <div class="alarm" style="position: absolute; top: 320px; left: 175px;">
           <img src="img/red_led.png">
