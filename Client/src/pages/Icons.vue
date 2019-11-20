@@ -268,8 +268,7 @@ data() {
       }
     },
     methods: {
-      open: function(){
-          let value = 2500;
+      open: function(event){
         console.log("Zamknięto" + this.value);
           axios.post(`${this.path}/servo/2500`, {
           headers: {
@@ -281,8 +280,7 @@ data() {
              console.log(error);        
           });
       },
-      close: function(){
-        let value = 600;
+      close: function(event){
         console.log("Otwarto" + this.value);
           axios.post(`${this.path}/servo/600`, {
           headers: {
