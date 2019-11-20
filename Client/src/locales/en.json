@@ -113,13 +113,13 @@
   },
   "sidebar": {
     "title": "Smart Home",
-    "shortTitle": "CT",
+    "shortTitle": "SH",
     "dashboard": "Wykresy",
     "icons": "Zestawienie",
-    "control": "Sterowanie",
+    "maps": "Sterowanie",
     "notifications": "Wizualizacja",
-    "userProfile": "User Profile",
-    "tableList": "Table List",
+    "userProfile": "Kamera",
+    "tableList": "Historia",
     "typography": "Typography",
     "rtlSupport": "RTL Support"
   }
