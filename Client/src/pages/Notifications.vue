@@ -49,7 +49,7 @@
         <div class="motion_sensor_2" style="position: absolute; top: 510px; left: 270px; transform:rotate(90deg);">
           <img src="img/motion-sensor.png" style="width: 32px;">
         </div>
-        <div class="heat_radiator" style="position: absolute; top:595; left: 720;">
+        <div class="heat_radiator" style="position: absolute; top: 595px; left: 720px;">
           <img src="img/radiator.png">
         </div>
         <div class="alarm" style="position: absolute; top: 320px; left: 175px;">
