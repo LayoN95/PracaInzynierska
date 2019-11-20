@@ -31,7 +31,7 @@
         <div class="light_2" style="position: absolute; top: 440px; left: 350px;">
           <img :src="lightRoom_2" style="width: 32px;">
         </div>
-        <div class="light_outdoor" style="position: absolute; top: 100px; left: 420px;">
+        <div class="light_outdoor" style="position: absolute; top: 100px; left: 430px;">
           <img :src="lightOutdoor" style="width: 32px;">
         </div>
 
