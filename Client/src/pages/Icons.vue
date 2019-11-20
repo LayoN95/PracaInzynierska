@@ -281,7 +281,7 @@ data() {
           });
       },
       close_window: function(event){
-        console.log("Otwarto" + this.value);
+        console.log("Zamknięto" + this.value);
           axios.post(`${this.path}/servo/600`, {
           headers: {
             'Access-Control-Allow-Origin': '*',
@@ -291,7 +291,6 @@ data() {
           }).catch((error) => {
              console.log(error);        
           });
-
       },
             turnOn: function (event) {
             var targetId = event.currentTarget.id;
