@@ -3,45 +3,45 @@
 
     <div class="col-md-12" style="position: relative; width: 980px;">
       <card>
-        <h3 class="card-title"><img src="img/temperature.png" style="width: 25px;">Wizualizacja</h3>
+        <h3 class="card-title"><img src="img/temperature.png" style="width: 32px;">Wizualizacja</h3>
 
         <div class="visualization" style="position: relative; width: 980px;">
         <img src="img/makieta.png">   
 
-        <div class="ds18b20" style="position: absolute; top: 240px; left: 280px;">
-          <img src="img/temperature.png" style="width: 25px;">
+        <div class="ds18b20" style="position: absolute; top: 385px; left: 270px;">
+          <img src="img/temperature.png" style="width: 32px;">
           <p class="d-inline"  style="color: black; font-size: 30px;">{{ ds18b20_temperature }}</p>
         </div> 
 
         <div class="dht11" style="position: absolute; top: 540px; left: 280px;">
-          <img src="img/temperature.png" style="width: 25px;">
+          <img src="img/temperature.png" style="width: 32px;">
           <p class="d-inline" style="color: black; font-size: 30px;">{{ temperature }}</p>
           <br>
-          <img src="img/humidity.png" style="width: 25px">
+          <img src="img/humidity.png" style="width: 32px">
           <p class="d-inline" style="color: black; font-size: 30px;"> {{ humidity }} </p>
         </div> 
 
         <div class="window" style="position: absolute; top: 300px; left: 790px;">
-          <img :src="window" style="width: 25px;">
+          <img src="img/window.png" style="width: 32px;">
         </div> 
 
         <div class="airconditioner" style="position: absolute; top: 600px; left: 540px;">
-          <img src="img/air-conditioner-off.png" style="width: 25px;">
+          <img src="img/air-conditioner.png" style="width: 32px;">
         </div> 
 
         <div class="light_1" style="position: absolute; top: 430px; left: 650px;">
-          <img :src="lightRoom_1" style="width: 25px;">
+          <img :src="lightRoom_1" style="width: 32px;">
         </div>
 
         <div class="light_2" style="position: absolute; top: 430px; left: 350px;">
-          <img :src="lightRoom_2" style="width: 25px;">
+          <img :src="lightRoom_2" style="width: 32px;">
         </div>
         <div class="light_outdoor" style="position: absolute; top: 100px; left: 350px;">
-          <img :src="lightOutdoor" style="width: 25px;">
+          <img :src="lightOutdoor" style="width: 32px;">
         </div>
 
         <div class="light intensity" style="position: absolute; top: 100px; left: 130px;">
-         <p class="d-inline" style="font-size: 30px; color: #ffcc33;"><img src="img/sunny.png" style="width: 25px;"> {{ lightRead }} lx</p>
+         <p class="d-inline" style="font-size: 30px; color: #ffcc33;"><img src="img/sunny.png" style="width: 32px;"> {{ lightRead }} lx</p>
         </div>
         </div>
       </card>
