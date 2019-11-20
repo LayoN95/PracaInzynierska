@@ -13,7 +13,7 @@
           <p class="d-inline"  style="color: black; font-size: 25px;">{{ ds18b20_temperature }}&#8451;</p>
         </div> 
 
-        <div class="dht11" style="position: absolute; top: 540px; left: 270px;">
+        <div class="dht11" style="position: absolute; top: 550px; left: 270px;">
           <img src="img/temperature.png" style="width: 32px;">
           <p class="d-inline" style="color: black; font-size: 25px;">{{ temperature }}&#8451;</p>
           <br>
