@@ -8,9 +8,8 @@
         <div class="visualization" style="position: relative; width: 980px;">
         <img src="img/makieta.png">   
 
-        <div class="ds18b20" style="position: absolute; top: 375px; left: 270px;">
-          <img src="img/temperature.png" style="width: 32px;">
-          <p class="d-inline"  style="color: black; font-size: 25px;">{{ ds18b20_temperature }}&#8451;</p>
+        <div class="ds18b20" style="position: absolute; top: 375px; left: 270px;"> 
+          <p style="color: black; font-size: 25px;"><img src="img/temperature.png" style="width: 32px;">{{ ds18b20_temperature }}&#8451;</p>
         </div> 
 
         <div class="dht11" style="position: absolute; top: 550px; left: 270px;">
