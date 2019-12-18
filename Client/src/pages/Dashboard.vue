@@ -1,38 +1,5 @@
 <template>
   <div>
-    <!-- <div class="row">
-      <div class="col-12">
-        <card type="chart">
-          <template slot="header">
-            <div class="row">
-              <div class="col-sm-6" :class="isRTL ? 'text-right' : 'text-left'">
-                <h5 class="card-category">{{$t('dashboard.totalShipments')}}</h5>
-                <h2 class="card-title">{{$t('dashboard.performance')}}</h2>
-              </div>
-
-            </div>
-          </template>
-          <div class="chart-area">
-     
-
-
-            <button v-on:click="getDS18B20">Get DS18B20 data from mongoDB</button>
-            <button v-on:click="getDHT11">Get DHT11 data from mongoDB</button>
-
-            <button v-on:click="fillData">fill Data</button> 
-
-            <line-chart style="height: 100%"
-                        ref="bigChart"
-                        chart-id="big-line-chart"
-                        :chart-data="bigLineChart.chartData"
-                        :gradient-colors="bigLineChart.gradientColors"
-                        :gradient-stops="bigLineChart.gradientStops"
-                        :extra-options="bigLineChart.extraOptions">
-            </line-chart>
-          </div>
-        </card>
-      </div>
-    </div> -->
     <div class="row">
       <div class="col-md-6" :class="{ 'text-right': isRTL }">
         <card type="chart">
@@ -57,22 +24,7 @@
           </div>
         </card>
       </div>
-      <!--<div class="col-lg-4" :class="{'text-right': isRTL}">
-        <card type="chart">
-          <template slot="header">
-            <h5 class="card-category">{{$t('dashboard.dailySales')}}</h5>
-            <h3 class="card-title"><i class="tim-icons icon-delivery-fast text-info "></i> 3,500€</h3>
-          </template>
-          <div class="chart-area">
-            <bar-chart style="height: 100%"
-                       chart-id="blue-bar-chart"
-                       :chart-data="blueBarChart.chartData"
-                       :gradient-stops="blueBarChart.gradientStops"
-                       :extra-options="blueBarChart.extraOptions">
-            </bar-chart>
-          </div>
-        </card>
-      </div> -->
+
       <div class="col-md-6" :class="{ 'text-right': isRTL }">
         <card type="chart">
           <template slot="header">
@@ -154,50 +106,13 @@ export default {
       },
       purpleLineChart: {
         extraOptions: chartConfigs.purpleChartOptions,
-        chartData: null /*{
-            labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
-            datasets: [{
-              label: "Temp: ",
-              fill: true,
-              borderColor: config.colors.primary,
-              borderWidth: 2,
-              borderDash: [],
-              borderDashOffset: 0.0,
-              pointBackgroundColor: config.colors.primary,
-              pointBorderColor: 'rgba(255,255,255,0)',
-              pointHoverBackgroundColor: config.colors.primary,
-              pointBorderWidth: 20,
-              pointHoverRadius: 4,
-              pointHoverBorderWidth: 15,
-              pointRadius: 4,
-              data: dhtChartTemp,
-            }]
-            }*/,
+        chartData: null,
         gradientColors: config.colors.primaryGradient,
         gradientStops: [1, 0.2, 0]
       },
       greenLineChart: {
         extraOptions: chartConfigs.greenChartOptions,
-        chartData: null /*{
-            labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV'],
-            datasets: [{
-              label: "My First dataset",
-              fill: true,
-              borderColor: config.colors.danger,
-              borderWidth: 2,
-              borderDash: [],
-              borderDashOffset: 0.0,
-              pointBackgroundColor: config.colors.danger,
-              pointBorderColor: 'rgba(255,255,255,0)',
-              pointHoverBackgroundColor: config.colors.danger,
-              pointBorderWidth: 20,
-              pointHoverRadius: 4,
-              pointHoverBorderWidth: 15,
-              pointRadius: 4,
-              data: [77, 78, 78, 76, 76],
-            }]
-            
-          }*/,
+        chartData: null,
         gradientColors: [
           "rgba(66,134,121,0.15)",
           "rgba(66,134,121,0.0)",
@@ -374,9 +289,6 @@ export default {
             z[i] = hours + ":" + minutes + ":" + seconds;
           }
 
-          //this.purpleLineChart.chartData.datasets[0].data = y;
-          //console.log(this.purpleLineChart.chartData.datasets[0].data);
-          //this.purpleLineChart.chartData.datasets[0].data = y;
           let chartData = {
             labels: z.reverse(),
             datasets: [

@@ -31,30 +31,6 @@
         </div>
       </card>
     </div>
-    <!--=====================================================================================================-->
-    <!--
-      <div class="col-md-6">
-        <card :title="dht11_table.title">
-          <div style="height: 400px; overflow-x: hidden;" class="table-responsive">
-            <base-table :data="dht11_table.data"
-                        :columns="dht11_table.columns"
-                        thead-classes="text-primary">
-            </base-table>
-          </div>
-        </card>
-      </div>
-
-      <div class="col-md-6">
-        <card :title="ds18b20_table.title">
-            <div style="height: 400px; overflow-x: hidden;" class="table-responsive">
-            <base-table :data="ds18b20_table.data"
-                        :columns="ds18b20_table.columns"
-                        thead-classes="text-primary">
-            </base-table>
-          </div>
-        </card>
-      </div>
--->
   </div>
 </template>
 <script>

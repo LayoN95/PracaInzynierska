@@ -240,15 +240,7 @@ export default {
           var z = [];
           this.temperature = obj.records[0].temperature;
           this.humidity = obj.records[0].humidity;
-          /*for (var i in obj.records) {
-          x[i] = obj.records[i].humidity;
-          y[i] = obj.records[i].temperature;
-          dateHMS = new Date(obj.records[i].date);
-          hours = dateHMS.getHours();
-          minutes = dateHMS.getMinutes();
-          seconds = dateHMS.getSeconds();
-          z[i] = hours + ":" + minutes + ":" + seconds; 
-        }*/
+
         })
         .catch(error => {
           console.log(error);

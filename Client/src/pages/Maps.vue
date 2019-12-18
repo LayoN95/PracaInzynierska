@@ -1,53 +1,5 @@
 <template>
   <div class="row">
-    <!-- 
-      <div class="col-md-6">
-        <card>
-          <h3 slot="header">Światła</h3>
-          Layout button
-          <base-button v-on:click="turnOn" id="18" type="primary" fill>Pokój 1 On!</base-button>
-          <base-button v-on:click="turnOff" id="18" type="primary" fill>Pokój 1 Off!</base-button>
-          <br>
-          <base-button v-on:click="turnOn" id="6" type="info" fill>Pokój 2 On!</base-button>
-          <base-button v-on:click="turnOff" id="6" type="info" fill>Pokój 2 Off!</base-button>
-          <br>
-          <base-button v-on:click="turnOn" id="21" type="success" fill>On!</base-button>
-          <base-button v-on:click="turnOff" id="21" type="success" fill>Off!</base-button>
-          <br>
-          <base-button v-on:click="turnOn" id="17" type="warning" fill>Zewnątrz On!</base-button>
-          <base-button v-on:click="turnOff" id="17" type="danger" fill>Zewnątrz Off!</base-button>
-          
-          <button v-on:click="turnOn" id="21">Turn the lights on!</button>
-          <button v-on:click="turnOff" id="21">Turn the lights off!</button>
-          
-          <button v-on:click="turnOn" id="18">Room 1 on!</button>
-          <button v-on:click="turnOff" id="18">Room 1 off!</button>
-
-          <button v-on:click="turnOn" id="6">Room 2 on!</button>
-          <button v-on:click="turnOff" id="6">Room 2 off!</button>
-
-          <button v-on:click="turnOn" id="20">Turn the lights on!</button>
-          <button v-on:click="turnOff" id="20">Turn the lights off!</button>
-          
-        </card>
-      </div>
-      <div class="col-md-6">
-        <card>
-          <h3 slot="header">Termostat</h3>
-          <knob-control
-          :min="10"
-          :max="35"
-          :size="100"
-          secondary-color="#66CC66"
-          text-color="#66CC66"
-          v-model="thermostat"
-          id="thermostatKnob"
-          ></knob-control>
-          <label for="thermostatKnob">Ustaw temperaturę</label>
-          <button v-on:click="setTemperature">Zapisz</button>
-        </card>
-      </div>
-      -->
     <div class="col-12">
       <card>
         <h3 slot="header">Schedule</h3>
@@ -131,47 +83,8 @@
           fill
           >Zapisz!</base-button
         >
-
-        <!--
-            <input v-model="thermostat" placeholder="Set temperature">
-          -->
       </card>
     </div>
-    <!--
-        <div class="col-md-6">
-        <card>
-          <h3 slot="header">ServoControl</h3>
-
-          <knob-control
-          :min="600"
-          :max="2500"
-          :size="100"
-          secondary-color="#66CC66"
-          text-color="#66CC66"
-          v-model="servoControl"
-          id="servoControlKnob"
-          ></knob-control>
-          <base-button slot="footer" v-on:click="servoSubmit" type="primary" fill>Save</base-button>
-
-          <button v-on:click="servoSubmit">Submit!</button>
-        </card>
-      </div>
-      -->
-    <!--
-      <div class="col-12">
-        <card>
-          <h3 slot="header">Alarm</h3>
-
-          <h1>Reset: </h1>
-          <button v-on:click="reset">Reset!</button>
-          <input type="checkbox" id="checkbox" v-model="checked">
-          <label for="checkbox">{{ checked }}</label>
-            <div id="chart">
-            </div>
-
-        </card>
-      </div>
-      -->
   </div>
 </template>
 <script>

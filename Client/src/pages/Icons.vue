@@ -142,90 +142,10 @@
               </p>
             </td>
           </tr>
-          <!-- <tr><td colspan="2"><p>Termometr: DS18B20</p></td></tr>
-            <tr>
-              
-              <td><p style="font-size: 30px; color: #1df8ca;"><img src="img/temperature.png" style="width: 25px;"> {{ ds18b20_temperature }} &#8451; </p></td>
-            </tr> -->
         </table>
       </card>
     </div>
-    <!-- Do usunięcia -->
-    <!--
-      <div class="col-lg-4">
-        <card>
-          <h3 slot="header"><i class="tim-icons icon-bulb-63 text-success "></i> Światło</h3>
-            <p>Pokój nr 1: {{ lightRoom_1 }}</p>
-            <p>Pokój nr 2: {{ lightRoom_2 }}</p>
-            <p>Oświetlenie na zewnątrz: {{ lightOutdoor }}</p>
-        </card>
-      </div>
-      <div class="col-lg-4">
-        <card>
-          <h3 slot="header"><i class="tim-icons icon-bell-55 text-success "></i> Termostat</h3>
-          <p>Termostat: {{ thermostat }}</p>
-        </card>
-      </div>
-      <div class="col-lg-4">
-        <card>
-          <h3 slot="header"><i class="tim-icons icon-bell-55 text-success "></i> Alarm</h3>
-          <p>Alarm: {{ alarm }}</p>
 
-        </card>
-      </div>
-
-    -->
-    <!--
-        <div class="col-lg-4">
-        <card>
-
-           <h3 slot="header"><i class="tim-icons icon-bell-55 text-success "></i> Temperatura</h3>
-          <table>
-            <tr><td colspan="2"><p>Termometr: DHT11</p></td></tr>
-            <tr>
-              <td><p style="font-size: 30px; color: #1df8ca;"><img src="img/temperature.png" style="width: 25px;"> {{ temperature }} &#8451; </p></td>
-              <td><p style="font-size: 30px; color: #1d8af8;"><img src="img/humidity.png" style="width: 25px;"> {{ humidity }} % </p></td>
-            </tr>
-            <tr><td colspan="2"><p>Termometr: DS18B20</p></td></tr>
-            <tr>
-              
-              <td><p style="font-size: 30px; color: #1df8ca;"><img src="img/temperature.png" style="width: 25px;"> {{ ds18b20_temperature }} &#8451; </p></td>
-            </tr>
-
-                      </table>
-           
-           
-        </card>
-         </div>
-        -->
-    <!-- <tr>
-            <td>
-          <p>Temperatura: {{ temperature }} </p>
-                     <knob-control
-          :min="0"
-          :max="35"
-          :size="100"
-          :disabled="false"
-          secondary-color="#66CC66"
-          text-color="#66CC66"
-          v-model="temperature"
-          id="temperatureControlKnob"
-          ></knob-control>
-            </td>
-            <td>
-              <p>Wilgotność: {{ humidity }}</p>
-           <knob-control
-          :min="0"
-          :max="100"
-          :size="100"
-          :disabled="false"
-          secondary-color="#66CC66"
-          text-color="#66CC66"
-          v-model="humidity"
-          id="humidityControlKnob"
-          ></knob-control>
-            </td>
-          </tr> -->
 
     <div class="col-lg-4">
       <card style="height: 200px;">
@@ -244,14 +164,7 @@
         </h4>
       </card>
     </div>
-    <!--
-        <div class="col-lg-4">
-        <card>
-           <h3 slot="header"><i class="tim-icons icon-alert-circle-exc text-success "></i> HCSR</h3>
 
-           
-        </card>
-      </div> -->
     <div class="col-lg-4">
       <card style="height: 200px;">
         <h3 slot="header">
