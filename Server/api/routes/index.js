@@ -1,197 +1,207 @@
-var express = require('express');
+var express = require("express");
 var router = express.Router();
-const mongoose = require('mongoose');
-const DHT11 = require('../models/dht11');
-const DS18B20 = require('../models/ds18b20');
-const PIR = require('../models/pirHCSR501');
-const THERMOSTAT = require('../models/thermostat');
-const DEVICE_STATUS = require('../models/devicesStatus');
+const mongoose = require("mongoose");
+const DHT11 = require("../models/dht11");
+const DS18B20 = require("../models/ds18b20");
+const PIR = require("../models/pirHCSR501");
+const THERMOSTAT = require("../models/thermostat");
+const DEVICE_STATUS = require("../models/devicesStatus");
 
+const schedule = require("../midleware/schedule");
+const ds18b20 = require("../midleware/ds18b20");
+const dht11 = require("../midleware/dht11");
+const pir = require("../midleware/pirHCSR501");
+const leds = require("../midleware/leds");
+const thermostat = require("../midleware/thermostat");
+const servoControl = require("../midleware/servo");
+const hcsr = require("../midleware/hcsr");
+const airConditioner = require("../midleware/airconditioner");
+const BH1750 = require("../midleware/bh1750");
 
-
-const schedule = require('../midleware/schedule');
-const ds18b20 = require('../midleware/ds18b20');
-const dht11 = require('../midleware/dht11');
-const pir = require('../midleware/pirHCSR501');
-const leds = require('../midleware/leds');
-const thermostat = require('../midleware/thermostat');
-const servoControl = require('../midleware/servo');
-const hcsr = require('../midleware/hcsr');
-const airConditioner = require('../midleware/airconditioner');
-const BH1750 = require('../midleware/bh1750');
-
-
-
-var test = require('./test.json');
+var test = require("./test.json");
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  DS18B20.find().sort({_id: -1 }).limit(24)  .exec()
-  .then(docs => {
-    res.status(200).json({
-      count: docs.length,
-      ds18b20: docs.map(doc => {
-        return {
-          _id: doc.id,
-          temperature: doc.temperature,
-          date: doc.date
-        }
-      })
+router.get("/", function(req, res, next) {
+  DS18B20.find()
+    .sort({ _id: -1 })
+    .limit(24)
+    .exec()
+    .then(docs => {
+      res.status(200).json({
+        count: docs.length,
+        ds18b20: docs.map(doc => {
+          return {
+            _id: doc.id,
+            temperature: doc.temperature,
+            date: doc.date
+          };
+        })
+      });
     });
-  })
 });
 
-router.get('/dht11', function(req, res, next) {
-  DHT11
-  .find().sort({_id: -1 }).limit(24)
-  .select('_id temperature humidity date')
-  .exec()
-  .then(docs => {
-    res.status(200).json({
-      count: docs.length,
-      records: docs.map(doc => {
-        return {
-          _id: doc.id,
-          temperature: doc.temperature,
-          humidity: doc.humidity,
-          date: doc.date
-        }
-      })
+router.get("/dht11", function(req, res, next) {
+  DHT11.find()
+    .sort({ _id: -1 })
+    .limit(24)
+    .select("_id temperature humidity date")
+    .exec()
+    .then(docs => {
+      res.status(200).json({
+        count: docs.length,
+        records: docs.map(doc => {
+          return {
+            _id: doc.id,
+            temperature: doc.temperature,
+            humidity: doc.humidity,
+            date: doc.date
+          };
+        })
+      });
+    })
+    .catch(err => {
+      res.status(500).json({
+        error: err
+      });
     });
-  })
-  .catch(err => {
-    res.status(500).json({
-      error: err
-    });
-  });
- /*res.status(200).json({
+  /*res.status(200).json({
    message: ("Wilgotność: " + dht11.humid + " Temperatura: " + dht11.temp)
  });*/
 });
 
-router.get('/pirSensor', function(req, res, next) {
-  PIR
-  .find().sort({_id: -1}).limit(1)
-  .exec()
-  .then(docs => {
-    res.status(200).json({
-    pir: docs.map(doc => {
-        return {
-          _id: doc.id,
-          state: doc.state,
-          date: doc.date
-        }
-      })
- 
+router.get("/pirSensor", function(req, res, next) {
+  PIR.find()
+    .sort({ _id: -1 })
+    .limit(1)
+    .exec()
+    .then(docs => {
+      res.status(200).json({
+        pir: docs.map(doc => {
+          return {
+            _id: doc.id,
+            state: doc.state,
+            date: doc.date
+          };
+        })
+      });
+    })
+    .catch(err => {
+      res.status(500).json({
+        error: err
+      });
     });
-  })
-  .catch(err => {
-    res.status(500).json({
-      error: err
-    });
-  });
 });
 
-router.get('/pir', function(req, res, next) {
+router.get("/pir", function(req, res, next) {
   res.status(200).json({
-    message: (pir.count)
+    message: pir.count
   });
 });
 
-router.post('/leds/:ledId/:value', (req, res, next) => {
+router.post("/leds/:ledId/:value", (req, res, next) => {
   var columnName;
 
-  if (req.params.ledId == 18)
-  {
+  if (req.params.ledId == 18) {
     columnName = `room_1`;
-  } else if(req.params.ledId == 6) {
+  } else if (req.params.ledId == 6) {
     columnName = `room_2`;
-  } else if(req.params.ledId == 21) {
+  } else if (req.params.ledId == 21) {
     columnName = `outdoor`;
   }
   //let columnName = `.room_${req.params.ledId}`;
-  
-  if(req.params.value == '1')
-  {
-    leds.led(req.params.ledId, 1)
+
+  if (req.params.value == "1") {
+    leds.led(req.params.ledId, 1);
     //console.log("led ID: " + req.params.ledId + " value: " + req.params.value);
-    DEVICE_STATUS.findById('5d8a5d38456fa304cebf8f4a', function(err, doc) {
+    DEVICE_STATUS.findById("5d8a5d38456fa304cebf8f4a", function(err, doc) {
       if (err) {
-          console.log("erorr not found");
+        console.log("erorr not found");
       }
       console.log(columnName);
       doc[columnName] = req.params.value;
       doc.save();
-     })
+    });
     res.status(200).json({
-      message: ("Uruchomiono diodę")
+      message: "Uruchomiono diodę"
     });
   } else {
-    leds.led(req.params.ledId, 0)
+    leds.led(req.params.ledId, 0);
     console.log("led ID: " + req.params.ledId + " value: " + req.params.value);
 
-    DEVICE_STATUS.findById('5d8a5d38456fa304cebf8f4a', function(err, doc) {
+    DEVICE_STATUS.findById("5d8a5d38456fa304cebf8f4a", function(err, doc) {
       if (err) {
-          console.log("erorr not found");
+        console.log("erorr not found");
       }
       console.log(columnName);
       doc[columnName] = req.params.value;
       doc.save();
-      })
+    });
 
     res.status(200).json({
-      message: ("Wyłączono diodę")
+      message: "Wyłączono diodę"
     });
   }
 });
 
-router.post('/schedule/:hour/:min/:state/:id', (req, res, next) => {
+router.post("/schedule/:hour/:min/:state/:id", (req, res, next) => {
   //req.params.hour = schedulde.hour;
   //req.params.min = schedulde.min;
   console.log("hour:" + req.params.hour + " min: " + req.params.min);
-  schedule.schedule1(req.params.min, req.params.hour, req.params.state, req.params.id);
+  schedule.schedule1(
+    req.params.min,
+    req.params.hour,
+    req.params.state,
+    req.params.id
+  );
   res.status(200).json({
-    message: ("Submit: " + req.params.min + " " + req.params.hour + " " + req.params.state + " " + req.params.id)
+    message:
+      "Submit: " +
+      req.params.min +
+      " " +
+      req.params.hour +
+      " " +
+      req.params.state +
+      " " +
+      req.params.id
   });
 });
 
-router.post('/windowschedule/:hour/:min/:value', (req, res, next) => {
+router.post("/windowschedule/:hour/:min/:value", (req, res, next) => {
   schedule.windowSchedule(req.params.min, req.params.hour, req.params.value);
   res.status(200).json({
-    message: (req.params.value)
+    message: req.params.value
   });
 });
 
-
-router.get('/alarm', (req, res, next) => {
-  PIR.findById('5d4c5a3d5af4f10b07a9bbde', function(err, doc) {
+router.get("/alarm", (req, res, next) => {
+  PIR.findById("5d4c5a3d5af4f10b07a9bbde", function(err, doc) {
     if (err) {
-        console.log("erorr not found");
+      console.log("erorr not found");
     }
     res.status(200).json({
-      message: (doc.state)
+      message: doc.state
     });
   });
 });
 
-router.post('/reset', (req, res, next) => {
-  PIR.findById('5d4c5a3d5af4f10b07a9bbde', function(err, doc) {
+router.post("/reset", (req, res, next) => {
+  PIR.findById("5d4c5a3d5af4f10b07a9bbde", function(err, doc) {
     if (err) {
-        console.log("erorr not found");
+      console.log("erorr not found");
     }
     doc.state = 0;
     doc.save();
-})
+  });
   leds.led(20, 0);
   res.status(200).json({
-    message: (pir.alarm)
+    message: pir.alarm
   });
 });
 
-router.post('/thermostat/:temp', (req, res, next) => {
-  THERMOSTAT.findById('5d4c6723b9388f0ed86b1da3', function(err, doc) {
+router.post("/thermostat/:temp", (req, res, next) => {
+  THERMOSTAT.findById("5d4c6723b9388f0ed86b1da3", function(err, doc) {
     if (err) {
-        console.log("erorr not found");
+      console.log("erorr not found");
     }
     doc.temperature = req.params.temp;
     doc.save();
@@ -200,66 +210,67 @@ router.post('/thermostat/:temp', (req, res, next) => {
     thermostat.setTemp(req.params.temp);
     console.log("Thermostat temp " + thermostat.temp);
     res.status(200).json({
-      message: (req.params.temp)
+      message: req.params.temp
     });
-}) 
-});
-
-router.get('/thermostat', (req, res, next) => {
-  THERMOSTAT.findById('5d4c6723b9388f0ed86b1da3', function(err, doc) {
-    if (err) {
-        console.log("erorr not found");
-    }
-    
-    res.status(200).json({
-      message: (doc.temperature)
-    });
-}) 
-});
-
-router.post('/servo/:value', (req, res, next) => {
-  if(req.params.value >= 600 && req.params.value <= 2500) {
-    servoControl.servoControl(req.params.value);
-  }
-  res.status(200).json({
-    message: (req.params.value)
   });
 });
 
-router.get('/devicestatus', (req, res, next) => {
-  DEVICE_STATUS.find().exec()
-  .then(docs => {
+router.get("/thermostat", (req, res, next) => {
+  THERMOSTAT.findById("5d4c6723b9388f0ed86b1da3", function(err, doc) {
+    if (err) {
+      console.log("erorr not found");
+    }
+
     res.status(200).json({
-      deviceStatus: docs.map(doc => {
-        return {
-          _id: doc.id,
-          state: doc.state,
-          window_open: doc.window_open,
-          hcsr04: doc.hcsr04,
-          date: doc.date,
-          room_1: doc.room_1,
-          room_2: doc.room_2,
-          outdoor: doc.outdoor,
-          radiator: doc.radiator,
-          air_conditioner: doc.air_conditioner
-        }
-      })
+      message: doc.temperature
     });
-  })
+  });
 });
 
-router.post('/airconditioner/:value', (req,res,next) => {
+router.post("/servo/:value", (req, res, next) => {
+  if (req.params.value >= 600 && req.params.value <= 2500) {
+    servoControl.servoControl(req.params.value);
+  }
+  res.status(200).json({
+    message: req.params.value
+  });
+});
+
+router.get("/devicestatus", (req, res, next) => {
+  DEVICE_STATUS.find()
+    .exec()
+    .then(docs => {
+      res.status(200).json({
+        deviceStatus: docs.map(doc => {
+          return {
+            _id: doc.id,
+            state: doc.state,
+            window_open: doc.window_open,
+            hcsr04: doc.hcsr04,
+            date: doc.date,
+            room_1: doc.room_1,
+            room_2: doc.room_2,
+            outdoor: doc.outdoor,
+            radiator: doc.radiator,
+            air_conditioner: doc.air_conditioner
+          };
+        })
+      });
+    });
+});
+
+router.post("/airconditioner/:value", (req, res, next) => {
   airConditioner.airConditioner(req.params.value);
 
   res.status(200).json({
-    message: (req.params.value)
-  })
+    message: req.params.value
+  });
 });
 
-router.get('/light', (req,res,next) => {
+router.get("/light", (req, res, next) => {
   res.status(200).json({
-    message: (BH1750.lightRead)
-  })
+    message: BH1750.lightRead
+  });
 });
 
 module.exports = router;
