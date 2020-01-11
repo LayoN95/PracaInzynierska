@@ -2,6 +2,8 @@ const mongoose = require("mongoose");
 const ds18b20 = require("./ds18b20");
 var socket = require("socket.io-client")("http://192.168.1.48:3000");
 const DEVICE_STATUS = require("../models/devicesStatus");
+var Gpio = require("onoff").Gpio;
+var FAN = new Gpio(16, 'out');
 
 var temp;
 function setTemp(setTemp) {
@@ -16,6 +18,7 @@ setInterval(function() {
     console.log("Turn on the heater.");
     socket.emit("heater_turn_on", { value: true });
     socket.emit("air_conditioner_turn_off", { value: false });
+    FAN = writeSync(0);
 
     DEVICE_STATUS.findById("5d8a5d38456fa304cebf8f4a", function(err, doc) {
       if (err) {
@@ -28,6 +31,7 @@ setInterval(function() {
   } else if (ds18b20.temp == temp) {
     console.log("Turn off the heater");
     console.log("turn air conditioner off");
+    FAN = writeSync(0);
     socket.emit("heater_turn_off", { value: false });
     socket.emit("air_conditioner_turn_off", { value: false });
 
@@ -40,6 +44,7 @@ setInterval(function() {
       doc.save();
     });
   } else if (ds18b20.temp > temp) {
+    FAN = writeSync(1);
     console.log("Turn air conditioner on");
     socket.emit("air_conditioner_turn_on", { value: true });
     socket.emit("heater_turn_off", { value: false });
