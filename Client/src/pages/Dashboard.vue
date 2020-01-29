@@ -224,7 +224,7 @@ export default {
             labels: y.reverse(),
             datasets: [
               {
-                label: "Temperature: ",
+                label: "Temperatura: ",
                 fill: true,
                 borderColor: config.colors.danger,
                 borderWidth: 2,
@@ -293,7 +293,7 @@ export default {
             labels: z.reverse(),
             datasets: [
               {
-                label: "Temp: ",
+                label: "Temperatura: ",
                 fill: false,
                 borderColor: config.colors.primary,
                 borderWidth: 2,
@@ -309,7 +309,7 @@ export default {
                 data: y.reverse()
               },
               {
-                label: "Humid: ",
+                label: "Wilgotność: ",
                 fill: false,
                 borderColor: "rgba(0,154,250,1)",
                 borderWidth: 2,
