@@ -6,8 +6,8 @@
           <template slot="header">
             <h5 class="card-category">{{ $t("dashboard.dht11") }}</h5>
             <h3 class="card-title">
-              <i class="tim-icons icon-bell-55 text-primary "></i> DHT11 Temp +
-              Humid
+              <i class="tim-icons icon-bell-55 text-primary "></i> DHT11 Temperatura +
+              Wilgotność
             </h3>
           </template>
           <div class="chart-area">
@@ -30,7 +30,7 @@
           <template slot="header">
             <h5 class="card-category">{{ $t("dashboard.completedTasks") }}</h5>
             <h3 class="card-title">
-              <i class="tim-icons icon-send text-success "></i> DS18B20
+              <i class="tim-icons icon-send text-success "></i> DS18B20 Temperatura
             </h3>
           </template>
           <div class="chart-area">

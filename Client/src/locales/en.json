@@ -1,9 +1,9 @@
 {
   "dashboard": {
-    "completedTasks": "Czujnik temperatury ds18b20",
+    "completedTasks": "Czujnik temperatury DS18B20",
     "dailySales": "Wykres słupkowy",
     "performance": "Podgląd",
-    "dht11": "DHT11",
+    "dht11": "Czujnik temperatury i wilgotności DHT11",
     "simpleTable": "Simple Table",
     "totalShipments": "Smart Home",
     "chartCategories": [
