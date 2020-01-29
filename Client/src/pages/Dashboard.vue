@@ -294,7 +294,7 @@ export default {
             datasets: [
               {
                 label: "Temp: ",
-                fill: true,
+                fill: false,
                 borderColor: config.colors.primary,
                 borderWidth: 2,
                 borderDash: [],
@@ -310,7 +310,7 @@ export default {
               },
               {
                 label: "Humid: ",
-                fill: true,
+                fill: false,
                 borderColor: "rgba(72,72,176,1)",
                 borderWidth: 2,
                 borderDash: [],
