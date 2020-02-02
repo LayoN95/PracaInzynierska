@@ -120,6 +120,7 @@
     "wizualizacja": "Wizualizacja",
     "userProfile": "Kamera",
     "tableList": "Historia",
-    "typography": "Typography"
+    /*"typography": "Typography",*/
+    "rtlSupport": "RTL Support"
   }
 }

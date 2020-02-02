@@ -42,11 +42,11 @@ const routes = [
         name: "sterowanie",
         component: Maps
       },
-      {
+      /*{
         path: "typography",
         name: "typography",
         component: Typography
-      },
+      },*/
       {
         path: "table-list",
         name: "table-list",
