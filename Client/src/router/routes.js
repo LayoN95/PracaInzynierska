@@ -4,12 +4,12 @@ import NotFound from "@/pages/NotFoundPage.vue";
 
 // Admin pages
 const Wykresy = () => import(/* webpackChunkName: "dashboard" */"@/pages/Wykresy.vue");
-const Profile = () => import(/* webpackChunkName: "common" */ "@/pages/Profile.vue");
+const Kamera = () => import(/* webpackChunkName: "common" */ "@/pages/Kamera.vue");
 const Wizualizacja = () => import(/* webpackChunkName: "common" */"@/pages/Wizualizacja.vue");
 const Zestawienie = () => import(/* webpackChunkName: "common" */ "@/pages/Zestawienie.vue");
 const Sterowanie = () => import(/* webpackChunkName: "common" */ "@/pages/Sterowanie.vue");
 /*const Typography = () => import(/* /* webpackChunkName: "common" */ /*"@/pages/Typography.vue");*/
-const TableList = () => import(/* webpackChunkName: "common" */ "@/pages/TableList.vue");
+const Historia = () => import(/* webpackChunkName: "common" */ "@/pages/Historia.vue");
 
 const routes = [
   {
@@ -23,9 +23,9 @@ const routes = [
         component: Wykresy
       },
       {
-        path: "profile",
-        name: "profile",
-        component: Profile
+        path: "kamera",
+        name: "kamera",
+        component: Kamera
       },
       {
         path: "wizualizacja",
@@ -48,9 +48,9 @@ const routes = [
         component: Typography
       },*/
       {
-        path: "table-list",
-        name: "table-list",
-        component: TableList
+        path: "historia",
+        name: "historia",
+        component: Historia
       }
     ]
   },
