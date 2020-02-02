@@ -8,7 +8,7 @@ const Profile = () => import(/* webpackChunkName: "common" */ "@/pages/Profile.v
 const Wizualizacja = () => import(/* webpackChunkName: "common" */"@/pages/Wizualizacja.vue");
 const Icons = () => import(/* webpackChunkName: "common" */ "@/pages/Icons.vue");
 const Maps = () => import(/* webpackChunkName: "common" */ "@/pages/Maps.vue");
-const Typography = () => import(/* webpackChunkName: "common" */ "@/pages/Typography.vue");
+/*const Typography = () => import(/* /* webpackChunkName: "common" */ /*"@/pages/Typography.vue");*/
 const TableList = () => import(/* webpackChunkName: "common" */ "@/pages/TableList.vue");
 
 const routes = [
