@@ -5,7 +5,7 @@ import NotFound from "@/pages/NotFoundPage.vue";
 // Admin pages
 const Dashboard = () => import(/* webpackChunkName: "dashboard" */"@/pages/Dashboard.vue");
 const Profile = () => import(/* webpackChunkName: "common" */ "@/pages/Profile.vue");
-const Notifications = () => import(/* webpackChunkName: "common" */"@/pages/Notifications.vue");
+const Wizualizacja = () => import(/* webpackChunkName: "common" */"@/pages/Wizualizacja.vue");
 const Icons = () => import(/* webpackChunkName: "common" */ "@/pages/Icons.vue");
 const Maps = () => import(/* webpackChunkName: "common" */ "@/pages/Maps.vue");
 const Typography = () => import(/* webpackChunkName: "common" */ "@/pages/Typography.vue");
@@ -28,9 +28,9 @@ const routes = [
         component: Profile
       },
       {
-        path: "notifications",
+        path: "wizualizacja",
         name: "wizualizacja",
-        component: Notifications
+        component: Wizualizacja
       },
       {
         path: "icons",

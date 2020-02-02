@@ -217,7 +217,6 @@ export default {
             x[i] = obj.ds18b20[i].temperature;
           }
           this.ds18b20_temperature = x[0];
-          console.log(x[0]);
         })
         .catch(error => {
           console.log(error);
