@@ -7,16 +7,16 @@ const PIR = require("../models/pirHCSR501");
 const THERMOSTAT = require("../models/thermostat");
 const DEVICE_STATUS = require("../models/devicesStatus");
 
-const schedule = require("../midleware/schedule");
-const ds18b20 = require("../midleware/ds18b20");
-const dht11 = require("../midleware/dht11");
-const pir = require("../midleware/pirHCSR501");
+//const schedule = require("../midleware/schedule");
+//const ds18b20 = require("../midleware/ds18b20");
+//const dht11 = require("../midleware/dht11");
+//const pir = require("../midleware/pirHCSR501");
 const leds = require("../midleware/leds");
-const thermostat = require("../midleware/thermostat");
+//const thermostat = require("../midleware/thermostat");
 const servoControl = require("../midleware/servo");
-const hcsr = require("../midleware/hcsr");
-const airConditioner = require("../midleware/airconditioner");
-const BH1750 = require("../midleware/bh1750");
+//const hcsr = require("../midleware/hcsr");
+//const airConditioner = require("../midleware/airconditioner");
+//const BH1750 = require("../midleware/bh1750");
 
 var test = require("./test.json");
 
