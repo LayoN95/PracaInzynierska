@@ -114,7 +114,7 @@
   "sidebar": {
     "title": "Smart Home",
     "shortTitle": "SH",
-    "dashboard": "Wykresy",
+    "wykresy": "Wykresy",
     "icons": "Zestawienie",
     "maps": "Sterowanie",
     "wizualizacja": "Wizualizacja",
