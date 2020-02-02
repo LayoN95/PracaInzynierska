@@ -8,7 +8,7 @@ const THERMOSTAT = require("../models/thermostat");
 const DEVICE_STATUS = require("../models/devicesStatus");
 
 //const schedule = require("../midleware/schedule");
-//const ds18b20 = require("../midleware/ds18b20");
+const ds18b20 = require("../midleware/ds18b20");
 //const dht11 = require("../midleware/dht11");
 const pir = require("../midleware/pirHCSR501");
 const leds = require("../midleware/leds");
