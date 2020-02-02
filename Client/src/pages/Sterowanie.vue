@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-12">
       <card>
-        <h3 slot="header">Schedule</h3>
+        <h3 slot="header">Sterowanie</h3>
 
         <h3>Oświetlenie pokój nr 1</h3>
         <p class="d-inline">Od:</p>
@@ -64,8 +64,8 @@
           >Zapisz!</base-button
         >
 
-        <h3>Sterowanie oknami</h3>
-        <p class="d-inline">Od:</p>
+        <h3>Sterowanie roletami</h3>
+        <p class="d-inline">Zasłonięcie okien:</p>
         <input
           class="d-inline"
           type="time"
@@ -73,7 +73,7 @@
           v-model="windowOpen"
         />
 
-        <p class="d-inline">Do:</p>
+        <p class="d-inline">Odsłonięcie okien:</p>
         <input type="time" id="timeEnd" v-model="windowClose" />
         <base-button
           class="d-inline"
