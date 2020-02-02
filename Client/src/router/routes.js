@@ -7,7 +7,7 @@ const Wykresy = () => import(/* webpackChunkName: "dashboard" */"@/pages/Wykresy
 const Profile = () => import(/* webpackChunkName: "common" */ "@/pages/Profile.vue");
 const Wizualizacja = () => import(/* webpackChunkName: "common" */"@/pages/Wizualizacja.vue");
 const Zestawienie = () => import(/* webpackChunkName: "common" */ "@/pages/Zestawienie.vue");
-const Maps = () => import(/* webpackChunkName: "common" */ "@/pages/Maps.vue");
+const Sterowanie = () => import(/* webpackChunkName: "common" */ "@/pages/Sterowanie.vue");
 /*const Typography = () => import(/* /* webpackChunkName: "common" */ /*"@/pages/Typography.vue");*/
 const TableList = () => import(/* webpackChunkName: "common" */ "@/pages/TableList.vue");
 
@@ -38,9 +38,9 @@ const routes = [
         component: Zestawienie
       },
       {
-        path: "maps",
+        path: "sterowanie",
         name: "sterowanie",
-        component: Maps
+        component: Sterowanie
       },
       /*{
         path: "typography",
