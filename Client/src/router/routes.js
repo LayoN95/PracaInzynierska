@@ -6,7 +6,7 @@ import NotFound from "@/pages/NotFoundPage.vue";
 const Wykresy = () => import(/* webpackChunkName: "dashboard" */"@/pages/Wykresy.vue");
 const Profile = () => import(/* webpackChunkName: "common" */ "@/pages/Profile.vue");
 const Wizualizacja = () => import(/* webpackChunkName: "common" */"@/pages/Wizualizacja.vue");
-const Icons = () => import(/* webpackChunkName: "common" */ "@/pages/Icons.vue");
+const Zestawienie = () => import(/* webpackChunkName: "common" */ "@/pages/Zestawienie.vue");
 const Maps = () => import(/* webpackChunkName: "common" */ "@/pages/Maps.vue");
 /*const Typography = () => import(/* /* webpackChunkName: "common" */ /*"@/pages/Typography.vue");*/
 const TableList = () => import(/* webpackChunkName: "common" */ "@/pages/TableList.vue");
@@ -33,9 +33,9 @@ const routes = [
         component: Wizualizacja
       },
       {
-        path: "icons",
+        path: "zestawienie",
         name: "zestawienie",
-        component: Icons
+        component: Zestawienie
       },
       {
         path: "maps",
