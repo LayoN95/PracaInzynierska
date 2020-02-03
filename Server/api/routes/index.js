@@ -14,7 +14,7 @@ const pir = require("../midleware/pirHCSR501");
 const leds = require("../midleware/leds");
 const thermostat = require("../midleware/thermostat");
 const servoControl = require("../midleware/servo");
-const hcsr = require("../midleware/hcsr");
+//const hcsr = require("../midleware/hcsr");
 const airConditioner = require("../midleware/airconditioner");
 //const BH1750 = require("../midleware/bh1750");
 
