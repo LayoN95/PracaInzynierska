@@ -9,12 +9,13 @@ var count = 0;
 var alarm = 0;
 
 pir.watch(function(err, value) {
+  socket.emit("HCSR501", { state: value });
+
   if ((value = true)) {
     LED.led(20, 1);
     setTimeout(function(){ LED.led(20, 0); }, 5000);
 
   } 
-  socket.emit("HCSR501", { state: value });
   if (err) exit(err);
   console.log(value ? "Ktos tu jest!" : " Juz Nie!");
   alarm = 1;
