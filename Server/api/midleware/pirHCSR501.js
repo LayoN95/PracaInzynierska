@@ -9,6 +9,11 @@ var count = 0;
 var alarm = 0;
 
 pir.watch(function(err, value) {
+  if ((value = true)) {
+    LED.led(20, 1);
+  } else {
+    LED.led(20, 0);
+  }
   socket.emit("HCSR501", { state: value });
   if (err) exit(err);
   console.log(value ? "Ktos tu jest!" : " Juz Nie!");
@@ -23,9 +28,8 @@ pir.watch(function(err, value) {
     doc.save();
   });
 
-  if ((value = true)) {
-    LED.led(20, 1);
-  }
+
+
   module.exports.alarm = alarm;
   module.exports.count = count;
   console.log("Intruder detected" + count + " " + alarm);
