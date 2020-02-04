@@ -73,14 +73,14 @@
               >
             </td>
           </tr>
+        <tr>
+          <td><base-button v-on:click="open" type="success" fill>Otwórz</base-button>
+          </td><td><base-button v-on:click="close_window" type="danger" fill>Zamknij</base-button></td>
+        </tr>
 
-          <base-button v-on:click="open" type="success" fill>Otwórz</base-button>
-        <base-button v-on:click="close_window" type="danger" fill
-          >Zamknij</base-button
-        >
 
 
-                    <tr style="text-align: center;">
+          <tr style="text-align: center;">
           </tr>
 
         </table>
@@ -120,24 +120,7 @@
               </p>
             </td>
           </tr>
-          <tr style="text-align: center;">
-            <td><h4>Temperatura</h4></td>
-            <td><h4>Wilgotność</h4></td>
-          </tr>
-          <tr>
-            <td>
-              <p style="font-size: 30px; color: #1df8ca;">
-                <img src="img/temperature.png" style="width: 25px;" />
-                {{ temperature }} &#8451;
-              </p>
-            </td>
-            <td>
-              <p style="font-size: 30px; color: #1d8af8;">
-                <img src="img/humidity.png" style="width: 25px;" />
-                {{ humidity }} %
-              </p>
-            </td>
-          </tr>
+
         </table>
       </card>
     </div>
@@ -148,7 +131,11 @@
         <h3 slot="header">
           <i class="tim-icons icon-alert-circle-exc text-success "></i>Pokój nr 3
         </h3>
-                  <tr>
+          <tr style="text-align: center;">
+            <td><h4>Temperatura</h4></td>
+            <td><h4>Wilgotność</h4></td>
+          </tr>
+          <tr>
             <td>
               <p style="font-size: 30px; color: #1df8ca;">
                 <img src="img/temperature.png" style="width: 25px;" />
