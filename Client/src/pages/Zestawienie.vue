@@ -1,7 +1,7 @@
 <template>
   <div class="row">
     <div class="col-lg-4">
-      <card style="height: 400px;">
+      <card style="height: 350px;">
         <h3 slot="header">
           <i class="tim-icons icon-bulb-63 text-success"></i>Pokój nr 1
         </h3>
@@ -48,7 +48,7 @@
     </div>
 
     <div class="col-lg-4">
-      <card style="height: 400px;">
+      <card style="height: 350px;">
         <h3 slot="header">
           <i class="tim-icons icon-bulb-63 text-success"></i>Pokój nr 2
         </h3>
@@ -89,7 +89,7 @@
     </div>
 
     <div class="col-lg-4">
-      <card style="height: 400px;">
+      <card style="height: 350px;">
         <h3 slot="header">
           <i class="tim-icons icon-bulb-63 text-success"></i>Zewnątrz
         </h3>
@@ -129,7 +129,7 @@
 
 
     <div class="col-lg-4">
-      <card style="height: 300px;">
+      <card style="height: 250px;">
         <h3 slot="header">
           <i class="tim-icons icon-alert-circle-exc text-success "></i>Pokój nr 3
         </h3>
@@ -176,7 +176,7 @@
     </div>
     -->
     <div class="col-lg-4">
-      <card style="height: 300px;">
+      <card style="height: 250px;">
         <h3 slot="header">
           <i class="tim-icons icon-image-02 text-success "></i>Termostat
         </h3>
