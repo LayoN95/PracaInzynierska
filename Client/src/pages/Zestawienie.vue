@@ -61,7 +61,7 @@
               </h4>
             </td>
           </tr>
-          <tr>
+          <!--<tr>
             <td>
               <base-button v-on:click="turnOn" id="6" type="success" fill
                 >Włącz</base-button
@@ -72,7 +72,8 @@
                 >Wyłącz</base-button
               >
             </td>
-          </tr>
+          </tr> -->
+        <tr><td style="text-align: center;"><h4>Rolety</h4></td></tr>
         <tr>
           <td><base-button v-on:click="open" type="success" fill>Otwórz</base-button>
           </td><td><base-button v-on:click="close_window" type="danger" fill>Zamknij</base-button></td>
