@@ -73,7 +73,7 @@
               >
             </td>
           </tr>
-        <tr><td style="text-align: center;"><h4>Rolety</h4></td></tr>
+        <tr><td><h4>Rolety</h4></td></tr>
         <tr>
           <td><base-button v-on:click="open" type="success" fill>Otwórz</base-button>
           </td><td><base-button v-on:click="close_window" type="danger" fill>Zamknij</base-button></td>
@@ -129,7 +129,7 @@
 
 
     <div class="col-lg-4">
-      <card style="height: 200px;">
+      <card style="height: 300px;">
         <h3 slot="header">
           <i class="tim-icons icon-alert-circle-exc text-success "></i>Pokój nr 3
         </h3>
@@ -158,7 +158,7 @@
         </h4>
       </card>
     </div>
-
+<!--
     <div class="col-lg-4">
       <card style="height: 200px;">
         <h3 slot="header">
@@ -174,8 +174,9 @@
         ></progress-bar>
       </card>
     </div>
+    -->
     <div class="col-lg-4">
-      <card style="height: 200px;">
+      <card style="height: 300px;">
         <h3 slot="header">
           <i class="tim-icons icon-image-02 text-success "></i>Termostat
         </h3>
