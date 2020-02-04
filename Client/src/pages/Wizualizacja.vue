@@ -7,7 +7,7 @@
         </h3>
 
         <div class="visualization" style="position: relative; width: 980px;">
-          <img src="img/makieta.png" />
+          <img src="img/makieta2.png" />
 
           <div
             class="ds18b20"
