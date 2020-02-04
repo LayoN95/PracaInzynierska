@@ -148,8 +148,7 @@
         <h3 slot="header">
           <i class="tim-icons icon-alert-circle-exc text-success "></i>Pokój nr 3
         </h3>
-
-          <tr>
+                  <tr>
             <td>
               <p style="font-size: 30px; color: #1df8ca;">
                 <img src="img/temperature.png" style="width: 25px;" />
@@ -163,6 +162,11 @@
               </p>
             </td>
           </tr>
+
+        <h4>
+          <img src="img/motion-sensor.png" style="width: 25px;" />Czujnik HCSR:
+          {{ hcsr04 }}
+        </h4>
       </card>
     </div>
 
