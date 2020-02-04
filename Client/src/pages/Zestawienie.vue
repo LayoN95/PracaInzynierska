@@ -28,7 +28,6 @@
           </tr>
                     <tr style="text-align: center;">
             <td>
-              <h4>Temperatura</h4>
             </td>
           </tr>
           <tr>
@@ -75,25 +74,15 @@
             </td>
           </tr>
 
+          <base-button v-on:click="open" type="success" fill>Otwórz</base-button>
+        <base-button v-on:click="close_window" type="danger" fill
+          >Zamknij</base-button
+        >
+
 
                     <tr style="text-align: center;">
-            <td><h4>Temperatura</h4></td>
-            <td><h4>Wilgotność</h4></td>
           </tr>
-          <tr>
-            <td>
-              <p style="font-size: 30px; color: #1df8ca;">
-                <img src="img/temperature.png" style="width: 25px;" />
-                {{ temperature }} &#8451;
-              </p>
-            </td>
-            <td>
-              <p style="font-size: 30px; color: #1d8af8;">
-                <img src="img/humidity.png" style="width: 25px;" />
-                {{ humidity }} %
-              </p>
-            </td>
-          </tr>
+
         </table>
       </card>
     </div>
@@ -157,15 +146,23 @@
     <div class="col-lg-4">
       <card style="height: 200px;">
         <h3 slot="header">
-          <i class="tim-icons icon-alert-circle-exc text-success "></i>Detektory
-          ruchu
+          <i class="tim-icons icon-alert-circle-exc text-success "></i>Pokój nr 3
         </h3>
 
-        <p>Ostatni ruch: {{ pirSensor }}</p>
-        <h4>
-          <img src="img/motion-sensor.png" style="width: 25px;" />Czujnik HCSR:
-          {{ hcsr04 }}
-        </h4>
+          <tr>
+            <td>
+              <p style="font-size: 30px; color: #1df8ca;">
+                <img src="img/temperature.png" style="width: 25px;" />
+                {{ temperature }} &#8451;
+              </p>
+            </td>
+            <td>
+              <p style="font-size: 30px; color: #1d8af8;">
+                <img src="img/humidity.png" style="width: 25px;" />
+                {{ humidity }} %
+              </p>
+            </td>
+          </tr>
       </card>
     </div>
 
@@ -174,10 +171,7 @@
         <h3 slot="header">
           <i class="tim-icons icon-image-02 text-success "></i> Okna
         </h3>
-        <base-button v-on:click="open" type="success" fill>Otwórz</base-button>
-        <base-button v-on:click="close_window" type="danger" fill
-          >Zamknij</base-button
-        >
+        
         <p>Stan okna: {{ window }}</p>
         <progress-bar
           :val="window_position"
