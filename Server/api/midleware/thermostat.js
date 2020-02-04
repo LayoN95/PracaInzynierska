@@ -4,7 +4,7 @@ var socket = require("socket.io-client")("http://192.168.1.48:3000");
 const DEVICE_STATUS = require("../models/devicesStatus");
 var Gpio = require("onoff").Gpio;
 var FAN = new Gpio(16, 'out');
-var HEATER = new Gpio(17, 'out');
+var HEATER = new Gpio(27, 'out');
 
 var temp;
 function setTemp(setTemp) {
