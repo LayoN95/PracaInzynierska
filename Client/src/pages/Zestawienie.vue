@@ -26,24 +26,24 @@
               >
             </td>
           </tr>
-          <tr style="text-align: center;">
-            <td><h4>Temperatura</h4></td>
-            <td><h4>Wilgotność</h4></td>
+                    <tr style="text-align: center;">
+            <td>
+              <h4>Temperatura</h4>
+            </td>
           </tr>
           <tr>
             <td>
               <p style="font-size: 30px; color: #1df8ca;">
                 <img src="img/temperature.png" style="width: 25px;" />
-                {{ temperature }} &#8451;
-              </p>
-            </td>
-            <td>
-              <p style="font-size: 30px; color: #1d8af8;">
-                <img src="img/humidity.png" style="width: 25px;" />
-                {{ humidity }} %
+                {{ ds18b20_temperature }} &#8451;
               </p>
             </td>
           </tr>
+        <h4>
+          <img src="img/motion-sensor.png" style="width: 25px;" />Czujnik PIR:
+          {{ alarm }}
+        </h4>
+
         </table>
       </card>
     </div>
@@ -74,16 +74,23 @@
               >
             </td>
           </tr>
-          <tr style="text-align: center;">
-            <td>
-              <h4>Temperatura</h4>
-            </td>
+
+
+                    <tr style="text-align: center;">
+            <td><h4>Temperatura</h4></td>
+            <td><h4>Wilgotność</h4></td>
           </tr>
           <tr>
             <td>
               <p style="font-size: 30px; color: #1df8ca;">
                 <img src="img/temperature.png" style="width: 25px;" />
-                {{ ds18b20_temperature }} &#8451;
+                {{ temperature }} &#8451;
+              </p>
+            </td>
+            <td>
+              <p style="font-size: 30px; color: #1d8af8;">
+                <img src="img/humidity.png" style="width: 25px;" />
+                {{ humidity }} %
               </p>
             </td>
           </tr>
@@ -153,10 +160,7 @@
           <i class="tim-icons icon-alert-circle-exc text-success "></i>Detektory
           ruchu
         </h3>
-        <h4>
-          <img src="img/motion-sensor.png" style="width: 25px;" />Czujnik PIR:
-          {{ alarm }}
-        </h4>
+
         <p>Ostatni ruch: {{ pirSensor }}</p>
         <h4>
           <img src="img/motion-sensor.png" style="width: 25px;" />Czujnik HCSR:

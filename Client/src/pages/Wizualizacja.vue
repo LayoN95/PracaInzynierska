@@ -104,12 +104,7 @@
           >
             <img src="img/radiator.png" /><img :src="radiator_led" />
           </div>
-          <div
-            class="alarm"
-            style="position: absolute; top: 320px; left: 175px;"
-          >
-            <img src="img/red_led.png" />
-          </div>
+
         </div>
       </card>
     </div>
