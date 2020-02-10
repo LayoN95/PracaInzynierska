@@ -73,7 +73,7 @@
 
           <div
             class="light intensity"
-            style="position: absolute; top: 100px; left: 130px;"
+            style="position: absolute; top: 200px; left: 230px;"
           >
             <p style="font-size: 20px; color: black">
               <img src="img/sunny.png" style="width: 32px;" />
