@@ -189,10 +189,10 @@ export default {
 
           //okna
           if (obj.deviceStatus[0].window_open <= 650) {
-            this.window_state = "img/windowclosed.png";
+            this.window_state = "img/led.png";
             console.log("okno zamknięte");
           } else if (obj.deviceStatus[0].window_open >= 1500) {
-            this.window_state = "img/windowopen.png";
+            this.window_state = "img/green_led.png";
             console.log("okno otwarte");
           }
         })
