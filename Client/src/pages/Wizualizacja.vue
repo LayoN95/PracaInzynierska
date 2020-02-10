@@ -34,7 +34,7 @@
 
           <div
             class="window"
-            style="position: absolute; top: 300px; left: 790px;"
+            style="position: absolute; top: 450px; left: 700px;"
           >
             <img :src="window_state" />
             <img src="img/window.png" style="width: 32px;" />
