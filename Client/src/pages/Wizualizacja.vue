@@ -90,7 +90,7 @@
 
           <div
             class="motion_sensor_1"
-            style="position: absolute; top: 400px; left: 255px; transform:rotate(135deg);"
+            style="position: absolute; top: 390px; left: 255px; transform:rotate(135deg);"
           >
             <img :src="hcsr501" style="width: 32px;" />
           </div>
@@ -102,7 +102,7 @@
           </div>
           <div
             class="heat_radiator"
-            style="position: absolute; top: 600px; left: 720px;"
+            style="position: absolute; top: 620px; left: 720px;"
           >
             <img src="img/radiator.png" /><img :src="radiator_led" />
           </div>
