@@ -7,7 +7,7 @@
         </h3>
 
         <div class="visualization" style="position: relative; width: 980px;">
-          <img src="img/makieta.png" />
+          <img src="img/makieta2.png" />
 
           <div
             class="ds18b20"
@@ -36,8 +36,9 @@
             class="window"
             style="position: absolute; top: 300px; left: 790px;"
           >
-            <img src="img/window.png" style="width: 32px;" />
             <img :src="window_state" />
+            <img src="img/window.png" style="width: 32px;" />
+            
           </div>
 
           <div
