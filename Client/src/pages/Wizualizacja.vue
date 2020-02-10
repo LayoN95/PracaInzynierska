@@ -90,7 +90,7 @@
 
           <div
             class="motion_sensor_1"
-            style="position: absolute; top: 490px; left: 2450px; transform:rotate(135deg);"
+            style="position: absolute; top: 490px; left: 245px; transform:rotate(135deg);"
           >
             <img :src="hcsr501" style="width: 32px;" />
           </div>
