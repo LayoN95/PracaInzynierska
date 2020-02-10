@@ -37,6 +37,7 @@
             style="position: absolute; top: 300px; left: 790px;"
           >
             <img src="img/window.png" style="width: 32px;" />
+            <img :src="window_state" />
           </div>
 
           <div
@@ -120,6 +121,7 @@ export default {
   components: {},
   data() {
     return {
+      window_state: "img/led.png",
       hcsr04: "img/motion-sensor.png",
       hcsr501: "img/motion-sensor.png",
       radiator_led: "img/led.png",
@@ -187,10 +189,10 @@ export default {
 
           //okna
           if (obj.deviceStatus[0].window_open <= 650) {
-            this.window = "img/windowclosed.png";
+            this.window_state = "img/windowclosed.png";
             console.log("okno zamknięte");
           } else if (obj.deviceStatus[0].window_open >= 1500) {
-            this.window = "img/windowopen.png";
+            this.window_state = "img/windowopen.png";
             console.log("okno otwarte");
           }
         })
