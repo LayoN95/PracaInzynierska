@@ -90,13 +90,13 @@
 
           <div
             class="motion_sensor_1"
-            style="position: absolute; top: 490px; left: 245px; transform:rotate(135deg);"
+            style="position: absolute; top: 400px; left: 255px; transform:rotate(135deg);"
           >
             <img :src="hcsr501" style="width: 32px;" />
           </div>
           <div
             class="motion_sensor_2"
-            style="position: absolute; top: 510px; left: 270px; transform:rotate(90deg);"
+            style="position: absolute; top: 600px; left: 255px; transform:rotate(90deg);"
           >
             <img :src="hcsr04" style="width: 32px;" />
           </div>
