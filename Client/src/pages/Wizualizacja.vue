@@ -66,7 +66,7 @@
           </div>
           <div
             class="light_outdoor"
-            style="position: absolute; top: 300px; left: 500px;"
+            style="position: absolute; top: 300px; left: 480px;"
           >
             <img :src="lightOutdoor" style="width: 32px;" />
           </div>
