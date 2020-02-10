@@ -102,7 +102,7 @@
           </div>
           <div
             class="heat_radiator"
-            style="position: absolute; top: 700px; left: 640px;"
+            style="position: absolute; top: 700px; left: 630px;"
           >
             <img src="img/radiator.png" /><img :src="radiator_led" />
           </div>
