@@ -43,7 +43,7 @@
 
           <div
             class="airconditioner"
-            style="position: absolute; top: 600px; left: 540px;"
+            style="position: absolute; top: 700px; left: 570px;"
           >
             <img
               src="img/air-conditioner.png"
