@@ -22,7 +22,7 @@
 
           <div
             class="dht11"
-            style="position: absolute; top: 750px; left: 245px;"
+            style="position: absolute; top: 720px; left: 245px;"
           >
             <p style="color: black; font-size: 20px;">
               <img src="img/temperature.png" style="width: 32px;" />{{
