@@ -21,10 +21,10 @@ setInterval(function() {
       lightRead = value.toFixed(1);
       if (value < 13) {
         LIGHT.writeSync(0);
-        LED.LED(21,1);
+        LED.led(21,1);
       } else {
         LIGHT.writeSync(1);
-        LED.LED(21,0);
+        LED.led(21,0);
       }
       module.exports.lightRead = lightRead;
     }
