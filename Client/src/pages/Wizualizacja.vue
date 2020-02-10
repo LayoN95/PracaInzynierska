@@ -53,14 +53,14 @@
 
           <div
             class="light_1"
-            style="position: absolute; top: 440px; left: 715px;"
+            style="position: absolute; top: 450px; left: 690px;"
           >
             <img :src="lightRoom_1" style="width: 32px;" />
           </div>
 
           <div
             class="light_2"
-            style="position: absolute; top: 440px; left: 350px;"
+            style="position: absolute; top: 450px; left: 250px;"
           >
             <img :src="lightRoom_2" style="width: 32px;" />
           </div>
