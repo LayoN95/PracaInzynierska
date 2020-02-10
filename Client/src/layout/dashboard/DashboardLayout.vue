@@ -32,7 +32,7 @@ import DashboardContent from "./Content.vue";
 import MobileMenu from "./MobileMenu";
 export default {
   components: {
-    //TopNavbar,
+    TopNavbar,
     ContentFooter,
     DashboardContent,
     MobileMenu
