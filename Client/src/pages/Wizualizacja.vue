@@ -11,7 +11,7 @@
 
           <div
             class="ds18b20"
-            style="position: absolute; top: 450px; left: 260px;"
+            style="position: absolute; top: 500px; left: 250px;"
           >
             <p style="color: black; font-size: 20px;">
               <img src="img/temperature.png" style="width: 32px;" />{{
