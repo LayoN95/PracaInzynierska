@@ -63,7 +63,7 @@ export default {
   methods: {
     getDHT11: function(event) {
       axios
-        .get(`${this.path}dht11`, {
+        .get(`${this.path}/dht11`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
@@ -97,7 +97,7 @@ export default {
     },
     getDS18B20: function(event) {
       axios
-        .get(`${this.path}`, {
+        .get(`${this.path}/`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
