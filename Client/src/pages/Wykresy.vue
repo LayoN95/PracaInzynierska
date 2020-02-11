@@ -161,7 +161,7 @@ export default {
     //Włączenie wybranej diody led
     turnOn: function(event) {
       axios
-        .post("http://192.168.1.48:3000/leds/" + this.id + "/1", {
+        .post(`${path}/leds/${this.id}/1`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
@@ -176,7 +176,7 @@ export default {
     //Wyłączenie wybranej diody led
     turnOff: function(event) {
       axios
-        .post("http://192.168.1.48:3000/leds/" + this.id + "/0", {
+        .post(`${path}/leds/${this.id}/0`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
@@ -191,7 +191,7 @@ export default {
 
     getDS18B20: function(event) {
       axios
-        .get("http://192.168.1.48:3000/", {
+        .get(`${path}/`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
@@ -257,7 +257,7 @@ export default {
 
     getDHT11: function(event) {
       axios
-        .get("http://192.168.1.48:3000/dht11", {
+        .get(`${path}/dht11`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }

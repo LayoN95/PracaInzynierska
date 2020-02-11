@@ -210,8 +210,8 @@ import Vue from "vue";
 import KnobControl from "vue-knob-control";
 import ProgressBar from "vue-simple-progress";
 import io from "socket.io-client";
-
-const socket = io("http://192.168.1.48:3000");
+import { path } from "../pages/variables";
+const socket = io(path);
 
 export default {
   components: {
@@ -236,7 +236,6 @@ export default {
       window_position: null,
       alarm: null,
       hcsr04: 5,
-      path: "http://192.168.1.48:3000"
     };
   },
   sockets: {
@@ -278,7 +277,7 @@ export default {
     turnOn: function(event) {
       var targetId = event.currentTarget.id;
       axios
-        .post("http://192.168.1.48:3000/leds/" + targetId /*this.id*/ + "/1", {
+        .post(`${path}/leds/${targetId}/1`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
@@ -295,7 +294,7 @@ export default {
       var targetId = event.currentTarget.id;
 
       axios
-        .post("http://192.168.1.48:3000/leds/" + targetId /*this.id*/ + "/0", {
+        .post(`${path}/leds/${targetId}/0`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
@@ -470,7 +469,7 @@ export default {
     },
     getDS18B20: function(event) {
       axios
-        .get("http://192.168.1.48:3000/", {
+        .get(`${path}/`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
@@ -491,7 +490,7 @@ export default {
 
     getLight: function(event) {
       axios
-        .get("http://192.168.1.48:3000/light", {
+        .get(`${path}/light`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }

@@ -115,8 +115,8 @@
 <script>
 import axios from "axios";
 import io from "socket.io-client";
-
-const socket = io("http://192.168.1.48:3000");
+import { path } from "../pages/variables";
+const socket = io(path);
 
 export default {
   components: {},
@@ -134,14 +134,13 @@ export default {
       window: "img/windowopen.png",
       lightRoom_1: false,
       lightRoom_2: false,
-      lightOutdoor: false,
-      path: "http://192.168.1.48:3000"
+      lightOutdoor: false
     };
   },
   methods: {
     getLight: function(event) {
       axios
-        .get("http://192.168.1.48:3000/light", {
+        .get(`${path}/light`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
@@ -203,7 +202,7 @@ export default {
     },
     getDS18B20: function(event) {
       axios
-        .get("http://192.168.1.48:3000/", {
+        .get(`${path}/`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
@@ -223,7 +222,7 @@ export default {
 
     getDHT11: function(event) {
       axios
-        .get("http://192.168.1.48:3000/dht11", {
+        .get(`${path}/dht11`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
@@ -245,7 +244,7 @@ export default {
     },
     getLight: function(event) {
       axios
-        .get("http://192.168.1.48:3000/light", {
+        .get(`${path}/light`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
