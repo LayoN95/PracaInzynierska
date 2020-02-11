@@ -97,7 +97,7 @@ export default {
     },
     getDS18B20: function(event) {
       axios
-        .get(`${this.path}/`, {
+        .get("http://192.168.1.48:3000/", {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
@@ -119,7 +119,6 @@ export default {
     this.getDHT11();
     this.getDS18B20();
     console.log(tableData);
-    console.log(path);
   },
   mounted() {
     this.getDHT11();
