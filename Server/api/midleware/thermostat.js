@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const ds18b20 = require("./ds18b20");
-var socket = require("socket.io-client")("http://192.168.1.48:3000");
+var socket = require("socket.io-client")(process.env.PATH);
 const DEVICE_STATUS = require("../models/devicesStatus");
 var Gpio = require("onoff").Gpio;
 var FAN = new Gpio(16, 'out');

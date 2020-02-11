@@ -1,7 +1,7 @@
 const sensor = require("node-dht-sensor");
 const dht11Schema = require("../models/dht11");
 const mongoose = require("mongoose");
-var socket = require("socket.io-client")("http://192.168.1.48:3000");
+var socket = require("socket.io-client")(process.env.PATH);
 
 var schedule = require("node-schedule");
 
