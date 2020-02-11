@@ -119,6 +119,7 @@ export default {
     this.getDHT11();
     this.getDS18B20();
     console.log(tableData);
+    console.log(path);
   },
   mounted() {
     this.getDHT11();
