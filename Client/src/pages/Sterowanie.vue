@@ -282,7 +282,7 @@ export default {
     },
     setTemperature: function(event) {
       axios
-        .post(`${this.path}/thermostat/${this.thermostat}`, {
+        .post(`${path}/thermostat/${this.thermostat}`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
@@ -297,7 +297,7 @@ export default {
 
     servoSubmit: function(event) {
       axios
-        .post(`${this.path}/servo/${this.servoControl}`, {
+        .post(`${path}/servo/${this.servoControl}`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
@@ -312,7 +312,7 @@ export default {
 
     getData: function(event) {
       axios
-        .get(`${this.path}/devicestatus/`, {
+        .get(`${path}/devicestatus/`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }

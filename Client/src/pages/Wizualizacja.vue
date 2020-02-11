@@ -156,7 +156,7 @@ export default {
     },
     getData: function(event) {
       axios
-        .get(`${this.path}/devicestatus/`, {
+        .get(`${path}/devicestatus/`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
@@ -260,7 +260,7 @@ export default {
     },
     getDevicesStatus: function(event) {
       axios
-        .get(`${this.path}/devicestatus/`, {
+        .get(`${path}/devicestatus/`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }

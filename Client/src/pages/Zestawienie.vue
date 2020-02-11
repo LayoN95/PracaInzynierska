@@ -247,7 +247,7 @@ export default {
     open: function(event) {
       console.log("Zamknięto" + this.value);
       axios
-        .post(`${this.path}/servo/2500`, {
+        .post(`${path}/servo/2500`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
@@ -262,7 +262,7 @@ export default {
     close_window: function(event) {
       console.log("Zamknięto" + this.value);
       axios
-        .post(`${this.path}/servo/600`, {
+        .post(`${path}/servo/600`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
@@ -308,7 +308,7 @@ export default {
     },
     setTemperature: function(event) {
       axios
-        .post(`${this.path}/thermostat/${this.thermostat}`, {
+        .post(`${path}/thermostat/${this.thermostat}`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
@@ -323,7 +323,7 @@ export default {
     getData: function(event) {
       //DeviceStatus
       axios
-        .get(`${this.path}/devicestatus/`, {
+        .get(`${path}/devicestatus/`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
@@ -377,7 +377,7 @@ export default {
         });
       //PirSensor
       axios
-        .get(`${this.path}/pirSensor/`, {
+        .get(`${path}/pirSensor/`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
@@ -405,7 +405,7 @@ export default {
     },
     getDHT11: function(event) {
       axios
-        .get(`${this.path}/dht11/`, {
+        .get(`${path}/dht11/`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
@@ -439,7 +439,7 @@ export default {
     },
     getThermostat: function(event) {
       axios
-        .get(`${this.path}/thermostat`, {
+        .get(`${path}/thermostat`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
@@ -454,7 +454,7 @@ export default {
     },
     getAlarm: function(event) {
       axios
-        .get(`${this.path}/alarm`, {
+        .get(`${path}/alarm`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
