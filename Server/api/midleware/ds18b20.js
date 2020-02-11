@@ -1,7 +1,7 @@
 const ds18b20 = require("ds18b20-raspi");
 const ds18b20Schema = require("../models/ds18b20");
 const mongoose = require("mongoose");
-var socket = require("socket.io-client")("http://192.168.1.48:3000");
+var socket = require("socket.io-client")(process.env.PATH);
 
 var temp = 0;
 

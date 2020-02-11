@@ -36,6 +36,7 @@
 <script>
 import { BaseTable } from "@/components";
 import axios from "axios";
+import { path } from "../pages/variables";
 
 var table = [];
 var ds_table = [];

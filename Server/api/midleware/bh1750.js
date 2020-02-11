@@ -1,6 +1,6 @@
 var BH1750 = require("bh1750");
 var LEDS =  require("../midleware/leds");
-var socket = require("socket.io-client")("http://192.168.1.48:3000");
+var socket = require("socket.io-client")(process.env.PATH);
 var Gpio = require("onoff").Gpio;
 var LIGHT = new Gpio(17, 'out');
 
