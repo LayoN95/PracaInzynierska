@@ -91,6 +91,7 @@
 import axios from "axios";
 import Vue from "vue";
 import KnobControl from "vue-knob-control";
+import { path } from "../pages/variables";
 
 export default {
   components: {
@@ -115,7 +116,6 @@ export default {
       thermostat: 21,
       servoControl: null,
       //detune: 20,
-      path: "http://192.168.1.48:3000"
     };
   },
   methods: {
@@ -136,7 +136,7 @@ export default {
       console.log("TIME RIGHT NOW: " + timeRightNow);
 
       axios
-        .post(`${this.path}/windowschedule/${start[0]}/${start[1]}/2500/`, {
+        .post(`${path}/windowschedule/${start[0]}/${start[1]}/2500/`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
@@ -148,7 +148,7 @@ export default {
           console.log(error);
         });
       axios
-        .post(`${this.path}/windowschedule/${end[0]}/${end[1]}/600/`, {
+        .post(`${path}/windowschedule/${end[0]}/${end[1]}/600/`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
@@ -202,7 +202,7 @@ export default {
       console.log("TIME RIGHT NOW: " + timeRightNow);
 
       axios
-        .post(`${this.path}/schedule/${start[0]}/${start[1]}/1/${targetId}`, {
+        .post(`${path}/schedule/${start[0]}/${start[1]}/1/${targetId}`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
@@ -214,7 +214,7 @@ export default {
           console.log(error);
         });
       axios
-        .post(`${this.path}/schedule/${end[0]}/${end[1]}/0/${targetId}`, {
+        .post(`${path}/schedule/${end[0]}/${end[1]}/0/${targetId}`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
@@ -235,7 +235,7 @@ export default {
 
     reset: function(event) {
       axios
-        .post("http://192.168.1.48:3000/reset", {
+        .post(`${path}/reset`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
@@ -251,7 +251,7 @@ export default {
     turnOn: function(event) {
       var targetId = event.currentTarget.id;
       axios
-        .post("http://192.168.1.48:3000/leds/" + targetId /*this.id*/ + "/1", {
+        .post(`${path}/leds/${targetId}/1`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
@@ -268,7 +268,7 @@ export default {
       var targetId = event.currentTarget.id;
 
       axios
-        .post("http://192.168.1.48:3000/leds/" + targetId /*this.id*/ + "/0", {
+        .post(`${path}/leds/${targetId}/0`, {
           headers: {
             "Access-Control-Allow-Origin": "*"
           }
